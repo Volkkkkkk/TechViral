@@ -1,0 +1,10 @@
+🧪 Test Auto-Deploy TechViral
+=============================
+
+Date: 2025-01-08
+Heure: Test initial
+Status: Vérification du workflow GitHub → Hostinger
+
+Si tu vois ce fichier sur ton site, l'auto-deploy fonctionne ! 🎉
+
+Prochaine étape : Supprimer ce fichier et faire un vrai déploiement.
