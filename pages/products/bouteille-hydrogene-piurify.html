@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bouteille à Hydrogène Piurify 1.5L - Eau Enrichie H₂ | TechViral</title>
+    <meta name="description" content="Bouteille Piurify Hydrogenator 1.5L - Transforme l'eau en eau hydrogénée jusqu'à 4000 ppb. Améliore la peau, antioxydant naturel. Prix: 199€. Livraison gratuite.">
+    <meta name="keywords" content="bouteille hydrogène, Piurify, eau hydrogénée, antioxydant, santé, bien-être, hydratation, 4000 ppb">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Bouteille à Hydrogène Piurify - Eau Enrichie H₂">
+    <meta property="og:description" content="Transformez votre eau en eau hydrogénée antioxydante. Production jusqu'à 4000 ppb d'hydrogène, améliore la peau et l'hydratation.">
+    <meta property="og:type" content="product">
+    <meta property="og:image" content="../../assets/images/products/bouteille-h2-main.jpg">
+    <meta property="og:price:amount" content="199">
+    <meta property="og:price:currency" content="EUR">
+    
+    <!-- Product Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": "Bouteille à Hydrogène Piurify Hydrogenator 1.5L",
+        "image": "../../assets/images/products/bouteille-h2-main.jpg",
+        "description": "Bouteille d'eau à hydrogène qui transforme l'eau ordinaire en eau hydrogénée antioxydante jusqu'à 4000 ppb",
+        "brand": {
+            "@type": "Brand",
+            "name": "Piurify"
+        },
+        "model": "Hydrogenator 1.5L",
+        "offers": {
+            "@type": "Offer",
+            "priceCurrency": "EUR",
+            "price": "199.00",
+            "availability": "https://schema.org/InStock",
+            "seller": {
+                "@type": "Organization",
+                "name": "TechViral"
+            }
+        },
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.7",
+            "reviewCount": "89"
+        }
+    }
+    </script>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="../../assets/icons/favicon.ico">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-gray-50 dark:bg-gray-900 font-inter">
+    <!-- Navigation -->
+    <nav class="bg-white/80 dark:bg-gray-900/80 backdrop-blur-md sticky top-0 z-50 border-b border-gray-200 dark:border-gray-700">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <a href="../../index.html" class="flex items-center space-x-3">
+                    <div class="w-10 h-10 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-xl flex items-center justify-center">
+                        <span class="text-white font-bold text-lg">T</span>
+                    </div>
+                    <span class="text-2xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">TechViral</span>
+                </a>
+                
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="../../index.html" class="text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Accueil</a>
+                    <a href="../categories/sante.html" class="text-indigo-600 dark:text-indigo-400 font-medium">Santé</a>
+                    <a href="../categories/all.html" class="text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Tous les produits</a>
+                    <a href="../contact.html" class="text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Contact</a>
+                    
+                    <!-- Cart Icon -->
+                    <div class="relative">
+                        <button id="cartButton" class="flex items-center space-x-2 text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4m2.6 8L6 21H4.6M7 13L5.4 5M7 13l-2.293 2.293c-.39.39-.39 1.024 0 1.414L7 18v-5zM17 13l2.293 2.293c.39.39.39 1.024 0 1.414L17 18v-5z"></path>
+                            </svg>
+                            <span id="cartCount" class="bg-indigo-600 text-white rounded-full w-5 h-5 flex items-center justify-center text-xs">0</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+        <nav class="flex" aria-label="Breadcrumb">
+            <ol class="flex items-center space-x-4">
+                <li>
+                    <div>
+                        <a href="../../index.html" class="text-gray-400 hover:text-gray-500">
+                            <svg class="flex-shrink-0 h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <div class="flex items-center">
+                        <svg class="flex-shrink-0 h-5 w-5 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
+                        </svg>
+                        <a href="../categories/sante.html" class="ml-4 text-sm font-medium text-gray-500 hover:text-gray-700">Santé & Bien-être</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="flex items-center">
+                        <svg class="flex-shrink-0 h-5 w-5 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
+                        </svg>
+                        <span class="ml-4 text-sm font-medium text-gray-900 dark:text-white">Bouteille Piurify H₂</span>
+                    </div>
+                </li>
+            </ol>
+        </nav>
+    </div>
+
+    <!-- Product Content -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <!-- Product Images -->
+            <div class="space-y-4">
+                <div class="aspect-square bg-gradient-to-br from-blue-50 to-cyan-50 dark:from-blue-900/20 dark:to-cyan-900/20 rounded-2xl border border-gray-200 dark:border-gray-700 p-8">
+                    <img id="mainImage" src="../../assets/images/products/bouteille-h2.webp" alt="Bouteille Piurify H₂" 
+                         class="w-full h-full object-contain hover:scale-110 transition-transform duration-300">
+                </div>
+                
+                <div class="grid grid-cols-4 gap-4">
+                    <div class="aspect-square bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 p-2 cursor-pointer hover:border-blue-500 transition-colors thumbnail active" data-image="../../assets/images/products/bouteille-h2.webp">
+                        <img src="../../assets/images/products/bouteille-h2.webp" alt="Vue principale" class="w-full h-full object-contain">
+                    </div>
+                    <div class="aspect-square bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 p-2 cursor-pointer hover:border-blue-500 transition-colors thumbnail" data-image="../../assets/images/products/bouteille-h2-process.webp">
+                        <img src="../../assets/images/products/bouteille-h2.webp" alt="Processus H₂" class="w-full h-full object-contain">
+                    </div>
+                    <div class="aspect-square bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 p-2 cursor-pointer hover:border-blue-500 transition-colors thumbnail" data-image="../../assets/images/products/bouteille-h2-usage.webp">
+                        <img src="../../assets/images/products/bouteille-h2.webp" alt="Utilisation" class="w-full h-full object-contain">
+                    </div>
+                    <div class="aspect-square bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 p-2 cursor-pointer hover:border-blue-500 transition-colors thumbnail" data-image="../../assets/images/products/bouteille-h2-benefits.webp">
+                        <img src="../../assets/images/products/bouteille-h2.webp" alt="Bénéfices" class="w-full h-full object-contain">
+                    </div>
+                </div>
+
+                <!-- Scientific Proof -->
+                <div class="bg-blue-50 dark:bg-blue-900/20 rounded-xl p-6 border border-blue-200 dark:border-blue-700">
+                    <h3 class="font-semibold text-blue-900 dark:text-blue-200 mb-3">🧪 Prouvé scientifiquement</h3>
+                    <ul class="space-y-2 text-blue-800 dark:text-blue-300 text-sm">
+                        <li>• Production stable jusqu'à 4000 ppb d'hydrogène</li>
+                        <li>• Efficacité maintenue après 2+ années d'utilisation</li>
+                        <li>• Tests indépendants certifiés</li>
+                        <li>• Technologie PEM (Proton Exchange Membrane)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Product Info -->
+            <div class="space-y-8">
+                <!-- Product Header -->
+                <div>
+                    <div class="flex items-center gap-2 mb-2">
+                        <span class="bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200 px-2 py-1 rounded-full text-sm font-medium">💧 Hydratation</span>
+                        <span class="bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200 px-2 py-1 rounded-full text-sm font-medium">En stock</span>
+                        <span class="bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200 px-2 py-1 rounded-full text-sm font-medium">Tendance santé</span>
+                    </div>
+                    
+                    <h1 class="text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+                        Bouteille à Hydrogène Piurify Hydrogenator 1.5L
+                    </h1>
+                    
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="flex items-center">
+                            <div class="flex text-yellow-400">
+                                ⭐⭐⭐⭐⭐
+                            </div>
+                            <span class="ml-2 text-sm text-gray-600 dark:text-gray-400">(89 avis)</span>
+                        </div>
+                        <span class="text-sm text-gray-500 dark:text-gray-400">SKU: PIU-H2-1.5L-001</span>
+                    </div>
+                    
+                    <div class="flex items-center gap-4 mb-6">
+                        <span class="text-4xl font-bold text-blue-600 dark:text-blue-400">199,00 €</span>
+                        <span class="text-xl text-gray-500 dark:text-gray-400 line-through">279,00 €</span>
+                        <span class="bg-red-500 text-white px-2 py-1 rounded text-sm font-medium">-29%</span>
+                    </div>
+                    
+                    <p class="text-gray-600 dark:text-gray-300 text-lg leading-relaxed">
+                        Transformez votre eau ordinaire en <strong>eau hydrogénée antioxydante</strong> avec la technologie Piurify. Production jusqu'à <strong>4000 ppb d'hydrogène</strong> pour une hydratation optimale et des bienfaits sur la peau.
+                    </p>
+                </div>
+
+                <!-- Key Benefits -->
+                <div class="bg-gradient-to-br from-blue-50 to-cyan-50 dark:from-blue-900/20 dark:to-cyan-900/20 rounded-xl p-6 border border-blue-200 dark:border-blue-700">
+                    <h3 class="font-semibold text-gray-900 dark:text-white mb-4 flex items-center">
+                        <span class="text-2xl mr-2">✨</span>
+                        Bienfaits prouvés
+                    </h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="flex items-start space-x-3">
+                            <div class="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                <span class="text-white text-sm">💧</span>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-gray-900 dark:text-white">Antioxydant puissant</h4>
+                                <p class="text-sm text-gray-600 dark:text-gray-400">Combat les radicaux libres</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-3">
+                            <div class="w-8 h-8 bg-pink-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                <span class="text-white text-sm">✨</span>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-gray-900 dark:text-white">Améliore la peau</h4>
+                                <p class="text-sm text-gray-600 dark:text-gray-400">Hydratation et éclat</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-3">
+                            <div class="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                <span class="text-white text-sm">⚡</span>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-gray-900 dark:text-white">Énergie naturelle</h4>
+                                <p class="text-sm text-gray-600 dark:text-gray-400">Réduction de la fatigue</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-3">
+                            <div class="w-8 h-8 bg-purple-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                <span class="text-white text-sm">🏃</span>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-gray-900 dark:text-white">Récupération sportive</h4>
+                                <p class="text-sm text-gray-600 dark:text-gray-400">Performances optimisées</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Technical Specs Preview -->
+                <div class="bg-gray-50 dark:bg-gray-800 rounded-xl p-6">
+                    <h3 class="font-semibold text-gray-900 dark:text-white mb-4">🔬 Spécifications techniques</h3>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <div class="text-2xl font-bold text-blue-600 dark:text-blue-400">4000 ppb</div>
+                            <div class="text-sm text-gray-600 dark:text-gray-400">Concentration H₂ max</div>
+                        </div>
+                        <div>
+                            <div class="text-2xl font-bold text-green-600 dark:text-green-400">1.5L</div>
+                            <div class="text-sm text-gray-600 dark:text-gray-400">Capacité</div>
+                        </div>
+                        <div>
+                            <div class="text-2xl font-bold text-purple-600 dark:text-purple-400">5 min</div>
+                            <div class="text-sm text-gray-600 dark:text-gray-400">Cycle de production</div>
+                        </div>
+                        <div>
+                            <div class="text-2xl font-bold text-orange-600 dark:text-orange-400">2+ ans</div>
+                            <div class="text-sm text-gray-600 dark:text-gray-400">Durabilité prouvée</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pack Selection -->
+                <div class="space-y-4">
+                    <h3 class="font-semibold text-gray-900 dark:text-white">Choisir votre pack :</h3>
+                    <div class="grid grid-cols-1 gap-3">
+                        <label class="pack-option flex items-center justify-between p-4 border-2 border-blue-500 bg-blue-50 dark:bg-blue-900/20 rounded-lg cursor-pointer">
+                            <input type="radio" name="pack" value="essential" checked class="sr-only">
+                            <div>
+                                <h4 class="font-medium text-gray-900 dark:text-white">Pack Découverte</h4>
+                                <p class="text-sm text-gray-600 dark:text-gray-400">Bouteille Piurify + Guide d'utilisation</p>
+                            </div>
+                            <span class="font-bold text-blue-600 dark:text-blue-400">199€</span>
+                        </label>
+                        
+                        <label class="pack-option flex items-center justify-between p-4 border-2 border-gray-200 dark:border-gray-700 rounded-lg cursor-pointer hover:border-blue-300">
+                            <input type="radio" name="pack" value="wellness" class="sr-only">
+                            <div>
+                                <h4 class="font-medium text-gray-900 dark:text-white">Pack Wellness</h4>
+                                <p class="text-sm text-gray-600 dark:text-gray-400">+ Électrolytes naturels + Carafe en verre</p>
+                            </div>
+                            <div class="text-right">
+                                <span class="font-bold text-gray-900 dark:text-white">249€</span>
+                                <div class="text-xs text-green-600 dark:text-green-400">Économie 15€</div>
+                            </div>
+                        </label>
+                        
+                        <label class="pack-option flex items-center justify-between p-4 border-2 border-gray-200 dark:border-gray-700 rounded-lg cursor-pointer hover:border-blue-300">
+                            <input type="radio" name="pack" value="family" class="sr-only">
+                            <div>
+                                <h4 class="font-medium text-gray-900 dark:text-white">Pack Famille</h4>
+                                <p class="text-sm text-gray-600 dark:text-gray-400">+ 4 gourdes + Kit de nettoyage + E-book santé</p>
+                            </div>
+                            <div class="text-right">
+                                <span class="font-bold text-gray-900 dark:text-white">319€</span>
+                                <div class="text-xs text-green-600 dark:text-green-400">Économie 35€</div>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Quantity & Add to Cart -->
+                <div class="flex items-center space-x-4">
+                    <div class="flex items-center border border-gray-300 dark:border-gray-600 rounded-lg">
+                        <button id="decreaseQty" class="px-4 py-3 text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 12H4"></path>
+                            </svg>
+                        </button>
+                        <span id="quantity" class="px-4 py-3 text-gray-900 dark:text-white font-medium">1</span>
+                        <button id="increaseQty" class="px-4 py-3 text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
+                            </svg>
+                        </button>
+                    </div>
+                    
+                    <button id="addToCart" class="add-to-cart flex-1 px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white rounded-xl font-semibold text-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
+                        💧 Ajouter au panier - <span id="currentPrice">199€</span>
+                    </button>
+                </div>
+
+                <!-- Buy Now -->
+                <button class="add-to-cart w-full px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-500 text-white rounded-xl font-semibold text-lg hover:from-green-600 hover:to-emerald-600 transition-colors">
+                    ⚡ ACHETER MAINTENANT
+                </button>
+
+                <!-- Shipping & Guarantees -->
+                <div class="space-y-4">
+                    <div class="bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-700 rounded-lg p-4">
+                        <div class="flex items-center space-x-3">
+                            <svg class="w-6 h-6 text-green-600 dark:text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 8h14M5 8a2 2 0 110-4h1.586a1 1 0 01.707.293l1.414 1.414a1 1 0 00.707.293H19a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"></path>
+                            </svg>
+                            <div>
+                                <p class="font-medium text-green-800 dark:text-green-200">Livraison gratuite & rapide</p>
+                                <p class="text-sm text-green-600 dark:text-green-400">Expédition sous 24h, emballage sécurisé</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-3 gap-4">
+                        <div class="text-center">
+                            <div class="w-12 h-12 bg-blue-100 dark:bg-blue-900 rounded-full flex items-center justify-center mx-auto mb-2">
+                                <svg class="w-6 h-6 text-blue-600 dark:text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                                </svg>
+                            </div>
+                            <p class="text-sm font-medium text-gray-900 dark:text-white">Garantie 3 ans</p>
+                        </div>
+                        
+                        <div class="text-center">
+                            <div class="w-12 h-12 bg-blue-100 dark:bg-blue-900 rounded-full flex items-center justify-center mx-auto mb-2">
+                                <svg class="w-6 h-6 text-blue-600 dark:text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h10a8 8 0 018 8v2M3 10l6 6m-6-6v8a2 2 0 002 2h8.586A2 2 0 0015 19.414L21 13.414A2 2 0 0021 12V8a8 8 0 00-8-8H3z"></path>
+                                </svg>
+                            </div>
+                            <p class="text-sm font-medium text-gray-900 dark:text-white">Satisfait ou remboursé 30j</p>
+                        </div>
+                        
+                        <div class="text-center">
+                            <div class="w-12 h-12 bg-blue-100 dark:bg-blue-900 rounded-full flex items-center justify-center mx-auto mb-2">
+                                <svg class="w-6 h-6 text-blue-600 dark:text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z"></path>
+                                </svg>
+                            </div>
+                            <p class="text-sm font-medium text-gray-900 dark:text-white">Support expert</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Detailed Information -->
+        <div class="mt-16">
+            <div class="bg-white dark:bg-gray-800 rounded-2xl border border-gray-200 dark:border-gray-700 overflow-hidden">
+                <div class="border-b border-gray-200 dark:border-gray-700">
+                    <nav class="-mb-px flex">
+                        <button class="spec-tab active py-4 px-8 text-sm font-medium text-blue-600 dark:text-blue-400 border-b-2 border-blue-600 dark:border-blue-400" data-tab="benefits">
+                            Bienfaits
+                        </button>
+                        <button class="spec-tab py-4 px-8 text-sm font-medium text-gray-500 dark:text-gray-400 border-b-2 border-transparent hover:text-gray-700 dark:hover:text-gray-300" data-tab="specs">
+                            Spécifications
+                        </button>
+                        <button class="spec-tab py-4 px-8 text-sm font-medium text-gray-500 dark:text-gray-400 border-b-2 border-transparent hover:text-gray-700 dark:hover:text-gray-300" data-tab="usage">
+                            Utilisation
+                        </button>
+                        <button class="spec-tab py-4 px-8 text-sm font-medium text-gray-500 dark:text-gray-400 border-b-2 border-transparent hover:text-gray-700 dark:hover:text-gray-300" data-tab="reviews">
+                            Avis (89)
+                        </button>
+                    </nav>
+                </div>
+                
+                <div class="p-8">
+                    <!-- Benefits -->
+                    <div id="benefits-content" class="spec-content">
+                        <div class="space-y-8">
+                            <div>
+                                <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">L'hydrogène moléculaire : un antioxydant révolutionnaire</h3>
+                                <p class="text-gray-600 dark:text-gray-300 leading-relaxed mb-4">
+                                    L'hydrogène moléculaire (H₂) est le plus petit antioxydant existant, capable de pénétrer facilement dans les cellules pour neutraliser les radicaux libres responsables du vieillissement et des inflammations.
+                                </p>
+                            </div>
+
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                                <div class="bg-blue-50 dark:bg-blue-900/20 rounded-xl p-6">
+                                    <h4 class="font-semibold text-blue-900 dark:text-blue-200 mb-3 flex items-center">
+                                        <span class="text-2xl mr-2">💧</span>
+                                        Hydratation optimale
+                                    </h4>
+                                    <ul class="space-y-2 text-blue-800 dark:text-blue-300 text-sm">
+                                        <li>• Améliore l'absorption cellulaire de l'eau</li>
+                                        <li>• Réduit la fatigue et booste l'énergie</li>
+                                        <li>• Optimise la récupération après l'effort</li>
+                                    </ul>
+                                </div>
+
+                                <div class="bg-pink-50 dark:bg-pink-900/20 rounded-xl p-6">
+                                    <h4 class="font-semibold text-pink-900 dark:text-pink-200 mb-3 flex items-center">
+                                        <span class="text-2xl mr-2">✨</span>
+                                        Bienfaits beauté
+                                    </h4>
+                                    <ul class="space-y-2 text-pink-800 dark:text-pink-300 text-sm">
+                                        <li>• Améliore l'élasticité de la peau</li>
+                                        <li>• Réduit les signes de vieillissement</li>
+                                        <li>• Donne un teint plus éclatant</li>
+                                    </ul>
+                                </div>
+
+                                <div class="bg-green-50 dark:bg-green-900/20 rounded-xl p-6">
+                                    <h4 class="font-semibold text-green-900 dark:text-green-200 mb-3 flex items-center">
+                                        <span class="text-2xl mr-2">🏃</span>
+                                        Performance sportive
+                                    </h4>
+                                    <ul class="space-y-2 text-green-800 dark:text-green-300 text-sm">
+                                        <li>• Réduit l'acide lactique</li>
+                                        <li>• Améliore l'endurance</li>
+                                        <li>• Accélère la récupération musculaire</li>
+                                    </ul>
+                                </div>
+
+                                <div class="bg-purple-50 dark:bg-purple-900/20 rounded-xl p-6">
+                                    <h4 class="font-semibold text-purple-900 dark:text-purple-200 mb-3 flex items-center">
+                                        <span class="text-2xl mr-2">🧠</span>
+                                        Bien-être général
+                                    </h4>
+                                    <ul class="space-y-2 text-purple-800 dark:text-purple-300 text-sm">
+                                        <li>• Soutient la fonction cognitive</li>
+                                        <li>• Réduit le stress oxydatif</li>
+                                        <li>• Améliore la qualité du sommeil</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Specs -->
+                    <div id="specs-content" class="spec-content hidden">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                            <div>
+                                <h3 class="font-semibold text-gray-900 dark:text-white mb-4">Performance</h3>
+                                <ul class="space-y-2 text-gray-600 dark:text-gray-300">
+                                    <li>• Concentration H₂ : 800-4000 ppb</li>
+                                    <li>• Technologie : PEM (Proton Exchange Membrane)</li>
+                                    <li>• Cycle de production : 5 minutes</li>
+                                    <li>• Durée d'efficacité : 2+ années prouvées</li>
+                                    <li>• Matériau : Tritan sans BPA</li>
+                                </ul>
+                            </div>
+                            
+                            <div>
+                                <h3 class="font-semibold text-gray-900 dark:text-white mb-4">Caractéristiques</h3>
+                                <ul class="space-y-2 text-gray-600 dark:text-gray-300">
+                                    <li>• Capacité : 1.5 litres</li>
+                                    <li>• Dimensions : 26cm x 8cm</li>
+                                    <li>• Poids : 850g</li>
+                                    <li>• Alimentation : USB-C rechargeable</li>
+                                    <li>• Autonomie : 20-25 cycles</li>
+                                </ul>
+                            </div>
+                            
+                            <div>
+                                <h3 class="font-semibold text-gray-900 dark:text-white mb-4">Sécurité & Certification</h3>
+                                <ul class="space-y-2 text-gray-600 dark:text-gray-300">
+                                    <li>• Certification FDA</li>
+                                    <li>• Normes européennes CE</li>
+                                    <li>• Tests de durabilité effectués</li>
+                                    <li>• Matériaux alimentaires</li>
+                                </ul>
+                            </div>
+                            
+                            <div>
+                                <h3 class="font-semibold text-gray-900 dark:text-white mb-4">Contenu du pack</h3>
+                                <ul class="space-y-2 text-gray-600 dark:text-gray-300">
+                                    <li>• Bouteille Piurify Hydrogenator</li>
+                                    <li>• Câble USB-C de charge</li>
+                                    <li>• Guide d'utilisation détaillé</li>
+                                    <li>• Carte de garantie 3 ans</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Usage -->
+                    <div id="usage-content" class="spec-content hidden">
+                        <div class="space-y-8">
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white">Mode d'emploi simple en 3 étapes</h3>
+                            
+                            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                                <div class="text-center">
+                                    <div class="w-16 h-16 bg-blue-100 dark:bg-blue-900 rounded-full flex items-center justify-center mx-auto mb-4">
+                                        <span class="text-2xl">1️⃣</span>
+                                    </div>
+                                    <h4 class="font-semibold text-gray-900 dark:text-white mb-2">Remplir</h4>
+                                    <p class="text-gray-600 dark:text-gray-300 text-sm">Versez de l'eau purifiée dans la bouteille jusqu'au niveau maximum</p>
+                                </div>
+                                
+                                <div class="text-center">
+                                    <div class="w-16 h-16 bg-blue-100 dark:bg-blue-900 rounded-full flex items-center justify-center mx-auto mb-4">
+                                        <span class="text-2xl">2️⃣</span>
+                                    </div>
+                                    <h4 class="font-semibold text-gray-900 dark:text-white mb-2">Activer</h4>
+                                    <p class="text-gray-600 dark:text-gray-300 text-sm">Appuyez sur le bouton pour démarrer le cycle d'hydrogénation (5 min)</p>
+                                </div>
+                                
+                                <div class="text-center">
+                                    <div class="w-16 h-16 bg-blue-100 dark:bg-blue-900 rounded-full flex items-center justify-center mx-auto mb-4">
+                                        <span class="text-2xl">3️⃣</span>
+                                    </div>
+                                    <h4 class="font-semibold text-gray-900 dark:text-white mb-2">Savourer</h4>
+                                    <p class="text-gray-600 dark:text-gray-300 text-sm">Buvez votre eau hydrogénée dans les 30 minutes pour une efficacité optimale</p>
+                                </div>
+                            </div>
+
+                            <div class="bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-700 rounded-xl p-6">
+                                <h4 class="font-semibold text-amber-900 dark:text-amber-200 mb-3">💡 Conseils d'utilisation</h4>
+                                <ul class="space-y-2 text-amber-800 dark:text-amber-300 text-sm">
+                                    <li>• Buvez 2-3 verres d'eau hydrogénée par jour pour des résultats optimaux</li>
+                                    <li>• Idéal avant et après l'exercice physique</li>
+                                    <li>• Utilisez de l'eau purifiée ou filtrée pour de meilleurs résultats</li>
+                                    <li>• Nettoyez la bouteille une fois par semaine avec de l'eau chaude</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Reviews -->
+                    <div id="reviews-content" class="spec-content hidden">
+                        <div class="space-y-6">
+                            <div class="flex items-center justify-between">
+                                <div>
+                                    <div class="flex items-center gap-2">
+                                        <div class="text-3xl font-bold text-gray-900 dark:text-white">4.7</div>
+                                        <div class="text-yellow-400 text-xl">⭐⭐⭐⭐⭐</div>
+                                    </div>
+                                    <p class="text-gray-600 dark:text-gray-400">Basé sur 89 avis vérifiés</p>
+                                </div>
+                                
+                                <div class="space-y-2">
+                                    <div class="flex items-center gap-2">
+                                        <span class="text-sm">5⭐</span>
+                                        <div class="w-32 h-2 bg-gray-200 dark:bg-gray-700 rounded-full">
+                                            <div class="w-3/4 h-2 bg-yellow-400 rounded-full"></div>
+                                        </div>
+                                        <span class="text-sm text-gray-600 dark:text-gray-400">67</span>
+                                    </div>
+                                    <div class="flex items-center gap-2">
+                                        <span class="text-sm">4⭐</span>
+                                        <div class="w-32 h-2 bg-gray-200 dark:bg-gray-700 rounded-full">
+                                            <div class="w-1/4 h-2 bg-yellow-400 rounded-full"></div>
+                                        </div>
+                                        <span class="text-sm text-gray-600 dark:text-gray-400">15</span>
+                                    </div>
+                                    <div class="flex items-center gap-2">
+                                        <span class="text-sm">3⭐</span>
+                                        <div class="w-32 h-2 bg-gray-200 dark:bg-gray-700 rounded-full">
+                                            <div class="w-1/12 h-2 bg-yellow-400 rounded-full"></div>
+                                        </div>
+                                        <span class="text-sm text-gray-600 dark:text-gray-400">5</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="space-y-6">
+                                <!-- Review 1 -->
+                                <div class="border-b border-gray-200 dark:border-gray-700 pb-6">
+                                    <div class="flex items-center gap-4 mb-3">
+                                        <div class="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center text-white font-medium">C</div>
+                                        <div>
+                                            <div class="flex items-center gap-2">
+                                                <span class="font-medium text-gray-900 dark:text-white">Claire M.</span>
+                                                <div class="text-yellow-400">⭐⭐⭐⭐⭐</div>
+                                            </div>
+                                            <p class="text-sm text-gray-600 dark:text-gray-400">Il y a 5 jours</p>
+                                        </div>
+                                    </div>
+                                    <p class="text-gray-700 dark:text-gray-300">
+                                        "Incroyable ! Après 3 semaines d'utilisation, ma peau est plus lumineuse et je me sens beaucoup plus énergique. L'eau a un goût très pur et le processus est simple. Je recommande vivement !"
+                                    </p>
+                                </div>
+
+                                <!-- Review 2 -->
+                                <div class="border-b border-gray-200 dark:border-gray-700 pb-6">
+                                    <div class="flex items-center gap-4 mb-3">
+                                        <div class="w-10 h-10 bg-green-600 rounded-full flex items-center justify-center text-white font-medium">T</div>
+                                        <div>
+                                            <div class="flex items-center gap-2">
+                                                <span class="font-medium text-gray-900 dark:text-white">Thomas L.</span>
+                                                <div class="text-yellow-400">⭐⭐⭐⭐⭐</div>
+                                            </div>
+                                            <p class="text-sm text-gray-600 dark:text-gray-400">Il y a 1 semaine</p>
+                                        </div>
+                                    </div>
+                                    <p class="text-gray-700 dark:text-gray-300">
+                                        "Parfait pour mes entraînements ! Je récupère beaucoup plus vite depuis que je bois de l'eau hydrogénée. La bouteille est robuste et la batterie tient bien. Excellent investissement santé."
+                                    </p>
+                                </div>
+
+                                <!-- Review 3 -->
+                                <div class="border-b border-gray-200 dark:border-gray-700 pb-6">
+                                    <div class="flex items-center gap-4 mb-3">
+                                        <div class="w-10 h-10 bg-purple-600 rounded-full flex items-center justify-center text-white font-medium">E</div>
+                                        <div>
+                                            <div class="flex items-center gap-2">
+                                                <span class="font-medium text-gray-900 dark:text-white">Émilie R.</span>
+                                                <div class="text-yellow-400">⭐⭐⭐⭐⭐</div>
+                                            </div>
+                                            <p class="text-sm text-gray-600 dark:text-gray-400">Il y a 2 semaines</p>
+                                        </div>
+                                    </div>
+                                    <p class="text-gray-700 dark:text-gray-300">
+                                        "Je suis nutritionniste et je recommande cette bouteille à mes clients. La technologie est fiable, les résultats sont là. Service client TechViral au top aussi !"
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12 mt-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="col-span-1 md:col-span-2">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="w-10 h-10 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-xl flex items-center justify-center">
+                            <span class="text-white font-bold text-lg">T</span>
+                        </div>
+                        <span class="text-2xl font-bold">TechViral</span>
+                    </div>
+                    <p class="text-gray-400 mb-4">Les produits les plus innovants de 2025 à portée de clic. Livraison rapide et support client exceptionnel.</p>
+                </div>
+                
+                <div>
+                    <h3 class="font-semibold mb-4">Support</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="../support/faq.html" class="hover:text-white transition-colors">FAQ</a></li>
+                        <li><a href="../contact.html" class="hover:text-white transition-colors">Contact</a></li>
+                        <li><a href="../support/shipping.html" class="hover:text-white transition-colors">Livraison</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="font-semibold mb-4">Légal</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="../legal/terms.html" class="hover:text-white transition-colors">CGV</a></li>
+                        <li><a href="../legal/privacy.html" class="hover:text-white transition-colors">Confidentialité</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cart System -->
+    <script src="../../assets/js/cart.js"></script>
+    
+    <!-- JavaScript -->
+    <script>
+        // Image gallery
+        document.querySelectorAll('.thumbnail').forEach(thumb => {
+            thumb.addEventListener('click', function() {
+                document.querySelectorAll('.thumbnail').forEach(t => t.classList.remove('active'));
+                this.classList.add('active');
+                document.getElementById('mainImage').src = this.dataset.image;
+            });
+        });
+
+        // Quantity controls
+        let quantity = 1;
+        document.getElementById('increaseQty').addEventListener('click', () => {
+            quantity++;
+            document.getElementById('quantity').textContent = quantity;
+        });
+
+        document.getElementById('decreaseQty').addEventListener('click', () => {
+            if (quantity > 1) {
+                quantity--;
+                document.getElementById('quantity').textContent = quantity;
+            }
+        });
+
+        // Pack selection
+        document.querySelectorAll('input[name="pack"]').forEach(pack => {
+            pack.addEventListener('change', function() {
+                document.querySelectorAll('.pack-option').forEach(option => {
+                    option.classList.remove('border-blue-500', 'bg-blue-50', 'dark:bg-blue-900/20');
+                    option.classList.add('border-gray-200', 'dark:border-gray-700');
+                });
+                
+                this.closest('.pack-option').classList.add('border-blue-500', 'bg-blue-50', 'dark:bg-blue-900/20');
+                this.closest('.pack-option').classList.remove('border-gray-200', 'dark:border-gray-700');
+                
+                const prices = { essential: 199, wellness: 249, family: 319 };
+                document.getElementById('currentPrice').textContent = prices[this.value] + '€';
+            });
+        });
+
+        // Tabs
+        document.querySelectorAll('.spec-tab').forEach(tab => {
+            tab.addEventListener('click', function() {
+                document.querySelectorAll('.spec-tab').forEach(t => {
+                    t.classList.remove('active', 'text-blue-600', 'dark:text-blue-400', 'border-blue-600', 'dark:border-blue-400');
+                    t.classList.add('text-gray-500', 'dark:text-gray-400', 'border-transparent');
+                });
+                
+                this.classList.add('active', 'text-blue-600', 'dark:text-blue-400', 'border-blue-600', 'dark:border-blue-400');
+                this.classList.remove('text-gray-500', 'dark:text-gray-400', 'border-transparent');
+                
+                document.querySelectorAll('.spec-content').forEach(content => {
+                    content.classList.add('hidden');
+                });
+                
+                document.getElementById(this.dataset.tab + '-content').classList.remove('hidden');
+            });
+        });
+
+        // Add to cart
+        document.getElementById('addToCart').addEventListener('click', function() {
+            const selectedPack = document.querySelector('input[name="pack"]:checked').value;
+            const packNames = { essential: 'Pack Découverte', wellness: 'Pack Wellness', family: 'Pack Famille' };
+            const prices = { essential: 199, wellness: 249, family: 319 };
+            
+            // Animation du bouton
+            this.innerHTML = '✅ Ajouté au panier !';
+            this.classList.remove('from-blue-600', 'to-cyan-600');
+            this.classList.add('bg-green-600');
+            
+            setTimeout(() => {
+                this.innerHTML = `💧 Ajouter au panier - ${prices[selectedPack]}€`;
+                this.classList.add('from-blue-600', 'to-cyan-600');
+                this.classList.remove('bg-green-600');
+            }, 2000);
+            
+            // Update cart count
+            let currentCount = parseInt(document.getElementById('cartCount').textContent);
+            document.getElementById('cartCount').textContent = currentCount + quantity;
+            
+            alert(`${packNames[selectedPack]} ajouté au panier (${quantity} x ${prices[selectedPack]}€)`);
+        });
+    </script>
+</body>
+</html>

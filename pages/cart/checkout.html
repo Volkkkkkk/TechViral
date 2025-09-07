@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Commande - Finaliser l'Achat | TechViral</title>
+    <meta name="description" content="Finalisez votre commande TechViral en toute sécurité. Paiement sécurisé, livraison rapide et satisfaction garantie.">
+    <meta name="keywords" content="commande, checkout, paiement sécurisé, TechViral, finaliser achat">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Finaliser ma Commande | TechViral">
+    <meta property="og:description" content="Dernière étape avant de recevoir vos produits innovants 2025">
+    <meta property="og:type" content="website">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="../../assets/icons/favicon.ico">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-gray-50 dark:bg-gray-900 font-inter">
+    <!-- Navigation -->
+    <nav class="bg-white/80 dark:bg-gray-900/80 backdrop-blur-md sticky top-0 z-50 border-b border-gray-200 dark:border-gray-700">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <a href="../../index.html" class="flex items-center space-x-3">
+                    <div class="w-10 h-10 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-xl flex items-center justify-center">
+                        <span class="text-white font-bold text-lg">T</span>
+                    </div>
+                    <span class="text-2xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">TechViral</span>
+                </a>
+                
+                <!-- Checkout Progress -->
+                <div class="hidden md:flex items-center space-x-4">
+                    <div class="flex items-center">
+                        <div class="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center text-white text-sm font-medium">✓</div>
+                        <span class="ml-2 text-sm text-gray-600 dark:text-gray-400">Panier</span>
+                    </div>
+                    <div class="w-8 h-px bg-gray-300 dark:bg-gray-600"></div>
+                    <div class="flex items-center">
+                        <div class="w-8 h-8 bg-indigo-600 rounded-full flex items-center justify-center text-white text-sm font-medium">2</div>
+                        <span class="ml-2 text-sm font-medium text-indigo-600 dark:text-indigo-400">Commande</span>
+                    </div>
+                    <div class="w-8 h-px bg-gray-300 dark:bg-gray-600"></div>
+                    <div class="flex items-center">
+                        <div class="w-8 h-8 bg-gray-300 dark:bg-gray-600 rounded-full flex items-center justify-center text-gray-600 dark:text-gray-400 text-sm font-medium">3</div>
+                        <span class="ml-2 text-sm text-gray-400">Confirmation</span>
+                    </div>
+                </div>
+
+                <div class="flex items-center space-x-4">
+                    <div class="text-sm text-gray-600 dark:text-gray-400">🔒 Paiement sécurisé</div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Checkout Form -->
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <!-- Left Column - Forms -->
+            <div class="space-y-8">
+                <!-- Customer Information -->
+                <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-sm border border-gray-200 dark:border-gray-700 p-6">
+                    <h2 class="text-xl font-semibold text-gray-900 dark:text-white mb-6">Informations de contact</h2>
+                    
+                    <form id="contactForm" class="space-y-4">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Email *</label>
+                            <input type="email" id="email" required 
+                                   class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+                                   placeholder="votre@email.com">
+                        </div>
+                        
+                        <div class="flex items-center">
+                            <input type="checkbox" id="newsletter" class="h-4 w-4 text-indigo-600 bg-white dark:bg-gray-700 border-gray-300 dark:border-gray-600 rounded focus:ring-indigo-500">
+                            <label class="ml-2 text-sm text-gray-600 dark:text-gray-400">Recevoir les offres spéciales par email</label>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Shipping Address -->
+                <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-sm border border-gray-200 dark:border-gray-700 p-6">
+                    <h2 class="text-xl font-semibold text-gray-900 dark:text-white mb-6">Adresse de livraison</h2>
+                    
+                    <form id="shippingForm" class="space-y-4">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Prénom *</label>
+                                <input type="text" id="firstName" required
+                                       class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+                                       placeholder="Jean">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Nom *</label>
+                                <input type="text" id="lastName" required
+                                       class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+                                       placeholder="Dupont">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Adresse *</label>
+                            <input type="text" id="address" required
+                                   class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+                                   placeholder="123 Rue de la République">
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Complément d'adresse (optionnel)</label>
+                            <input type="text" id="addressComplement"
+                                   class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+                                   placeholder="Appartement, étage, etc.">
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Code postal *</label>
+                                <input type="text" id="postalCode" required maxlength="5"
+                                       class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+                                       placeholder="75001">
+                            </div>
+                            <div class="sm:col-span-2">
+                                <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Ville *</label>
+                                <input type="text" id="city" required
+                                       class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+                                       placeholder="Paris">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Téléphone *</label>
+                            <input type="tel" id="phone" required
+                                   class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+                                   placeholder="06 12 34 56 78">
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Shipping Method -->
+                <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-sm border border-gray-200 dark:border-gray-700 p-6">
+                    <h2 class="text-xl font-semibold text-gray-900 dark:text-white mb-6">Mode de livraison</h2>
+                    
+                    <div class="space-y-4">
+                        <label class="shipping-option flex items-center p-4 border-2 border-green-200 bg-green-50 dark:bg-green-900/20 dark:border-green-700 rounded-lg cursor-pointer">
+                            <input type="radio" name="shipping" value="standard" checked class="h-4 w-4 text-indigo-600">
+                            <div class="ml-4 flex-1">
+                                <div class="flex justify-between items-center">
+                                    <div>
+                                        <h3 class="font-medium text-gray-900 dark:text-white">Livraison Standard</h3>
+                                        <p class="text-sm text-gray-600 dark:text-gray-300">3-5 jours ouvrés</p>
+                                    </div>
+                                    <div class="text-right">
+                                        <span class="text-green-600 dark:text-green-400 font-semibold">GRATUITE</span>
+                                        <p class="text-xs text-gray-500 dark:text-gray-400">Commande > 50€</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </label>
+
+                        <label class="shipping-option flex items-center p-4 border-2 border-gray-200 dark:border-gray-600 rounded-lg cursor-pointer hover:border-indigo-300 dark:hover:border-indigo-600 transition-colors">
+                            <input type="radio" name="shipping" value="express" class="h-4 w-4 text-indigo-600">
+                            <div class="ml-4 flex-1">
+                                <div class="flex justify-between items-center">
+                                    <div>
+                                        <h3 class="font-medium text-gray-900 dark:text-white">Livraison Express</h3>
+                                        <p class="text-sm text-gray-600 dark:text-gray-300">24-48h</p>
+                                    </div>
+                                    <div class="text-right">
+                                        <span class="text-gray-900 dark:text-white font-semibold">9,90 €</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </label>
+
+                        <label class="shipping-option flex items-center p-4 border-2 border-gray-200 dark:border-gray-600 rounded-lg cursor-pointer hover:border-indigo-300 dark:hover:border-indigo-600 transition-colors">
+                            <input type="radio" name="shipping" value="premium" class="h-4 w-4 text-indigo-600">
+                            <div class="ml-4 flex-1">
+                                <div class="flex justify-between items-center">
+                                    <div>
+                                        <h3 class="font-medium text-gray-900 dark:text-white">Livraison Premium</h3>
+                                        <p class="text-sm text-gray-600 dark:text-gray-300">Jour même (Paris + région)</p>
+                                    </div>
+                                    <div class="text-right">
+                                        <span class="text-gray-900 dark:text-white font-semibold">14,90 €</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Payment Method -->
+                <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-sm border border-gray-200 dark:border-gray-700 p-6">
+                    <h2 class="text-xl font-semibold text-gray-900 dark:text-white mb-6">Paiement</h2>
+                    
+                    <!-- Payment Options -->
+                    <div class="space-y-4 mb-6">
+                        <label class="payment-option flex items-center p-4 border-2 border-indigo-200 bg-indigo-50 dark:bg-indigo-900/20 dark:border-indigo-700 rounded-lg cursor-pointer">
+                            <input type="radio" name="payment" value="card" checked class="h-4 w-4 text-indigo-600">
+                            <div class="ml-4 flex-1">
+                                <div class="flex items-center justify-between">
+                                    <h3 class="font-medium text-gray-900 dark:text-white">Carte bancaire</h3>
+                                    <div class="flex space-x-2">
+                                        <div class="w-8 h-5 bg-blue-600 rounded text-white text-xs flex items-center justify-center font-bold">V</div>
+                                        <div class="w-8 h-5 bg-red-600 rounded text-white text-xs flex items-center justify-center font-bold">MC</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </label>
+
+                        <label class="payment-option flex items-center p-4 border-2 border-gray-200 dark:border-gray-600 rounded-lg cursor-pointer hover:border-indigo-300 dark:hover:border-indigo-600 transition-colors">
+                            <input type="radio" name="payment" value="paypal" class="h-4 w-4 text-indigo-600">
+                            <div class="ml-4 flex-1">
+                                <div class="flex items-center justify-between">
+                                    <h3 class="font-medium text-gray-900 dark:text-white">PayPal</h3>
+                                    <div class="w-16 h-5 bg-blue-800 rounded text-white text-xs flex items-center justify-center font-bold">PayPal</div>
+                                </div>
+                            </div>
+                        </label>
+
+                        <label class="payment-option flex items-center p-4 border-2 border-gray-200 dark:border-gray-600 rounded-lg cursor-pointer hover:border-indigo-300 dark:hover:border-indigo-600 transition-colors">
+                            <input type="radio" name="payment" value="applepay" class="h-4 w-4 text-indigo-600">
+                            <div class="ml-4 flex-1">
+                                <div class="flex items-center justify-between">
+                                    <h3 class="font-medium text-gray-900 dark:text-white">Apple Pay</h3>
+                                    <div class="w-16 h-5 bg-gray-900 rounded text-white text-xs flex items-center justify-center">Pay</div>
+                                </div>
+                            </div>
+                        </label>
+                    </div>
+
+                    <!-- Card Details -->
+                    <div id="cardDetails" class="space-y-4">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Numéro de carte *</label>
+                            <input type="text" id="cardNumber" placeholder="1234 5678 9012 3456" maxlength="19"
+                                   class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-indigo-500 focus:border-transparent">
+                        </div>
+
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Expiration *</label>
+                                <input type="text" id="cardExpiry" placeholder="MM/AA" maxlength="5"
+                                       class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-indigo-500 focus:border-transparent">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">CVV *</label>
+                                <input type="text" id="cardCVV" placeholder="123" maxlength="4"
+                                       class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-indigo-500 focus:border-transparent">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Nom sur la carte *</label>
+                            <input type="text" id="cardName" placeholder="Jean Dupont"
+                                   class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-indigo-500 focus:border-transparent">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column - Order Summary -->
+            <div class="lg:sticky lg:top-8 lg:self-start">
+                <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-sm border border-gray-200 dark:border-gray-700 p-6">
+                    <h2 class="text-xl font-semibold text-gray-900 dark:text-white mb-6">Récapitulatif de commande</h2>
+                    
+                    <!-- Order Items -->
+                    <div class="space-y-4 mb-6 border-b border-gray-200 dark:border-gray-700 pb-6">
+                        <div class="flex items-center space-x-3">
+                            <img src="../../assets/images/products/camera-pov.webp" alt="Caméra POV" class="w-12 h-12 object-cover rounded-lg">
+                            <div class="flex-1">
+                                <h3 class="font-medium text-gray-900 dark:text-white text-sm">Caméra POV Portable 4K</h3>
+                                <p class="text-xs text-gray-500 dark:text-gray-400">Quantité: 1</p>
+                            </div>
+                            <span class="font-semibold text-gray-900 dark:text-white">89,00 €</span>
+                        </div>
+
+                        <div class="flex items-center space-x-3">
+                            <img src="../../assets/images/products/drone-mousse.webp" alt="Drone Mousse" class="w-12 h-12 object-cover rounded-lg">
+                            <div class="flex-1">
+                                <h3 class="font-medium text-gray-900 dark:text-white text-sm">Drone en Mousse RC</h3>
+                                <p class="text-xs text-gray-500 dark:text-gray-400">Quantité: 1</p>
+                            </div>
+                            <span class="font-semibold text-gray-900 dark:text-white">149,00 €</span>
+                        </div>
+
+                        <div class="flex items-center space-x-3">
+                            <img src="../../assets/images/products/casquette-cryo.webp" alt="Casquette Cryo" class="w-12 h-12 object-cover rounded-lg">
+                            <div class="flex-1">
+                                <h3 class="font-medium text-gray-900 dark:text-white text-sm">Casquette Cryothérapie</h3>
+                                <p class="text-xs text-gray-500 dark:text-gray-400">Quantité: 1</p>
+                            </div>
+                            <span class="font-semibold text-gray-900 dark:text-white">69,00 €</span>
+                        </div>
+                    </div>
+
+                    <!-- Order Totals -->
+                    <div class="space-y-3 mb-6">
+                        <div class="flex justify-between text-gray-600 dark:text-gray-300">
+                            <span>Sous-total</span>
+                            <span>307,00 €</span>
+                        </div>
+                        
+                        <div class="flex justify-between text-gray-600 dark:text-gray-300">
+                            <span>Livraison</span>
+                            <span id="shippingCost" class="text-green-600 dark:text-green-400 font-medium">Gratuite</span>
+                        </div>
+                        
+                        <div class="flex justify-between text-gray-600 dark:text-gray-300">
+                            <span>TVA (20%)</span>
+                            <span>61,40 €</span>
+                        </div>
+                        
+                        <hr class="border-gray-200 dark:border-gray-700">
+                        
+                        <div class="flex justify-between text-xl font-bold text-gray-900 dark:text-white">
+                            <span>Total</span>
+                            <span id="finalTotal">307,00 €</span>
+                        </div>
+                    </div>
+
+                    <!-- Final Order Button -->
+                    <button id="placeOrder" 
+                            class="w-full px-6 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-xl font-semibold text-lg hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 mb-6">
+                        <span id="orderText">Finaliser la commande</span>
+                        <span id="orderSpinner" class="hidden ml-2">
+                            <svg class="animate-spin h-5 w-5 text-white inline" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                                <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l-3-2.647z"></path>
+                            </svg>
+                        </span>
+                    </button>
+
+                    <!-- Terms and Conditions -->
+                    <div class="mb-4">
+                        <label class="flex items-start">
+                            <input type="checkbox" id="termsAccept" required class="h-4 w-4 text-indigo-600 bg-white dark:bg-gray-700 border-gray-300 dark:border-gray-600 rounded focus:ring-indigo-500 mt-0.5">
+                            <span class="ml-2 text-sm text-gray-600 dark:text-gray-400">
+                                J'accepte les <a href="../legal/terms.html" class="text-indigo-600 dark:text-indigo-400 hover:text-indigo-500 underline" target="_blank">conditions générales</a> 
+                                et la <a href="../legal/privacy.html" class="text-indigo-600 dark:text-indigo-400 hover:text-indigo-500 underline" target="_blank">politique de confidentialité</a>
+                            </span>
+                        </label>
+                    </div>
+
+                    <!-- Security Notice -->
+                    <div class="bg-gray-50 dark:bg-gray-700 rounded-lg p-4">
+                        <div class="flex items-center space-x-2">
+                            <svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                            </svg>
+                            <div>
+                                <p class="text-sm font-medium text-gray-900 dark:text-white">Paiement 100% sécurisé</p>
+                                <p class="text-xs text-gray-600 dark:text-gray-400">Vos données sont chiffrées SSL 256-bit</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        // Payment method toggle
+        document.querySelectorAll('input[name="payment"]').forEach(radio => {
+            radio.addEventListener('change', function() {
+                const cardDetails = document.getElementById('cardDetails');
+                
+                // Update payment option styles
+                document.querySelectorAll('.payment-option').forEach(option => {
+                    option.classList.remove('border-indigo-200', 'bg-indigo-50', 'dark:bg-indigo-900/20', 'dark:border-indigo-700');
+                    option.classList.add('border-gray-200', 'dark:border-gray-600');
+                });
+                
+                this.closest('.payment-option').classList.remove('border-gray-200', 'dark:border-gray-600');
+                this.closest('.payment-option').classList.add('border-indigo-200', 'bg-indigo-50', 'dark:bg-indigo-900/20', 'dark:border-indigo-700');
+                
+                // Show/hide card details
+                if (this.value === 'card') {
+                    cardDetails.classList.remove('hidden');
+                } else {
+                    cardDetails.classList.add('hidden');
+                }
+            });
+        });
+
+        // Shipping method toggle
+        document.querySelectorAll('input[name="shipping"]').forEach(radio => {
+            radio.addEventListener('change', function() {
+                // Update shipping option styles
+                document.querySelectorAll('.shipping-option').forEach(option => {
+                    option.classList.remove('border-green-200', 'bg-green-50', 'dark:bg-green-900/20', 'dark:border-green-700');
+                    option.classList.add('border-gray-200', 'dark:border-gray-600');
+                });
+                
+                this.closest('.shipping-option').classList.remove('border-gray-200', 'dark:border-gray-600');
+                this.closest('.shipping-option').classList.add('border-green-200', 'bg-green-50', 'dark:bg-green-900/20', 'dark:border-green-700');
+                
+                // Update shipping cost
+                updateShippingCost(this.value);
+            });
+        });
+
+        function updateShippingCost(method) {
+            const shippingCostElement = document.getElementById('shippingCost');
+            const finalTotalElement = document.getElementById('finalTotal');
+            let shippingCost = 0;
+            let baseTotal = 307.00;
+            
+            switch(method) {
+                case 'standard':
+                    shippingCost = 0;
+                    shippingCostElement.innerHTML = '<span class="text-green-600 dark:text-green-400 font-medium">Gratuite</span>';
+                    break;
+                case 'express':
+                    shippingCost = 9.90;
+                    shippingCostElement.textContent = '9,90 €';
+                    break;
+                case 'premium':
+                    shippingCost = 14.90;
+                    shippingCostElement.textContent = '14,90 €';
+                    break;
+            }
+            
+            finalTotalElement.textContent = (baseTotal + shippingCost).toFixed(2) + ' €';
+        }
+
+        // Card number formatting
+        document.getElementById('cardNumber').addEventListener('input', function(e) {
+            let value = e.target.value.replace(/\s/g, '').replace(/\D/g, '');
+            let formattedValue = value.replace(/(.{4})/g, '$1 ').trim();
+            if (formattedValue.length > 19) formattedValue = formattedValue.slice(0, 19);
+            e.target.value = formattedValue;
+        });
+
+        // Card expiry formatting
+        document.getElementById('cardExpiry').addEventListener('input', function(e) {
+            let value = e.target.value.replace(/\D/g, '');
+            if (value.length >= 2) {
+                value = value.substring(0, 2) + '/' + value.substring(2, 4);
+            }
+            e.target.value = value;
+        });
+
+        // CVV formatting
+        document.getElementById('cardCVV').addEventListener('input', function(e) {
+            e.target.value = e.target.value.replace(/\D/g, '');
+        });
+
+        // Phone formatting
+        document.getElementById('phone').addEventListener('input', function(e) {
+            let value = e.target.value.replace(/\D/g, '');
+            if (value.length > 10) value = value.slice(0, 10);
+            
+            if (value.length >= 6) {
+                value = value.replace(/(\d{2})(\d{2})(\d{2})(\d{2})(\d{2})/, '$1 $2 $3 $4 $5');
+            } else if (value.length >= 4) {
+                value = value.replace(/(\d{2})(\d{2})(\d{2})/, '$1 $2 $3');
+            } else if (value.length >= 2) {
+                value = value.replace(/(\d{2})/, '$1');
+            }
+            
+            e.target.value = value;
+        });
+
+        // Postal code formatting
+        document.getElementById('postalCode').addEventListener('input', function(e) {
+            e.target.value = e.target.value.replace(/\D/g, '');
+        });
+
+        // Place order
+        document.getElementById('placeOrder').addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            // Check terms acceptance
+            if (!document.getElementById('termsAccept').checked) {
+                alert('Veuillez accepter les conditions générales pour continuer.');
+                return;
+            }
+            
+            // Basic form validation
+            const requiredFields = ['email', 'firstName', 'lastName', 'address', 'postalCode', 'city', 'phone'];
+            let isValid = true;
+            
+            requiredFields.forEach(fieldId => {
+                const field = document.getElementById(fieldId);
+                if (!field.value.trim()) {
+                    field.classList.add('border-red-500', 'focus:ring-red-500');
+                    field.classList.remove('border-gray-300', 'focus:ring-indigo-500');
+                    isValid = false;
+                } else {
+                    field.classList.remove('border-red-500', 'focus:ring-red-500');
+                    field.classList.add('border-gray-300', 'focus:ring-indigo-500');
+                }
+            });
+            
+            // Validate card details if card payment is selected
+            const selectedPayment = document.querySelector('input[name="payment"]:checked').value;
+            if (selectedPayment === 'card') {
+                const cardFields = ['cardNumber', 'cardExpiry', 'cardCVV', 'cardName'];
+                cardFields.forEach(fieldId => {
+                    const field = document.getElementById(fieldId);
+                    if (!field.value.trim()) {
+                        field.classList.add('border-red-500', 'focus:ring-red-500');
+                        field.classList.remove('border-gray-300', 'focus:ring-indigo-500');
+                        isValid = false;
+                    } else {
+                        field.classList.remove('border-red-500', 'focus:ring-red-500');
+                        field.classList.add('border-gray-300', 'focus:ring-indigo-500');
+                    }
+                });
+            }
+            
+            if (!isValid) {
+                alert('Veuillez remplir tous les champs obligatoires.');
+                return;
+            }
+            
+            // Show loading state
+            const orderText = document.getElementById('orderText');
+            const orderSpinner = document.getElementById('orderSpinner');
+            const button = document.getElementById('placeOrder');
+            
+            orderText.classList.add('hidden');
+            orderSpinner.classList.remove('hidden');
+            button.disabled = true;
+            
+            // Simulate order processing
+            setTimeout(() => {
+                // Reset button state
+                orderText.classList.remove('hidden');
+                orderSpinner.classList.add('hidden');
+                button.disabled = false;
+                
+                // Mock success - clear cart and redirect to confirmation page
+                // Clear cart after successful order
+                if (window.cartManager) {
+                    window.cartManager.clearCart();
+                }
+                localStorage.removeItem('techviral_cart');
+                
+                // Save order data for confirmation page
+                const orderData = {
+                    orderId: 'TV-' + Date.now(),
+                    date: new Date().toLocaleDateString('fr-FR'),
+                    email: document.getElementById('email').value,
+                    total: document.getElementById('orderTotal').textContent,
+                    paymentMethod: document.querySelector('input[name="payment"]:checked').value
+                };
+                localStorage.setItem('last_order', JSON.stringify(orderData));
+                
+                // Redirect to confirmation page
+                window.location.href = 'confirmation.html';
+            }, 3000);
+        });
+
+        // Auto-fill city based on postal code (mock data)
+        document.getElementById('postalCode').addEventListener('blur', function(e) {
+            const postalCode = e.target.value;
+            const cityField = document.getElementById('city');
+            
+            // Mock postal code to city mapping
+            const postalToCity = {
+                '75001': 'Paris',
+                '69000': 'Lyon',
+                '13000': 'Marseille',
+                '31000': 'Toulouse',
+                '44000': 'Nantes'
+            };
+            
+            if (postalToCity[postalCode]) {
+                cityField.value = postalToCity[postalCode];
+            }
+        });
+    </script>
+
+    <!-- Enhanced Checkout System -->
+    <script src="../../assets/js/cart.js"></script>
+    <script src="../../assets/js/forms.js"></script>
+    <script src="../../assets/js/checkout.js"></script>
+    
+    <script>
+        // Load cart data on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            setTimeout(() => {
+                loadCartDataIntoCheckout();
+            }, 500); // Wait for cart.js to load
+        });
+
+        function loadCartDataIntoCheckout() {
+            // Get checkout data from localStorage (saved by cart.js proceedToCheckout)
+            const checkoutData = localStorage.getItem('checkout_data');
+            if (checkoutData) {
+                try {
+                    const data = JSON.parse(checkoutData);
+                    console.log('Loaded checkout data:', data);
+                    
+                    // Update order summary with real cart data
+                    updateOrderSummary(data);
+                } catch (e) {
+                    console.error('Error loading checkout data:', e);
+                }
+            } else {
+                console.warn('No checkout data found, using default values');
+            }
+        }
+
+        function updateOrderSummary(checkoutData) {
+            // Update item count and total
+            const itemCountEl = document.getElementById('itemCount');
+            const subtotalEl = document.getElementById('subtotal');
+            const totalEl = document.getElementById('orderTotal');
+            
+            if (itemCountEl) itemCountEl.textContent = `${checkoutData.itemCount} article${checkoutData.itemCount > 1 ? 's' : ''}`;
+            if (subtotalEl) subtotalEl.textContent = `${checkoutData.total.toFixed(2)} €`;
+            if (totalEl) totalEl.textContent = `${checkoutData.total.toFixed(2)} €`;
+            
+            // Update order items display if container exists
+            const orderItemsContainer = document.getElementById('orderItems');
+            if (orderItemsContainer && checkoutData.cart && checkoutData.cart.length > 0) {
+                orderItemsContainer.innerHTML = checkoutData.cart.map(item => `
+                    <div class="flex items-center justify-between py-2 border-b border-gray-200 dark:border-gray-700">
+                        <div class="flex items-center space-x-3">
+                            <div class="w-12 h-12 bg-gray-200 dark:bg-gray-700 rounded-lg flex items-center justify-center text-2xl">
+                                ${typeof item.image === 'string' && item.image.startsWith('http') ? 
+                                    `<img src="${item.image}" alt="${item.name}" class="w-full h-full object-cover rounded-lg">` : 
+                                    item.image}
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-gray-900 dark:text-white text-sm">${item.name}</h4>
+                                <p class="text-xs text-gray-500 dark:text-gray-400">Quantité: ${item.quantity}</p>
+                            </div>
+                        </div>
+                        <span class="font-medium text-gray-900 dark:text-white">${(item.price * item.quantity).toFixed(2)} €</span>
+                    </div>
+                `).join('');
+            }
+        }
+    </script>
+</body>
+</html>

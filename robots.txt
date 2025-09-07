@@ -1,0 +1,54 @@
+# TechViral - Robots.txt
+# Site optimisé pour les moteurs de recherche et l'expérience utilisateur
+
+User-agent: *
+Allow: /
+
+# Priorités SEO
+Allow: /index.html
+Allow: /pages/categories/
+Allow: /pages/promotions.html
+Allow: /assets/css/
+Allow: /assets/js/
+Allow: /assets/images/
+
+# Fichiers système à exclure
+Disallow: /config/
+Disallow: /docs/
+Disallow: /*.json$
+Disallow: /Base*
+
+# Performance et cache
+Disallow: /assets/temp/
+Disallow: /.claude/
+
+# Sitemap
+Sitemap: https://techviral.com/sitemap.xml
+
+# Délai entre les requêtes (en secondes)
+Crawl-delay: 1
+
+# Directives spécifiques pour les moteurs de recherche majeurs
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+# Interdire les bots malveillants
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /

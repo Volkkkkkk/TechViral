@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoPro HERO 13 Black - Caméra POV Portable 4K | TechViral</title>
+    <meta name="description" content="GoPro HERO 13 Black - Caméra POV portable 4K ultra-légère pour vidéos virales. Stabilisation avancée, étanche, mains libres. Prix: 449€. Livraison gratuite.">
+    <meta name="keywords" content="GoPro HERO 13, caméra POV, 4K, portable, vidéos virales, TikTok, Instagram, mains libres, stabilisation">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="GoPro HERO 13 Black - Caméra POV 4K Portable">
+    <meta property="og:description" content="La caméra parfaite pour créer des vidéos virales en 4K. Stabilisation avancée, design mains libres, étanche jusqu'à 10m.">
+    <meta property="og:type" content="product">
+    <meta property="og:image" content="../../assets/images/products/gopro-hero13-main.jpg">
+    <meta property="og:price:amount" content="449">
+    <meta property="og:price:currency" content="EUR">
+    
+    <!-- Product Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": "GoPro HERO 13 Black - Caméra POV 4K",
+        "image": "../../assets/images/products/gopro-hero13-main.jpg",
+        "description": "Caméra POV portable 4K ultra-légère avec stabilisation avancée HyperSmooth, parfaite pour créer des contenus viraux",
+        "brand": {
+            "@type": "Brand",
+            "name": "GoPro"
+        },
+        "model": "HERO 13 Black",
+        "offers": {
+            "@type": "Offer",
+            "priceCurrency": "EUR",
+            "price": "449.00",
+            "availability": "https://schema.org/InStock",
+            "seller": {
+                "@type": "Organization",
+                "name": "TechViral"
+            }
+        },
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.8",
+            "reviewCount": "127"
+        }
+    }
+    </script>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="../../assets/icons/favicon.ico">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-gray-50 dark:bg-gray-900 font-inter">
+    <!-- Navigation -->
+    <nav class="bg-white/80 dark:bg-gray-900/80 backdrop-blur-md sticky top-0 z-50 border-b border-gray-200 dark:border-gray-700">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <a href="../../index.html" class="flex items-center space-x-3">
+                    <div class="w-10 h-10 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-xl flex items-center justify-center">
+                        <span class="text-white font-bold text-lg">T</span>
+                    </div>
+                    <span class="text-2xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">TechViral</span>
+                </a>
+                
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="../../index.html" class="text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Accueil</a>
+                    <a href="../categories/electronique.html" class="text-indigo-600 dark:text-indigo-400 font-medium">Électronique</a>
+                    <a href="../categories/all.html" class="text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Tous les produits</a>
+                    <a href="../contact.html" class="text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Contact</a>
+                    
+                    <!-- Cart Icon -->
+                    <div class="relative">
+                        <button id="cartBtn" class="flex items-center space-x-2 text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4m2.6 8L6 21H4.6M7 13L5.4 5M7 13l-2.293 2.293c-.39.39-.39 1.024 0 1.414L7 18v-5zM17 13l2.293 2.293c.39.39.39 1.024 0 1.414L17 18v-5z"></path>
+                            </svg>
+                            <span id="cartCount" class="bg-indigo-600 text-white rounded-full w-5 h-5 flex items-center justify-center text-xs">0</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+        <nav class="flex" aria-label="Breadcrumb">
+            <ol class="flex items-center space-x-4">
+                <li>
+                    <div>
+                        <a href="../../index.html" class="text-gray-400 hover:text-gray-500">
+                            <svg class="flex-shrink-0 h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <div class="flex items-center">
+                        <svg class="flex-shrink-0 h-5 w-5 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
+                        </svg>
+                        <a href="../categories/electronique.html" class="ml-4 text-sm font-medium text-gray-500 hover:text-gray-700">Électronique</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="flex items-center">
+                        <svg class="flex-shrink-0 h-5 w-5 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
+                        </svg>
+                        <span class="ml-4 text-sm font-medium text-gray-900 dark:text-white">GoPro HERO 13 Black</span>
+                    </div>
+                </li>
+            </ol>
+        </nav>
+    </div>
+
+    <!-- Product Content -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <!-- Product Images -->
+            <div class="space-y-4">
+                <div class="aspect-square bg-white dark:bg-gray-800 rounded-2xl border border-gray-200 dark:border-gray-700 p-8">
+                    <img id="mainImage" src="../../assets/images/products/camera-pov.webp" alt="GoPro HERO 13 Black" 
+                         class="w-full h-full object-contain hover:scale-110 transition-transform duration-300">
+                </div>
+                
+                <div class="grid grid-cols-4 gap-4">
+                    <div class="aspect-square bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 p-2 cursor-pointer hover:border-indigo-500 transition-colors thumbnail active" data-image="../../assets/images/products/camera-pov.webp">
+                        <img src="../../assets/images/products/camera-pov.webp" alt="Vue principale" class="w-full h-full object-contain">
+                    </div>
+                    <div class="aspect-square bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 p-2 cursor-pointer hover:border-indigo-500 transition-colors thumbnail" data-image="../../assets/images/products/camera-pov-2.webp">
+                        <img src="../../assets/images/products/camera-pov.webp" alt="Vue de côté" class="w-full h-full object-contain">
+                    </div>
+                    <div class="aspect-square bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 p-2 cursor-pointer hover:border-indigo-500 transition-colors thumbnail" data-image="../../assets/images/products/camera-pov-3.webp">
+                        <img src="../../assets/images/products/camera-pov.webp" alt="Accessoires inclus" class="w-full h-full object-contain">
+                    </div>
+                    <div class="aspect-square bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 p-2 cursor-pointer hover:border-indigo-500 transition-colors thumbnail" data-image="../../assets/images/products/camera-pov-4.webp">
+                        <img src="../../assets/images/products/camera-pov.webp" alt="En action" class="w-full h-full object-contain">
+                    </div>
+                </div>
+
+                <!-- Video Preview -->
+                <div class="aspect-video bg-gray-900 rounded-xl overflow-hidden relative">
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <button class="w-20 h-20 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-white/30 transition-colors">
+                            <svg class="w-8 h-8 text-white ml-1" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M8 5v14l11-7z"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <img src="../../assets/images/products/camera-pov.webp" alt="Vidéo démo" class="w-full h-full object-cover opacity-70">
+                </div>
+            </div>
+
+            <!-- Product Info -->
+            <div class="space-y-8">
+                <!-- Product Header -->
+                <div>
+                    <div class="flex items-center gap-2 mb-2">
+                        <span class="bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200 px-2 py-1 rounded-full text-sm font-medium">🔥 Viral</span>
+                        <span class="bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200 px-2 py-1 rounded-full text-sm font-medium">En stock</span>
+                        <span class="bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200 px-2 py-1 rounded-full text-sm font-medium">Expédition 24h</span>
+                    </div>
+                    
+                    <h1 class="text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+                        GoPro HERO 13 Black - Caméra POV Portable 4K
+                    </h1>
+                    
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="flex items-center">
+                            <div class="flex text-yellow-400">
+                                ⭐⭐⭐⭐⭐
+                            </div>
+                            <span class="ml-2 text-sm text-gray-600 dark:text-gray-400">(127 avis)</span>
+                        </div>
+                        <span class="text-sm text-gray-500 dark:text-gray-400">SKU: GP-H13-BLK-001</span>
+                    </div>
+                    
+                    <div class="flex items-center gap-4">
+                        <span class="text-4xl font-bold text-indigo-600 dark:text-indigo-400">449,00 €</span>
+                        <span class="text-xl text-gray-500 dark:text-gray-400 line-through">599,00 €</span>
+                        <span class="bg-red-500 text-white px-2 py-1 rounded text-sm font-medium">-25%</span>
+                    </div>
+                    
+                    <p class="text-gray-600 dark:text-gray-300 mt-4">
+                        La caméra parfaite pour créer des vidéos virales sur TikTok et Instagram. Conception mains libres avec stabilisation HyperSmooth 6.0 et qualité d'image 4K exceptionnelle.
+                    </p>
+                </div>
+
+                <!-- Key Features -->
+                <div class="bg-gray-50 dark:bg-gray-800 rounded-xl p-6">
+                    <h3 class="font-semibold text-gray-900 dark:text-white mb-4">✨ Points forts</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-center text-gray-700 dark:text-gray-300">
+                            <svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Vidéo 4K à 60fps pour un rendu ultra-net
+                        </li>
+                        <li class="flex items-center text-gray-700 dark:text-gray-300">
+                            <svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Stabilisation HyperSmooth 6.0 révolutionnaire
+                        </li>
+                        <li class="flex items-center text-gray-700 dark:text-gray-300">
+                            <svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Étanche jusqu'à 10m sans boîtier
+                        </li>
+                        <li class="flex items-center text-gray-700 dark:text-gray-300">
+                            <svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Batterie longue durée (70 minutes)
+                        </li>
+                        <li class="flex items-center text-gray-700 dark:text-gray-300">
+                            <svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Écran tactile arrière 2,27" + écran avant 1,4"
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Variants -->
+                <div class="space-y-4">
+                    <h3 class="font-semibold text-gray-900 dark:text-white">Pack choisi :</h3>
+                    <div class="grid grid-cols-1 gap-3">
+                        <label class="pack-option flex items-center justify-between p-4 border-2 border-indigo-500 bg-indigo-50 dark:bg-indigo-900/20 rounded-lg cursor-pointer">
+                            <input type="radio" name="pack" value="essential" checked class="sr-only">
+                            <div>
+                                <h4 class="font-medium text-gray-900 dark:text-white">Pack Essentiel</h4>
+                                <p class="text-sm text-gray-600 dark:text-gray-400">Caméra + Batterie + Carte SD 64Go</p>
+                            </div>
+                            <span class="font-bold text-indigo-600 dark:text-indigo-400">449€</span>
+                        </label>
+                        
+                        <label class="pack-option flex items-center justify-between p-4 border-2 border-gray-200 dark:border-gray-700 rounded-lg cursor-pointer hover:border-indigo-300">
+                            <input type="radio" name="pack" value="creator" class="sr-only">
+                            <div>
+                                <h4 class="font-medium text-gray-900 dark:text-white">Pack Créateur</h4>
+                                <p class="text-sm text-gray-600 dark:text-gray-400">+ Selfie Stick + Trépied + Étui de transport</p>
+                            </div>
+                            <span class="font-bold text-gray-900 dark:text-white">579€</span>
+                        </label>
+                        
+                        <label class="pack-option flex items-center justify-between p-4 border-2 border-gray-200 dark:border-gray-700 rounded-lg cursor-pointer hover:border-indigo-300">
+                            <input type="radio" name="pack" value="pro" class="sr-only">
+                            <div>
+                                <h4 class="font-medium text-gray-900 dark:text-white">Pack Pro</h4>
+                                <p class="text-sm text-gray-600 dark:text-gray-400">+ Stabilisateur + Micro + Éclairage LED</p>
+                            </div>
+                            <span class="font-bold text-gray-900 dark:text-white">749€</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Quantity & Add to Cart -->
+                <div class="flex items-center space-x-4">
+                    <div class="flex items-center border border-gray-300 dark:border-gray-600 rounded-lg">
+                        <button id="decreaseQty" class="px-4 py-3 text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 12H4"></path>
+                            </svg>
+                        </button>
+                        <span id="quantity" class="px-4 py-3 text-gray-900 dark:text-white font-medium">1</span>
+                        <button id="increaseQty" class="px-4 py-3 text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
+                            </svg>
+                        </button>
+                    </div>
+                    
+                    <button id="addToCart" class="add-to-cart flex-1 px-8 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-xl font-semibold text-lg hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
+                        🛒 Ajouter au panier - <span id="currentPrice">449€</span>
+                    </button>
+                </div>
+
+                <!-- Buy Now -->
+                <button class="w-full px-8 py-4 bg-orange-500 text-white rounded-xl font-semibold text-lg hover:bg-orange-600 transition-colors">
+                    ⚡ Acheter maintenant
+                </button>
+
+                <!-- Shipping Info -->
+                <div class="bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-700 rounded-lg p-4">
+                    <div class="flex items-center space-x-3">
+                        <svg class="w-6 h-6 text-green-600 dark:text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 8h14M5 8a2 2 0 110-4h1.586a1 1 0 01.707.293l1.414 1.414a1 1 0 00.707.293H19a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"></path>
+                        </svg>
+                        <div>
+                            <p class="font-medium text-green-800 dark:text-green-200">Livraison gratuite</p>
+                            <p class="text-sm text-green-600 dark:text-green-400">Commandez avant 15h, expédié aujourd'hui</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Guarantees -->
+                <div class="grid grid-cols-3 gap-4">
+                    <div class="text-center">
+                        <div class="w-12 h-12 bg-indigo-100 dark:bg-indigo-900 rounded-full flex items-center justify-center mx-auto mb-2">
+                            <svg class="w-6 h-6 text-indigo-600 dark:text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                            </svg>
+                        </div>
+                        <p class="text-sm font-medium text-gray-900 dark:text-white">Garantie 2 ans</p>
+                    </div>
+                    
+                    <div class="text-center">
+                        <div class="w-12 h-12 bg-indigo-100 dark:bg-indigo-900 rounded-full flex items-center justify-center mx-auto mb-2">
+                            <svg class="w-6 h-6 text-indigo-600 dark:text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h10a8 8 0 018 8v2M3 10l6 6m-6-6v8a2 2 0 002 2h8.586A2 2 0 0015 19.414L21 13.414A2 2 0 0021 12V8a8 8 0 00-8-8H3z"></path>
+                            </svg>
+                        </div>
+                        <p class="text-sm font-medium text-gray-900 dark:text-white">Retour 30 jours</p>
+                    </div>
+                    
+                    <div class="text-center">
+                        <div class="w-12 h-12 bg-indigo-100 dark:bg-indigo-900 rounded-full flex items-center justify-center mx-auto mb-2">
+                            <svg class="w-6 h-6 text-indigo-600 dark:text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z"></path>
+                            </svg>
+                        </div>
+                        <p class="text-sm font-medium text-gray-900 dark:text-white">Support 7j/7</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Detailed Specs -->
+        <div class="mt-16">
+            <div class="bg-white dark:bg-gray-800 rounded-2xl border border-gray-200 dark:border-gray-700 overflow-hidden">
+                <div class="border-b border-gray-200 dark:border-gray-700">
+                    <nav class="-mb-px flex">
+                        <button class="spec-tab active py-4 px-8 text-sm font-medium text-indigo-600 dark:text-indigo-400 border-b-2 border-indigo-600 dark:border-indigo-400" data-tab="specs">
+                            Spécifications
+                        </button>
+                        <button class="spec-tab py-4 px-8 text-sm font-medium text-gray-500 dark:text-gray-400 border-b-2 border-transparent hover:text-gray-700 dark:hover:text-gray-300" data-tab="included">
+                            Contenu du pack
+                        </button>
+                        <button class="spec-tab py-4 px-8 text-sm font-medium text-gray-500 dark:text-gray-400 border-b-2 border-transparent hover:text-gray-700 dark:hover:text-gray-300" data-tab="reviews">
+                            Avis clients (127)
+                        </button>
+                    </nav>
+                </div>
+                
+                <div class="p-8">
+                    <!-- Specifications -->
+                    <div id="specs-content" class="spec-content">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                            <div>
+                                <h3 class="font-semibold text-gray-900 dark:text-white mb-4">Vidéo</h3>
+                                <ul class="space-y-2 text-gray-600 dark:text-gray-300">
+                                    <li>• Résolution : 5.3K à 60fps, 4K à 120fps</li>
+                                    <li>• Stabilisation : HyperSmooth 6.0</li>
+                                    <li>• Format : MP4 (H.264 / H.265)</li>
+                                    <li>• Slow Motion : 8x à 2.7K</li>
+                                    <li>• TimeWarp 3.0 inclus</li>
+                                </ul>
+                            </div>
+                            
+                            <div>
+                                <h3 class="font-semibold text-gray-900 dark:text-white mb-4">Photo</h3>
+                                <ul class="space-y-2 text-gray-600 dark:text-gray-300">
+                                    <li>• Résolution : 27MP</li>
+                                    <li>• Format : JPEG, RAW</li>
+                                    <li>• HDR automatique</li>
+                                    <li>• Burst : 30 photos/seconde</li>
+                                    <li>• Modes : Portrait, Nuit, Action</li>
+                                </ul>
+                            </div>
+                            
+                            <div>
+                                <h3 class="font-semibold text-gray-900 dark:text-white mb-4">Autonomie & Stockage</h3>
+                                <ul class="space-y-2 text-gray-600 dark:text-gray-300">
+                                    <li>• Batterie : 1720mAh (70 minutes)</li>
+                                    <li>• Charge rapide : 50% en 30 minutes</li>
+                                    <li>• Carte SD : jusqu'à 1TB (incluse 64GB)</li>
+                                    <li>• Stockage cloud GoPro</li>
+                                </ul>
+                            </div>
+                            
+                            <div>
+                                <h3 class="font-semibold text-gray-900 dark:text-white mb-4">Conception</h3>
+                                <ul class="space-y-2 text-gray-600 dark:text-gray-300">
+                                    <li>• Dimensions : 71.8 × 50.8 × 33.6 mm</li>
+                                    <li>• Poids : 154g</li>
+                                    <li>• Étanchéité : 10m sans boîtier</li>
+                                    <li>• Écrans : Tactile arrière 2.27" + avant 1.4"</li>
+                                    <li>• Matériaux : Polycarbonate renforcé</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pack Contents -->
+                    <div id="included-content" class="spec-content hidden">
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                            <div class="text-center">
+                                <div class="w-20 h-20 bg-gray-100 dark:bg-gray-700 rounded-xl flex items-center justify-center mx-auto mb-4">
+                                    <svg class="w-10 h-10 text-gray-600 dark:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"></path>
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                    </svg>
+                                </div>
+                                <h3 class="font-medium text-gray-900 dark:text-white mb-2">GoPro HERO 13 Black</h3>
+                                <p class="text-sm text-gray-600 dark:text-gray-400">Caméra principale</p>
+                            </div>
+                            
+                            <div class="text-center">
+                                <div class="w-20 h-20 bg-gray-100 dark:bg-gray-700 rounded-xl flex items-center justify-center mx-auto mb-4">
+                                    <svg class="w-10 h-10 text-gray-600 dark:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                                    </svg>
+                                </div>
+                                <h3 class="font-medium text-gray-900 dark:text-white mb-2">Batterie Enduro</h3>
+                                <p class="text-sm text-gray-600 dark:text-gray-400">1720mAh longue durée</p>
+                            </div>
+                            
+                            <div class="text-center">
+                                <div class="w-20 h-20 bg-gray-100 dark:bg-gray-700 rounded-xl flex items-center justify-center mx-auto mb-4">
+                                    <svg class="w-10 h-10 text-gray-600 dark:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                                    </svg>
+                                </div>
+                                <h3 class="font-medium text-gray-900 dark:text-white mb-2">Carte SD 64GB</h3>
+                                <p class="text-sm text-gray-600 dark:text-gray-400">Classe 10, U3, V30</p>
+                            </div>
+                            
+                            <div class="text-center">
+                                <div class="w-20 h-20 bg-gray-100 dark:bg-gray-700 rounded-xl flex items-center justify-center mx-auto mb-4">
+                                    <svg class="w-10 h-10 text-gray-600 dark:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                                    </svg>
+                                </div>
+                                <h3 class="font-medium text-gray-900 dark:text-white mb-2">Câble USB-C</h3>
+                                <p class="text-sm text-gray-600 dark:text-gray-400">Charge et transfert</p>
+                            </div>
+                            
+                            <div class="text-center">
+                                <div class="w-20 h-20 bg-gray-100 dark:bg-gray-700 rounded-xl flex items-center justify-center mx-auto mb-4">
+                                    <svg class="w-10 h-10 text-gray-600 dark:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                                    </svg>
+                                </div>
+                                <h3 class="font-medium text-gray-900 dark:text-white mb-2">Guide d'utilisation</h3>
+                                <p class="text-sm text-gray-600 dark:text-gray-400">Manuel + QR codes tutoriels</p>
+                            </div>
+                            
+                            <div class="text-center">
+                                <div class="w-20 h-20 bg-gray-100 dark:bg-gray-700 rounded-xl flex items-center justify-center mx-auto mb-4">
+                                    <svg class="w-10 h-10 text-gray-600 dark:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zM7 3H5a2 2 0 00-2 2v12a4 4 0 004 4h2a2 2 0 002-2V5a2 2 0 00-2-2z"></path>
+                                    </svg>
+                                </div>
+                                <h3 class="font-medium text-gray-900 dark:text-white mb-2">Stickers</h3>
+                                <p class="text-sm text-gray-600 dark:text-gray-400">Pack de 3 autocollants GoPro</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Reviews -->
+                    <div id="reviews-content" class="spec-content hidden">
+                        <div class="space-y-6">
+                            <div class="flex items-center justify-between">
+                                <div>
+                                    <div class="flex items-center gap-2">
+                                        <div class="text-3xl font-bold text-gray-900 dark:text-white">4.8</div>
+                                        <div class="text-yellow-400 text-xl">⭐⭐⭐⭐⭐</div>
+                                    </div>
+                                    <p class="text-gray-600 dark:text-gray-400">Basé sur 127 avis</p>
+                                </div>
+                                
+                                <div class="space-y-2">
+                                    <div class="flex items-center gap-2">
+                                        <span class="text-sm">5⭐</span>
+                                        <div class="w-32 h-2 bg-gray-200 dark:bg-gray-700 rounded-full">
+                                            <div class="w-4/5 h-2 bg-yellow-400 rounded-full"></div>
+                                        </div>
+                                        <span class="text-sm text-gray-600 dark:text-gray-400">102</span>
+                                    </div>
+                                    <div class="flex items-center gap-2">
+                                        <span class="text-sm">4⭐</span>
+                                        <div class="w-32 h-2 bg-gray-200 dark:bg-gray-700 rounded-full">
+                                            <div class="w-1/5 h-2 bg-yellow-400 rounded-full"></div>
+                                        </div>
+                                        <span class="text-sm text-gray-600 dark:text-gray-400">18</span>
+                                    </div>
+                                    <div class="flex items-center gap-2">
+                                        <span class="text-sm">3⭐</span>
+                                        <div class="w-32 h-2 bg-gray-200 dark:bg-gray-700 rounded-full">
+                                            <div class="w-1/12 h-2 bg-yellow-400 rounded-full"></div>
+                                        </div>
+                                        <span class="text-sm text-gray-600 dark:text-gray-400">5</span>
+                                    </div>
+                                    <div class="flex items-center gap-2">
+                                        <span class="text-sm">2⭐</span>
+                                        <div class="w-32 h-2 bg-gray-200 dark:bg-gray-700 rounded-full"></div>
+                                        <span class="text-sm text-gray-600 dark:text-gray-400">2</span>
+                                    </div>
+                                    <div class="flex items-center gap-2">
+                                        <span class="text-sm">1⭐</span>
+                                        <div class="w-32 h-2 bg-gray-200 dark:bg-gray-700 rounded-full"></div>
+                                        <span class="text-sm text-gray-600 dark:text-gray-400">0</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="space-y-6">
+                                <!-- Review 1 -->
+                                <div class="border-b border-gray-200 dark:border-gray-700 pb-6">
+                                    <div class="flex items-center gap-4 mb-3">
+                                        <div class="w-10 h-10 bg-indigo-600 rounded-full flex items-center justify-center text-white font-medium">M</div>
+                                        <div>
+                                            <div class="flex items-center gap-2">
+                                                <span class="font-medium text-gray-900 dark:text-white">Marc D.</span>
+                                                <div class="text-yellow-400">⭐⭐⭐⭐⭐</div>
+                                            </div>
+                                            <p class="text-sm text-gray-600 dark:text-gray-400">Il y a 3 jours</p>
+                                        </div>
+                                    </div>
+                                    <p class="text-gray-700 dark:text-gray-300">
+                                        "Parfait pour mes vidéos de surf ! La stabilisation est impressionnante, même dans les vagues. La qualité 4K est top et l'autonomie tient largement une session complète."
+                                    </p>
+                                </div>
+
+                                <!-- Review 2 -->
+                                <div class="border-b border-gray-200 dark:border-gray-700 pb-6">
+                                    <div class="flex items-center gap-4 mb-3">
+                                        <div class="w-10 h-10 bg-pink-500 rounded-full flex items-center justify-center text-white font-medium">S</div>
+                                        <div>
+                                            <div class="flex items-center gap-2">
+                                                <span class="font-medium text-gray-900 dark:text-white">Sarah L.</span>
+                                                <div class="text-yellow-400">⭐⭐⭐⭐⭐</div>
+                                            </div>
+                                            <p class="text-sm text-gray-600 dark:text-gray-400">Il y a 1 semaine</p>
+                                        </div>
+                                    </div>
+                                    <p class="text-gray-700 dark:text-gray-300">
+                                        "J'utilise cette GoPro pour mes contenus TikTok et Instagram. Les couleurs sont vives, la netteté parfaite et elle est vraiment facile à utiliser. Mes vidéos ont explosé en vues !"
+                                    </p>
+                                </div>
+
+                                <!-- Review 3 -->
+                                <div class="border-b border-gray-200 dark:border-gray-700 pb-6">
+                                    <div class="flex items-center gap-4 mb-3">
+                                        <div class="w-10 h-10 bg-green-600 rounded-full flex items-center justify-center text-white font-medium">A</div>
+                                        <div>
+                                            <div class="flex items-center gap-2">
+                                                <span class="font-medium text-gray-900 dark:text-white">Antoine R.</span>
+                                                <div class="text-yellow-400">⭐⭐⭐⭐⭐</div>
+                                            </div>
+                                            <p class="text-sm text-gray-600 dark:text-gray-400">Il y a 2 semaines</p>
+                                        </div>
+                                    </div>
+                                    <p class="text-gray-700 dark:text-gray-300">
+                                        "Livraison ultra rapide ! La caméra est arrivée le lendemain. Qualité de construction excellente, très robuste. Je recommande vivement pour tous les aventuriers."
+                                    </p>
+                                </div>
+                            </div>
+
+                            <button class="text-indigo-600 dark:text-indigo-400 hover:text-indigo-500 font-medium">
+                                Voir tous les avis →
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Related Products -->
+        <div class="mt-16">
+            <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-8">Produits complémentaires</h2>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Accessory 1 -->
+                <div class="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-4 hover:shadow-lg transition-shadow">
+                    <img src="../../assets/images/products/gopro-accessories.webp" alt="Selfie Stick GoPro" class="w-full aspect-square object-cover rounded-lg mb-4">
+                    <h3 class="font-medium text-gray-900 dark:text-white mb-2">Selfie Stick GoPro</h3>
+                    <div class="flex items-center justify-between">
+                        <span class="text-lg font-bold text-indigo-600 dark:text-indigo-400">39,99 €</span>
+                        <button class="px-4 py-2 bg-indigo-600 text-white rounded-lg text-sm hover:bg-indigo-700 transition-colors">
+                            Ajouter
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Accessory 2 -->
+                <div class="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-4 hover:shadow-lg transition-shadow">
+                    <img src="../../assets/images/products/gopro-case.webp" alt="Étui de transport" class="w-full aspect-square object-cover rounded-lg mb-4">
+                    <h3 class="font-medium text-gray-900 dark:text-white mb-2">Étui de transport</h3>
+                    <div class="flex items-center justify-between">
+                        <span class="text-lg font-bold text-indigo-600 dark:text-indigo-400">24,99 €</span>
+                        <button class="px-4 py-2 bg-indigo-600 text-white rounded-lg text-sm hover:bg-indigo-700 transition-colors">
+                            Ajouter
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Accessory 3 -->
+                <div class="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-4 hover:shadow-lg transition-shadow">
+                    <img src="../../assets/images/products/tripod.webp" alt="Trépied flexible" class="w-full aspect-square object-cover rounded-lg mb-4">
+                    <h3 class="font-medium text-gray-900 dark:text-white mb-2">Trépied flexible</h3>
+                    <div class="flex items-center justify-between">
+                        <span class="text-lg font-bold text-indigo-600 dark:text-indigo-400">19,99 €</span>
+                        <button class="px-4 py-2 bg-indigo-600 text-white rounded-lg text-sm hover:bg-indigo-700 transition-colors">
+                            Ajouter
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Accessory 4 -->
+                <div class="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-4 hover:shadow-lg transition-shadow">
+                    <img src="../../assets/images/products/sd-card.webp" alt="Carte SD 128GB" class="w-full aspect-square object-cover rounded-lg mb-4">
+                    <h3 class="font-medium text-gray-900 dark:text-white mb-2">Carte SD 128GB</h3>
+                    <div class="flex items-center justify-between">
+                        <span class="text-lg font-bold text-indigo-600 dark:text-indigo-400">29,99 €</span>
+                        <button class="px-4 py-2 bg-indigo-600 text-white rounded-lg text-sm hover:bg-indigo-700 transition-colors">
+                            Ajouter
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12 mt-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="col-span-1 md:col-span-2">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="w-10 h-10 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-xl flex items-center justify-center">
+                            <span class="text-white font-bold text-lg">T</span>
+                        </div>
+                        <span class="text-2xl font-bold">TechViral</span>
+                    </div>
+                    <p class="text-gray-400 mb-4">Les produits les plus innovants de 2025 à portée de clic. Livraison rapide et support client exceptionnel.</p>
+                </div>
+                
+                <div>
+                    <h3 class="font-semibold mb-4">Support</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="../support/faq.html" class="hover:text-white transition-colors">FAQ</a></li>
+                        <li><a href="../contact.html" class="hover:text-white transition-colors">Contact</a></li>
+                        <li><a href="../support/shipping.html" class="hover:text-white transition-colors">Livraison</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="font-semibold mb-4">Légal</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="../legal/terms.html" class="hover:text-white transition-colors">CGV</a></li>
+                        <li><a href="../legal/privacy.html" class="hover:text-white transition-colors">Confidentialité</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Image gallery
+        document.querySelectorAll('.thumbnail').forEach(thumb => {
+            thumb.addEventListener('click', function() {
+                document.querySelectorAll('.thumbnail').forEach(t => t.classList.remove('active'));
+                this.classList.add('active');
+                document.getElementById('mainImage').src = this.dataset.image;
+            });
+        });
+
+        // Quantity controls
+        let quantity = 1;
+        document.getElementById('increaseQty').addEventListener('click', () => {
+            quantity++;
+            document.getElementById('quantity').textContent = quantity;
+        });
+
+        document.getElementById('decreaseQty').addEventListener('click', () => {
+            if (quantity > 1) {
+                quantity--;
+                document.getElementById('quantity').textContent = quantity;
+            }
+        });
+
+        // Pack selection
+        document.querySelectorAll('input[name="pack"]').forEach(pack => {
+            pack.addEventListener('change', function() {
+                document.querySelectorAll('.pack-option').forEach(option => {
+                    option.classList.remove('border-indigo-500', 'bg-indigo-50', 'dark:bg-indigo-900/20');
+                    option.classList.add('border-gray-200', 'dark:border-gray-700');
+                });
+                
+                this.closest('.pack-option').classList.add('border-indigo-500', 'bg-indigo-50', 'dark:bg-indigo-900/20');
+                this.closest('.pack-option').classList.remove('border-gray-200', 'dark:border-gray-700');
+                
+                const prices = { essential: 449, creator: 579, pro: 749 };
+                document.getElementById('currentPrice').textContent = prices[this.value] + '€';
+            });
+        });
+
+        // Tabs
+        document.querySelectorAll('.spec-tab').forEach(tab => {
+            tab.addEventListener('click', function() {
+                document.querySelectorAll('.spec-tab').forEach(t => {
+                    t.classList.remove('active', 'text-indigo-600', 'dark:text-indigo-400', 'border-indigo-600', 'dark:border-indigo-400');
+                    t.classList.add('text-gray-500', 'dark:text-gray-400', 'border-transparent');
+                });
+                
+                this.classList.add('active', 'text-indigo-600', 'dark:text-indigo-400', 'border-indigo-600', 'dark:border-indigo-400');
+                this.classList.remove('text-gray-500', 'dark:text-gray-400', 'border-transparent');
+                
+                document.querySelectorAll('.spec-content').forEach(content => {
+                    content.classList.add('hidden');
+                });
+                
+                document.getElementById(this.dataset.tab + '-content').classList.remove('hidden');
+            });
+        });
+
+        // Add to cart
+        document.getElementById('addToCart').addEventListener('click', function() {
+            const selectedPack = document.querySelector('input[name="pack"]:checked').value;
+            const packNames = { essential: 'Pack Essentiel', creator: 'Pack Créateur', pro: 'Pack Pro' };
+            const prices = { essential: 449, creator: 579, pro: 749 };
+            
+            // Animation du bouton
+            this.innerHTML = '✅ Ajouté au panier !';
+            this.classList.add('bg-green-600');
+            this.classList.remove('from-indigo-600', 'to-purple-600');
+            
+            setTimeout(() => {
+                this.innerHTML = `🛒 Ajouter au panier - ${prices[selectedPack]}€`;
+                this.classList.remove('bg-green-600');
+                this.classList.add('from-indigo-600', 'to-purple-600');
+            }, 2000);
+            
+            // Update cart count
+            let currentCount = parseInt(document.getElementById('cartCount').textContent);
+            document.getElementById('cartCount').textContent = currentCount + quantity;
+            
+            alert(`${packNames[selectedPack]} ajouté au panier (${quantity} x ${prices[selectedPack]}€)`);
+        });
+    </script>
+</body>
+</html>

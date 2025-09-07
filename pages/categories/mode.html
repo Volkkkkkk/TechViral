@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mode & Accessoires - TechViral | Wearables et Fashion Tech</title>
+    <meta name="description" content="Découvrez notre sélection de mode connectée : montres intelligentes, bijoux tech, vêtements connectés et accessoires high-tech tendance.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="icon" href="../../assets/images/favicon.ico">
+</head>
+<body class="bg-gradient-to-br from-purple-50 to-pink-50 min-h-screen">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center space-x-4">
+                    <a href="../../index.html" class="flex items-center space-x-2">
+                        <i class="fas fa-bolt text-2xl text-blue-600"></i>
+                        <span class="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">TechViral</span>
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center space-x-6">
+                    <a href="../../index.html" class="text-gray-700 hover:text-blue-600 transition-colors">Accueil</a>
+                    <a href="all.html" class="text-gray-700 hover:text-blue-600 transition-colors">Catégories</a>
+                    <a href="../promotions.html" class="text-red-600 hover:text-red-700 transition-colors font-medium">🔥 Promotions</a>
+                    <a href="../contact.html" class="text-gray-700 hover:text-blue-600 transition-colors">Contact</a>
+                </div>
+                <div class="flex items-center space-x-3">
+                    <button id="cartButton" class="relative p-2 rounded-full bg-gradient-to-r from-purple-500 to-pink-600 text-white hover:shadow-lg transition-all">
+                        <i class="fas fa-shopping-cart w-5 h-5"></i>
+                        <span id="cartCount" class="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center font-bold">0</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Coming Soon Section -->
+    <section class="py-20">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <div class="bg-white rounded-3xl shadow-2xl p-12">
+                <div class="mb-8">
+                    <i class="fas fa-tshirt text-6xl text-purple-500 mb-6"></i>
+                    <h1 class="text-4xl lg:text-5xl font-bold text-gray-800 mb-6">
+                        Catégorie <span class="text-purple-500">Mode & Accessoires</span>
+                    </h1>
+                    <div class="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-100 to-pink-100 rounded-full text-purple-800 font-medium text-lg mb-8">
+                        <i class="fas fa-tools mr-3"></i>
+                        Bientôt Disponible
+                    </div>
+                </div>
+                
+                <p class="text-xl text-gray-600 mb-8 leading-relaxed">
+                    Nous préparons une collection exclusive de mode connectée et d'accessoires tech : 
+                    montres intelligentes, bijoux connectés, vêtements high-tech et accessoires tendance.
+                </p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+                    <div class="p-6 bg-purple-50 rounded-2xl">
+                        <i class="fas fa-watch text-3xl text-purple-600 mb-4"></i>
+                        <h3 class="text-lg font-bold text-gray-800 mb-2">Wearables Premium</h3>
+                        <p class="text-gray-600">Montres et bijoux connectés design et performants</p>
+                    </div>
+                    <div class="p-6 bg-pink-50 rounded-2xl">
+                        <i class="fas fa-gem text-3xl text-pink-600 mb-4"></i>
+                        <h3 class="text-lg font-bold text-gray-800 mb-2">Fashion Tech</h3>
+                        <p class="text-gray-600">Vêtements intelligents et accessoires innovants</p>
+                    </div>
+                    <div class="p-6 bg-rose-50 rounded-2xl">
+                        <i class="fas fa-star text-3xl text-rose-500 mb-4"></i>
+                        <h3 class="text-lg font-bold text-gray-800 mb-2">Style & Performance</h3>
+                        <p class="text-gray-600">L'alliance parfaite entre élégance et technologie</p>
+                    </div>
+                </div>
+
+                <div class="bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl p-8 text-white mb-8">
+                    <h3 class="text-2xl font-bold mb-4">Fashion Tech Revolution</h3>
+                    <p class="mb-6">Soyez les premiers à découvrir nos collections de mode connectée</p>
+                    <div class="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+                        <input type="email" placeholder="Votre adresse email" class="flex-1 px-6 py-3 rounded-xl border-0 focus:outline-none text-gray-900">
+                        <button class="px-8 py-3 bg-white text-purple-600 rounded-xl font-semibold hover:bg-gray-50 transition-colors">
+                            Fashion Alert
+                        </button>
+                    </div>
+                </div>
+
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="all.html" class="px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-xl font-semibold hover:shadow-lg transition-all">
+                        <i class="fas fa-arrow-left mr-2"></i>Toutes les Catégories
+                    </a>
+                    <a href="../../index.html" class="px-8 py-3 bg-gradient-to-r from-gray-100 to-gray-200 text-gray-800 rounded-xl font-semibold hover:shadow-lg transition-all">
+                        <i class="fas fa-home mr-2"></i>Retour Accueil
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="../../assets/js/cart.js"></script>
+</body>
+</html>

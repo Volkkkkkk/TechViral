@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:antiquewhite-rabbit-562143.hostingersite.com)",
+      "Bash(del:*)",
+      "Bash(node:*)",
+      "Bash(find:*)",
+      "WebSearch",
+      "Bash(git init:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

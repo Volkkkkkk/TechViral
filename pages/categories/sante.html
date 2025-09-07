@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Santé & Bien-être - Produits Innovation Wellness 2025 | TechViral</title>
+    <meta name="description" content="Découvrez notre sélection santé & bien-être 2025 : bouteille hydrogène Piurify, casquette cryothérapie, compléments ADHD, accessoires fitness. Livraison gratuite.">
+    <meta name="keywords" content="santé, bien-être, wellness, bouteille hydrogène, cryothérapie, compléments, fitness, innovation santé 2025">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Santé & Bien-être - Innovations Wellness 2025">
+    <meta property="og:description" content="Produits de santé innovants : hydratation optimale, récupération, compléments naturels. Tendances wellness 2025.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="../../assets/images/og-sante.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="../../assets/icons/favicon.ico">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-gray-50 dark:bg-gray-900 font-inter">
+    <!-- Navigation -->
+    <nav class="bg-white/80 dark:bg-gray-900/80 backdrop-blur-md sticky top-0 z-50 border-b border-gray-200 dark:border-gray-700">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <a href="../../index.html" class="flex items-center space-x-3">
+                    <div class="w-10 h-10 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-xl flex items-center justify-center">
+                        <span class="text-white font-bold text-lg">T</span>
+                    </div>
+                    <span class="text-2xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">TechViral</span>
+                </a>
+                
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="../../index.html" class="text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Accueil</a>
+                    <div class="relative group">
+                        <button class="text-indigo-600 dark:text-indigo-400 font-medium flex items-center">
+                            Catégories
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="absolute top-full left-0 mt-2 w-48 bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                            <a href="electronique.html" class="block px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 rounded-t-lg">Électronique</a>
+                            <a href="sante.html" class="block px-4 py-2 text-indigo-600 dark:text-indigo-400 bg-indigo-50 dark:bg-indigo-900/20 font-medium">Santé & Bien-être</a>
+                            <a href="ecologique.html" class="block px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700">Écologique</a>
+                            <a href="animaux.html" class="block px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 rounded-b-lg">Animaux</a>
+                        </div>
+                    </div>
+                    <a href="../contact.html" class="text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Contact</a>
+                    <a href="../cart/index.html" class="flex items-center space-x-2 text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors" id="cartButton">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4m2.6 8L6 21H4.6M7 13L5.4 5M7 13l-2.293 2.293c-.39.39-.39 1.024 0 1.414L7 18v-5zM17 13l2.293 2.293c.39.39.39 1.024 0 1.414L17 18v-5z"></path>
+                        </svg>
+                        <span id="cartCount" class="bg-indigo-600 text-white rounded-full w-5 h-5 flex items-center justify-center text-xs">0</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-br from-green-50 via-blue-50 to-purple-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h1 class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
+                    Santé & <span class="bg-gradient-to-r from-green-600 to-blue-600 bg-clip-text text-transparent">Bien-être</span>
+                </h1>
+                <p class="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto mb-8">
+                    Découvrez les innovations wellness 2025 pour optimiser votre santé : hydratation révolutionnaire, récupération avancée et compléments naturels de nouvelle génération.
+                </p>
+                
+                <!-- Key Statistics -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-green-600 dark:text-green-400">+64%</div>
+                        <div class="text-gray-600 dark:text-gray-400">des consommateurs privilégient les solutions naturelles</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-blue-600 dark:text-blue-400">2025</div>
+                        <div class="text-gray-600 dark:text-gray-400">Année de la révolution hydratation H₂</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-purple-600 dark:text-purple-400">100%</div>
+                        <div class="text-gray-600 dark:text-gray-400">Produits testés et certifiés</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filters & Sort -->
+    <section class="py-8 bg-white dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row gap-6 items-center justify-between">
+                <!-- Category Filters -->
+                <div class="flex flex-wrap gap-3">
+                    <button class="filter-btn active px-4 py-2 rounded-full bg-green-600 text-white font-medium" data-category="all">
+                        Tous les produits
+                    </button>
+                    <button class="filter-btn px-4 py-2 rounded-full bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 font-medium hover:bg-green-100 dark:hover:bg-green-900 transition-colors" data-category="hydration">
+                        Hydratation
+                    </button>
+                    <button class="filter-btn px-4 py-2 rounded-full bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 font-medium hover:bg-green-100 dark:hover:bg-green-900 transition-colors" data-category="recovery">
+                        Récupération
+                    </button>
+                    <button class="filter-btn px-4 py-2 rounded-full bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 font-medium hover:bg-green-100 dark:hover:bg-green-900 transition-colors" data-category="supplements">
+                        Compléments
+                    </button>
+                    <button class="filter-btn px-4 py-2 rounded-full bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 font-medium hover:bg-green-100 dark:hover:bg-green-900 transition-colors" data-category="fitness">
+                        Fitness
+                    </button>
+                </div>
+
+                <!-- Sort Options -->
+                <div class="flex items-center gap-4">
+                    <span class="text-gray-600 dark:text-gray-400">Trier par :</span>
+                    <select id="sortSelect" class="px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-green-500">
+                        <option value="featured">Mis en avant</option>
+                        <option value="price-asc">Prix croissant</option>
+                        <option value="price-desc">Prix décroissant</option>
+                        <option value="newest">Nouveautés</option>
+                        <option value="rating">Mieux notés</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Grid -->
+    <section class="py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div id="productsGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+                
+                <!-- Product 1: Bouteille Hydrogène Piurify -->
+                <div class="product-card bg-white dark:bg-gray-800 rounded-2xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2" data-category="hydration" data-price="199" data-rating="4.7">
+                    <div class="relative">
+                        <img src="../../assets/images/products/bouteille-h2.webp" alt="Bouteille Hydrogène Piurify" class="w-full h-64 object-cover">
+                        <div class="absolute top-4 left-4 flex gap-2">
+                            <span class="px-2 py-1 bg-blue-600 text-white text-xs font-medium rounded-full">💧 Hydratation</span>
+                            <span class="px-2 py-1 bg-red-500 text-white text-xs font-medium rounded-full">-29%</span>
+                        </div>
+                        <div class="absolute top-4 right-4">
+                            <button class="w-8 h-8 bg-white/80 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-white transition-colors">
+                                <svg class="w-4 h-4 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="p-6">
+                        <div class="mb-2">
+                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-1">Bouteille Hydrogène Piurify 1.5L</h3>
+                            <p class="text-gray-600 dark:text-gray-400 text-sm">Eau hydrogénée antioxydante jusqu'à 4000 ppb</p>
+                        </div>
+                        
+                        <div class="flex items-center gap-2 mb-3">
+                            <div class="flex text-yellow-400 text-sm">⭐⭐⭐⭐⭐</div>
+                            <span class="text-gray-500 dark:text-gray-400 text-sm">(89)</span>
+                        </div>
+                        
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center gap-2">
+                                <span class="text-xl font-bold text-blue-600 dark:text-blue-400">199€</span>
+                                <span class="text-sm text-gray-500 dark:text-gray-400 line-through">279€</span>
+                            </div>
+                        </div>
+                        
+                        <div class="space-y-2">
+                            <button class="add-to-cart w-full px-4 py-2 bg-gradient-to-r from-blue-600 to-cyan-600 text-white rounded-lg font-medium hover:from-blue-700 hover:to-cyan-700 transition-colors">
+                                Ajouter au panier
+                            </button>
+                            <a href="../products/bouteille-hydrogene-piurify.html" class="block w-full px-4 py-2 border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 text-center rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
+                                Voir détails
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 2: Casquette Cryothérapie -->
+                <div class="product-card bg-white dark:bg-gray-800 rounded-2xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2" data-category="recovery" data-price="69" data-rating="4.5">
+                    <div class="relative">
+                        <img src="../../assets/images/products/casquette-cryo.webp" alt="Casquette Cryothérapie" class="w-full h-64 object-cover">
+                        <div class="absolute top-4 left-4 flex gap-2">
+                            <span class="px-2 py-1 bg-purple-600 text-white text-xs font-medium rounded-full">❄️ Cryothérapie</span>
+                            <span class="px-2 py-1 bg-orange-500 text-white text-xs font-medium rounded-full">Tendance</span>
+                        </div>
+                        <div class="absolute top-4 right-4">
+                            <button class="w-8 h-8 bg-white/80 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-white transition-colors">
+                                <svg class="w-4 h-4 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="p-6">
+                        <div class="mb-2">
+                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-1">Casquette Cryothérapie TheraICE</h3>
+                            <p class="text-gray-600 dark:text-gray-400 text-sm">Soulagement naturel migraines et tensions</p>
+                        </div>
+                        
+                        <div class="flex items-center gap-2 mb-3">
+                            <div class="flex text-yellow-400 text-sm">⭐⭐⭐⭐⭐</div>
+                            <span class="text-gray-500 dark:text-gray-400 text-sm">(156)</span>
+                        </div>
+                        
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center gap-2">
+                                <span class="text-xl font-bold text-purple-600 dark:text-purple-400">69€</span>
+                                <span class="text-sm text-gray-500 dark:text-gray-400 line-through">89€</span>
+                            </div>
+                        </div>
+                        
+                        <div class="space-y-2">
+                            <button class="add-to-cart w-full px-4 py-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-lg font-medium hover:from-purple-700 hover:to-pink-700 transition-colors">
+                                Ajouter au panier
+                            </button>
+                            <button class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
+                                Voir détails
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 3: Compléments ADHD -->
+                <div class="product-card bg-white dark:bg-gray-800 rounded-2xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2" data-category="supplements" data-price="45" data-rating="4.3">
+                    <div class="relative">
+                        <img src="../../assets/images/products/supplements-adhd.webp" alt="Compléments ADHD" class="w-full h-64 object-cover bg-gradient-to-br from-green-50 to-blue-50 dark:from-green-900/20 dark:to-blue-900/20 flex items-center justify-center">
+                        <div class="absolute top-4 left-4 flex gap-2">
+                            <span class="px-2 py-1 bg-green-600 text-white text-xs font-medium rounded-full">🧠 Nootropique</span>
+                            <span class="px-2 py-1 bg-blue-500 text-white text-xs font-medium rounded-full">+1011%</span>
+                        </div>
+                        <div class="absolute top-4 right-4">
+                            <button class="w-8 h-8 bg-white/80 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-white transition-colors">
+                                <svg class="w-4 h-4 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="p-6">
+                        <div class="mb-2">
+                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-1">Brainzyme Focus ADHD</h3>
+                            <p class="text-gray-600 dark:text-gray-400 text-sm">Améliore attention et concentration naturellement</p>
+                        </div>
+                        
+                        <div class="flex items-center gap-2 mb-3">
+                            <div class="flex text-yellow-400 text-sm">⭐⭐⭐⭐☆</div>
+                            <span class="text-gray-500 dark:text-gray-400 text-sm">(78)</span>
+                        </div>
+                        
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center gap-2">
+                                <span class="text-xl font-bold text-green-600 dark:text-green-400">45€</span>
+                                <span class="text-sm text-gray-500 dark:text-gray-400 line-through">60€</span>
+                            </div>
+                        </div>
+                        
+                        <div class="space-y-2">
+                            <button class="add-to-cart w-full px-4 py-2 bg-gradient-to-r from-green-600 to-emerald-600 text-white rounded-lg font-medium hover:from-green-700 hover:to-emerald-700 transition-colors">
+                                Ajouter au panier
+                            </button>
+                            <button class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
+                                Voir détails
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 4: Sérum Bakuchiol -->
+                <div class="product-card bg-white dark:bg-gray-800 rounded-2xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2" data-category="supplements" data-price="35" data-rating="4.6">
+                    <div class="relative">
+                        <img src="../../assets/images/products/bakuchiol-serum.webp" alt="Sérum Bakuchiol" class="w-full h-64 object-cover bg-gradient-to-br from-pink-50 to-orange-50 dark:from-pink-900/20 dark:to-orange-900/20 flex items-center justify-center">
+                        <div class="absolute top-4 left-4 flex gap-2">
+                            <span class="px-2 py-1 bg-pink-600 text-white text-xs font-medium rounded-full">✨ Anti-âge</span>
+                            <span class="px-2 py-1 bg-yellow-500 text-white text-xs font-medium rounded-full">+733%</span>
+                        </div>
+                        <div class="absolute top-4 right-4">
+                            <button class="w-8 h-8 bg-white/80 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-white transition-colors">
+                                <svg class="w-4 h-4 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="p-6">
+                        <div class="mb-2">
+                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-1">Sérum Bakuchiol BYBI</h3>
+                            <p class="text-gray-600 dark:text-gray-400 text-sm">Alternative naturelle au rétinol, anti-rides</p>
+                        </div>
+                        
+                        <div class="flex items-center gap-2 mb-3">
+                            <div class="flex text-yellow-400 text-sm">⭐⭐⭐⭐⭐</div>
+                            <span class="text-gray-500 dark:text-gray-400 text-sm">(94)</span>
+                        </div>
+                        
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center gap-2">
+                                <span class="text-xl font-bold text-pink-600 dark:text-pink-400">35€</span>
+                                <span class="text-sm text-gray-500 dark:text-gray-400 line-through">45€</span>
+                            </div>
+                        </div>
+                        
+                        <div class="space-y-2">
+                            <button class="add-to-cart w-full px-4 py-2 bg-gradient-to-r from-pink-600 to-rose-600 text-white rounded-lg font-medium hover:from-pink-700 hover:to-rose-700 transition-colors">
+                                Ajouter au panier
+                            </button>
+                            <button class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
+                                Voir détails
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 5: Séparateurs d'orteils -->
+                <div class="product-card bg-white dark:bg-gray-800 rounded-2xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2" data-category="recovery" data-price="25" data-rating="4.4">
+                    <div class="relative">
+                        <img src="../../assets/images/products/toe-spacers.webp" alt="Séparateurs orteils" class="w-full h-64 object-cover bg-gradient-to-br from-blue-50 to-teal-50 dark:from-blue-900/20 dark:to-teal-900/20 flex items-center justify-center">
+                        <div class="absolute top-4 left-4 flex gap-2">
+                            <span class="px-2 py-1 bg-teal-600 text-white text-xs font-medium rounded-full">🦶 Orthopédie</span>
+                            <span class="px-2 py-1 bg-indigo-500 text-white text-xs font-medium rounded-full">+400%</span>
+                        </div>
+                        <div class="absolute top-4 right-4">
+                            <button class="w-8 h-8 bg-white/80 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-white transition-colors">
+                                <svg class="w-4 h-4 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="p-6">
+                        <div class="mb-2">
+                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-1">Séparateurs Orteils YogaMedic</h3>
+                            <p class="text-gray-600 dark:text-gray-400 text-sm">Améliore équilibre et soulage douleurs</p>
+                        </div>
+                        
+                        <div class="flex items-center gap-2 mb-3">
+                            <div class="flex text-yellow-400 text-sm">⭐⭐⭐⭐☆</div>
+                            <span class="text-gray-500 dark:text-gray-400 text-sm">(67)</span>
+                        </div>
+                        
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center gap-2">
+                                <span class="text-xl font-bold text-teal-600 dark:text-teal-400">25€</span>
+                                <span class="text-sm text-gray-500 dark:text-gray-400 line-through">35€</span>
+                            </div>
+                        </div>
+                        
+                        <div class="space-y-2">
+                            <button class="add-to-cart w-full px-4 py-2 bg-gradient-to-r from-teal-600 to-cyan-600 text-white rounded-lg font-medium hover:from-teal-700 hover:to-cyan-700 transition-colors">
+                                Ajouter au panier
+                            </button>
+                            <button class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
+                                Voir détails
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 6: Kit Fitness -->
+                <div class="product-card bg-white dark:bg-gray-800 rounded-2xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2" data-category="fitness" data-price="129" data-rating="4.8">
+                    <div class="relative">
+                        <img src="../../assets/images/products/fitness-kit.webp" alt="Kit Fitness" class="w-full h-64 object-cover bg-gradient-to-br from-orange-50 to-red-50 dark:from-orange-900/20 dark:to-red-900/20 flex items-center justify-center">
+                        <div class="absolute top-4 left-4 flex gap-2">
+                            <span class="px-2 py-1 bg-orange-600 text-white text-xs font-medium rounded-full">💪 Fitness</span>
+                            <span class="px-2 py-1 bg-green-500 text-white text-xs font-medium rounded-full">Pack complet</span>
+                        </div>
+                        <div class="absolute top-4 right-4">
+                            <button class="w-8 h-8 bg-white/80 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-white transition-colors">
+                                <svg class="w-4 h-4 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="p-6">
+                        <div class="mb-2">
+                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-1">Kit Fitness Complet</h3>
+                            <p class="text-gray-600 dark:text-gray-400 text-sm">Bandes résistance + tapis yoga + tracker</p>
+                        </div>
+                        
+                        <div class="flex items-center gap-2 mb-3">
+                            <div class="flex text-yellow-400 text-sm">⭐⭐⭐⭐⭐</div>
+                            <span class="text-gray-500 dark:text-gray-400 text-sm">(145)</span>
+                        </div>
+                        
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center gap-2">
+                                <span class="text-xl font-bold text-orange-600 dark:text-orange-400">129€</span>
+                                <span class="text-sm text-gray-500 dark:text-gray-400 line-through">179€</span>
+                            </div>
+                        </div>
+                        
+                        <div class="space-y-2">
+                            <button class="add-to-cart w-full px-4 py-2 bg-gradient-to-r from-orange-600 to-red-600 text-white rounded-lg font-medium hover:from-orange-700 hover:to-red-700 transition-colors">
+                                Ajouter au panier
+                            </button>
+                            <button class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
+                                Voir détails
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sérum Bakuchiol Anti-âge -->
+                <div class="product-item bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden transform hover:scale-105 transition-all duration-300" data-category="supplements">
+                    <div class="relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=400" alt="Sérum Bakuchiol" class="w-full h-48 object-cover">
+                        <div class="absolute top-3 left-3">
+                            <span class="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-3 py-1 rounded-full text-xs font-semibold">+733%</span>
+                        </div>
+                        <div class="absolute top-3 right-3 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-full p-2">
+                            <button class="text-gray-600 dark:text-gray-300 hover:text-red-500 transition-colors">
+                                <i class="fas fa-heart text-sm"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="p-5">
+                        <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-2">Sérum Bakuchiol Anti-âge</h3>
+                        <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">Alternative naturelle au rétinol, réduit rides et taches</p>
+                        
+                        <div class="flex items-center mb-3">
+                            <div class="flex text-yellow-400 text-sm mr-2">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="text-xs text-gray-500 dark:text-gray-400">(4.9) • 1,234 avis</span>
+                        </div>
+                        
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center gap-2">
+                                <span class="text-xl font-bold text-purple-600 dark:text-purple-400">45€</span>
+                                <span class="text-sm text-gray-500 dark:text-gray-400 line-through">65€</span>
+                            </div>
+                        </div>
+                        
+                        <div class="space-y-2">
+                            <button class="add-to-cart w-full px-4 py-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-lg font-medium hover:from-purple-700 hover:to-pink-700 transition-colors">
+                                Ajouter au panier
+                            </button>
+                            <button class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
+                                Voir détails
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Séparateurs d'Orteils Orthopédiques -->
+                <div class="product-item bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden transform hover:scale-105 transition-all duration-300" data-category="fitness">
+                    <div class="relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400" alt="Séparateurs orteils" class="w-full h-48 object-cover">
+                        <div class="absolute top-3 left-3">
+                            <span class="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-3 py-1 rounded-full text-xs font-semibold">+400%</span>
+                        </div>
+                        <div class="absolute top-3 right-3 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-full p-2">
+                            <button class="text-gray-600 dark:text-gray-300 hover:text-red-500 transition-colors">
+                                <i class="fas fa-heart text-sm"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="p-5">
+                        <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-2">Séparateurs d'Orteils YogaMedic</h3>
+                        <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">Correction naturelle, soulage douleurs et améliore équilibre</p>
+                        
+                        <div class="flex items-center mb-3">
+                            <div class="flex text-yellow-400 text-sm mr-2">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <span class="text-xs text-gray-500 dark:text-gray-400">(4.7) • 2,847 avis</span>
+                        </div>
+                        
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center gap-2">
+                                <span class="text-xl font-bold text-blue-600 dark:text-blue-400">19€</span>
+                                <span class="text-sm text-gray-500 dark:text-gray-400 line-through">29€</span>
+                            </div>
+                        </div>
+                        
+                        <div class="space-y-2">
+                            <button class="add-to-cart w-full px-4 py-2 bg-gradient-to-r from-blue-600 to-cyan-600 text-white rounded-lg font-medium hover:from-blue-700 hover:to-cyan-700 transition-colors">
+                                Ajouter au panier
+                            </button>
+                            <button class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
+                                Voir détails
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Compléments ADHD Nootropiques -->
+                <div class="product-item bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden transform hover:scale-105 transition-all duration-300" data-category="supplements">
+                    <div class="relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1607623814075-e51df1bdc82f?w=400" alt="Compléments ADHD" class="w-full h-48 object-cover">
+                        <div class="absolute top-3 left-3">
+                            <span class="bg-gradient-to-r from-indigo-500 to-purple-500 text-white px-3 py-1 rounded-full text-xs font-semibold">+1011%</span>
+                        </div>
+                        <div class="absolute top-3 right-3 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-full p-2">
+                            <button class="text-gray-600 dark:text-gray-300 hover:text-red-500 transition-colors">
+                                <i class="fas fa-heart text-sm"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="p-5">
+                        <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-2">Brainzyme Focus - Nootropiques</h3>
+                        <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">Améliore attention et mémoire, formule biohacking</p>
+                        
+                        <div class="flex items-center mb-3">
+                            <div class="flex text-yellow-400 text-sm mr-2">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <span class="text-xs text-gray-500 dark:text-gray-400">(4.6) • 1,567 avis</span>
+                        </div>
+                        
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center gap-2">
+                                <span class="text-xl font-bold text-indigo-600 dark:text-indigo-400">39€</span>
+                                <span class="text-sm text-gray-500 dark:text-gray-400 line-through">55€</span>
+                            </div>
+                        </div>
+                        
+                        <div class="space-y-2">
+                            <button class="add-to-cart w-full px-4 py-2 bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-lg font-medium hover:from-indigo-700 hover:to-purple-700 transition-colors">
+                                Ajouter au panier
+                            </button>
+                            <button class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
+                                Voir détails
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Chocolat aux Champignons Adaptogènes -->
+                <div class="product-item bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden transform hover:scale-105 transition-all duration-300" data-category="supplements">
+                    <div class="relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1549007994-cb92caebd54b?w=400" alt="Chocolat champignons" class="w-full h-48 object-cover">
+                        <div class="absolute top-3 left-3">
+                            <span class="bg-gradient-to-r from-amber-500 to-orange-500 text-white px-3 py-1 rounded-full text-xs font-semibold">+270%</span>
+                        </div>
+                        <div class="absolute top-3 right-3 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-full p-2">
+                            <button class="text-gray-600 dark:text-gray-300 hover:text-red-500 transition-colors">
+                                <i class="fas fa-heart text-sm"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="p-5">
+                        <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-2">Chocolat Champignons Adaptogènes</h3>
+                        <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">Snack fonctionnel avec champignons nootropiques</p>
+                        
+                        <div class="flex items-center mb-3">
+                            <div class="flex text-yellow-400 text-sm mr-2">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                            <span class="text-xs text-gray-500 dark:text-gray-400">(4.2) • 892 avis</span>
+                        </div>
+                        
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center gap-2">
+                                <span class="text-xl font-bold text-amber-600 dark:text-amber-400">24€</span>
+                                <span class="text-sm text-gray-500 dark:text-gray-400 line-through">32€</span>
+                            </div>
+                        </div>
+                        
+                        <div class="space-y-2">
+                            <button class="add-to-cart w-full px-4 py-2 bg-gradient-to-r from-amber-600 to-orange-600 text-white rounded-lg font-medium hover:from-amber-700 hover:to-orange-700 transition-colors">
+                                Ajouter au panier
+                            </button>
+                            <button class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
+                                Voir détails
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kit de Blanchiment Dentaire -->
+                <div class="product-item bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden transform hover:scale-105 transition-all duration-300" data-category="recovery">
+                    <div class="relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1609840114035-3c981b782dfe?w=400" alt="Kit blanchiment dentaire" class="w-full h-48 object-cover">
+                        <div class="absolute top-3 left-3">
+                            <span class="bg-gradient-to-r from-green-500 to-teal-500 text-white px-3 py-1 rounded-full text-xs font-semibold">+155%</span>
+                        </div>
+                        <div class="absolute top-3 right-3 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-full p-2">
+                            <button class="text-gray-600 dark:text-gray-300 hover:text-red-500 transition-colors">
+                                <i class="fas fa-heart text-sm"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="p-5">
+                        <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-2">Kit Blanchiment Dentaire LED</h3>
+                        <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">Résultats visibles en 7 jours, technologie LED professionnelle</p>
+                        
+                        <div class="flex items-center mb-3">
+                            <div class="flex text-yellow-400 text-sm mr-2">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <span class="text-xs text-gray-500 dark:text-gray-400">(4.8) • 3,456 avis</span>
+                        </div>
+                        
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center gap-2">
+                                <span class="text-xl font-bold text-teal-600 dark:text-teal-400">69€</span>
+                                <span class="text-sm text-gray-500 dark:text-gray-400 line-through">99€</span>
+                            </div>
+                        </div>
+                        
+                        <div class="space-y-2">
+                            <button class="add-to-cart w-full px-4 py-2 bg-gradient-to-r from-green-600 to-teal-600 text-white rounded-lg font-medium hover:from-green-700 hover:to-teal-700 transition-colors">
+                                Ajouter au panier
+                            </button>
+                            <button class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
+                                Voir détails
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Roller Facial Jade -->
+                <div class="product-item bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden transform hover:scale-105 transition-all duration-300" data-category="recovery">
+                    <div class="relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1596755389378-c31d21fd1273?w=400" alt="Roller facial jade" class="w-full h-48 object-cover">
+                        <div class="absolute top-3 left-3">
+                            <span class="bg-gradient-to-r from-pink-500 to-rose-500 text-white px-3 py-1 rounded-full text-xs font-semibold">+128%</span>
+                        </div>
+                        <div class="absolute top-3 right-3 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-full p-2">
+                            <button class="text-gray-600 dark:text-gray-300 hover:text-red-500 transition-colors">
+                                <i class="fas fa-heart text-sm"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="p-5">
+                        <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-2">Roller Facial Jade + Gua Sha</h3>
+                        <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">Anti-âge naturel, améliore circulation et réduit poches</p>
+                        
+                        <div class="flex items-center mb-3">
+                            <div class="flex text-yellow-400 text-sm mr-2">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="text-xs text-gray-500 dark:text-gray-400">(4.9) • 2,134 avis</span>
+                        </div>
+                        
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center gap-2">
+                                <span class="text-xl font-bold text-pink-600 dark:text-pink-400">29€</span>
+                                <span class="text-sm text-gray-500 dark:text-gray-400 line-through">39€</span>
+                            </div>
+                        </div>
+                        
+                        <div class="space-y-2">
+                            <button class="add-to-cart w-full px-4 py-2 bg-gradient-to-r from-pink-600 to-rose-600 text-white rounded-lg font-medium hover:from-pink-700 hover:to-rose-700 transition-colors">
+                                Ajouter au panier
+                            </button>
+                            <button class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
+                                Voir détails
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Load More Button -->
+            <div class="text-center mt-12">
+                <button id="loadMore" class="px-8 py-3 border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 rounded-xl hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
+                    Voir plus de produits
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="bg-gradient-to-r from-green-600 to-blue-600 py-16">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold text-white mb-4">Restez informé des innovations wellness</h2>
+            <p class="text-xl text-green-100 mb-8">Recevez en avant-première les dernières tendances santé & bien-être 2025</p>
+            
+            <div class="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
+                <input type="email" placeholder="Votre adresse email" 
+                       class="flex-1 px-6 py-3 rounded-xl border-0 focus:ring-4 focus:ring-green-300 focus:outline-none">
+                <button class="px-8 py-3 bg-white text-green-600 rounded-xl font-semibold hover:bg-gray-50 transition-colors">
+                    S'abonner
+                </button>
+            </div>
+            
+            <p class="text-green-100 text-sm mt-4">
+                Nouveautés, offres exclusives et conseils wellness. Désabonnement possible à tout moment.
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="col-span-1 md:col-span-2">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="w-10 h-10 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-xl flex items-center justify-center">
+                            <span class="text-white font-bold text-lg">T</span>
+                        </div>
+                        <span class="text-2xl font-bold">TechViral</span>
+                    </div>
+                    <p class="text-gray-400 mb-4">Les produits les plus innovants de 2025 à portée de clic. Livraison rapide et support client exceptionnel.</p>
+                </div>
+                
+                <div>
+                    <h3 class="font-semibold mb-4">Support</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="../support/faq.html" class="hover:text-white transition-colors">FAQ</a></li>
+                        <li><a href="../contact.html" class="hover:text-white transition-colors">Contact</a></li>
+                        <li><a href="../support/shipping.html" class="hover:text-white transition-colors">Livraison</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="font-semibold mb-4">Légal</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="../legal/terms.html" class="hover:text-white transition-colors">CGV</a></li>
+                        <li><a href="../legal/privacy.html" class="hover:text-white transition-colors">Confidentialité</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 TechViral. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="../../assets/js/cart.js"></script>
+    <script src="../../assets/js/search.js"></script>
+    <script>
+        // Filter functionality
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                // Update active filter button
+                document.querySelectorAll('.filter-btn').forEach(b => {
+                    b.classList.remove('active', 'bg-green-600', 'text-white');
+                    b.classList.add('bg-gray-200', 'dark:bg-gray-700', 'text-gray-700', 'dark:text-gray-300');
+                });
+                
+                this.classList.add('active', 'bg-green-600', 'text-white');
+                this.classList.remove('bg-gray-200', 'dark:bg-gray-700', 'text-gray-700', 'dark:text-gray-300');
+                
+                // Filter products
+                const category = this.dataset.category;
+                const products = document.querySelectorAll('.product-card');
+                
+                products.forEach(product => {
+                    if (category === 'all' || product.dataset.category === category) {
+                        product.style.display = 'block';
+                        product.style.animation = 'fadeIn 0.5s ease-in-out';
+                    } else {
+                        product.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Sort functionality
+        document.getElementById('sortSelect').addEventListener('change', function() {
+            const sortValue = this.value;
+            const productsGrid = document.getElementById('productsGrid');
+            const products = Array.from(document.querySelectorAll('.product-card'));
+            
+            products.sort((a, b) => {
+                switch (sortValue) {
+                    case 'price-asc':
+                        return parseInt(a.dataset.price) - parseInt(b.dataset.price);
+                    case 'price-desc':
+                        return parseInt(b.dataset.price) - parseInt(a.dataset.price);
+                    case 'rating':
+                        return parseFloat(b.dataset.rating) - parseFloat(a.dataset.rating);
+                    case 'newest':
+                        // Mock newest first
+                        return Math.random() - 0.5;
+                    default:
+                        return 0;
+                }
+            });
+            
+            // Re-append sorted products
+            products.forEach(product => productsGrid.appendChild(product));
+        });
+
+        // Add to cart functionality is now handled by cart.js globally
+
+        // Load more functionality (mock)
+        document.getElementById('loadMore').addEventListener('click', function() {
+            this.innerHTML = '⏳ Chargement...';
+            
+            setTimeout(() => {
+                this.innerHTML = 'Voir plus de produits';
+                alert('Tous les produits ont été chargés !');
+            }, 1000);
+        });
+
+        // Add CSS animation
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes fadeIn {
+                from { opacity: 0; transform: translateY(20px); }
+                to { opacity: 1; transform: translateY(0); }
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body>
+</html>

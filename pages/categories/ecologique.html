@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produits Écologiques & Durables - TechViral</title>
+    <meta name="description" content="Découvrez notre sélection de produits écologiques et durables : cotons démaquillants réutilisables, housses bambou, sacs réutilisables. Livraison rapide.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+        }
+        .product-card {
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+        .product-card:hover {
+            transform: translateY(-8px);
+            border-color: #22c55e;
+            box-shadow: 0 20px 40px rgba(34, 197, 94, 0.1);
+        }
+        .eco-badge {
+            background: linear-gradient(45deg, #22c55e, #16a34a);
+        }
+        .growth-badge {
+            background: linear-gradient(45deg, #059669, #047857);
+        }
+        .filter-btn.active {
+            background: linear-gradient(135deg, #22c55e, #16a34a) !important;
+            color: white !important;
+        }
+    </style>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="icon" href="../../assets/images/favicon.ico">
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center space-x-4">
+                    <a href="../../index.html" class="flex items-center space-x-2">
+                        <i class="fas fa-bolt text-2xl text-blue-600"></i>
+                        <span class="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">TechViral</span>
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center space-x-6">
+                    <a href="../../index.html" class="text-gray-700 hover:text-blue-600 transition-colors">Accueil</a>
+                    <div class="relative group">
+                        <a href="#" class="text-blue-600 font-medium flex items-center">
+                            Catégories <i class="fas fa-chevron-down ml-1"></i>
+                        </a>
+                        <div class="absolute top-full left-0 w-48 bg-white shadow-lg rounded-lg py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+                            <a href="tech.html" class="block px-4 py-2 hover:bg-gray-100">High-Tech</a>
+                            <a href="gaming.html" class="block px-4 py-2 hover:bg-gray-100">Gaming</a>
+                            <a href="sante.html" class="block px-4 py-2 hover:bg-gray-100">Santé & Bien-être</a>
+                            <a href="ecologique.html" class="block px-4 py-2 text-green-600 font-medium">Écologique</a>
+                            <a href="animaux.html" class="block px-4 py-2 hover:bg-gray-100">Animaux</a>
+                        </div>
+                    </div>
+                    <a href="../support.html" class="text-gray-700 hover:text-blue-600 transition-colors">Support</a>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <a href="../cart.html" class="relative text-gray-700 hover:text-blue-600 transition-colors">
+                        <i class="fas fa-shopping-cart text-xl"></i>
+                        <span class="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center" id="cart-count">0</span>
+                    </a>
+                    <a href="../login.html" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">Connexion</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="gradient-bg text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <div class="mb-6">
+                <i class="fas fa-leaf text-6xl mb-4 opacity-80"></i>
+            </div>
+            <h1 class="text-5xl font-bold mb-6">Produits Écologiques & Durables</h1>
+            <p class="text-xl mb-8 max-w-3xl mx-auto opacity-90">Découvrez notre sélection de produits éco-responsables pour un mode de vie durable. Des solutions innovantes qui respectent la planète et votre budget.</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto mt-12">
+                <div class="bg-white/10 backdrop-blur-md rounded-xl p-6">
+                    <i class="fas fa-recycle text-3xl mb-3"></i>
+                    <h3 class="text-lg font-semibold mb-2">100% Réutilisable</h3>
+                    <p class="text-sm opacity-80">Produits durables qui remplacent les alternatives jetables</p>
+                </div>
+                <div class="bg-white/10 backdrop-blur-md rounded-xl p-6">
+                    <i class="fas fa-seedling text-3xl mb-3"></i>
+                    <h3 class="text-lg font-semibold mb-2">Matériaux Naturels</h3>
+                    <p class="text-sm opacity-80">Bambou, coton bio et matières biodégradables</p>
+                </div>
+                <div class="bg-white/10 backdrop-blur-md rounded-xl p-6">
+                    <i class="fas fa-heart text-3xl mb-3"></i>
+                    <h3 class="text-lg font-semibold mb-2">Impact Positif</h3>
+                    <p class="text-sm opacity-80">Réduisez votre empreinte carbone au quotidien</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filters Section -->
+    <section class="py-8 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex flex-wrap justify-center gap-4 mb-8">
+                <button class="filter-btn active px-6 py-3 rounded-full border border-green-200 hover:bg-green-50 transition-all font-medium" data-category="all">
+                    <i class="fas fa-th-large mr-2"></i>Tous les produits
+                </button>
+                <button class="filter-btn px-6 py-3 rounded-full border border-green-200 hover:bg-green-50 transition-all font-medium" data-category="reutilisable">
+                    <i class="fas fa-recycle mr-2"></i>Réutilisable
+                </button>
+                <button class="filter-btn px-6 py-3 rounded-full border border-green-200 hover:bg-green-50 transition-all font-medium" data-category="bambou">
+                    <i class="fas fa-seedling mr-2"></i>Bambou
+                </button>
+                <button class="filter-btn px-6 py-3 rounded-full border border-green-200 hover:bg-green-50 transition-all font-medium" data-category="maison">
+                    <i class="fas fa-home mr-2"></i>Maison
+                </button>
+                <button class="filter-btn px-6 py-3 rounded-full border border-green-200 hover:bg-green-50 transition-all font-medium" data-category="beaute">
+                    <i class="fas fa-spa mr-2"></i>Beauté
+                </button>
+            </div>
+            
+            <div class="flex justify-between items-center mb-6">
+                <div>
+                    <span class="text-gray-600">Affichage de <span id="product-count">10</span> produits</span>
+                </div>
+                <select id="sort-select" class="border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-green-500">
+                    <option value="default">Trier par défaut</option>
+                    <option value="price-asc">Prix croissant</option>
+                    <option value="price-desc">Prix décroissant</option>
+                    <option value="rating">Meilleures notes</option>
+                    <option value="popularity">Popularité</option>
+                </select>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Grid -->
+    <section class="py-12 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div id="products-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Cotons Démaquillants Réutilisables -->
+                <div class="product-card bg-white rounded-2xl shadow-lg overflow-hidden" data-category="reutilisable beaute" data-price="24.90" data-rating="4.8">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1596755389378-c31d21fd1273?w=400" alt="Cotons démaquillants réutilisables" class="w-full h-64 object-cover">
+                        <div class="absolute top-4 left-4">
+                            <span class="eco-badge text-white px-3 py-1 rounded-full text-sm font-medium">
+                                <i class="fas fa-leaf mr-1"></i>Éco-Friendly
+                            </span>
+                        </div>
+                        <div class="absolute top-4 right-4">
+                            <span class="growth-badge text-white px-2 py-1 rounded text-xs font-bold">+180%</span>
+                        </div>
+                        <button class="absolute bottom-4 right-4 bg-white/80 backdrop-blur-sm p-2 rounded-full hover:bg-white transition-all">
+                            <i class="fas fa-heart text-gray-600 hover:text-red-500"></i>
+                        </button>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-gray-800">Cotons Démaquillants Réutilisables</h3>
+                        <p class="text-gray-600 mb-3">Pack de 16 cotons en bambou ultra-doux, lavables jusqu'à 1000 fois</p>
+                        <div class="flex items-center mb-3">
+                            <div class="flex text-yellow-400 mr-2">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="text-sm text-gray-500">(4.8) • 2,847 avis</span>
+                        </div>
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center space-x-2">
+                                <span class="text-2xl font-bold text-green-600">24,90€</span>
+                                <span class="text-lg text-gray-400 line-through">34,90€</span>
+                                <span class="bg-red-100 text-red-600 px-2 py-1 rounded text-sm font-medium">-29%</span>
+                            </div>
+                        </div>
+                        <div class="space-y-2 mb-4">
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span>Remplace 3000+ cotons jetables</span>
+                            </div>
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-leaf text-green-500 mr-2"></i>
+                                <span>100% bambou bio certifié</span>
+                            </div>
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-shipping-fast text-blue-500 mr-2"></i>
+                                <span>Livraison 2-3 jours</span>
+                            </div>
+                        </div>
+                        <button class="w-full bg-green-600 text-white py-3 rounded-xl hover:bg-green-700 transition-colors font-medium">
+                            <i class="fas fa-cart-plus mr-2"></i>Ajouter au panier
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Housses de Protection Bambou -->
+                <div class="product-card bg-white rounded-2xl shadow-lg overflow-hidden" data-category="bambou maison" data-price="39.90" data-rating="4.7">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1586773860418-d37222d8fce3?w=400" alt="Housses protection bambou" class="w-full h-64 object-cover">
+                        <div class="absolute top-4 left-4">
+                            <span class="eco-badge text-white px-3 py-1 rounded-full text-sm font-medium">
+                                <i class="fas fa-seedling mr-1"></i>Bambou
+                            </span>
+                        </div>
+                        <div class="absolute top-4 right-4">
+                            <span class="growth-badge text-white px-2 py-1 rounded text-xs font-bold">+220%</span>
+                        </div>
+                        <button class="absolute bottom-4 right-4 bg-white/80 backdrop-blur-sm p-2 rounded-full hover:bg-white transition-all">
+                            <i class="fas fa-heart text-gray-600 hover:text-red-500"></i>
+                        </button>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-gray-800">Housses de Protection Bambou</h3>
+                        <p class="text-gray-600 mb-3">Set de 6 housses imperméables en fibre de bambou pour vêtements</p>
+                        <div class="flex items-center mb-3">
+                            <div class="flex text-yellow-400 mr-2">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <span class="text-sm text-gray-500">(4.7) • 1,923 avis</span>
+                        </div>
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center space-x-2">
+                                <span class="text-2xl font-bold text-green-600">39,90€</span>
+                                <span class="text-lg text-gray-400 line-through">59,90€</span>
+                                <span class="bg-red-100 text-red-600 px-2 py-1 rounded text-sm font-medium">-33%</span>
+                            </div>
+                        </div>
+                        <div class="space-y-2 mb-4">
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-shield-alt text-green-500 mr-2"></i>
+                                <span>Protection anti-mites naturelle</span>
+                            </div>
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-tint text-blue-500 mr-2"></i>
+                                <span>Respirant et imperméable</span>
+                            </div>
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-recycle text-green-500 mr-2"></i>
+                                <span>100% biodégradable</span>
+                            </div>
+                        </div>
+                        <button class="w-full bg-green-600 text-white py-3 rounded-xl hover:bg-green-700 transition-colors font-medium">
+                            <i class="fas fa-cart-plus mr-2"></i>Ajouter au panier
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Sacs Réutilisables Premium -->
+                <div class="product-card bg-white rounded-2xl shadow-lg overflow-hidden" data-category="reutilisable maison" data-price="29.90" data-rating="4.9">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=400" alt="Sacs réutilisables" class="w-full h-64 object-cover">
+                        <div class="absolute top-4 left-4">
+                            <span class="eco-badge text-white px-3 py-1 rounded-full text-sm font-medium">
+                                <i class="fas fa-award mr-1"></i>Premium
+                            </span>
+                        </div>
+                        <div class="absolute top-4 right-4">
+                            <span class="growth-badge text-white px-2 py-1 rounded text-xs font-bold">+350%</span>
+                        </div>
+                        <button class="absolute bottom-4 right-4 bg-white/80 backdrop-blur-sm p-2 rounded-full hover:bg-white transition-all">
+                            <i class="fas fa-heart text-gray-600 hover:text-red-500"></i>
+                        </button>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-gray-800">Sacs Réutilisables Premium</h3>
+                        <p class="text-gray-600 mb-3">Set de 12 sacs en coton bio certifié, ultra-résistants et pliables</p>
+                        <div class="flex items-center mb-3">
+                            <div class="flex text-yellow-400 mr-2">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="text-sm text-gray-500">(4.9) • 3,654 avis</span>
+                        </div>
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center space-x-2">
+                                <span class="text-2xl font-bold text-green-600">29,90€</span>
+                                <span class="text-lg text-gray-400 line-through">44,90€</span>
+                                <span class="bg-red-100 text-red-600 px-2 py-1 rounded text-sm font-medium">-33%</span>
+                            </div>
+                        </div>
+                        <div class="space-y-2 mb-4">
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-weight-hanging text-green-500 mr-2"></i>
+                                <span>Résiste jusqu'à 15kg</span>
+                            </div>
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-compress text-blue-500 mr-2"></i>
+                                <span>Se plie dans pochette incluse</span>
+                            </div>
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-certificate text-green-500 mr-2"></i>
+                                <span>Coton bio certifié GOTS</span>
+                            </div>
+                        </div>
+                        <button class="w-full bg-green-600 text-white py-3 rounded-xl hover:bg-green-700 transition-colors font-medium">
+                            <i class="fas fa-cart-plus mr-2"></i>Ajouter au panier
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Brosse à Dents Bambou -->
+                <div class="product-card bg-white rounded-2xl shadow-lg overflow-hidden" data-category="bambou beaute" data-price="19.90" data-rating="4.6">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1607613009820-a29f7bb81c04?w=400" alt="Brosse à dents bambou" class="w-full h-64 object-cover">
+                        <div class="absolute top-4 left-4">
+                            <span class="eco-badge text-white px-3 py-1 rounded-full text-sm font-medium">
+                                <i class="fas fa-seedling mr-1"></i>Bio
+                            </span>
+                        </div>
+                        <div class="absolute top-4 right-4">
+                            <span class="growth-badge text-white px-2 py-1 rounded text-xs font-bold">+290%</span>
+                        </div>
+                        <button class="absolute bottom-4 right-4 bg-white/80 backdrop-blur-sm p-2 rounded-full hover:bg-white transition-all">
+                            <i class="fas fa-heart text-gray-600 hover:text-red-500"></i>
+                        </button>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-gray-800">Brosses à Dents Bambou</h3>
+                        <p class="text-gray-600 mb-3">Pack de 8 brosses en bambou naturel avec poils biodégradables</p>
+                        <div class="flex items-center mb-3">
+                            <div class="flex text-yellow-400 mr-2">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <span class="text-sm text-gray-500">(4.6) • 2,156 avis</span>
+                        </div>
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center space-x-2">
+                                <span class="text-2xl font-bold text-green-600">19,90€</span>
+                                <span class="text-lg text-gray-400 line-through">29,90€</span>
+                                <span class="bg-red-100 text-red-600 px-2 py-1 rounded text-sm font-medium">-33%</span>
+                            </div>
+                        </div>
+                        <div class="space-y-2 mb-4">
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-leaf text-green-500 mr-2"></i>
+                                <span>Bambou Moso naturel</span>
+                            </div>
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-recycle text-green-500 mr-2"></i>
+                                <span>Poils 100% biodégradables</span>
+                            </div>
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-globe text-blue-500 mr-2"></i>
+                                <span>Neutre en carbone</span>
+                            </div>
+                        </div>
+                        <button class="w-full bg-green-600 text-white py-3 rounded-xl hover:bg-green-700 transition-colors font-medium">
+                            <i class="fas fa-cart-plus mr-2"></i>Ajouter au panier
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Emballage Cire d'Abeille -->
+                <div class="product-card bg-white rounded-2xl shadow-lg overflow-hidden" data-category="reutilisable maison" data-price="32.90" data-rating="4.8">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1558618666-fbd6c9c6c373?w=400" alt="Emballage cire abeille" class="w-full h-64 object-cover">
+                        <div class="absolute top-4 left-4">
+                            <span class="eco-badge text-white px-3 py-1 rounded-full text-sm font-medium">
+                                <i class="fas fa-honeycomb mr-1"></i>Naturel
+                            </span>
+                        </div>
+                        <div class="absolute top-4 right-4">
+                            <span class="growth-badge text-white px-2 py-1 rounded text-xs font-bold">+425%</span>
+                        </div>
+                        <button class="absolute bottom-4 right-4 bg-white/80 backdrop-blur-sm p-2 rounded-full hover:bg-white transition-all">
+                            <i class="fas fa-heart text-gray-600 hover:text-red-500"></i>
+                        </button>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-gray-800">Emballage Cire d'Abeille</h3>
+                        <p class="text-gray-600 mb-3">Kit de 6 emballages alimentaires réutilisables en cire naturelle</p>
+                        <div class="flex items-center mb-3">
+                            <div class="flex text-yellow-400 mr-2">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="text-sm text-gray-500">(4.8) • 1,789 avis</span>
+                        </div>
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center space-x-2">
+                                <span class="text-2xl font-bold text-green-600">32,90€</span>
+                                <span class="text-lg text-gray-400 line-through">49,90€</span>
+                                <span class="bg-red-100 text-red-600 px-2 py-1 rounded text-sm font-medium">-34%</span>
+                            </div>
+                        </div>
+                        <div class="space-y-2 mb-4">
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-utensils text-green-500 mr-2"></i>
+                                <span>Contact alimentaire sûr</span>
+                            </div>
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-clock text-blue-500 mr-2"></i>
+                                <span>Réutilisable 12+ mois</span>
+                            </div>
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-snowflake text-gray-500 mr-2"></i>
+                                <span>Conservation fraîcheur optimale</span>
+                            </div>
+                        </div>
+                        <button class="w-full bg-green-600 text-white py-3 rounded-xl hover:bg-green-700 transition-colors font-medium">
+                            <i class="fas fa-cart-plus mr-2"></i>Ajouter au panier
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Pailles Réutilisables Inox -->
+                <div class="product-card bg-white rounded-2xl shadow-lg overflow-hidden" data-category="reutilisable maison" data-price="16.90" data-rating="4.7">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400" alt="Pailles inox réutilisables" class="w-full h-64 object-cover">
+                        <div class="absolute top-4 left-4">
+                            <span class="eco-badge text-white px-3 py-1 rounded-full text-sm font-medium">
+                                <i class="fas fa-infinity mr-1"></i>Durable
+                            </span>
+                        </div>
+                        <div class="absolute top-4 right-4">
+                            <span class="growth-badge text-white px-2 py-1 rounded text-xs font-bold">+500%</span>
+                        </div>
+                        <button class="absolute bottom-4 right-4 bg-white/80 backdrop-blur-sm p-2 rounded-full hover:bg-white transition-all">
+                            <i class="fas fa-heart text-gray-600 hover:text-red-500"></i>
+                        </button>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-gray-800">Pailles Inox Réutilisables</h3>
+                        <p class="text-gray-600 mb-3">Set de 8 pailles en acier inoxydable avec étui de transport</p>
+                        <div class="flex items-center mb-3">
+                            <div class="flex text-yellow-400 mr-2">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <span class="text-sm text-gray-500">(4.7) • 2,934 avis</span>
+                        </div>
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center space-x-2">
+                                <span class="text-2xl font-bold text-green-600">16,90€</span>
+                                <span class="text-lg text-gray-400 line-through">24,90€</span>
+                                <span class="bg-red-100 text-red-600 px-2 py-1 rounded text-sm font-medium">-32%</span>
+                            </div>
+                        </div>
+                        <div class="space-y-2 mb-4">
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-shield-alt text-green-500 mr-2"></i>
+                                <span>Acier inox 304 alimentaire</span>
+                            </div>
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-brush text-blue-500 mr-2"></i>
+                                <span>2 goupillons inclus</span>
+                            </div>
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-suitcase text-gray-500 mr-2"></i>
+                                <span>Étui de voyage en coton</span>
+                            </div>
+                        </div>
+                        <button class="w-full bg-green-600 text-white py-3 rounded-xl hover:bg-green-700 transition-colors font-medium">
+                            <i class="fas fa-cart-plus mr-2"></i>Ajouter au panier
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Gourde Isotherme Inox -->
+                <div class="product-card bg-white rounded-2xl shadow-lg overflow-hidden" data-category="reutilisable maison" data-price="34.90" data-rating="4.9">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1602143407151-7111542de6e8?w=400" alt="Gourde isotherme inox" class="w-full h-64 object-cover">
+                        <div class="absolute top-4 left-4">
+                            <span class="eco-badge text-white px-3 py-1 rounded-full text-sm font-medium">
+                                <i class="fas fa-thermometer-half mr-1"></i>Isotherme
+                            </span>
+                        </div>
+                        <div class="absolute top-4 right-4">
+                            <span class="growth-badge text-white px-2 py-1 rounded text-xs font-bold">+195%</span>
+                        </div>
+                        <button class="absolute bottom-4 right-4 bg-white/80 backdrop-blur-sm p-2 rounded-full hover:bg-white transition-all">
+                            <i class="fas fa-heart text-gray-600 hover:text-red-500"></i>
+                        </button>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-gray-800">Gourde Isotherme Inox 750ml</h3>
+                        <p class="text-gray-600 mb-3">Double paroi isolante, garde au chaud 12h / au froid 24h</p>
+                        <div class="flex items-center mb-3">
+                            <div class="flex text-yellow-400 mr-2">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="text-sm text-gray-500">(4.9) • 4,123 avis</span>
+                        </div>
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center space-x-2">
+                                <span class="text-2xl font-bold text-green-600">34,90€</span>
+                                <span class="text-lg text-gray-400 line-through">49,90€</span>
+                                <span class="bg-red-100 text-red-600 px-2 py-1 rounded text-sm font-medium">-30%</span>
+                            </div>
+                        </div>
+                        <div class="space-y-2 mb-4">
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-fire text-red-500 mr-2"></i>
+                                <span>Chaud 12h / Froid 24h</span>
+                            </div>
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-shield-alt text-green-500 mr-2"></i>
+                                <span>Inox 316 qualité alimentaire</span>
+                            </div>
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-recycle text-blue-500 mr-2"></i>
+                                <span>Sans BPA, 100% recyclable</span>
+                            </div>
+                        </div>
+                        <button class="w-full bg-green-600 text-white py-3 rounded-xl hover:bg-green-700 transition-colors font-medium">
+                            <i class="fas fa-cart-plus mr-2"></i>Ajouter au panier
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Set Ustensiles Bambou -->
+                <div class="product-card bg-white rounded-2xl shadow-lg overflow-hidden" data-category="bambou maison" data-price="27.90" data-rating="4.7">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=400" alt="Ustensiles bambou" class="w-full h-64 object-cover">
+                        <div class="absolute top-4 left-4">
+                            <span class="eco-badge text-white px-3 py-1 rounded-full text-sm font-medium">
+                                <i class="fas fa-utensils mr-1"></i>Cuisine
+                            </span>
+                        </div>
+                        <div class="absolute top-4 right-4">
+                            <span class="growth-badge text-white px-2 py-1 rounded text-xs font-bold">+340%</span>
+                        </div>
+                        <button class="absolute bottom-4 right-4 bg-white/80 backdrop-blur-sm p-2 rounded-full hover:bg-white transition-all">
+                            <i class="fas fa-heart text-gray-600 hover:text-red-500"></i>
+                        </button>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-gray-800">Set Ustensiles Bambou</h3>
+                        <p class="text-gray-600 mb-3">Kit complet 6 pièces avec étui de transport en coton bio</p>
+                        <div class="flex items-center mb-3">
+                            <div class="flex text-yellow-400 mr-2">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <span class="text-sm text-gray-500">(4.7) • 1,876 avis</span>
+                        </div>
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center space-x-2">
+                                <span class="text-2xl font-bold text-green-600">27,90€</span>
+                                <span class="text-lg text-gray-400 line-through">39,90€</span>
+                                <span class="bg-red-100 text-red-600 px-2 py-1 rounded text-sm font-medium">-30%</span>
+                            </div>
+                        </div>
+                        <div class="space-y-2 mb-4">
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-leaf text-green-500 mr-2"></i>
+                                <span>6 ustensiles bambou naturel</span>
+                            </div>
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-bag-shopping text-blue-500 mr-2"></i>
+                                <span>Étui transport inclus</span>
+                            </div>
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-washing-machine text-purple-500 mr-2"></i>
+                                <span>Lavage facile au lave-vaisselle</span>
+                            </div>
+                        </div>
+                        <button class="w-full bg-green-600 text-white py-3 rounded-xl hover:bg-green-700 transition-colors font-medium">
+                            <i class="fas fa-cart-plus mr-2"></i>Ajouter au panier
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Savon Solide Bio -->
+                <div class="product-card bg-white rounded-2xl shadow-lg overflow-hidden" data-category="beaute reutilisable" data-price="22.90" data-rating="4.8">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1556228578-8c89e6adf883?w=400" alt="Savon solide bio" class="w-full h-64 object-cover">
+                        <div class="absolute top-4 left-4">
+                            <span class="eco-badge text-white px-3 py-1 rounded-full text-sm font-medium">
+                                <i class="fas fa-spa mr-1"></i>Bio
+                            </span>
+                        </div>
+                        <div class="absolute top-4 right-4">
+                            <span class="growth-badge text-white px-2 py-1 rounded text-xs font-bold">+265%</span>
+                        </div>
+                        <button class="absolute bottom-4 right-4 bg-white/80 backdrop-blur-sm p-2 rounded-full hover:bg-white transition-all">
+                            <i class="fas fa-heart text-gray-600 hover:text-red-500"></i>
+                        </button>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-gray-800">Pack 4 Savons Solides Bio</h3>
+                        <p class="text-gray-600 mb-3">Shampoing, gel douche, visage et rasage - 100% naturel</p>
+                        <div class="flex items-center mb-3">
+                            <div class="flex text-yellow-400 mr-2">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="text-sm text-gray-500">(4.8) • 3,291 avis</span>
+                        </div>
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center space-x-2">
+                                <span class="text-2xl font-bold text-green-600">22,90€</span>
+                                <span class="text-lg text-gray-400 line-through">34,90€</span>
+                                <span class="bg-red-100 text-red-600 px-2 py-1 rounded text-sm font-medium">-34%</span>
+                            </div>
+                        </div>
+                        <div class="space-y-2 mb-4">
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-certificate text-green-500 mr-2"></i>
+                                <span>Certifié bio COSMOS</span>
+                            </div>
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-clock text-blue-500 mr-2"></i>
+                                <span>Durée 3-4 mois (1 savon)</span>
+                            </div>
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-tint text-purple-500 mr-2"></i>
+                                <span>Sans sulfates, sans parabens</span>
+                            </div>
+                        </div>
+                        <button class="w-full bg-green-600 text-white py-3 rounded-xl hover:bg-green-700 transition-colors font-medium">
+                            <i class="fas fa-cart-plus mr-2"></i>Ajouter au panier
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Lunch Box Inox -->
+                <div class="product-card bg-white rounded-2xl shadow-lg overflow-hidden" data-category="reutilisable maison" data-price="42.90" data-rating="4.6">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400" alt="Lunch box inox" class="w-full h-64 object-cover">
+                        <div class="absolute top-4 left-4">
+                            <span class="eco-badge text-white px-3 py-1 rounded-full text-sm font-medium">
+                                <i class="fas fa-utensils mr-1"></i>Premium
+                            </span>
+                        </div>
+                        <div class="absolute top-4 right-4">
+                            <span class="growth-badge text-white px-2 py-1 rounded text-xs font-bold">+175%</span>
+                        </div>
+                        <button class="absolute bottom-4 right-4 bg-white/80 backdrop-blur-sm p-2 rounded-full hover:bg-white transition-all">
+                            <i class="fas fa-heart text-gray-600 hover:text-red-500"></i>
+                        </button>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-gray-800">Lunch Box Inox 3 Compartiments</h3>
+                        <p class="text-gray-600 mb-3">Boîte repas étanche avec couverts intégrés et sac isotherme</p>
+                        <div class="flex items-center mb-3">
+                            <div class="flex text-yellow-400 mr-2">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <span class="text-sm text-gray-500">(4.6) • 2,567 avis</span>
+                        </div>
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center space-x-2">
+                                <span class="text-2xl font-bold text-green-600">42,90€</span>
+                                <span class="text-lg text-gray-400 line-through">59,90€</span>
+                                <span class="bg-red-100 text-red-600 px-2 py-1 rounded text-sm font-medium">-28%</span>
+                            </div>
+                        </div>
+                        <div class="space-y-2 mb-4">
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-shield-alt text-green-500 mr-2"></i>
+                                <span>Inox 304 qualité alimentaire</span>
+                            </div>
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-snowflake text-blue-500 mr-2"></i>
+                                <span>Sac isotherme inclus</span>
+                            </div>
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-lock text-purple-500 mr-2"></i>
+                                <span>Étanche, couverts intégrés</span>
+                            </div>
+                        </div>
+                        <button class="w-full bg-green-600 text-white py-3 rounded-xl hover:bg-green-700 transition-colors font-medium">
+                            <i class="fas fa-cart-plus mr-2"></i>Ajouter au panier
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-12 text-gray-800">Pourquoi Choisir Nos Produits Écologiques ?</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+                <div class="p-6">
+                    <div class="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-globe-americas text-green-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2">Impact Environnemental</h3>
+                    <p class="text-gray-600">Réduisez votre empreinte carbone de 70% en moyenne avec nos alternatives durables</p>
+                </div>
+                <div class="p-6">
+                    <div class="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-piggy-bank text-green-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2">Économies</h3>
+                    <p class="text-gray-600">Économisez jusqu'à 300€/an en remplaçant les produits jetables</p>
+                </div>
+                <div class="p-6">
+                    <div class="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-award text-green-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2">Qualité Premium</h3>
+                    <p class="text-gray-600">Matériaux nobles et durables, conçus pour durer des années</p>
+                </div>
+                <div class="p-6">
+                    <div class="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-heart text-green-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2">Santé</h3>
+                    <p class="text-gray-600">Sans produits chimiques nocifs, 100% sains pour vous et votre famille</p>
+                </div>
+            </div>
+
+            <div class="bg-green-50 rounded-2xl p-8 max-w-4xl mx-auto">
+                <h3 class="text-2xl font-bold mb-4 text-green-800">L'Engagement TechViral Éco</h3>
+                <p class="text-gray-700 mb-6">Nous nous engageons à proposer uniquement des produits certifiés, testés et approuvés par nos experts en développement durable. Chaque achat contribue à notre programme de reforestation.</p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div class="flex items-center justify-center space-x-2">
+                        <i class="fas fa-tree text-green-600"></i>
+                        <span class="text-sm">1 produit = 1 arbre planté</span>
+                    </div>
+                    <div class="flex items-center justify-center space-x-2">
+                        <i class="fas fa-shipping-fast text-blue-600"></i>
+                        <span class="text-sm">Livraison carbone neutre</span>
+                    </div>
+                    <div class="flex items-center justify-center space-x-2">
+                        <i class="fas fa-recycle text-green-600"></i>
+                        <span class="text-sm">Emballage 100% recyclé</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="py-12 gradient-bg">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold text-white mb-4">Restez Informé des Nouveautés Éco</h2>
+            <p class="text-white/80 mb-8">Recevez nos conseils éco-responsables et découvrez en avant-première nos nouveaux produits durables</p>
+            <div class="flex flex-col sm:flex-row max-w-md mx-auto">
+                <input type="email" placeholder="Votre email" class="flex-1 px-6 py-3 rounded-l-xl sm:rounded-r-none rounded-r-xl border-0 focus:outline-none focus:ring-2 focus:ring-white/20">
+                <button class="bg-white text-green-600 px-8 py-3 rounded-r-xl sm:rounded-l-none rounded-l-xl font-medium hover:bg-gray-100 transition-colors">
+                    S'abonner
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <i class="fas fa-bolt text-2xl text-blue-500"></i>
+                        <span class="text-2xl font-bold">TechViral</span>
+                    </div>
+                    <p class="text-gray-400 mb-4">Votre destination pour les produits éco-responsables et innovants. Livraison rapide et service client exceptionnel.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Catégories</h3>
+                    <ul class="space-y-2">
+                        <li><a href="tech.html" class="text-gray-400 hover:text-white transition-colors">High-Tech</a></li>
+                        <li><a href="gaming.html" class="text-gray-400 hover:text-white transition-colors">Gaming</a></li>
+                        <li><a href="sante.html" class="text-gray-400 hover:text-white transition-colors">Santé & Bien-être</a></li>
+                        <li><a href="ecologique.html" class="text-gray-400 hover:text-green-400 transition-colors">Écologique</a></li>
+                        <li><a href="animaux.html" class="text-gray-400 hover:text-white transition-colors">Animaux</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Support</h3>
+                    <ul class="space-y-2">
+                        <li><a href="../support.html" class="text-gray-400 hover:text-white transition-colors">Centre d'aide</a></li>
+                        <li><a href="../legal/shipping.html" class="text-gray-400 hover:text-white transition-colors">Livraison</a></li>
+                        <li><a href="../legal/returns.html" class="text-gray-400 hover:text-white transition-colors">Retours</a></li>
+                        <li><a href="../contact.html" class="text-gray-400 hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Légal</h3>
+                    <ul class="space-y-2">
+                        <li><a href="../legal/terms.html" class="text-gray-400 hover:text-white transition-colors">CGV</a></li>
+                        <li><a href="../legal/privacy.html" class="text-gray-400 hover:text-white transition-colors">Confidentialité</a></li>
+                        <li><a href="../legal/cookies.html" class="text-gray-400 hover:text-white transition-colors">Cookies</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8 mt-8 text-center">
+                <p class="text-gray-400">&copy; 2025 TechViral. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../assets/js/cart.js"></script>
+    <script src="../../assets/js/search.js"></script>
+    <script>
+        // Filter functionality
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const productCards = document.querySelectorAll('.product-card');
+        const productCountElement = document.getElementById('product-count');
+        
+        function updateProductCount() {
+            const visibleProducts = Array.from(productCards).filter(card => 
+                card.style.display !== 'none'
+            ).length;
+            productCountElement.textContent = visibleProducts;
+        }
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                // Remove active class from all buttons
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                // Add active class to clicked button
+                this.classList.add('active');
+
+                const category = this.dataset.category;
+
+                productCards.forEach(card => {
+                    const cardCategories = card.dataset.category;
+                    
+                    if (category === 'all' || cardCategories.includes(category)) {
+                        card.style.display = 'block';
+                        setTimeout(() => {
+                            card.style.opacity = '1';
+                            card.style.transform = 'scale(1)';
+                        }, 50);
+                    } else {
+                        card.style.opacity = '0';
+                        card.style.transform = 'scale(0.9)';
+                        setTimeout(() => {
+                            card.style.display = 'none';
+                        }, 300);
+                    }
+                });
+
+                setTimeout(updateProductCount, 350);
+            });
+        });
+
+        // Sort functionality
+        const sortSelect = document.getElementById('sort-select');
+        const productsGrid = document.getElementById('products-grid');
+
+        sortSelect.addEventListener('change', function() {
+            const sortValue = this.value;
+            const products = Array.from(productCards);
+            
+            products.sort((a, b) => {
+                switch (sortValue) {
+                    case 'price-asc':
+                        return parseFloat(a.dataset.price) - parseFloat(b.dataset.price);
+                    case 'price-desc':
+                        return parseFloat(b.dataset.price) - parseFloat(a.dataset.price);
+                    case 'rating':
+                        return parseFloat(b.dataset.rating) - parseFloat(a.dataset.rating);
+                    case 'popularity':
+                        return Math.random() - 0.5; // Random for demo
+                    default:
+                        return 0;
+                }
+            });
+
+            // Clear and re-append sorted products
+            products.forEach(product => {
+                productsGrid.appendChild(product);
+            });
+        });
+
+        // Add to cart functionality is now handled by cart.js globally
+
+        // Initialize
+        updateProductCount();
+    </script>
+</body>
+</html>

@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - Questions Fréquentes | TechViral</title>
+    <meta name="description" content="Réponses aux questions les plus fréquentes sur TechViral. Livraison, retours, garanties, paiement sécurisé.">
+    <meta name="keywords" content="FAQ, questions, aide, support, TechViral, livraison, retour">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="FAQ - Questions Fréquentes | TechViral">
+    <meta property="og:description" content="Trouvez rapidement les réponses à vos questions sur nos produits et services.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="../assets/images/og-faq.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="../../assets/icons/favicon.ico">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-gray-50 dark:bg-gray-900 font-inter">
+    <!-- Navigation -->
+    <nav class="bg-white/80 dark:bg-gray-900/80 backdrop-blur-md sticky top-0 z-50 border-b border-gray-200 dark:border-gray-700">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <a href="../../index.html" class="flex items-center space-x-3">
+                    <div class="w-10 h-10 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-xl flex items-center justify-center">
+                        <span class="text-white font-bold text-lg">T</span>
+                    </div>
+                    <span class="text-2xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">TechViral</span>
+                </a>
+                
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="../../index.html" class="text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Accueil</a>
+                    <a href="../categories/all.html" class="text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Produits</a>
+                    <a href="../contact.html" class="text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Contact</a>
+                    <a href="faq.html" class="text-indigo-600 dark:text-indigo-400 font-medium">FAQ</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-br from-indigo-50 via-purple-50 to-orange-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 py-16">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="animate-fade-in-up">
+                <h1 class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
+                    Questions <span class="bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">Fréquentes</span>
+                </h1>
+                <p class="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+                    Trouvez rapidement les réponses à toutes vos questions sur nos produits, la livraison, les retours et plus encore.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Content -->
+    <section class="py-16">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Search Bar -->
+            <div class="mb-12">
+                <div class="relative max-w-md mx-auto">
+                    <input type="text" id="faq-search" placeholder="Rechercher dans la FAQ..." 
+                           class="w-full px-4 py-3 pl-12 rounded-xl border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-indigo-500 focus:border-transparent">
+                    <svg class="absolute left-4 top-3.5 w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                    </svg>
+                </div>
+            </div>
+
+            <!-- FAQ Categories -->
+            <div class="mb-8">
+                <div class="flex flex-wrap justify-center gap-4">
+                    <button class="faq-category-btn active px-6 py-2 rounded-full bg-indigo-600 text-white font-medium" data-category="all">
+                        Tout voir
+                    </button>
+                    <button class="faq-category-btn px-6 py-2 rounded-full bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 font-medium hover:bg-indigo-100 dark:hover:bg-indigo-900 transition-colors" data-category="commande">
+                        Commandes
+                    </button>
+                    <button class="faq-category-btn px-6 py-2 rounded-full bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 font-medium hover:bg-indigo-100 dark:hover:bg-indigo-900 transition-colors" data-category="livraison">
+                        Livraison
+                    </button>
+                    <button class="faq-category-btn px-6 py-2 rounded-full bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 font-medium hover:bg-indigo-100 dark:hover:bg-indigo-900 transition-colors" data-category="retour">
+                        Retours
+                    </button>
+                    <button class="faq-category-btn px-6 py-2 rounded-full bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 font-medium hover:bg-indigo-100 dark:hover:bg-indigo-900 transition-colors" data-category="paiement">
+                        Paiement
+                    </button>
+                </div>
+            </div>
+
+            <!-- FAQ Items -->
+            <div class="space-y-6">
+                <!-- Commandes -->
+                <div class="faq-item bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 overflow-hidden" data-category="commande">
+                    <button class="faq-toggle w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
+                        <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Comment passer une commande ?</h3>
+                        <svg class="faq-icon w-5 h-5 text-gray-500 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div class="faq-answer px-6 pb-4 text-gray-600 dark:text-gray-300 hidden">
+                        <p>Pour passer une commande sur TechViral :</p>
+                        <ol class="list-decimal list-inside mt-2 space-y-1">
+                            <li>Parcourez nos produits et ajoutez-les à votre panier</li>
+                            <li>Cliquez sur l'icône panier et vérifiez vos articles</li>
+                            <li>Procédez au checkout en remplissant vos informations</li>
+                            <li>Choisissez votre mode de livraison et de paiement</li>
+                            <li>Confirmez votre commande</li>
+                        </ol>
+                        <p class="mt-2">Vous recevrez immédiatement un email de confirmation avec les détails de votre commande.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 overflow-hidden" data-category="commande">
+                    <button class="faq-toggle w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
+                        <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Puis-je modifier ou annuler ma commande ?</h3>
+                        <svg class="faq-icon w-5 h-5 text-gray-500 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div class="faq-answer px-6 pb-4 text-gray-600 dark:text-gray-300 hidden">
+                        <p>Vous pouvez modifier ou annuler votre commande dans les 2 heures suivant la confirmation, à condition qu'elle ne soit pas encore expédiée.</p>
+                        <p class="mt-2">Contactez-nous rapidement via :</p>
+                        <ul class="list-disc list-inside mt-2">
+                            <li>Email : support@techviral.com</li>
+                            <li>Chat en direct sur notre site</li>
+                            <li>Téléphone : 01 23 45 67 89</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Livraison -->
+                <div class="faq-item bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 overflow-hidden" data-category="livraison">
+                    <button class="faq-toggle w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
+                        <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Quels sont les délais de livraison ?</h3>
+                        <svg class="faq-icon w-5 h-5 text-gray-500 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div class="faq-answer px-6 pb-4 text-gray-600 dark:text-gray-300 hidden">
+                        <div class="space-y-3">
+                            <div class="bg-gray-50 dark:bg-gray-700 p-3 rounded-lg">
+                                <h4 class="font-semibold text-gray-900 dark:text-white">Livraison Standard (gratuite dès 50€)</h4>
+                                <p>3-5 jours ouvrés - 4,90€</p>
+                            </div>
+                            <div class="bg-gray-50 dark:bg-gray-700 p-3 rounded-lg">
+                                <h4 class="font-semibold text-gray-900 dark:text-white">Livraison Express</h4>
+                                <p>24-48h - 9,90€</p>
+                            </div>
+                            <div class="bg-gray-50 dark:bg-gray-700 p-3 rounded-lg">
+                                <h4 class="font-semibold text-gray-900 dark:text-white">Livraison Premium</h4>
+                                <p>Jour même (Paris et région) - 14,90€</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 overflow-hidden" data-category="livraison">
+                    <button class="faq-toggle w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
+                        <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Comment suivre ma commande ?</h3>
+                        <svg class="faq-icon w-5 h-5 text-gray-500 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div class="faq-answer px-6 pb-4 text-gray-600 dark:text-gray-300 hidden">
+                        <p>Dès l'expédition de votre commande, vous recevrez :</p>
+                        <ul class="list-disc list-inside mt-2 space-y-1">
+                            <li>Un email avec le numéro de suivi</li>
+                            <li>Un lien direct vers le suivi transporteur</li>
+                            <li>Des notifications SMS à chaque étape (optionnel)</li>
+                        </ul>
+                        <p class="mt-2">Vous pouvez aussi suivre votre commande depuis votre compte client sur notre site.</p>
+                    </div>
+                </div>
+
+                <!-- Retours -->
+                <div class="faq-item bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 overflow-hidden" data-category="retour">
+                    <button class="faq-toggle w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
+                        <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Quelle est votre politique de retour ?</h3>
+                        <svg class="faq-icon w-5 h-5 text-gray-500 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div class="faq-answer px-6 pb-4 text-gray-600 dark:text-gray-300 hidden">
+                        <p class="font-medium text-green-600 dark:text-green-400 mb-2">30 jours satisfait ou remboursé !</p>
+                        <p>Vous avez 30 jours après réception pour retourner un article dans son état d'origine.</p>
+                        <p class="mt-2">Conditions :</p>
+                        <ul class="list-disc list-inside mt-2">
+                            <li>Produit non utilisé et dans son emballage d'origine</li>
+                            <li>Tous les accessoires inclus</li>
+                            <li>Étiquettes non retirées</li>
+                        </ul>
+                        <p class="mt-2">Les frais de retour sont gratuits si le produit est défectueux, sinon ils sont à votre charge (4,90€).</p>
+                    </div>
+                </div>
+
+                <div class="faq-item bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 overflow-hidden" data-category="retour">
+                    <button class="faq-toggle w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
+                        <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Comment faire un retour ?</h3>
+                        <svg class="faq-icon w-5 h-5 text-gray-500 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div class="faq-answer px-6 pb-4 text-gray-600 dark:text-gray-300 hidden">
+                        <p>Processus de retour simple en 3 étapes :</p>
+                        <ol class="list-decimal list-inside mt-2 space-y-1">
+                            <li>Connectez-vous à votre compte et demandez un retour</li>
+                            <li>Imprimez l'étiquette de retour prépayée</li>
+                            <li>Déposez le colis dans un point relais ou planifiez un enlèvement</li>
+                        </ol>
+                        <p class="mt-2">Dès réception et vérification, nous procédons au remboursement sous 3-5 jours ouvrés.</p>
+                    </div>
+                </div>
+
+                <!-- Paiement -->
+                <div class="faq-item bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 overflow-hidden" data-category="paiement">
+                    <button class="faq-toggle w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
+                        <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Quels moyens de paiement acceptez-vous ?</h3>
+                        <svg class="faq-icon w-5 h-5 text-gray-500 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div class="faq-answer px-6 pb-4 text-gray-600 dark:text-gray-300 hidden">
+                        <p>Nous acceptons tous les moyens de paiement sécurisés :</p>
+                        <div class="grid grid-cols-2 gap-4 mt-3">
+                            <div>
+                                <h4 class="font-semibold">Cartes bancaires</h4>
+                                <ul class="text-sm">
+                                    <li>• Visa</li>
+                                    <li>• Mastercard</li>
+                                    <li>• American Express</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold">Paiements numériques</h4>
+                                <ul class="text-sm">
+                                    <li>• PayPal</li>
+                                    <li>• Apple Pay</li>
+                                    <li>• Google Pay</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <p class="mt-3">Tous les paiements sont sécurisés avec chiffrement SSL 256-bit.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 overflow-hidden" data-category="paiement">
+                    <button class="faq-toggle w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
+                        <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Mes informations de paiement sont-elles sécurisées ?</h3>
+                        <svg class="faq-icon w-5 h-5 text-gray-500 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div class="faq-answer px-6 pb-4 text-gray-600 dark:text-gray-300 hidden">
+                        <p class="font-medium text-green-600 dark:text-green-400 mb-2">Sécurité maximale garantie !</p>
+                        <p>Vos données de paiement sont protégées par :</p>
+                        <ul class="list-disc list-inside mt-2">
+                            <li>Chiffrement SSL/TLS 256-bit</li>
+                            <li>Conformité PCI-DSS</li>
+                            <li>Authentification 3D Secure</li>
+                            <li>Partenariat avec Stripe (leader européen des paiements)</li>
+                        </ul>
+                        <p class="mt-2">Nous ne stockons jamais vos informations bancaires sur nos serveurs.</p>
+                    </div>
+                </div>
+
+                <!-- Questions générales -->
+                <div class="faq-item bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 overflow-hidden" data-category="general">
+                    <button class="faq-toggle w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
+                        <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Proposez-vous une garantie sur vos produits ?</h3>
+                        <svg class="faq-icon w-5 h-5 text-gray-500 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div class="faq-answer px-6 pb-4 text-gray-600 dark:text-gray-300 hidden">
+                        <p>Oui, tous nos produits bénéficient d'une garantie :</p>
+                        <div class="space-y-2 mt-2">
+                            <div class="flex justify-between">
+                                <span>Garantie légale</span>
+                                <span class="font-medium">2 ans</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span>Garantie commerciale TechViral</span>
+                                <span class="font-medium">1 an</span>
+                            </div>
+                        </div>
+                        <p class="mt-3">La garantie couvre les défauts de fabrication et les pannes prématurées. Support technique inclus.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 overflow-hidden" data-category="general">
+                    <button class="faq-toggle w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
+                        <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Comment vous contacter si j'ai un problème ?</h3>
+                        <svg class="faq-icon w-5 h-5 text-gray-500 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div class="faq-answer px-6 pb-4 text-gray-600 dark:text-gray-300 hidden">
+                        <p>Notre équipe support est à votre disposition :</p>
+                        <div class="space-y-3 mt-3">
+                            <div class="bg-gray-50 dark:bg-gray-700 p-3 rounded-lg">
+                                <h4 class="font-semibold">Chat en direct</h4>
+                                <p class="text-sm">Lun-Ven 9h-18h • Réponse immédiate</p>
+                            </div>
+                            <div class="bg-gray-50 dark:bg-gray-700 p-3 rounded-lg">
+                                <h4 class="font-semibold">Email : support@techviral.com</h4>
+                                <p class="text-sm">Réponse sous 2h en moyenne</p>
+                            </div>
+                            <div class="bg-gray-50 dark:bg-gray-700 p-3 rounded-lg">
+                                <h4 class="font-semibold">Téléphone : 01 23 45 67 89</h4>
+                                <p class="text-sm">Lun-Ven 9h-18h • Rappel gratuit</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="bg-gradient-to-r from-indigo-600 to-purple-600 py-16">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold text-white mb-4">Vous ne trouvez pas votre réponse ?</h2>
+            <p class="text-xl text-indigo-100 mb-8">Notre équipe support est là pour vous aider personnellement</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="../contact.html" class="px-8 py-3 bg-white text-indigo-600 rounded-xl font-medium hover:bg-gray-50 transition-colors">
+                    Nous contacter
+                </a>
+                <a href="mailto:support@techviral.com" class="px-8 py-3 bg-indigo-500 text-white rounded-xl font-medium hover:bg-indigo-400 transition-colors">
+                    Envoyer un email
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="col-span-1 md:col-span-2">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="w-10 h-10 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-xl flex items-center justify-center">
+                            <span class="text-white font-bold text-lg">T</span>
+                        </div>
+                        <span class="text-2xl font-bold">TechViral</span>
+                    </div>
+                    <p class="text-gray-400 mb-4">Les produits les plus innovants de 2025 à portée de clic. Livraison rapide et support client exceptionnel.</p>
+                </div>
+                
+                <div>
+                    <h3 class="font-semibold mb-4">Support</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="faq.html" class="hover:text-white transition-colors">FAQ</a></li>
+                        <li><a href="../contact.html" class="hover:text-white transition-colors">Contact</a></li>
+                        <li><a href="shipping.html" class="hover:text-white transition-colors">Livraison</a></li>
+                        <li><a href="returns.html" class="hover:text-white transition-colors">Retours</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="font-semibold mb-4">Légal</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="../legal/terms.html" class="hover:text-white transition-colors">CGV</a></li>
+                        <li><a href="../legal/privacy.html" class="hover:text-white transition-colors">Confidentialité</a></li>
+                        <li><a href="../legal/cookies.html" class="hover:text-white transition-colors">Cookies</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 TechViral. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // FAQ Search
+        document.getElementById('faq-search').addEventListener('input', function(e) {
+            const searchTerm = e.target.value.toLowerCase();
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const title = item.querySelector('h3').textContent.toLowerCase();
+                const content = item.querySelector('.faq-answer').textContent.toLowerCase();
+                
+                if (title.includes(searchTerm) || content.includes(searchTerm)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = searchTerm === '' ? 'block' : 'none';
+                }
+            });
+        });
+
+        // Category Filter
+        document.querySelectorAll('.faq-category-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                // Update active state
+                document.querySelectorAll('.faq-category-btn').forEach(b => {
+                    b.classList.remove('active', 'bg-indigo-600', 'text-white');
+                    b.classList.add('bg-gray-200', 'dark:bg-gray-700', 'text-gray-700', 'dark:text-gray-300');
+                });
+                
+                this.classList.add('active', 'bg-indigo-600', 'text-white');
+                this.classList.remove('bg-gray-200', 'dark:bg-gray-700', 'text-gray-700', 'dark:text-gray-300');
+                
+                // Filter items
+                const category = this.dataset.category;
+                const faqItems = document.querySelectorAll('.faq-item');
+                
+                faqItems.forEach(item => {
+                    if (category === 'all' || item.dataset.category === category) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // FAQ Toggle
+        document.querySelectorAll('.faq-toggle').forEach(toggle => {
+            toggle.addEventListener('click', function() {
+                const answer = this.nextElementSibling;
+                const icon = this.querySelector('.faq-icon');
+                
+                if (answer.classList.contains('hidden')) {
+                    answer.classList.remove('hidden');
+                    icon.style.transform = 'rotate(180deg)';
+                } else {
+                    answer.classList.add('hidden');
+                    icon.style.transform = 'rotate(0deg)';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="refresh" content="0;url=index.html">
+    <title>TechViral - Redirection</title>
+    <style>
+        body { 
+            font-family: system-ui; 
+            text-align: center; 
+            padding: 50px; 
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        .loading { animation: pulse 1.5s infinite; }
+        @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
+    </style>
+</head>
+<body>
+    <div class="loading">
+        <h1>🚀 TechViral</h1>
+        <p>Redirection vers le site...</p>
+    </div>
+    <script>
+        // Redirection immédiate
+        window.location.replace('index.html');
+    </script>
+</body>
+</html>

@@ -1,0 +1,1027 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produits pour Animaux - TechViral</title>
+    <meta name="description" content="Découvrez notre sélection de produits innovants pour animaux : jouets intelligents, accessoires connectés, soins naturels. Livraison rapide.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #ea580c 0%, #dc2626 100%);
+        }
+        .product-card {
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+        .product-card:hover {
+            transform: translateY(-8px);
+            border-color: #ea580c;
+            box-shadow: 0 20px 40px rgba(234, 88, 12, 0.1);
+        }
+        .animal-badge {
+            background: linear-gradient(45deg, #ea580c, #dc2626);
+        }
+        .growth-badge {
+            background: linear-gradient(45deg, #059669, #047857);
+        }
+        .filter-btn.active {
+            background: linear-gradient(135deg, #ea580c, #dc2626) !important;
+            color: white !important;
+        }
+    </style>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="icon" href="../../assets/images/favicon.ico">
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center space-x-4">
+                    <a href="../../index.html" class="flex items-center space-x-2">
+                        <i class="fas fa-bolt text-2xl text-blue-600"></i>
+                        <span class="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">TechViral</span>
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center space-x-6">
+                    <a href="../../index.html" class="text-gray-700 hover:text-blue-600 transition-colors">Accueil</a>
+                    <div class="relative group">
+                        <a href="#" class="text-orange-500 font-medium flex items-center">
+                            Catégories <i class="fas fa-chevron-down ml-1"></i>
+                        </a>
+                        <div class="absolute top-full left-0 w-48 bg-white shadow-lg rounded-lg py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+                            <a href="tech.html" class="block px-4 py-2 hover:bg-gray-100">High-Tech</a>
+                            <a href="gaming.html" class="block px-4 py-2 hover:bg-gray-100">Gaming</a>
+                            <a href="sante.html" class="block px-4 py-2 hover:bg-gray-100">Santé & Bien-être</a>
+                            <a href="ecologique.html" class="block px-4 py-2 hover:bg-gray-100">Écologique</a>
+                            <a href="animaux.html" class="block px-4 py-2 text-orange-500 font-medium">Animaux</a>
+                        </div>
+                    </div>
+                    <a href="../support.html" class="text-gray-700 hover:text-blue-600 transition-colors">Support</a>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <a href="../cart.html" class="relative text-gray-700 hover:text-blue-600 transition-colors">
+                        <i class="fas fa-shopping-cart text-xl"></i>
+                        <span class="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center" id="cart-count">0</span>
+                    </a>
+                    <a href="../login.html" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">Connexion</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="gradient-bg text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <div class="mb-6">
+                <i class="fas fa-paw text-6xl mb-4 opacity-80"></i>
+            </div>
+            <h1 class="text-5xl font-bold mb-6">Produits pour Animaux</h1>
+            <p class="text-xl mb-8 max-w-3xl mx-auto opacity-90">Gâtez vos compagnons à quatre pattes avec notre sélection de produits innovants, jouets intelligents et accessoires high-tech pour leur bien-être et votre tranquillité d'esprit.</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto mt-12">
+                <div class="bg-white/10 backdrop-blur-md rounded-xl p-6">
+                    <i class="fas fa-heart text-3xl mb-3"></i>
+                    <h3 class="text-lg font-semibold mb-2">Bien-être Animal</h3>
+                    <p class="text-sm opacity-80">Produits testés vétérinaires pour la santé de vos animaux</p>
+                </div>
+                <div class="bg-white/10 backdrop-blur-md rounded-xl p-6">
+                    <i class="fas fa-mobile-alt text-3xl mb-3"></i>
+                    <h3 class="text-lg font-semibold mb-2">Connectés & Intelligents</h3>
+                    <p class="text-sm opacity-80">Surveillance et interaction via smartphone</p>
+                </div>
+                <div class="bg-white/10 backdrop-blur-md rounded-xl p-6">
+                    <i class="fas fa-shipping-fast text-3xl mb-3"></i>
+                    <h3 class="text-lg font-semibold mb-2">Livraison Express</h3>
+                    <p class="text-sm opacity-80">Réception rapide pour le bonheur de vos animaux</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filters Section -->
+    <section class="py-8 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex flex-wrap justify-center gap-4 mb-8">
+                <button class="filter-btn active px-6 py-3 rounded-full border border-orange-200 hover:bg-orange-50 transition-all font-medium" data-category="all">
+                    <i class="fas fa-th-large mr-2"></i>Tous les produits
+                </button>
+                <button class="filter-btn px-6 py-3 rounded-full border border-orange-200 hover:bg-orange-50 transition-all font-medium" data-category="chien">
+                    <i class="fas fa-dog mr-2"></i>Chiens
+                </button>
+                <button class="filter-btn px-6 py-3 rounded-full border border-orange-200 hover:bg-orange-50 transition-all font-medium" data-category="chat">
+                    <i class="fas fa-cat mr-2"></i>Chats
+                </button>
+                <button class="filter-btn px-6 py-3 rounded-full border border-orange-200 hover:bg-orange-50 transition-all font-medium" data-category="connecte">
+                    <i class="fas fa-wifi mr-2"></i>Connecté
+                </button>
+                <button class="filter-btn px-6 py-3 rounded-full border border-orange-200 hover:bg-orange-50 transition-all font-medium" data-category="sante">
+                    <i class="fas fa-stethoscope mr-2"></i>Santé
+                </button>
+            </div>
+            
+            <div class="flex justify-between items-center mb-6">
+                <div>
+                    <span class="text-gray-600">Affichage de <span id="product-count">12</span> produits</span>
+                </div>
+                <select id="sort-select" class="border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-orange-500">
+                    <option value="default">Trier par défaut</option>
+                    <option value="price-asc">Prix croissant</option>
+                    <option value="price-desc">Prix décroissant</option>
+                    <option value="rating">Meilleures notes</option>
+                    <option value="popularity">Popularité</option>
+                </select>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Grid -->
+    <section class="py-12 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div id="products-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Caméra de Surveillance Pet -->
+                <div class="product-card bg-white rounded-2xl shadow-lg overflow-hidden" data-category="chien chat connecte" data-price="129.90" data-rating="4.8">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?w=400" alt="Caméra surveillance animaux" class="w-full h-64 object-cover">
+                        <div class="absolute top-4 left-4">
+                            <span class="animal-badge text-white px-3 py-1 rounded-full text-sm font-medium">
+                                <i class="fas fa-video mr-1"></i>Connecté
+                            </span>
+                        </div>
+                        <div class="absolute top-4 right-4">
+                            <span class="growth-badge text-white px-2 py-1 rounded text-xs font-bold">+387%</span>
+                        </div>
+                        <button class="absolute bottom-4 right-4 bg-white/80 backdrop-blur-sm p-2 rounded-full hover:bg-white transition-all">
+                            <i class="fas fa-heart text-gray-600 hover:text-red-500"></i>
+                        </button>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-gray-800">Caméra de Surveillance Pet</h3>
+                        <p class="text-gray-600 mb-3">Caméra HD 1080p avec audio bidirectionnel et distributeur de friandises</p>
+                        <div class="flex items-center mb-3">
+                            <div class="flex text-yellow-400 mr-2">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="text-sm text-gray-500">(4.8) • 3,247 avis</span>
+                        </div>
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center space-x-2">
+                                <span class="text-2xl font-bold text-orange-600">129,90€</span>
+                                <span class="text-lg text-gray-400 line-through">179,90€</span>
+                                <span class="bg-red-100 text-red-600 px-2 py-1 rounded text-sm font-medium">-28%</span>
+                            </div>
+                        </div>
+                        <div class="space-y-2 mb-4">
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-mobile-alt text-blue-500 mr-2"></i>
+                                <span>Contrôle via app smartphone</span>
+                            </div>
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-volume-up text-green-500 mr-2"></i>
+                                <span>Audio bidirectionnel HD</span>
+                            </div>
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-cookie-bite text-orange-500 mr-2"></i>
+                                <span>Distributeur friandises inclus</span>
+                            </div>
+                        </div>
+                        <button class="w-full bg-orange-600 text-white py-3 rounded-xl hover:bg-orange-700 transition-colors font-medium">
+                            <i class="fas fa-cart-plus mr-2"></i>Ajouter au panier
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Collier GPS Intelligent -->
+                <div class="product-card bg-white rounded-2xl shadow-lg overflow-hidden" data-category="chien connecte" data-price="89.90" data-rating="4.7">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1601758228041-f3b2795255f1?w=400" alt="Collier GPS chien" class="w-full h-64 object-cover">
+                        <div class="absolute top-4 left-4">
+                            <span class="animal-badge text-white px-3 py-1 rounded-full text-sm font-medium">
+                                <i class="fas fa-satellite-dish mr-1"></i>GPS
+                            </span>
+                        </div>
+                        <div class="absolute top-4 right-4">
+                            <span class="growth-badge text-white px-2 py-1 rounded text-xs font-bold">+445%</span>
+                        </div>
+                        <button class="absolute bottom-4 right-4 bg-white/80 backdrop-blur-sm p-2 rounded-full hover:bg-white transition-all">
+                            <i class="fas fa-heart text-gray-600 hover:text-red-500"></i>
+                        </button>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-gray-800">Collier GPS Intelligent</h3>
+                        <p class="text-gray-600 mb-3">Suivi en temps réel avec zones de sécurité et monitoring d'activité</p>
+                        <div class="flex items-center mb-3">
+                            <div class="flex text-yellow-400 mr-2">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <span class="text-sm text-gray-500">(4.7) • 2,891 avis</span>
+                        </div>
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center space-x-2">
+                                <span class="text-2xl font-bold text-orange-600">89,90€</span>
+                                <span class="text-lg text-gray-400 line-through">129,90€</span>
+                                <span class="bg-red-100 text-red-600 px-2 py-1 rounded text-sm font-medium">-31%</span>
+                            </div>
+                        </div>
+                        <div class="space-y-2 mb-4">
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-map-marker-alt text-red-500 mr-2"></i>
+                                <span>Localisation précise 3m</span>
+                            </div>
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-battery-full text-green-500 mr-2"></i>
+                                <span>Autonomie 7 jours</span>
+                            </div>
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-water text-blue-500 mr-2"></i>
+                                <span>Étanche IP67</span>
+                            </div>
+                        </div>
+                        <button class="w-full bg-orange-600 text-white py-3 rounded-xl hover:bg-orange-700 transition-colors font-medium">
+                            <i class="fas fa-cart-plus mr-2"></i>Ajouter au panier
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Distributeur Automatique -->
+                <div class="product-card bg-white rounded-2xl shadow-lg overflow-hidden" data-category="chien chat connecte" data-price="69.90" data-rating="4.6">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1589924691995-400dc9ecc119?w=400" alt="Distributeur automatique croquettes" class="w-full h-64 object-cover">
+                        <div class="absolute top-4 left-4">
+                            <span class="animal-badge text-white px-3 py-1 rounded-full text-sm font-medium">
+                                <i class="fas fa-clock mr-1"></i>Auto
+                            </span>
+                        </div>
+                        <div class="absolute top-4 right-4">
+                            <span class="growth-badge text-white px-2 py-1 rounded text-xs font-bold">+298%</span>
+                        </div>
+                        <button class="absolute bottom-4 right-4 bg-white/80 backdrop-blur-sm p-2 rounded-full hover:bg-white transition-all">
+                            <i class="fas fa-heart text-gray-600 hover:text-red-500"></i>
+                        </button>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-gray-800">Distributeur Automatique</h3>
+                        <p class="text-gray-600 mb-3">Programmable 4 repas/jour avec contrôle portions et app mobile</p>
+                        <div class="flex items-center mb-3">
+                            <div class="flex text-yellow-400 mr-2">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <span class="text-sm text-gray-500">(4.6) • 1,756 avis</span>
+                        </div>
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center space-x-2">
+                                <span class="text-2xl font-bold text-orange-600">69,90€</span>
+                                <span class="text-lg text-gray-400 line-through">99,90€</span>
+                                <span class="bg-red-100 text-red-600 px-2 py-1 rounded text-sm font-medium">-30%</span>
+                            </div>
+                        </div>
+                        <div class="space-y-2 mb-4">
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-utensils text-green-500 mr-2"></i>
+                                <span>Capacité 4kg de croquettes</span>
+                            </div>
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-cog text-blue-500 mr-2"></i>
+                                <span>4 repas programmables</span>
+                            </div>
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-volume-low text-gray-500 mr-2"></i>
+                                <span>Fonctionnement silencieux</span>
+                            </div>
+                        </div>
+                        <button class="w-full bg-orange-600 text-white py-3 rounded-xl hover:bg-orange-700 transition-colors font-medium">
+                            <i class="fas fa-cart-plus mr-2"></i>Ajouter au panier
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Jouet Laser Automatique -->
+                <div class="product-card bg-white rounded-2xl shadow-lg overflow-hidden" data-category="chat connecte" data-price="49.90" data-rating="4.9">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1574144611937-0df059b5ef3e?w=400" alt="Jouet laser automatique chat" class="w-full h-64 object-cover">
+                        <div class="absolute top-4 left-4">
+                            <span class="animal-badge text-white px-3 py-1 rounded-full text-sm font-medium">
+                                <i class="fas fa-star mr-1"></i>Top Vente
+                            </span>
+                        </div>
+                        <div class="absolute top-4 right-4">
+                            <span class="growth-badge text-white px-2 py-1 rounded text-xs font-bold">+678%</span>
+                        </div>
+                        <button class="absolute bottom-4 right-4 bg-white/80 backdrop-blur-sm p-2 rounded-full hover:bg-white transition-all">
+                            <i class="fas fa-heart text-gray-600 hover:text-red-500"></i>
+                        </button>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-gray-800">Jouet Laser Automatique</h3>
+                        <p class="text-gray-600 mb-3">Laser rotatif intelligent avec détection mouvement et timer</p>
+                        <div class="flex items-center mb-3">
+                            <div class="flex text-yellow-400 mr-2">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="text-sm text-gray-500">(4.9) • 4,523 avis</span>
+                        </div>
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center space-x-2">
+                                <span class="text-2xl font-bold text-orange-600">49,90€</span>
+                                <span class="text-lg text-gray-400 line-through">69,90€</span>
+                                <span class="bg-red-100 text-red-600 px-2 py-1 rounded text-sm font-medium">-29%</span>
+                            </div>
+                        </div>
+                        <div class="space-y-2 mb-4">
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-eye text-red-500 mr-2"></i>
+                                <span>Détection de mouvement</span>
+                            </div>
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-clock text-blue-500 mr-2"></i>
+                                <span>Timer automatique 15min</span>
+                            </div>
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-shield-alt text-green-500 mr-2"></i>
+                                <span>Laser sécurisé classe 1</span>
+                            </div>
+                        </div>
+                        <button class="w-full bg-orange-600 text-white py-3 rounded-xl hover:bg-orange-700 transition-colors font-medium">
+                            <i class="fas fa-cart-plus mr-2"></i>Ajouter au panier
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Compléments Articulations -->
+                <div class="product-card bg-white rounded-2xl shadow-lg overflow-hidden" data-category="chien chat sante" data-price="39.90" data-rating="4.7">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1560743173-567a3b5658b1?w=400" alt="Compléments articulations animaux" class="w-full h-64 object-cover">
+                        <div class="absolute top-4 left-4">
+                            <span class="animal-badge text-white px-3 py-1 rounded-full text-sm font-medium">
+                                <i class="fas fa-plus-circle mr-1"></i>Santé
+                            </span>
+                        </div>
+                        <div class="absolute top-4 right-4">
+                            <span class="growth-badge text-white px-2 py-1 rounded text-xs font-bold">+234%</span>
+                        </div>
+                        <button class="absolute bottom-4 right-4 bg-white/80 backdrop-blur-sm p-2 rounded-full hover:bg-white transition-all">
+                            <i class="fas fa-heart text-gray-600 hover:text-red-500"></i>
+                        </button>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-gray-800">Compléments Articulations</h3>
+                        <p class="text-gray-600 mb-3">Chondroïtine et glucosamine naturelles pour la mobilité articulaire</p>
+                        <div class="flex items-center mb-3">
+                            <div class="flex text-yellow-400 mr-2">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <span class="text-sm text-gray-500">(4.7) • 2,341 avis</span>
+                        </div>
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center space-x-2">
+                                <span class="text-2xl font-bold text-orange-600">39,90€</span>
+                                <span class="text-lg text-gray-400 line-through">54,90€</span>
+                                <span class="bg-red-100 text-red-600 px-2 py-1 rounded text-sm font-medium">-27%</span>
+                            </div>
+                        </div>
+                        <div class="space-y-2 mb-4">
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-leaf text-green-500 mr-2"></i>
+                                <span>100% ingrédients naturels</span>
+                            </div>
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-microscope text-blue-500 mr-2"></i>
+                                <span>Testé cliniquement</span>
+                            </div>
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-pills text-purple-500 mr-2"></i>
+                                <span>90 comprimés appétents</span>
+                            </div>
+                        </div>
+                        <button class="w-full bg-orange-600 text-white py-3 rounded-xl hover:bg-orange-700 transition-colors font-medium">
+                            <i class="fas fa-cart-plus mr-2"></i>Ajouter au panier
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Tapis Rafraîchissant -->
+                <div class="product-card bg-white rounded-2xl shadow-lg overflow-hidden" data-category="chien chat sante" data-price="29.90" data-rating="4.8">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1601758125946-6ec2ef64daf8?w=400" alt="Tapis rafraîchissant animaux" class="w-full h-64 object-cover">
+                        <div class="absolute top-4 left-4">
+                            <span class="animal-badge text-white px-3 py-1 rounded-full text-sm font-medium">
+                                <i class="fas fa-snowflake mr-1"></i>Cool
+                            </span>
+                        </div>
+                        <div class="absolute top-4 right-4">
+                            <span class="growth-badge text-white px-2 py-1 rounded text-xs font-bold">+156%</span>
+                        </div>
+                        <button class="absolute bottom-4 right-4 bg-white/80 backdrop-blur-sm p-2 rounded-full hover:bg-white transition-all">
+                            <i class="fas fa-heart text-gray-600 hover:text-red-500"></i>
+                        </button>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-gray-800">Tapis Rafraîchissant</h3>
+                        <p class="text-gray-600 mb-3">Gel autorefroidissant sans électricité pour le confort estival</p>
+                        <div class="flex items-center mb-3">
+                            <div class="flex text-yellow-400 mr-2">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="text-sm text-gray-500">(4.8) • 3,678 avis</span>
+                        </div>
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center space-x-2">
+                                <span class="text-2xl font-bold text-orange-600">29,90€</span>
+                                <span class="text-lg text-gray-400 line-through">39,90€</span>
+                                <span class="bg-red-100 text-red-600 px-2 py-1 rounded text-sm font-medium">-25%</span>
+                            </div>
+                        </div>
+                        <div class="space-y-2 mb-4">
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-thermometer-half text-blue-500 mr-2"></i>
+                                <span>Refroidit jusqu'à -5°C</span>
+                            </div>
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-plug text-green-500 mr-2"></i>
+                                <span>Aucun branchement requis</span>
+                            </div>
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-ruler text-gray-500 mr-2"></i>
+                                <span>Taille M: 50x90cm</span>
+                            </div>
+                        </div>
+                        <button class="w-full bg-orange-600 text-white py-3 rounded-xl hover:bg-orange-700 transition-colors font-medium">
+                            <i class="fas fa-cart-plus mr-2"></i>Ajouter au panier
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Arbre à Chat Intelligent -->
+                <div class="product-card bg-white rounded-2xl shadow-lg overflow-hidden" data-category="chat connecte" data-price="159.90" data-rating="4.7">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?w=400" alt="Arbre à chat intelligent" class="w-full h-64 object-cover">
+                        <div class="absolute top-4 left-4">
+                            <span class="animal-badge text-white px-3 py-1 rounded-full text-sm font-medium">
+                                <i class="fas fa-microchip mr-1"></i>Smart
+                            </span>
+                        </div>
+                        <div class="absolute top-4 right-4">
+                            <span class="growth-badge text-white px-2 py-1 rounded text-xs font-bold">+312%</span>
+                        </div>
+                        <button class="absolute bottom-4 right-4 bg-white/80 backdrop-blur-sm p-2 rounded-full hover:bg-white transition-all">
+                            <i class="fas fa-heart text-gray-600 hover:text-red-500"></i>
+                        </button>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-gray-800">Arbre à Chat Intelligent</h3>
+                        <p class="text-gray-600 mb-3">Capteurs d'activité intégrés et app de suivi comportemental</p>
+                        <div class="flex items-center mb-3">
+                            <div class="flex text-yellow-400 mr-2">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <span class="text-sm text-gray-500">(4.7) • 1,456 avis</span>
+                        </div>
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center space-x-2">
+                                <span class="text-2xl font-bold text-orange-600">159,90€</span>
+                                <span class="text-lg text-gray-400 line-through">219,90€</span>
+                                <span class="bg-red-100 text-red-600 px-2 py-1 rounded text-sm font-medium">-27%</span>
+                            </div>
+                        </div>
+                        <div class="space-y-2 mb-4">
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-mobile-alt text-blue-500 mr-2"></i>
+                                <span>App de suivi d'activité</span>
+                            </div>
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-tree text-green-500 mr-2"></i>
+                                <span>150cm hauteur, bois premium</span>
+                            </div>
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-tools text-purple-500 mr-2"></i>
+                                <span>Installation facile 30min</span>
+                            </div>
+                        </div>
+                        <button class="w-full bg-orange-600 text-white py-3 rounded-xl hover:bg-orange-700 transition-colors font-medium">
+                            <i class="fas fa-cart-plus mr-2"></i>Ajouter au panier
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Harnais Anti-Traction GPS -->
+                <div class="product-card bg-white rounded-2xl shadow-lg overflow-hidden" data-category="chien connecte sante" data-price="79.90" data-rating="4.8">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1552053001-e35d0c4b3c83?w=400" alt="Harnais anti-traction GPS" class="w-full h-64 object-cover">
+                        <div class="absolute top-4 left-4">
+                            <span class="animal-badge text-white px-3 py-1 rounded-full text-sm font-medium">
+                                <i class="fas fa-shield-alt mr-1"></i>Ergonomique
+                            </span>
+                        </div>
+                        <div class="absolute top-4 right-4">
+                            <span class="growth-badge text-white px-2 py-1 rounded text-xs font-bold">+267%</span>
+                        </div>
+                        <button class="absolute bottom-4 right-4 bg-white/80 backdrop-blur-sm p-2 rounded-full hover:bg-white transition-all">
+                            <i class="fas fa-heart text-gray-600 hover:text-red-500"></i>
+                        </button>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-gray-800">Harnais Anti-Traction + GPS</h3>
+                        <p class="text-gray-600 mb-3">Design ergonomique avec tracker GPS intégré discret</p>
+                        <div class="flex items-center mb-3">
+                            <div class="flex text-yellow-400 mr-2">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="text-sm text-gray-500">(4.8) • 3,127 avis</span>
+                        </div>
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center space-x-2">
+                                <span class="text-2xl font-bold text-orange-600">79,90€</span>
+                                <span class="text-lg text-gray-400 line-through">109,90€</span>
+                                <span class="bg-red-100 text-red-600 px-2 py-1 rounded text-sm font-medium">-27%</span>
+                            </div>
+                        </div>
+                        <div class="space-y-2 mb-4">
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-hand-paper text-green-500 mr-2"></i>
+                                <span>Stop la traction instantané</span>
+                            </div>
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-satellite text-blue-500 mr-2"></i>
+                                <span>GPS intégré invisible</span>
+                            </div>
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-award text-purple-500 mr-2"></i>
+                                <span>Certifié vétérinaire</span>
+                            </div>
+                        </div>
+                        <button class="w-full bg-orange-600 text-white py-3 rounded-xl hover:bg-orange-700 transition-colors font-medium">
+                            <i class="fas fa-cart-plus mr-2"></i>Ajouter au panier
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Fontaine à Eau Connectée -->
+                <div class="product-card bg-white rounded-2xl shadow-lg overflow-hidden" data-category="chien chat connecte sante" data-price="89.90" data-rating="4.6">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1601758228041-f3b2795255f1?w=400" alt="Fontaine eau connectée" class="w-full h-64 object-cover">
+                        <div class="absolute top-4 left-4">
+                            <span class="animal-badge text-white px-3 py-1 rounded-full text-sm font-medium">
+                                <i class="fas fa-tint mr-1"></i>Hydratation
+                            </span>
+                        </div>
+                        <div class="absolute top-4 right-4">
+                            <span class="growth-badge text-white px-2 py-1 rounded text-xs font-bold">+189%</span>
+                        </div>
+                        <button class="absolute bottom-4 right-4 bg-white/80 backdrop-blur-sm p-2 rounded-full hover:bg-white transition-all">
+                            <i class="fas fa-heart text-gray-600 hover:text-red-500"></i>
+                        </button>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-gray-800">Fontaine à Eau Connectée</h3>
+                        <p class="text-gray-600 mb-3">Suivi consommation d'eau via app et filtration UV</p>
+                        <div class="flex items-center mb-3">
+                            <div class="flex text-yellow-400 mr-2">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <span class="text-sm text-gray-500">(4.6) • 2,193 avis</span>
+                        </div>
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center space-x-2">
+                                <span class="text-2xl font-bold text-orange-600">89,90€</span>
+                                <span class="text-lg text-gray-400 line-through">129,90€</span>
+                                <span class="bg-red-100 text-red-600 px-2 py-1 rounded text-sm font-medium">-31%</span>
+                            </div>
+                        </div>
+                        <div class="space-y-2 mb-4">
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-chart-line text-blue-500 mr-2"></i>
+                                <span>Suivi hydratation app</span>
+                            </div>
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-magic text-green-500 mr-2"></i>
+                                <span>Filtration UV + charbon</span>
+                            </div>
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-volume-off text-gray-500 mr-2"></i>
+                                <span>Ultra-silencieuse < 35dB</span>
+                            </div>
+                        </div>
+                        <button class="w-full bg-orange-600 text-white py-3 rounded-xl hover:bg-orange-700 transition-colors font-medium">
+                            <i class="fas fa-cart-plus mr-2"></i>Ajouter au panier
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Jouet Puzzle Interactif -->
+                <div class="product-card bg-white rounded-2xl shadow-lg overflow-hidden" data-category="chien chat" data-price="34.90" data-rating="4.9">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1548540222-7d46ee3c2dde?w=400" alt="Jouet puzzle interactif" class="w-full h-64 object-cover">
+                        <div class="absolute top-4 left-4">
+                            <span class="animal-badge text-white px-3 py-1 rounded-full text-sm font-medium">
+                                <i class="fas fa-puzzle-piece mr-1"></i>IQ+
+                            </span>
+                        </div>
+                        <div class="absolute top-4 right-4">
+                            <span class="growth-badge text-white px-2 py-1 rounded text-xs font-bold">+423%</span>
+                        </div>
+                        <button class="absolute bottom-4 right-4 bg-white/80 backdrop-blur-sm p-2 rounded-full hover:bg-white transition-all">
+                            <i class="fas fa-heart text-gray-600 hover:text-red-500"></i>
+                        </button>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-gray-800">Jouet Puzzle Interactif IQ</h3>
+                        <p class="text-gray-600 mb-3">Développe intelligence avec 5 niveaux de difficulté évolutifs</p>
+                        <div class="flex items-center mb-3">
+                            <div class="flex text-yellow-400 mr-2">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="text-sm text-gray-500">(4.9) • 4,567 avis</span>
+                        </div>
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center space-x-2">
+                                <span class="text-2xl font-bold text-orange-600">34,90€</span>
+                                <span class="text-lg text-gray-400 line-through">49,90€</span>
+                                <span class="bg-red-100 text-red-600 px-2 py-1 rounded text-sm font-medium">-30%</span>
+                            </div>
+                        </div>
+                        <div class="space-y-2 mb-4">
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-brain text-purple-500 mr-2"></i>
+                                <span>Stimule intelligence et réflexes</span>
+                            </div>
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-layer-group text-blue-500 mr-2"></i>
+                                <span>5 niveaux de difficulté</span>
+                            </div>
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-shield-alt text-green-500 mr-2"></i>
+                                <span>Matériaux non-toxiques</span>
+                            </div>
+                        </div>
+                        <button class="w-full bg-orange-600 text-white py-3 rounded-xl hover:bg-orange-700 transition-colors font-medium">
+                            <i class="fas fa-cart-plus mr-2"></i>Ajouter au panier
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Litière Auto-Nettoyante -->
+                <div class="product-card bg-white rounded-2xl shadow-lg overflow-hidden" data-category="chat connecte" data-price="299.90" data-rating="4.5">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1570824104453-508955ab713e?w=400" alt="Litière auto-nettoyante" class="w-full h-64 object-cover">
+                        <div class="absolute top-4 left-4">
+                            <span class="animal-badge text-white px-3 py-1 rounded-full text-sm font-medium">
+                                <i class="fas fa-robot mr-1"></i>Auto
+                            </span>
+                        </div>
+                        <div class="absolute top-4 right-4">
+                            <span class="growth-badge text-white px-2 py-1 rounded text-xs font-bold">+156%</span>
+                        </div>
+                        <button class="absolute bottom-4 right-4 bg-white/80 backdrop-blur-sm p-2 rounded-full hover:bg-white transition-all">
+                            <i class="fas fa-heart text-gray-600 hover:text-red-500"></i>
+                        </button>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-gray-800">Litière Auto-Nettoyante</h3>
+                        <p class="text-gray-600 mb-3">Nettoyage automatique + notifications app + contrôle odeurs</p>
+                        <div class="flex items-center mb-3">
+                            <div class="flex text-yellow-400 mr-2">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <span class="text-sm text-gray-500">(4.5) • 1,234 avis</span>
+                        </div>
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center space-x-2">
+                                <span class="text-2xl font-bold text-orange-600">299,90€</span>
+                                <span class="text-lg text-gray-400 line-through">399,90€</span>
+                                <span class="bg-red-100 text-red-600 px-2 py-1 rounded text-sm font-medium">-25%</span>
+                            </div>
+                        </div>
+                        <div class="space-y-2 mb-4">
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-magic text-blue-500 mr-2"></i>
+                                <span>Nettoyage automatique 15min</span>
+                            </div>
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-bell text-green-500 mr-2"></i>
+                                <span>Notifications app santé chat</span>
+                            </div>
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-air-freshener text-purple-500 mr-2"></i>
+                                <span>Système anti-odeurs intégré</span>
+                            </div>
+                        </div>
+                        <button class="w-full bg-orange-600 text-white py-3 rounded-xl hover:bg-orange-700 transition-colors font-medium">
+                            <i class="fas fa-cart-plus mr-2"></i>Ajouter au panier
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Brosse Aspirante Poils -->
+                <div class="product-card bg-white rounded-2xl shadow-lg overflow-hidden" data-category="chien chat sante" data-price="59.90" data-rating="4.7">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1581456495146-65a71b2c8e52?w=400" alt="Brosse aspirante poils" class="w-full h-64 object-cover">
+                        <div class="absolute top-4 left-4">
+                            <span class="animal-badge text-white px-3 py-1 rounded-full text-sm font-medium">
+                                <i class="fas fa-wind mr-1"></i>Aspiration
+                            </span>
+                        </div>
+                        <div class="absolute top-4 right-4">
+                            <span class="growth-badge text-white px-2 py-1 rounded text-xs font-bold">+234%</span>
+                        </div>
+                        <button class="absolute bottom-4 right-4 bg-white/80 backdrop-blur-sm p-2 rounded-full hover:bg-white transition-all">
+                            <i class="fas fa-heart text-gray-600 hover:text-red-500"></i>
+                        </button>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-gray-800">Brosse Aspirante Anti-Poils</h3>
+                        <p class="text-gray-600 mb-3">Aspiration douce pendant brossage, réduit poils 95%</p>
+                        <div class="flex items-center mb-3">
+                            <div class="flex text-yellow-400 mr-2">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <span class="text-sm text-gray-500">(4.7) • 3,456 avis</span>
+                        </div>
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center space-x-2">
+                                <span class="text-2xl font-bold text-orange-600">59,90€</span>
+                                <span class="text-lg text-gray-400 line-through">89,90€</span>
+                                <span class="bg-red-100 text-red-600 px-2 py-1 rounded text-sm font-medium">-33%</span>
+                            </div>
+                        </div>
+                        <div class="space-y-2 mb-4">
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-percentage text-green-500 mr-2"></i>
+                                <span>Réduit poils maison -95%</span>
+                            </div>
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-battery-three-quarters text-blue-500 mr-2"></i>
+                                <span>Autonomie 45 minutes</span>
+                            </div>
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-heart text-red-500 mr-2"></i>
+                                <span>Massage relaxant intégré</span>
+                            </div>
+                        </div>
+                        <button class="w-full bg-orange-600 text-white py-3 rounded-xl hover:bg-orange-700 transition-colors font-medium">
+                            <i class="fas fa-cart-plus mr-2"></i>Ajouter au panier
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-12 text-gray-800">Pourquoi Choisir TechViral pour Vos Animaux ?</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+                <div class="p-6">
+                    <div class="bg-orange-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-user-md text-orange-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2">Approuvé Vétérinaires</h3>
+                    <p class="text-gray-600">Tous nos produits sont testés et recommandés par des professionnels de la santé animale</p>
+                </div>
+                <div class="p-6">
+                    <div class="bg-orange-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-mobile-alt text-orange-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2">Technologies Avancées</h3>
+                    <p class="text-gray-600">GPS, caméras HD, apps mobiles pour surveiller et interagir à distance</p>
+                </div>
+                <div class="p-6">
+                    <div class="bg-orange-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-shipping-fast text-orange-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2">Livraison Express</h3>
+                    <p class="text-gray-600">Réception en 24-48h pour ne pas faire attendre vos compagnons</p>
+                </div>
+                <div class="p-6">
+                    <div class="bg-orange-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-phone text-orange-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2">Support Spécialisé</h3>
+                    <p class="text-gray-600">Conseils d'experts disponibles 7j/7 pour l'utilisation de nos produits</p>
+                </div>
+            </div>
+
+            <div class="bg-orange-50 rounded-2xl p-8 max-w-4xl mx-auto">
+                <h3 class="text-2xl font-bold mb-4 text-orange-800">Garantie Bien-être Animal</h3>
+                <p class="text-gray-700 mb-6">Nous nous engageons à proposer uniquement des produits sûrs, testés et bénéfiques pour la santé et le bonheur de vos animaux. Satisfaction garantie ou remboursé sous 30 jours.</p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div class="flex items-center justify-center space-x-2">
+                        <i class="fas fa-award text-orange-600"></i>
+                        <span class="text-sm">Qualité certifiée</span>
+                    </div>
+                    <div class="flex items-center justify-center space-x-2">
+                        <i class="fas fa-undo text-blue-600"></i>
+                        <span class="text-sm">Retour 30 jours</span>
+                    </div>
+                    <div class="flex items-center justify-center space-x-2">
+                        <i class="fas fa-headset text-green-600"></i>
+                        <span class="text-sm">Support expert</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="py-12 gradient-bg">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold text-white mb-4">Conseils et Nouveautés Animaux</h2>
+            <p class="text-white/80 mb-8">Recevez nos conseils d'experts et découvrez en avant-première les dernières innovations pour vos animaux</p>
+            <div class="flex flex-col sm:flex-row max-w-md mx-auto">
+                <input type="email" placeholder="Votre email" class="flex-1 px-6 py-3 rounded-l-xl sm:rounded-r-none rounded-r-xl border-0 focus:outline-none focus:ring-2 focus:ring-white/20">
+                <button class="bg-white text-orange-600 px-8 py-3 rounded-r-xl sm:rounded-l-none rounded-l-xl font-medium hover:bg-gray-100 transition-colors">
+                    S'abonner
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <i class="fas fa-bolt text-2xl text-blue-500"></i>
+                        <span class="text-2xl font-bold">TechViral</span>
+                    </div>
+                    <p class="text-gray-400 mb-4">Votre destination pour les produits innovants pour animaux. Livraison rapide et service client exceptionnel.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Catégories</h3>
+                    <ul class="space-y-2">
+                        <li><a href="tech.html" class="text-gray-400 hover:text-white transition-colors">High-Tech</a></li>
+                        <li><a href="gaming.html" class="text-gray-400 hover:text-white transition-colors">Gaming</a></li>
+                        <li><a href="sante.html" class="text-gray-400 hover:text-white transition-colors">Santé & Bien-être</a></li>
+                        <li><a href="ecologique.html" class="text-gray-400 hover:text-white transition-colors">Écologique</a></li>
+                        <li><a href="animaux.html" class="text-gray-400 hover:text-orange-400 transition-colors">Animaux</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Support</h3>
+                    <ul class="space-y-2">
+                        <li><a href="../support.html" class="text-gray-400 hover:text-white transition-colors">Centre d'aide</a></li>
+                        <li><a href="../legal/shipping.html" class="text-gray-400 hover:text-white transition-colors">Livraison</a></li>
+                        <li><a href="../legal/returns.html" class="text-gray-400 hover:text-white transition-colors">Retours</a></li>
+                        <li><a href="../contact.html" class="text-gray-400 hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Légal</h3>
+                    <ul class="space-y-2">
+                        <li><a href="../legal/terms.html" class="text-gray-400 hover:text-white transition-colors">CGV</a></li>
+                        <li><a href="../legal/privacy.html" class="text-gray-400 hover:text-white transition-colors">Confidentialité</a></li>
+                        <li><a href="../legal/cookies.html" class="text-gray-400 hover:text-white transition-colors">Cookies</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8 mt-8 text-center">
+                <p class="text-gray-400">&copy; 2025 TechViral. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../assets/js/cart.js"></script>
+    <script src="../../assets/js/search.js"></script>
+    <script>
+        // Filter functionality
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const productCards = document.querySelectorAll('.product-card');
+        const productCountElement = document.getElementById('product-count');
+        
+        function updateProductCount() {
+            const visibleProducts = Array.from(productCards).filter(card => 
+                card.style.display !== 'none'
+            ).length;
+            productCountElement.textContent = visibleProducts;
+        }
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                // Remove active class from all buttons
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                // Add active class to clicked button
+                this.classList.add('active');
+
+                const category = this.dataset.category;
+
+                productCards.forEach(card => {
+                    const cardCategories = card.dataset.category;
+                    
+                    if (category === 'all' || cardCategories.includes(category)) {
+                        card.style.display = 'block';
+                        setTimeout(() => {
+                            card.style.opacity = '1';
+                            card.style.transform = 'scale(1)';
+                        }, 50);
+                    } else {
+                        card.style.opacity = '0';
+                        card.style.transform = 'scale(0.9)';
+                        setTimeout(() => {
+                            card.style.display = 'none';
+                        }, 300);
+                    }
+                });
+
+                setTimeout(updateProductCount, 350);
+            });
+        });
+
+        // Sort functionality
+        const sortSelect = document.getElementById('sort-select');
+        const productsGrid = document.getElementById('products-grid');
+
+        sortSelect.addEventListener('change', function() {
+            const sortValue = this.value;
+            const products = Array.from(productCards);
+            
+            products.sort((a, b) => {
+                switch (sortValue) {
+                    case 'price-asc':
+                        return parseFloat(a.dataset.price) - parseFloat(b.dataset.price);
+                    case 'price-desc':
+                        return parseFloat(b.dataset.price) - parseFloat(a.dataset.price);
+                    case 'rating':
+                        return parseFloat(b.dataset.rating) - parseFloat(a.dataset.rating);
+                    case 'popularity':
+                        return Math.random() - 0.5; // Random for demo
+                    default:
+                        return 0;
+                }
+            });
+
+            // Clear and re-append sorted products
+            products.forEach(product => {
+                productsGrid.appendChild(product);
+            });
+        });
+
+        // Add to cart functionality is now handled by cart.js globally
+
+        // Initialize
+        updateProductCount();
+    </script>
+</body>
+</html>

@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lifestyle & Design - TechViral | Objets Déco et Lifestyle Tech 2025</title>
+    <meta name="description" content="Découvrez notre sélection d'objets lifestyle et design : déco connectée, accessoires élégants et gadgets lifestyle qui allient esthétique et technologie.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="icon" href="../../assets/images/favicon.ico">
+    
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #ec4899 0%, #be185d 100%);
+        }
+        .product-card {
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+        .product-card:hover {
+            transform: translateY(-8px);
+            border-color: #ec4899;
+            box-shadow: 0 20px 40px rgba(236, 72, 153, 0.1);
+        }
+        .lifestyle-badge {
+            background: linear-gradient(45deg, #ec4899, #be185d);
+        }
+        .design-badge {
+            background: linear-gradient(45deg, #8b5cf6, #7c3aed);
+        }
+        .filter-btn.active {
+            background: linear-gradient(135deg, #ec4899, #be185d) !important;
+            color: white !important;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center space-x-4">
+                    <a href="../../index.html" class="flex items-center space-x-2">
+                        <i class="fas fa-bolt text-2xl text-blue-600"></i>
+                        <span class="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">TechViral</span>
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center space-x-6">
+                    <a href="../../index.html" class="text-gray-700 hover:text-blue-600 transition-colors">Accueil</a>
+                    <a href="all.html" class="text-gray-700 hover:text-blue-600 transition-colors">Catégories</a>
+                    <a href="../promotions.html" class="text-red-600 hover:text-red-700 transition-colors font-medium">🔥 Promotions</a>
+                    <a href="../blog.html" class="text-gray-700 hover:text-blue-600 transition-colors">Blog</a>
+                    <a href="../contact.html" class="text-gray-700 hover:text-blue-600 transition-colors">Contact</a>
+                </div>
+                <div class="flex items-center space-x-3">
+                    <button id="cartButton" class="relative p-2 rounded-full bg-gradient-to-r from-pink-500 to-rose-600 text-white hover:shadow-lg transition-all">
+                        <i class="fas fa-shopping-cart w-5 h-5"></i>
+                        <span id="cartCount" class="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center font-bold">0</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-r from-pink-500 via-rose-500 to-pink-600 text-white py-20">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <div class="inline-flex items-center px-4 py-2 bg-white/20 rounded-full text-white font-medium text-sm mb-8">
+                <i class="fas fa-palette mr-2"></i>
+                Lifestyle & Design
+            </div>
+            <h1 class="text-4xl lg:text-6xl font-bold mb-6 leading-tight">
+                Objets <span class="bg-gradient-to-r from-yellow-300 to-orange-400 bg-clip-text text-transparent">Lifestyle</span> & Design
+            </h1>
+            <p class="text-xl lg:text-2xl text-pink-100 mb-12 max-w-4xl mx-auto leading-relaxed">
+                Découvrez notre collection exclusive d'objets qui allient technologie et esthétique. 
+                Pour un lifestyle moderne et raffiné, où chaque détail compte.
+            </p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+                <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6">
+                    <i class="fas fa-home text-3xl mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">Déco Connectée</h3>
+                    <p class="text-pink-100">Éclairage intelligent, objets design interactifs</p>
+                </div>
+                <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6">
+                    <i class="fas fa-sparkles text-3xl mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">Design Premium</h3>
+                    <p class="text-pink-100">Matériaux nobles, finitions soignées</p>
+                </div>
+                <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6">
+                    <i class="fas fa-magic text-3xl mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">Innovation Esthétique</h3>
+                    <p class="text-pink-100">Technologie invisible, beauté apparente</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filters & Sort -->
+    <section class="bg-white border-b py-6">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6">
+                
+                <!-- Category Filters -->
+                <div class="flex flex-wrap gap-3">
+                    <button class="filter-btn active px-4 py-2 rounded-full bg-pink-500 text-white hover:bg-pink-600 transition-colors" data-category="all">
+                        Tous (<span id="product-count">8</span>)
+                    </button>
+                    <button class="filter-btn px-4 py-2 rounded-full bg-gray-200 text-gray-700 hover:bg-gray-300 transition-colors" data-category="deco">
+                        <i class="fas fa-home mr-2"></i>Déco (3)
+                    </button>
+                    <button class="filter-btn px-4 py-2 rounded-full bg-gray-200 text-gray-700 hover:bg-gray-300 transition-colors" data-category="accessoires">
+                        <i class="fas fa-gem mr-2"></i>Accessoires (3)
+                    </button>
+                    <button class="filter-btn px-4 py-2 rounded-full bg-gray-200 text-gray-700 hover:bg-gray-300 transition-colors" data-category="design">
+                        <i class="fas fa-palette mr-2"></i>Design (2)
+                    </button>
+                </div>
+
+                <!-- Sort -->
+                <div class="flex items-center space-x-4">
+                    <label class="text-sm font-medium text-gray-700">Trier par :</label>
+                    <select id="sort-select" class="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent">
+                        <option value="popularity">Popularité</option>
+                        <option value="price-asc">Prix croissant</option>
+                        <option value="price-desc">Prix décroissant</option>
+                        <option value="rating">Meilleures notes</option>
+                        <option value="newest">Plus récent</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Grid -->
+    <section class="py-16">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Collection Lifestyle & Design</h2>
+                <p class="text-gray-600 text-lg">Objets d'exception pour un intérieur moderne et connecté</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8" id="products-grid">
+                
+                <!-- Lampe Connectée Minimaliste -->
+                <div class="product-card bg-white rounded-2xl shadow-lg overflow-hidden" data-category="deco" data-price="129" data-rating="4.8">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?w=400" alt="Lampe connectée design" class="w-full h-64 object-cover">
+                        <div class="absolute top-4 left-4">
+                            <span class="lifestyle-badge text-white px-3 py-1 rounded-full text-sm font-medium">
+                                <i class="fas fa-lightbulb mr-1"></i>Déco
+                            </span>
+                        </div>
+                        <div class="absolute top-4 right-4">
+                            <span class="bg-gradient-to-r from-green-500 to-emerald-600 text-white px-2 py-1 rounded text-xs font-bold">+245%</span>
+                        </div>
+                        <button class="absolute bottom-4 right-4 bg-white/80 backdrop-blur-sm p-2 rounded-full hover:bg-white transition-all">
+                            <i class="fas fa-heart text-gray-600 hover:text-pink-500"></i>
+                        </button>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-gray-800">Lampe Connectée Minimaliste</h3>
+                        <p class="text-gray-600 mb-3">Design épuré, contrôle vocal et 16 millions de couleurs</p>
+                        <div class="flex items-center mb-3">
+                            <div class="flex text-yellow-400 mr-2">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="text-sm text-gray-500">(4.8) • 892 avis</span>
+                        </div>
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center space-x-2">
+                                <span class="text-2xl font-bold text-pink-600">129€</span>
+                                <span class="text-lg text-gray-400 line-through">179€</span>
+                                <span class="bg-red-100 text-red-600 px-2 py-1 rounded text-sm font-medium">-28%</span>
+                            </div>
+                        </div>
+                        <div class="space-y-2 mb-4">
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-wifi text-blue-500 mr-2"></i>
+                                <span>WiFi + Bluetooth</span>
+                            </div>
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-microphone text-green-500 mr-2"></i>
+                                <span>Compatible Alexa & Google</span>
+                            </div>
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-palette text-purple-500 mr-2"></i>
+                                <span>16M couleurs, dimming</span>
+                            </div>
+                        </div>
+                        <button class="w-full bg-pink-500 text-white py-3 rounded-xl hover:bg-pink-600 transition-colors font-medium">
+                            <i class="fas fa-cart-plus mr-2"></i>Ajouter au panier
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Miroir Intelligent -->
+                <div class="product-card bg-white rounded-2xl shadow-lg overflow-hidden" data-category="deco design" data-price="349" data-rating="4.9">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=400" alt="Miroir intelligent" class="w-full h-64 object-cover">
+                        <div class="absolute top-4 left-4">
+                            <span class="design-badge text-white px-3 py-1 rounded-full text-sm font-medium">
+                                <i class="fas fa-magic mr-1"></i>Design
+                            </span>
+                        </div>
+                        <div class="absolute top-4 right-4">
+                            <span class="bg-gradient-to-r from-orange-500 to-red-600 text-white px-2 py-1 rounded text-xs font-bold">+412%</span>
+                        </div>
+                        <div class="absolute bottom-4 left-4 bg-black/50 text-white px-2 py-1 rounded text-xs">
+                            🔥 Tendance #1
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-gray-800">Miroir Intelligent Touch</h3>
+                        <p class="text-gray-600 mb-3">Météo, actualités, éclairage LED intégré</p>
+                        <div class="flex items-center mb-3">
+                            <div class="flex text-yellow-400 mr-2">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="text-sm text-gray-500">(4.9) • 1,247 avis</span>
+                        </div>
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center space-x-2">
+                                <span class="text-2xl font-bold text-pink-600">349€</span>
+                                <span class="text-lg text-gray-400 line-through">499€</span>
+                                <span class="bg-red-100 text-red-600 px-2 py-1 rounded text-sm font-medium">-30%</span>
+                            </div>
+                        </div>
+                        <div class="space-y-2 mb-4">
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-touch text-blue-500 mr-2"></i>
+                                <span>Écran tactile 24"</span>
+                            </div>
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-sun text-yellow-500 mr-2"></i>
+                                <span>LED adjustable</span>
+                            </div>
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-cloud text-green-500 mr-2"></i>
+                                <span>Infos temps réel</span>
+                            </div>
+                        </div>
+                        <button class="w-full bg-pink-500 text-white py-3 rounded-xl hover:bg-pink-600 transition-colors font-medium">
+                            <i class="fas fa-cart-plus mr-2"></i>Ajouter au panier
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Diffuseur Arômes Design -->
+                <div class="product-card bg-white rounded-2xl shadow-lg overflow-hidden" data-category="deco accessoires" data-price="89" data-rating="4.7">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=400" alt="Diffuseur arômes" class="w-full h-64 object-cover">
+                        <div class="absolute top-4 left-4">
+                            <span class="lifestyle-badge text-white px-3 py-1 rounded-full text-sm font-medium">
+                                <i class="fas fa-leaf mr-1"></i>Wellness
+                            </span>
+                        </div>
+                        <div class="absolute top-4 right-4">
+                            <span class="bg-gradient-to-r from-green-500 to-emerald-600 text-white px-2 py-1 rounded text-xs font-bold">+198%</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-gray-800">Diffuseur Arômes Premium</h3>
+                        <p class="text-gray-600 mb-3">Contrôle app, design japonais, ultrasons silencieux</p>
+                        <div class="flex items-center mb-3">
+                            <div class="flex text-yellow-400 mr-2">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <span class="text-sm text-gray-500">(4.7) • 634 avis</span>
+                        </div>
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center space-x-2">
+                                <span class="text-2xl font-bold text-pink-600">89€</span>
+                                <span class="text-lg text-gray-400 line-through">129€</span>
+                                <span class="bg-red-100 text-red-600 px-2 py-1 rounded text-sm font-medium">-31%</span>
+                            </div>
+                        </div>
+                        <div class="space-y-2 mb-4">
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-volume-off text-green-500 mr-2"></i>
+                                <span>Fonctionnement silencieux</span>
+                            </div>
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-clock text-blue-500 mr-2"></i>
+                                <span>Programmation 12h</span>
+                            </div>
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-mobile-alt text-purple-500 mr-2"></i>
+                                <span>App dédiée iOS/Android</span>
+                            </div>
+                        </div>
+                        <button class="w-full bg-pink-500 text-white py-3 rounded-xl hover:bg-pink-600 transition-colors font-medium">
+                            <i class="fas fa-cart-plus mr-2"></i>Ajouter au panier
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Horloge Projection -->
+                <div class="product-card bg-white rounded-2xl shadow-lg overflow-hidden" data-category="accessoires design" data-price="159" data-rating="4.6">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1563861826100-9cb868fdbe1c?w=400" alt="Horloge projection" class="w-full h-64 object-cover">
+                        <div class="absolute top-4 left-4">
+                            <span class="design-badge text-white px-3 py-1 rounded-full text-sm font-medium">
+                                <i class="fas fa-clock mr-1"></i>Design
+                            </span>
+                        </div>
+                        <div class="absolute top-4 right-4">
+                            <span class="bg-gradient-to-r from-blue-500 to-indigo-600 text-white px-2 py-1 rounded text-xs font-bold">+289%</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-gray-800">Horloge Projection Zen</h3>
+                        <p class="text-gray-600 mb-3">Projection plafond, sons nature, réveil lumière</p>
+                        <div class="flex items-center mb-3">
+                            <div class="flex text-yellow-400 mr-2">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <span class="text-sm text-gray-500">(4.6) • 458 avis</span>
+                        </div>
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center space-x-2">
+                                <span class="text-2xl font-bold text-pink-600">159€</span>
+                                <span class="text-lg text-gray-400 line-through">219€</span>
+                                <span class="bg-red-100 text-red-600 px-2 py-1 rounded text-sm font-medium">-27%</span>
+                            </div>
+                        </div>
+                        <div class="space-y-2 mb-4">
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-video text-blue-500 mr-2"></i>
+                                <span>Projection 180°</span>
+                            </div>
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-leaf text-green-500 mr-2"></i>
+                                <span>10 sons nature</span>
+                            </div>
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-sun text-yellow-500 mr-2"></i>
+                                <span>Réveil lumineux progressif</span>
+                            </div>
+                        </div>
+                        <button class="w-full bg-pink-500 text-white py-3 rounded-xl hover:bg-pink-600 transition-colors font-medium">
+                            <i class="fas fa-cart-plus mr-2"></i>Ajouter au panier
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Enceinte Design Transparente -->
+                <div class="product-card bg-white rounded-2xl shadow-lg overflow-hidden" data-category="accessoires" data-price="199" data-rating="4.8">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1545454675-3531b543be5d?w=400" alt="Enceinte transparente" class="w-full h-64 object-cover">
+                        <div class="absolute top-4 left-4">
+                            <span class="lifestyle-badge text-white px-3 py-1 rounded-full text-sm font-medium">
+                                <i class="fas fa-music mr-1"></i>Audio
+                            </span>
+                        </div>
+                        <div class="absolute top-4 right-4">
+                            <span class="bg-gradient-to-r from-purple-500 to-pink-600 text-white px-2 py-1 rounded text-xs font-bold">+367%</span>
+                        </div>
+                        <div class="absolute bottom-4 left-4 bg-black/50 text-white px-2 py-1 rounded text-xs">
+                            🎵 Qualité studio
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-gray-800">Enceinte Crystal Sound</h3>
+                        <p class="text-gray-600 mb-3">Design transparent, son 360°, éclairage LED</p>
+                        <div class="flex items-center mb-3">
+                            <div class="flex text-yellow-400 mr-2">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="text-sm text-gray-500">(4.8) • 723 avis</span>
+                        </div>
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center space-x-2">
+                                <span class="text-2xl font-bold text-pink-600">199€</span>
+                                <span class="text-lg text-gray-400 line-through">279€</span>
+                                <span class="bg-red-100 text-red-600 px-2 py-1 rounded text-sm font-medium">-29%</span>
+                            </div>
+                        </div>
+                        <div class="space-y-2 mb-4">
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-volume-up text-blue-500 mr-2"></i>
+                                <span>Son 360° HD</span>
+                            </div>
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-battery-three-quarters text-green-500 mr-2"></i>
+                                <span>Autonomie 20h</span>
+                            </div>
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-palette text-purple-500 mr-2"></i>
+                                <span>Éclairage synchronisé</span>
+                            </div>
+                        </div>
+                        <button class="w-full bg-pink-500 text-white py-3 rounded-xl hover:bg-pink-600 transition-colors font-medium">
+                            <i class="fas fa-cart-plus mr-2"></i>Ajouter au panier
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Plante Connectée -->
+                <div class="product-card bg-white rounded-2xl shadow-lg overflow-hidden" data-category="deco" data-price="79" data-rating="4.5">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=400" alt="Plante connectée" class="w-full h-64 object-cover">
+                        <div class="absolute top-4 left-4">
+                            <span class="lifestyle-badge text-white px-3 py-1 rounded-full text-sm font-medium">
+                                <i class="fas fa-seedling mr-1"></i>Nature
+                            </span>
+                        </div>
+                        <div class="absolute top-4 right-4">
+                            <span class="bg-gradient-to-r from-green-500 to-emerald-600 text-white px-2 py-1 rounded text-xs font-bold">+156%</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-gray-800">Jardin Connecté Smart</h3>
+                        <p class="text-gray-600 mb-3">Surveillance app, arrosage auto, herbes fraîches</p>
+                        <div class="flex items-center mb-3">
+                            <div class="flex text-yellow-400 mr-2">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <span class="text-sm text-gray-500">(4.5) • 389 avis</span>
+                        </div>
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center space-x-2">
+                                <span class="text-2xl font-bold text-pink-600">79€</span>
+                                <span class="text-lg text-gray-400 line-through">109€</span>
+                                <span class="bg-red-100 text-red-600 px-2 py-1 rounded text-sm font-medium">-28%</span>
+                            </div>
+                        </div>
+                        <div class="space-y-2 mb-4">
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-tint text-blue-500 mr-2"></i>
+                                <span>Arrosage intelligent</span>
+                            </div>
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-seedling text-green-500 mr-2"></i>
+                                <span>Kit 6 plantes inclus</span>
+                            </div>
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-chart-line text-purple-500 mr-2"></i>
+                                <span>Suivi croissance app</span>
+                            </div>
+                        </div>
+                        <button class="w-full bg-pink-500 text-white py-3 rounded-xl hover:bg-pink-600 transition-colors font-medium">
+                            <i class="fas fa-cart-plus mr-2"></i>Ajouter au panier
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Support Téléphone Design -->
+                <div class="product-card bg-white rounded-2xl shadow-lg overflow-hidden" data-category="accessoires" data-price="49" data-rating="4.7">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1565031491910-e57fac031c41?w=400" alt="Support téléphone" class="w-full h-64 object-cover">
+                        <div class="absolute top-4 left-4">
+                            <span class="design-badge text-white px-3 py-1 rounded-full text-sm font-medium">
+                                <i class="fas fa-mobile-alt mr-1"></i>Accessoire
+                            </span>
+                        </div>
+                        <div class="absolute top-4 right-4">
+                            <span class="bg-gradient-to-r from-blue-500 to-indigo-600 text-white px-2 py-1 rounded text-xs font-bold">+234%</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-gray-800">Support Téléphone Lévitation</h3>
+                        <p class="text-gray-600 mb-3">Magnétique, rotation 360°, charge sans fil</p>
+                        <div class="flex items-center mb-3">
+                            <div class="flex text-yellow-400 mr-2">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <span class="text-sm text-gray-500">(4.7) • 567 avis</span>
+                        </div>
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center space-x-2">
+                                <span class="text-2xl font-bold text-pink-600">49€</span>
+                                <span class="text-lg text-gray-400 line-through">69€</span>
+                                <span class="bg-red-100 text-red-600 px-2 py-1 rounded text-sm font-medium">-29%</span>
+                            </div>
+                        </div>
+                        <div class="space-y-2 mb-4">
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-magnet text-red-500 mr-2"></i>
+                                <span>Fixation magnétique</span>
+                            </div>
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-charging-station text-green-500 mr-2"></i>
+                                <span>Charge sans fil 15W</span>
+                            </div>
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-redo text-blue-500 mr-2"></i>
+                                <span>Rotation libre 360°</span>
+                            </div>
+                        </div>
+                        <button class="w-full bg-pink-500 text-white py-3 rounded-xl hover:bg-pink-600 transition-colors font-medium">
+                            <i class="fas fa-cart-plus mr-2"></i>Ajouter au panier
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Cadre Photo Numérique -->
+                <div class="product-card bg-white rounded-2xl shadow-lg overflow-hidden" data-category="deco design" data-price="259" data-rating="4.9">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?w=400" alt="Cadre photo numérique" class="w-full h-64 object-cover">
+                        <div class="absolute top-4 left-4">
+                            <span class="lifestyle-badge text-white px-3 py-1 rounded-full text-sm font-medium">
+                                <i class="fas fa-image mr-1"></i>Photo
+                            </span>
+                        </div>
+                        <div class="absolute top-4 right-4">
+                            <span class="bg-gradient-to-r from-purple-500 to-pink-600 text-white px-2 py-1 rounded text-xs font-bold">+445%</span>
+                        </div>
+                        <div class="absolute bottom-4 left-4 bg-black/50 text-white px-2 py-1 rounded text-xs">
+                            📸 Premium
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-gray-800">Cadre Photo 4K Premium</h3>
+                        <p class="text-gray-600 mb-3">Écran 15", partage familial, détecteur mouvement</p>
+                        <div class="flex items-center mb-3">
+                            <div class="flex text-yellow-400 mr-2">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="text-sm text-gray-500">(4.9) • 1,134 avis</span>
+                        </div>
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center space-x-2">
+                                <span class="text-2xl font-bold text-pink-600">259€</span>
+                                <span class="text-lg text-gray-400 line-through">349€</span>
+                                <span class="bg-red-100 text-red-600 px-2 py-1 rounded text-sm font-medium">-26%</span>
+                            </div>
+                        </div>
+                        <div class="space-y-2 mb-4">
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-tv text-blue-500 mr-2"></i>
+                                <span>Écran 4K 15"</span>
+                            </div>
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-users text-green-500 mr-2"></i>
+                                <span>Partage famille app</span>
+                            </div>
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-eye text-purple-500 mr-2"></i>
+                                <span>Détection mouvement</span>
+                            </div>
+                        </div>
+                        <button class="w-full bg-pink-500 text-white py-3 rounded-xl hover:bg-pink-600 transition-colors font-medium">
+                            <i class="fas fa-cart-plus mr-2"></i>Ajouter au panier
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-12 text-gray-800">Pourquoi Choisir Notre Collection Lifestyle ?</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+                <div class="p-6">
+                    <div class="bg-pink-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-gem text-pink-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2">Design Exclusif</h3>
+                    <p class="text-gray-600">Objets uniques créés par des designers reconnus mondialement</p>
+                </div>
+                <div class="p-6">
+                    <div class="bg-pink-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-cog text-pink-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2">Technologie Intégrée</h3>
+                    <p class="text-gray-600">Innovation discrète au service de l'esthétique et du confort</p>
+                </div>
+                <div class="p-6">
+                    <div class="bg-pink-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-award text-pink-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2">Matériaux Premium</h3>
+                    <p class="text-gray-600">Sélection rigoureuse des meilleurs matériaux pour une durée de vie optimale</p>
+                </div>
+                <div class="p-6">
+                    <div class="bg-pink-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-heart text-pink-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2">Satisfaction Garantie</h3>
+                    <p class="text-gray-600">Service client dédié et garantie étendue pour votre tranquillité</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="py-12 gradient-bg">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold text-white mb-4">Newsletter Lifestyle & Design</h2>
+            <p class="text-white/80 mb-8">Découvrez en avant-première nos nouveautés design et recevez nos conseils déco</p>
+            <div class="flex flex-col sm:flex-row max-w-md mx-auto">
+                <input type="email" placeholder="Votre email" class="flex-1 px-6 py-3 rounded-l-xl sm:rounded-r-none rounded-r-xl border-0 focus:outline-none focus:ring-2 focus:ring-white/20">
+                <button class="bg-white text-pink-600 px-8 py-3 rounded-r-xl sm:rounded-l-none rounded-l-xl font-medium hover:bg-gray-100 transition-colors">
+                    S'abonner
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <i class="fas fa-bolt text-2xl text-blue-500"></i>
+                        <span class="text-2xl font-bold">TechViral</span>
+                    </div>
+                    <p class="text-gray-400 mb-4">Votre destination pour les objets lifestyle et design les plus innovants. Élégance et technologie réunies.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Catégories</h3>
+                    <ul class="space-y-2">
+                        <li><a href="electronique.html" class="text-gray-400 hover:text-white transition-colors">Électronique</a></li>
+                        <li><a href="ecologique.html" class="text-gray-400 hover:text-white transition-colors">Écologique</a></li>
+                        <li><a href="sante.html" class="text-gray-400 hover:text-white transition-colors">Santé</a></li>
+                        <li><a href="lifestyle.html" class="text-pink-400 transition-colors">Lifestyle</a></li>
+                        <li><a href="animaux.html" class="text-gray-400 hover:text-white transition-colors">Animaux</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Support</h3>
+                    <ul class="space-y-2">
+                        <li><a href="../support/faq.html" class="text-gray-400 hover:text-white transition-colors">FAQ</a></li>
+                        <li><a href="../contact.html" class="text-gray-400 hover:text-white transition-colors">Contact</a></li>
+                        <li><a href="../support/shipping.html" class="text-gray-400 hover:text-white transition-colors">Livraison</a></li>
+                        <li><a href="../support/returns.html" class="text-gray-400 hover:text-white transition-colors">Retours</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Légal</h3>
+                    <ul class="space-y-2">
+                        <li><a href="../legal/terms.html" class="text-gray-400 hover:text-white transition-colors">CGV</a></li>
+                        <li><a href="../legal/privacy.html" class="text-gray-400 hover:text-white transition-colors">Confidentialité</a></li>
+                        <li><a href="../legal/cookies.html" class="text-gray-400 hover:text-white transition-colors">Cookies</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8 mt-8 text-center">
+                <p class="text-gray-400">&copy; 2025 TechViral. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../assets/js/cart.js"></script>
+    <script>
+        // Filter functionality
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                // Update active button
+                document.querySelectorAll('.filter-btn').forEach(b => {
+                    b.classList.remove('active');
+                    b.style.background = '';
+                    b.style.color = '';
+                    b.classList.add('bg-gray-200', 'text-gray-700');
+                });
+                this.classList.add('active');
+                this.classList.remove('bg-gray-200', 'text-gray-700');
+                this.style.background = 'linear-gradient(135deg, #ec4899, #be185d)';
+                this.style.color = 'white';
+                
+                // Filter products
+                const category = this.dataset.category;
+                document.querySelectorAll('.product-card').forEach(card => {
+                    const cardCategories = card.dataset.category;
+                    if (category === 'all' || cardCategories.includes(category)) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+                
+                // Update count
+                const visibleCards = document.querySelectorAll('.product-card[style="display: block;"], .product-card:not([style*="display: none"])').length;
+                document.getElementById('product-count').textContent = category === 'all' ? '8' : visibleCards;
+            });
+        });
+
+        // Sort functionality
+        document.getElementById('sort-select').addEventListener('change', function() {
+            const sortValue = this.value;
+            const grid = document.getElementById('products-grid');
+            const products = Array.from(grid.children);
+            
+            products.sort((a, b) => {
+                switch (sortValue) {
+                    case 'price-asc':
+                        return parseInt(a.dataset.price) - parseInt(b.dataset.price);
+                    case 'price-desc':
+                        return parseInt(b.dataset.price) - parseInt(a.dataset.price);
+                    case 'rating':
+                        return parseFloat(b.dataset.rating) - parseFloat(a.dataset.rating);
+                    case 'newest':
+                        return Math.random() - 0.5;
+                    default:
+                        return 0;
+                }
+            });
+            
+            products.forEach(product => grid.appendChild(product));
+        });
+    </script>
+</body>
+</html>

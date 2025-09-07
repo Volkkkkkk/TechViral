@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Commande Confirmée - Merci ! | TechViral</title>
+    <meta name="description" content="Votre commande TechViral a été confirmée avec succès. Vous recevrez un email de confirmation avec les détails de votre commande.">
+    <meta name="robots" content="noindex, nofollow">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="../../assets/icons/favicon.ico">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-gray-50 dark:bg-gray-900 font-inter">
+    <!-- Navigation -->
+    <nav class="bg-white/80 dark:bg-gray-900/80 backdrop-blur-md sticky top-0 z-50 border-b border-gray-200 dark:border-gray-700">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <a href="../../index.html" class="flex items-center space-x-3">
+                    <div class="w-10 h-10 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-xl flex items-center justify-center">
+                        <span class="text-white font-bold text-lg">T</span>
+                    </div>
+                    <span class="text-2xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">TechViral</span>
+                </a>
+                
+                <!-- Success Progress -->
+                <div class="hidden md:flex items-center space-x-4">
+                    <div class="flex items-center">
+                        <div class="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center text-white text-sm font-medium">✓</div>
+                        <span class="ml-2 text-sm text-gray-600 dark:text-gray-400">Panier</span>
+                    </div>
+                    <div class="w-8 h-px bg-gray-300 dark:bg-gray-600"></div>
+                    <div class="flex items-center">
+                        <div class="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center text-white text-sm font-medium">✓</div>
+                        <span class="ml-2 text-sm text-gray-600 dark:text-gray-400">Commande</span>
+                    </div>
+                    <div class="w-8 h-px bg-gray-300 dark:bg-gray-600"></div>
+                    <div class="flex items-center">
+                        <div class="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center text-white text-sm font-medium">✓</div>
+                        <span class="ml-2 text-sm font-medium text-green-600 dark:text-green-400">Confirmée</span>
+                    </div>
+                </div>
+
+                <div class="text-sm text-green-600 dark:text-green-400 font-medium">✅ Commande confirmée</div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Confirmation Content -->
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <!-- Success Header -->
+        <div class="text-center mb-12">
+            <div class="w-24 h-24 bg-green-100 dark:bg-green-900/30 rounded-full flex items-center justify-center mx-auto mb-6">
+                <svg class="w-12 h-12 text-green-600 dark:text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+            </div>
+            
+            <h1 class="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+                Commande confirmée ! 🎉
+            </h1>
+            
+            <p class="text-lg text-gray-600 dark:text-gray-400 mb-6">
+                Merci pour votre confiance. Votre commande a été traitée avec succès.
+            </p>
+            
+            <div class="bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-lg p-4 inline-block">
+                <p class="text-green-800 dark:text-green-200">
+                    <span class="font-semibold">Numéro de commande :</span> 
+                    <span id="orderNumber" class="font-mono">TV20250107XXXX</span>
+                </p>
+            </div>
+        </div>
+
+        <!-- Order Details -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+            <!-- Order Summary -->
+            <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-sm border border-gray-200 dark:border-gray-700 p-6">
+                <h2 class="text-xl font-semibold text-gray-900 dark:text-white mb-6">Résumé de la commande</h2>
+                <div id="orderSummary" class="space-y-4">
+                    <!-- Populated by JavaScript -->
+                    <div class="flex justify-between">
+                        <span class="text-gray-600 dark:text-gray-400">Date de commande :</span>
+                        <span id="orderDate" class="font-medium text-gray-900 dark:text-white">--</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span class="text-gray-600 dark:text-gray-400">Email :</span>
+                        <span id="orderEmail" class="font-medium text-gray-900 dark:text-white">--</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span class="text-gray-600 dark:text-gray-400">Mode de paiement :</span>
+                        <span id="paymentMethod" class="font-medium text-gray-900 dark:text-white">--</span>
+                    </div>
+                    <hr class="border-gray-200 dark:border-gray-700">
+                    <div class="flex justify-between text-lg font-bold">
+                        <span class="text-gray-900 dark:text-white">Total :</span>
+                        <span id="orderTotal" class="text-indigo-600 dark:text-indigo-400">-- €</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Next Steps -->
+            <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-sm border border-gray-200 dark:border-gray-700 p-6">
+                <h2 class="text-xl font-semibold text-gray-900 dark:text-white mb-6">Et maintenant ?</h2>
+                
+                <div class="space-y-6">
+                    <div class="flex items-start space-x-4">
+                        <div class="w-10 h-10 bg-blue-100 dark:bg-blue-900/30 rounded-full flex items-center justify-center flex-shrink-0">
+                            <span class="text-blue-600 dark:text-blue-400 font-semibold text-sm">1</span>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-gray-900 dark:text-white">Email de confirmation</h3>
+                            <p class="text-sm text-gray-600 dark:text-gray-400">Vous recevrez un email avec tous les détails dans les 5 prochaines minutes.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start space-x-4">
+                        <div class="w-10 h-10 bg-blue-100 dark:bg-blue-900/30 rounded-full flex items-center justify-center flex-shrink-0">
+                            <span class="text-blue-600 dark:text-blue-400 font-semibold text-sm">2</span>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-gray-900 dark:text-white">Préparation</h3>
+                            <p class="text-sm text-gray-600 dark:text-gray-400">Nous préparons soigneusement votre commande dans les 24h.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start space-x-4">
+                        <div class="w-10 h-10 bg-blue-100 dark:bg-blue-900/30 rounded-full flex items-center justify-center flex-shrink-0">
+                            <span class="text-blue-600 dark:text-blue-400 font-semibold text-sm">3</span>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-gray-900 dark:text-white">Livraison</h3>
+                            <p class="text-sm text-gray-600 dark:text-gray-400">Livraison gratuite sous 48h à votre adresse.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-8 p-4 bg-gray-50 dark:bg-gray-700 rounded-lg">
+                    <div class="flex items-center space-x-2 mb-2">
+                        <svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                        </svg>
+                        <span class="font-semibold text-gray-900 dark:text-white">Satisfaction garantie</span>
+                    </div>
+                    <p class="text-sm text-gray-600 dark:text-gray-400">30 jours pour changer d'avis, remboursement intégral.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Actions -->
+        <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-sm border border-gray-200 dark:border-gray-700 p-8">
+            <div class="text-center space-y-6">
+                <h2 class="text-2xl font-semibold text-gray-900 dark:text-white">
+                    Que souhaitez-vous faire maintenant ?
+                </h2>
+                
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                    <a href="../../index.html" 
+                       class="inline-flex items-center justify-center px-6 py-3 border border-gray-300 dark:border-gray-600 rounded-lg text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
+                        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
+                        </svg>
+                        Retour à l'accueil
+                    </a>
+                    
+                    <a href="../../pages/categories/all.html" 
+                       class="inline-flex items-center justify-center px-6 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors">
+                        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path>
+                        </svg>
+                        Continuer les achats
+                    </a>
+                    
+                    <a href="../../pages/account/profile.html" 
+                       class="inline-flex items-center justify-center px-6 py-3 border border-gray-300 dark:border-gray-600 rounded-lg text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
+                        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+                        </svg>
+                        Mon compte
+                    </a>
+                </div>
+                
+                <!-- Newsletter signup -->
+                <div class="border-t border-gray-200 dark:border-gray-700 pt-6">
+                    <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">
+                        Restez informé des dernières nouveautés et promotions
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+                        <input type="email" 
+                               placeholder="votre@email.com" 
+                               class="flex-1 px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-indigo-500 focus:border-transparent">
+                        <button class="px-6 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors whitespace-nowrap">
+                            S'inscrire
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12 mt-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="flex items-center justify-center space-x-3 mb-6">
+                <div class="w-10 h-10 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-xl flex items-center justify-center">
+                    <span class="text-white font-bold text-lg">T</span>
+                </div>
+                <span class="text-2xl font-bold">TechViral</span>
+            </div>
+            
+            <p class="text-gray-400 mb-4">Merci de faire confiance à TechViral pour vos achats innovants.</p>
+            
+            <div class="flex justify-center space-x-6 text-sm">
+                <a href="#" class="text-gray-400 hover:text-white transition-colors">Support</a>
+                <a href="#" class="text-gray-400 hover:text-white transition-colors">Suivi de commande</a>
+                <a href="#" class="text-gray-400 hover:text-white transition-colors">Retours</a>
+                <a href="#" class="text-gray-400 hover:text-white transition-colors">CGV</a>
+            </div>
+            
+            <div class="mt-6 pt-6 border-t border-gray-800">
+                <p class="text-xs text-gray-500">
+                    © 2025 TechViral. Tous droits réservés. | Paiement sécurisé SSL
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Récupérer le numéro de commande depuis l'URL
+            const urlParams = new URLSearchParams(window.location.search);
+            const orderNumber = urlParams.get('order');
+            
+            if (orderNumber) {
+                document.getElementById('orderNumber').textContent = orderNumber;
+            }
+            
+            // Charger les détails de la commande depuis localStorage
+            const orderData = localStorage.getItem('last_order');
+            if (orderData) {
+                try {
+                    const order = JSON.parse(orderData);
+                    
+                    // Mettre à jour les éléments de la page
+                    if (order.orderId) document.getElementById('orderNumber').textContent = order.orderId;
+                    if (order.date) document.getElementById('orderDate').textContent = order.date;
+                    if (order.email) document.getElementById('orderEmail').textContent = order.email;
+                    if (order.total) document.getElementById('orderTotal').textContent = order.total;
+                    if (order.paymentMethod) {
+                        const paymentText = order.paymentMethod === 'card' ? 'Carte bancaire' : 
+                                          order.paymentMethod === 'paypal' ? 'PayPal' : 
+                                          order.paymentMethod === 'bank' ? 'Virement bancaire' : 
+                                          order.paymentMethod;
+                        document.getElementById('paymentMethod').textContent = paymentText;
+                    }
+                    
+                    console.log('Order data loaded:', order);
+                    
+                    // Nettoyer les données après affichage
+                    setTimeout(() => {
+                        localStorage.removeItem('last_order');
+                        localStorage.removeItem('checkout_data');
+                    }, 30000); // Nettoyer après 30 secondes
+                    
+                } catch (e) {
+                    console.error('Error loading order data:', e);
+                }
+            }
+            loadOrderDetails();
+        });
+        
+        function loadOrderDetails() {
+            // Récupérer la dernière commande ou les données checkout
+            const orders = JSON.parse(localStorage.getItem('user_orders') || '[]');
+            const lastOrder = orders[orders.length - 1];
+            
+            if (lastOrder && lastOrder.cart) {
+                displayOrderSummary(lastOrder);
+            } else {
+                // Fallback si pas de données
+                document.getElementById('orderSummary').innerHTML = `
+                    <p class="text-gray-600 dark:text-gray-400">
+                        Détails de la commande non disponibles.
+                    </p>
+                `;
+            }
+        }
+        
+        function displayOrderSummary(order) {
+            const summaryContainer = document.getElementById('orderSummary');
+            
+            const summaryHTML = `
+                ${order.cart.map(item => `
+                    <div class="flex justify-between items-center py-2 border-b border-gray-200 dark:border-gray-700 last:border-0">
+                        <div>
+                            <p class="font-medium text-gray-900 dark:text-white text-sm">${item.name}</p>
+                            <p class="text-xs text-gray-500 dark:text-gray-400">Quantité: ${item.quantity}</p>
+                        </div>
+                        <p class="font-semibold text-gray-900 dark:text-white">
+                            ${(item.price * item.quantity).toFixed(2)} €
+                        </p>
+                    </div>
+                `).join('')}
+                
+                <div class="pt-4 mt-4 border-t border-gray-200 dark:border-gray-700">
+                    <div class="flex justify-between text-sm mb-2">
+                        <span class="text-gray-600 dark:text-gray-400">Sous-total</span>
+                        <span class="text-gray-900 dark:text-white">${order.total.toFixed(2)} €</span>
+                    </div>
+                    <div class="flex justify-between text-sm mb-2">
+                        <span class="text-gray-600 dark:text-gray-400">Livraison</span>
+                        <span class="text-green-600 font-medium">Gratuite</span>
+                    </div>
+                    <div class="flex justify-between text-lg font-semibold pt-2 border-t border-gray-200 dark:border-gray-700">
+                        <span class="text-gray-900 dark:text-white">Total</span>
+                        <span class="text-gray-900 dark:text-white">${order.total.toFixed(2)} €</span>
+                    </div>
+                </div>
+            `;
+            
+            summaryContainer.innerHTML = summaryHTML;
+        }
+    </script>
+    
+    <!-- Load system scripts -->
+    <script src="../../assets/js/forms.js"></script>
+</body>
+</html>
