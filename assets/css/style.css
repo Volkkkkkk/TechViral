@@ -509,3 +509,195 @@ input:focus, select:focus, textarea:focus {
   content-visibility: auto;
   contain-intrinsic-size: 300px;
 }
+
+/* ========================================
+   🚀 AMÉLIORATIONS 2025 - CLAUDE CODE
+   ======================================== */
+
+/* Advanced Product Hover Effects */
+.product-hover-3d {
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transform-style: preserve-3d;
+}
+
+.product-hover-3d:hover {
+  transform: translateY(-12px) rotateX(5deg);
+  box-shadow: 
+    0 32px 64px -12px rgba(0, 0, 0, 0.25),
+    0 0 0 1px rgba(255, 255, 255, 0.05);
+}
+
+.product-hover-3d .product-image {
+  transition: transform 0.4s ease;
+}
+
+.product-hover-3d:hover .product-image {
+  transform: scale(1.05) translateZ(20px);
+}
+
+/* Magnetic Button Effect */
+.btn-magnetic {
+  position: relative;
+  transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.btn-magnetic::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4);
+  background-size: 400% 400%;
+  border-radius: inherit;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  animation: gradient-shift 3s ease infinite;
+}
+
+@keyframes gradient-shift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.btn-magnetic:hover::before {
+  opacity: 1;
+}
+
+.btn-magnetic:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+/* Liquid Loading Animation */
+@keyframes liquid {
+  0% { 
+    transform: translateX(-100%) skewX(45deg); 
+  }
+  100% { 
+    transform: translateX(200%) skewX(45deg); 
+  }
+}
+
+.liquid-loading {
+  position: relative;
+  overflow: hidden;
+}
+
+.liquid-loading::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(90deg, 
+    transparent,
+    rgba(255, 255, 255, 0.4),
+    transparent
+  );
+  animation: liquid 2s infinite;
+}
+
+/* Glassmorphism Cards Enhanced */
+.glass-card-enhanced {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 20px;
+  box-shadow: 
+    0 8px 32px 0 rgba(31, 38, 135, 0.37),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-card-enhanced:hover {
+  background: rgba(255, 255, 255, 0.12);
+  transform: translateY(-5px);
+  box-shadow: 
+    0 20px 40px 0 rgba(31, 38, 135, 0.5),
+    inset 0 1px 0 rgba(255, 255, 255, 0.15);
+}
+
+.dark .glass-card-enhanced {
+  background: rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.dark .glass-card-enhanced:hover {
+  background: rgba(0, 0, 0, 0.25);
+}
+
+/* Micro-interactions for Cart */
+.cart-bounce-enhanced {
+  animation: cartBounceEnhanced 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+@keyframes cartBounceEnhanced {
+  0% { transform: scale(1); }
+  25% { transform: scale(1.1) rotate(5deg); }
+  50% { transform: scale(1.05) rotate(-3deg); }
+  75% { transform: scale(1.02) rotate(1deg); }
+  100% { transform: scale(1) rotate(0deg); }
+}
+
+/* Ripple Effect */
+.ripple {
+  position: relative;
+  overflow: hidden;
+}
+
+.ripple::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+}
+
+.ripple:active::after {
+  width: 300px;
+  height: 300px;
+}
+
+/* Smooth Dark Mode Transitions */
+.dark-transition {
+  transition: 
+    background-color 0.3s ease,
+    border-color 0.3s ease,
+    color 0.3s ease,
+    fill 0.3s ease,
+    opacity 0.3s ease;
+}
+
+/* Custom Focus Ring */
+.focus-ring {
+  transition: box-shadow 0.2s;
+}
+
+.focus-ring:focus-visible {
+  outline: none;
+  box-shadow: 
+    0 0 0 2px var(--primary),
+    0 0 0 4px rgba(99, 102, 241, 0.2);
+}
+
+/* Text Selection */
+::selection {
+  background: var(--primary);
+  color: white;
+}
+
+.dark ::selection {
+  background: var(--secondary);
+  color: var(--warm);
+}
