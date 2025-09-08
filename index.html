@@ -41,10 +41,13 @@
     }
     </script>
     
-    <!-- Tailwind CSS -->
+    <!-- Tailwind CSS avec configuration inline -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
-        tailwind.config = {
+        // Configuration Tailwind après chargement
+        document.addEventListener('DOMContentLoaded', function() {
+            if (typeof tailwind !== 'undefined') {
+                tailwind.config = {
             theme: {
                 extend: {
                     colors: {
@@ -87,7 +90,9 @@
                 }
             },
             darkMode: 'selector'  // FIXÉ: v4-compatible selector au lieu de class
-        }
+                }
+            }
+        });
     </script>
     
     <!-- Custom CSS -->
