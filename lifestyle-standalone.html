@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lifestyle & Design - TechViral | Version Standalone</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'selector',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#6366f1',
+                        secondary: '#f59e0b', 
+                        accent: '#10b981'
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        /* Version standalone - Tous styles inline */
+        .gradient-bg { background: linear-gradient(135deg, #ec4899 0%, #be185d 100%); }
+        .product-hover-3d {
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            transform-style: preserve-3d;
+        }
+        .product-hover-3d:hover {
+            transform: translateY(-12px) rotateX(5deg);
+            box-shadow: 0 32px 64px -12px rgba(0, 0, 0, 0.25);
+        }
+        .btn-magnetic {
+            position: relative;
+            background: linear-gradient(45deg, #ec4899, #be185d);
+            transition: all 0.3s ease;
+        }
+        .btn-magnetic:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+        }
+        
+        /* Icônes émojis */
+        .icon-bolt::before { content: "⚡"; }
+        .icon-cart::before { content: "🛒"; }
+        .icon-star::before { content: "⭐"; }
+        .icon-heart::before { content: "❤️"; }
+        .icon-home::before { content: "🏠"; }
+        .icon-gem::before { content: "💎"; }
+        .icon-palette::before { content: "🎨"; }
+        
+        body { font-family: system-ui, -apple-system, sans-serif; }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center h-16">
+                <a href="../../index.html" class="flex items-center space-x-2">
+                    <span class="icon-bolt text-2xl text-blue-600"></span>
+                    <span class="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">TechViral</span>
+                </a>
+                <button class="relative p-2 rounded-full bg-gradient-to-r from-pink-500 to-rose-600 text-white">
+                    <span class="icon-cart"></span>
+                    <span class="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center font-bold">0</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="gradient-bg text-white py-20 text-center">
+        <h1 class="text-6xl font-bold mb-6">
+            Lifestyle <span class="bg-gradient-to-r from-yellow-300 to-orange-400 bg-clip-text text-transparent">Design</span>
+        </h1>
+        <p class="text-xl text-pink-100 mb-12 max-w-4xl mx-auto">
+            Collection exclusive d'objets qui allient technologie et esthétique
+        </p>
+    </section>
+
+    <!-- Produit exemple -->
+    <section class="py-16">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="product-hover-3d bg-white rounded-2xl p-6 shadow-lg">
+                    <div class="w-full h-48 bg-gradient-to-br from-blue-400 to-purple-600 rounded-xl mb-4 flex items-center justify-center">
+                        <span class="text-6xl">💡</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Lampe Connectée</h3>
+                    <p class="text-gray-600 mb-4">Design épuré, contrôle vocal</p>
+                    <div class="flex mb-3">
+                        <span class="icon-star text-yellow-400"></span>
+                        <span class="icon-star text-yellow-400"></span>
+                        <span class="icon-star text-yellow-400"></span>
+                        <span class="icon-star text-yellow-400"></span>
+                        <span class="icon-star text-yellow-400"></span>
+                    </div>
+                    <div class="text-2xl font-bold text-pink-600 mb-4">129€</div>
+                    <button class="btn-magnetic w-full text-white py-3 rounded-xl font-medium">
+                        Ajouter au panier
+                    </button>
+                </div>
+
+                <div class="product-hover-3d bg-white rounded-2xl p-6 shadow-lg">
+                    <div class="w-full h-48 bg-gradient-to-br from-green-400 to-blue-600 rounded-xl mb-4 flex items-center justify-center">
+                        <span class="text-6xl">🔊</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Enceinte Crystal</h3>
+                    <p class="text-gray-600 mb-4">Son 360°, design transparent</p>
+                    <div class="flex mb-3">
+                        <span class="icon-star text-yellow-400"></span>
+                        <span class="icon-star text-yellow-400"></span>
+                        <span class="icon-star text-yellow-400"></span>
+                        <span class="icon-star text-yellow-400"></span>
+                        <span class="icon-star text-yellow-400"></span>
+                    </div>
+                    <div class="text-2xl font-bold text-pink-600 mb-4">199€</div>
+                    <button class="btn-magnetic w-full text-white py-3 rounded-xl font-medium">
+                        Ajouter au panier
+                    </button>
+                </div>
+
+                <div class="product-hover-3d bg-white rounded-2xl p-6 shadow-lg">
+                    <div class="w-full h-48 bg-gradient-to-br from-purple-400 to-pink-600 rounded-xl mb-4 flex items-center justify-center">
+                        <span class="text-6xl">📱</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Support Lévitation</h3>
+                    <p class="text-gray-600 mb-4">Magnétique, charge sans fil</p>
+                    <div class="flex mb-3">
+                        <span class="icon-star text-yellow-400"></span>
+                        <span class="icon-star text-yellow-400"></span>
+                        <span class="icon-star text-yellow-400"></span>
+                        <span class="icon-star text-yellow-400"></span>
+                        <span class="icon-star text-gray-300"></span>
+                    </div>
+                    <div class="text-2xl font-bold text-pink-600 mb-4">49€</div>
+                    <button class="btn-magnetic w-full text-white py-3 rounded-xl font-medium">
+                        Ajouter au panier
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        console.log('🎯 Version lifestyle STANDALONE chargée - 0 dépendance externe !');
+        console.log('✅ Aucun Font Awesome, aucun CSS externe, aucune CSP issue !');
+    </script>
+</body>
+</html>
