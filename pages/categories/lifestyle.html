@@ -6,7 +6,23 @@
     <title>Lifestyle & Design - TechViral | Objets Déco et Lifestyle Tech 2025</title>
     <meta name="description" content="Découvrez notre sélection d'objets lifestyle et design : déco connectée, accessoires élégants et gadgets lifestyle qui allient esthétique et technologie.">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        // Configuration Tailwind moderne
+        tailwind.config = {
+            darkMode: 'selector',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#6366f1',
+                        secondary: '#f59e0b',
+                        accent: '#10b981'
+                    }
+                }
+            }
+        }
+    </script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../assets/css/style.css">
     <link rel="icon" href="../../assets/images/favicon.ico">
     
     <style>
@@ -144,7 +160,7 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8" id="products-grid">
                 
                 <!-- Lampe Connectée Minimaliste -->
-                <div class="product-card bg-white rounded-2xl shadow-lg overflow-hidden" data-category="deco" data-price="129" data-rating="4.8">
+                <div class="product-card product-hover-3d glass-card-enhanced dark-transition bg-white rounded-2xl shadow-lg overflow-hidden" data-category="deco" data-price="129" data-rating="4.8">
                     <div class="relative">
                         <img src="https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?w=400" alt="Lampe connectée design" class="w-full h-64 object-cover">
                         <div class="absolute top-4 left-4">
@@ -193,14 +209,14 @@
                                 <span>16M couleurs, dimming</span>
                             </div>
                         </div>
-                        <button class="w-full bg-pink-500 text-white py-3 rounded-xl hover:bg-pink-600 transition-colors font-medium">
+                        <button class="add-to-cart btn-magnetic ripple focus-ring w-full bg-gradient-to-r from-pink-500 to-rose-600 text-white py-3 rounded-xl font-medium">
                             <i class="fas fa-cart-plus mr-2"></i>Ajouter au panier
                         </button>
                     </div>
                 </div>
 
                 <!-- Miroir Intelligent -->
-                <div class="product-card bg-white rounded-2xl shadow-lg overflow-hidden" data-category="deco design" data-price="349" data-rating="4.9">
+                <div class="product-card product-hover-3d glass-card-enhanced dark-transition bg-white rounded-2xl shadow-lg overflow-hidden" data-category="deco design" data-price="349" data-rating="4.9">
                     <div class="relative">
                         <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=400" alt="Miroir intelligent" class="w-full h-64 object-cover">
                         <div class="absolute top-4 left-4">
@@ -249,14 +265,14 @@
                                 <span>Infos temps réel</span>
                             </div>
                         </div>
-                        <button class="w-full bg-pink-500 text-white py-3 rounded-xl hover:bg-pink-600 transition-colors font-medium">
+                        <button class="add-to-cart btn-magnetic ripple focus-ring w-full bg-gradient-to-r from-pink-500 to-rose-600 text-white py-3 rounded-xl font-medium">
                             <i class="fas fa-cart-plus mr-2"></i>Ajouter au panier
                         </button>
                     </div>
                 </div>
 
                 <!-- Diffuseur Arômes Design -->
-                <div class="product-card bg-white rounded-2xl shadow-lg overflow-hidden" data-category="deco accessoires" data-price="89" data-rating="4.7">
+                <div class="product-card product-hover-3d glass-card-enhanced dark-transition bg-white rounded-2xl shadow-lg overflow-hidden" data-category="deco accessoires" data-price="89" data-rating="4.7">
                     <div class="relative">
                         <img src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=400" alt="Diffuseur arômes" class="w-full h-64 object-cover">
                         <div class="absolute top-4 left-4">
@@ -302,14 +318,14 @@
                                 <span>App dédiée iOS/Android</span>
                             </div>
                         </div>
-                        <button class="w-full bg-pink-500 text-white py-3 rounded-xl hover:bg-pink-600 transition-colors font-medium">
+                        <button class="add-to-cart btn-magnetic ripple focus-ring w-full bg-gradient-to-r from-pink-500 to-rose-600 text-white py-3 rounded-xl font-medium">
                             <i class="fas fa-cart-plus mr-2"></i>Ajouter au panier
                         </button>
                     </div>
                 </div>
 
                 <!-- Horloge Projection -->
-                <div class="product-card bg-white rounded-2xl shadow-lg overflow-hidden" data-category="accessoires design" data-price="159" data-rating="4.6">
+                <div class="product-card product-hover-3d glass-card-enhanced dark-transition bg-white rounded-2xl shadow-lg overflow-hidden" data-category="accessoires design" data-price="159" data-rating="4.6">
                     <div class="relative">
                         <img src="https://images.unsplash.com/photo-1563861826100-9cb868fdbe1c?w=400" alt="Horloge projection" class="w-full h-64 object-cover">
                         <div class="absolute top-4 left-4">
@@ -355,14 +371,14 @@
                                 <span>Réveil lumineux progressif</span>
                             </div>
                         </div>
-                        <button class="w-full bg-pink-500 text-white py-3 rounded-xl hover:bg-pink-600 transition-colors font-medium">
+                        <button class="add-to-cart btn-magnetic ripple focus-ring w-full bg-gradient-to-r from-pink-500 to-rose-600 text-white py-3 rounded-xl font-medium">
                             <i class="fas fa-cart-plus mr-2"></i>Ajouter au panier
                         </button>
                     </div>
                 </div>
 
                 <!-- Enceinte Design Transparente -->
-                <div class="product-card bg-white rounded-2xl shadow-lg overflow-hidden" data-category="accessoires" data-price="199" data-rating="4.8">
+                <div class="product-card product-hover-3d glass-card-enhanced dark-transition bg-white rounded-2xl shadow-lg overflow-hidden" data-category="accessoires" data-price="199" data-rating="4.8">
                     <div class="relative">
                         <img src="https://images.unsplash.com/photo-1545454675-3531b543be5d?w=400" alt="Enceinte transparente" class="w-full h-64 object-cover">
                         <div class="absolute top-4 left-4">
@@ -411,14 +427,14 @@
                                 <span>Éclairage synchronisé</span>
                             </div>
                         </div>
-                        <button class="w-full bg-pink-500 text-white py-3 rounded-xl hover:bg-pink-600 transition-colors font-medium">
+                        <button class="add-to-cart btn-magnetic ripple focus-ring w-full bg-gradient-to-r from-pink-500 to-rose-600 text-white py-3 rounded-xl font-medium">
                             <i class="fas fa-cart-plus mr-2"></i>Ajouter au panier
                         </button>
                     </div>
                 </div>
 
                 <!-- Plante Connectée -->
-                <div class="product-card bg-white rounded-2xl shadow-lg overflow-hidden" data-category="deco" data-price="79" data-rating="4.5">
+                <div class="product-card product-hover-3d glass-card-enhanced dark-transition bg-white rounded-2xl shadow-lg overflow-hidden" data-category="deco" data-price="79" data-rating="4.5">
                     <div class="relative">
                         <img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=400" alt="Plante connectée" class="w-full h-64 object-cover">
                         <div class="absolute top-4 left-4">
@@ -464,14 +480,14 @@
                                 <span>Suivi croissance app</span>
                             </div>
                         </div>
-                        <button class="w-full bg-pink-500 text-white py-3 rounded-xl hover:bg-pink-600 transition-colors font-medium">
+                        <button class="add-to-cart btn-magnetic ripple focus-ring w-full bg-gradient-to-r from-pink-500 to-rose-600 text-white py-3 rounded-xl font-medium">
                             <i class="fas fa-cart-plus mr-2"></i>Ajouter au panier
                         </button>
                     </div>
                 </div>
 
                 <!-- Support Téléphone Design -->
-                <div class="product-card bg-white rounded-2xl shadow-lg overflow-hidden" data-category="accessoires" data-price="49" data-rating="4.7">
+                <div class="product-card product-hover-3d glass-card-enhanced dark-transition bg-white rounded-2xl shadow-lg overflow-hidden" data-category="accessoires" data-price="49" data-rating="4.7">
                     <div class="relative">
                         <img src="https://images.unsplash.com/photo-1565031491910-e57fac031c41?w=400" alt="Support téléphone" class="w-full h-64 object-cover">
                         <div class="absolute top-4 left-4">
@@ -517,14 +533,14 @@
                                 <span>Rotation libre 360°</span>
                             </div>
                         </div>
-                        <button class="w-full bg-pink-500 text-white py-3 rounded-xl hover:bg-pink-600 transition-colors font-medium">
+                        <button class="add-to-cart btn-magnetic ripple focus-ring w-full bg-gradient-to-r from-pink-500 to-rose-600 text-white py-3 rounded-xl font-medium">
                             <i class="fas fa-cart-plus mr-2"></i>Ajouter au panier
                         </button>
                     </div>
                 </div>
 
                 <!-- Cadre Photo Numérique -->
-                <div class="product-card bg-white rounded-2xl shadow-lg overflow-hidden" data-category="deco design" data-price="259" data-rating="4.9">
+                <div class="product-card product-hover-3d glass-card-enhanced dark-transition bg-white rounded-2xl shadow-lg overflow-hidden" data-category="deco design" data-price="259" data-rating="4.9">
                     <div class="relative">
                         <img src="https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?w=400" alt="Cadre photo numérique" class="w-full h-64 object-cover">
                         <div class="absolute top-4 left-4">
@@ -573,7 +589,7 @@
                                 <span>Détection mouvement</span>
                             </div>
                         </div>
-                        <button class="w-full bg-pink-500 text-white py-3 rounded-xl hover:bg-pink-600 transition-colors font-medium">
+                        <button class="add-to-cart btn-magnetic ripple focus-ring w-full bg-gradient-to-r from-pink-500 to-rose-600 text-white py-3 rounded-xl font-medium">
                             <i class="fas fa-cart-plus mr-2"></i>Ajouter au panier
                         </button>
                     </div>
@@ -690,7 +706,8 @@
         </div>
     </footer>
 
-    <script src="../../assets/js/cart.js"></script>
+    <script src="../../assets/js/cart.js?v=2025010800"></script>
+    <script src="../../assets/js/main.js"></script>
     <script>
         // Filter functionality
         document.querySelectorAll('.filter-btn').forEach(btn => {
