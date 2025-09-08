@@ -502,9 +502,14 @@ class TechViralApp {
     }
 
     preloadCriticalResources() {
+        // Détection de la page courante pour chemins relatifs corrects
+        const currentPath = window.location.pathname;
+        const isInSubfolder = currentPath.includes('/pages/categories/');
+        const basePath = isInSubfolder ? '../../' : './';
+        
         const criticalPages = [
-            'pages/categories/all.html',
-            'pages/promotions.html'
+            basePath + 'pages/categories/all.html',
+            basePath + 'pages/promotions.html'
         ];
 
         criticalPages.forEach(page => {
