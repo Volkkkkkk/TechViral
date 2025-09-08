@@ -1,3 +1,4 @@
-WEBHOOK HOSTINGER TEST - Si tu vois ce fichier, l'auto-deploy fonctionne !
+🎉 WEBHOOK HOSTINGER TEST - BRANCHE MASTER ! 
 Date: 2025-01-08
-Push #3 - Test simple
+Push #4 - Test avec branche master (comme configuré dans Hostinger)
+Si tu vois ce fichier, l'auto-deploy GitHub → Hostinger fonctionne parfaitement !
