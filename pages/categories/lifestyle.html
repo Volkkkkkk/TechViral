@@ -21,8 +21,11 @@
             }
         }
     </script>
-    <!-- Remplacement Font Awesome par icônes SVG inline -->
-    <link rel="stylesheet" href="../../assets/css/style.css">
+    <!-- Version 100% autonome - Aucune dépendance externe -->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <link rel="stylesheet" href="../../assets/css/style.css?v=2025010802">
     <link rel="icon" href="../../assets/images/favicon.svg">
     
     <style>
@@ -729,7 +732,17 @@
     </footer>
 
     <script src="../../assets/js/cart.js?v=2025010800"></script>
-    <script src="../../assets/js/main.js"></script>
+    <script src="../../assets/js/main.js?v=2025010802"></script>
+    <script>
+        // Vérification anti-Font Awesome 
+        document.addEventListener('DOMContentLoaded', function() {
+            const faLinks = document.querySelectorAll('link[href*="font-awesome"], link[href*="cdnjs.cloudflare.com"]');
+            faLinks.forEach(link => {
+                console.warn('🚫 Suppression lien Font Awesome détecté:', link.href);
+                link.remove();
+            });
+        });
+    </script>
     <script>
         // Filter functionality
         document.querySelectorAll('.filter-btn').forEach(btn => {
