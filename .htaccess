@@ -15,9 +15,9 @@ RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 RewriteCond %{HTTP_HOST} ^techviral\.com [NC]
 RewriteRule ^(.*)$ https://www.techviral.com/$1 [L,R=301]
 
-# CORRECTION: Redirection racine vers index.html (URL propre)
+# CORRECTION: Réécriture interne pour que racine affiche index.html (preserve CSS)
 RewriteCond %{REQUEST_URI} ^/$
-RewriteRule ^$ /index.html [R=301,L]
+RewriteRule ^$ index.html [L]
 
 # URLs propres pour les catégories
 RewriteRule ^categories/([a-zA-Z0-9-]+)/?$ pages/categories/$1.html [L,QSA]
