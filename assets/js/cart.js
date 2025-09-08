@@ -742,7 +742,9 @@ class CartManager {
             }
         }
 
-        // Custom analytics endpoint (remplacer par votre service)
+        // Custom analytics endpoint (désactivé - pas d'API backend)
+        // TODO: Activer quand API analytics sera disponible
+        /*
         if (window.location.hostname !== 'localhost') {
             fetch('/api/analytics', {
                 method: 'POST',
@@ -752,6 +754,7 @@ class CartManager {
                 body: JSON.stringify(event)
             }).catch(err => console.log('Analytics send failed:', err));
         }
+        */
     }
 
     getCart() {
