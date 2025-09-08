@@ -41,7 +41,8 @@
     }
     </script>
     
-    <!-- Tailwind CSS avec configuration inline -->
+    <!-- Tailwind CSS avec configuration inline (CDN pour développement) -->
+    <!-- TODO: Remplacer par PostCSS build pour production -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         // Configuration Tailwind après chargement
@@ -1036,7 +1037,7 @@
                             const parsedCart = JSON.parse(cartData); // JSON.parse sécurisé
                             console.log('📦 Cart localStorage synchronisé:', parsedCart.length, 'articles');
                         }
-                        window.cartManager.updateCartUI();
+                        window.cartManager.updateCartBadge();
                     } catch (e) {
                         console.warn('⚠️ Erreur JSON cart:', e);
                         localStorage.removeItem('techviral_cart'); // Clear corrupted data
