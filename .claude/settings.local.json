@@ -18,7 +18,13 @@
       "Bash(git checkout:*)",
       "Bash(tar:*)",
       "Bash(scp:*)",
-      "Bash(ssh:*)"
+      "Bash(ssh:*)",
+      "Bash(./ftp-deploy.bat)",
+      "Bash(ping:*)",
+      "Bash(telnet:*)",
+      "Bash(curl:*)",
+      "Bash(.ssh_test.bat)",
+      "Bash(./ssh-deploy.bat)"
     ],
     "deny": [],
     "ask": []

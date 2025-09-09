@@ -1,0 +1,7 @@
+open 147.93.93.199
+u518329827
+password_placeholder
+binary
+cd /public_html/pages/categories
+put maison.html
+quit

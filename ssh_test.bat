@@ -1,0 +1,3 @@
+@echo off
+echo Testing SSH connection...
+ssh -p 65002 u531520039@147.93.93.199 "pwd && ls -la"
