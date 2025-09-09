@@ -1,0 +1,351 @@
+<!-- Comparateur de Produits TechViral -->
+<div class="product-comparison bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 mb-8">
+    
+    <!-- Header -->
+    <div class="comparison-header mb-6">
+        <div class="flex items-center justify-between">
+            <h2 class="text-2xl font-bold text-gray-900 dark:text-white flex items-center">
+                <svg class="w-6 h-6 mr-2 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                </svg>
+                Comparateur de produits
+            </h2>
+            
+            <div class="flex items-center space-x-2">
+                <button id="clearComparison" class="text-gray-500 hover:text-red-500 text-sm transition-colors">
+                    Vider la comparaison
+                </button>
+                <div class="text-sm text-gray-500">
+                    <span id="comparisonCount">0</span>/4 produits
+                </div>
+            </div>
+        </div>
+        
+        <p class="text-gray-600 dark:text-gray-400 mt-2">
+            Comparez jusqu'à 4 produits côte à côte pour faire le meilleur choix
+        </p>
+    </div>
+
+    <!-- État vide -->
+    <div id="emptyComparison" class="text-center py-12">
+        <div class="text-6xl mb-4">⚖️</div>
+        <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+            Aucun produit à comparer
+        </h3>
+        <p class="text-gray-600 dark:text-gray-400 mb-6">
+            Ajoutez des produits en cliquant sur "Comparer" sur les pages produits
+        </p>
+        <a href="/pages/categories/all.html" class="inline-block bg-primary text-white px-6 py-3 rounded-lg hover:bg-primary/90 transition-colors">
+            Parcourir les produits
+        </a>
+    </div>
+
+    <!-- Table de comparaison -->
+    <div id="comparisonTable" class="hidden">
+        
+        <!-- Actions globales -->
+        <div class="comparison-actions mb-6 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <button id="addProductBtn" class="flex items-center space-x-2 px-4 py-2 bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 rounded-lg transition-colors">
+                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/>
+                    </svg>
+                    <span>Ajouter un produit</span>
+                </button>
+                
+                <div class="flex items-center space-x-2">
+                    <span class="text-sm text-gray-600 dark:text-gray-400">Affichage :</span>
+                    <button id="toggleDifferences" class="px-3 py-1 text-xs bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded-full hover:bg-blue-200 dark:hover:bg-blue-900/50 transition-colors">
+                        Différences uniquement
+                    </button>
+                </div>
+            </div>
+            
+            <div class="flex items-center space-x-2">
+                <button id="exportComparison" class="px-4 py-2 text-gray-600 dark:text-gray-400 hover:text-primary transition-colors">
+                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z"/>
+                    </svg>
+                </button>
+                
+                <button id="shareComparison" class="px-4 py-2 text-gray-600 dark:text-gray-400 hover:text-primary transition-colors">
+                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M15 8a3 3 0 10-2.977-2.63l-4.94 2.47a3 3 0 100 4.319l4.94 2.47a3 3 0 10.895-1.789l-4.94-2.47a3.027 3.027 0 000-.74l4.94-2.47C13.456 7.68 14.19 8 15 8z"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Table responsive -->
+        <div class="comparison-scroll overflow-x-auto">
+            <table class="w-full min-w-[800px]">
+                
+                <!-- En-tête avec produits -->
+                <thead class="comparison-header-row">
+                    <tr class="border-b border-gray-200 dark:border-gray-700">
+                        <th class="comparison-feature-column sticky left-0 bg-white dark:bg-gray-800 z-10 p-4 text-left font-medium text-gray-700 dark:text-gray-300 border-r border-gray-200 dark:border-gray-700">
+                            Caractéristiques
+                        </th>
+                        <!-- Les colonnes produits seront ajoutées dynamiquement -->
+                    </tr>
+                </thead>
+
+                <!-- Corps du tableau -->
+                <tbody id="comparisonTableBody">
+                    <!-- Les rangées seront ajoutées dynamiquement -->
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Résumé et recommandations -->
+        <div class="comparison-summary mt-8 p-6 bg-gray-50 dark:bg-gray-700 rounded-xl">
+            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-4">
+                🎯 Recommandations personnalisées
+            </h3>
+            <div id="recommendations" class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <!-- Les recommandations seront ajoutées dynamiquement -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal d'ajout de produit -->
+    <div id="addProductModal" class="hidden fixed inset-0 bg-black/50 flex items-center justify-center z-50">
+        <div class="bg-white dark:bg-gray-800 rounded-xl p-6 max-w-2xl w-full mx-4 max-h-[80vh] overflow-y-auto">
+            
+            <div class="flex items-center justify-between mb-6">
+                <h3 class="text-xl font-bold text-gray-900 dark:text-white">
+                    Ajouter un produit à comparer
+                </h3>
+                <button id="closeAddModal" class="text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 transition-colors">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Recherche de produits -->
+            <div class="search-section mb-6">
+                <div class="relative">
+                    <input 
+                        type="text" 
+                        id="productSearchInput"
+                        placeholder="Rechercher un produit à ajouter..."
+                        class="w-full px-4 py-3 pl-10 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-primary focus:border-primary transition-colors"
+                    >
+                    <svg class="absolute left-3 top-3.5 w-5 h-5 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"/>
+                    </svg>
+                </div>
+            </div>
+
+            <!-- Filtres rapides -->
+            <div class="filter-section mb-6">
+                <h4 class="text-sm font-medium text-gray-700 dark:text-gray-300 mb-3">Catégories populaires</h4>
+                <div class="flex flex-wrap gap-2">
+                    <button class="category-filter px-3 py-1 text-xs bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-full hover:bg-primary hover:text-white transition-colors" data-category="electronique">
+                        📱 Électronique
+                    </button>
+                    <button class="category-filter px-3 py-1 text-xs bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-full hover:bg-primary hover:text-white transition-colors" data-category="sante">
+                        🏥 Santé
+                    </button>
+                    <button class="category-filter px-3 py-1 text-xs bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-full hover:bg-primary hover:text-white transition-colors" data-category="maison">
+                        🏠 Maison
+                    </button>
+                    <button class="category-filter px-3 py-1 text-xs bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-full hover:bg-primary hover:text-white transition-colors" data-category="mode">
+                        👗 Mode
+                    </button>
+                </div>
+            </div>
+
+            <!-- Résultats de recherche -->
+            <div id="searchResults" class="space-y-3">
+                <!-- Les résultats seront ajoutés dynamiquement -->
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Styles CSS pour le comparateur -->
+<style>
+/* Table de comparaison */
+.comparison-table {
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+.comparison-feature-column {
+    min-width: 200px;
+    font-weight: 600;
+}
+
+.comparison-product-column {
+    min-width: 250px;
+    max-width: 300px;
+}
+
+.comparison-cell {
+    padding: 16px;
+    border-bottom: 1px solid #e5e7eb;
+    vertical-align: top;
+}
+
+.dark .comparison-cell {
+    border-bottom-color: #374151;
+}
+
+.comparison-feature-cell {
+    background: #f9fafb;
+    font-weight: 500;
+    color: #374151;
+}
+
+.dark .comparison-feature-cell {
+    background: #1f2937;
+    color: #d1d5db;
+}
+
+/* Product cards dans la comparaison */
+.comparison-product-card {
+    text-align: center;
+    padding: 16px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.dark .comparison-product-card {
+    border-bottom-color: #374151;
+}
+
+.comparison-product-image {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin: 0 auto 12px;
+}
+
+.comparison-product-title {
+    font-weight: 600;
+    margin-bottom: 8px;
+    line-height: 1.4;
+}
+
+.comparison-product-price {
+    color: #059669;
+    font-weight: 700;
+    font-size: 1.125rem;
+}
+
+.comparison-product-rating {
+    margin-top: 8px;
+}
+
+/* Remove button */
+.remove-product-btn {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 24px;
+    height: 24px;
+    background: #ef4444;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+.comparison-product-card:hover .remove-product-btn {
+    opacity: 1;
+}
+
+/* Différences highlight */
+.highlight-difference {
+    background: #fef3c7;
+    font-weight: 600;
+}
+
+.dark .highlight-difference {
+    background: #92400e;
+    color: #fbbf24;
+}
+
+/* Recommended badge */
+.recommended-badge {
+    position: absolute;
+    top: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(45deg, #10b981, #059669);
+    color: white;
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    z-index: 10;
+}
+
+/* Loading states */
+.comparison-loading {
+    animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .comparison-feature-column {
+        min-width: 120px;
+        font-size: 0.875rem;
+    }
+    
+    .comparison-product-column {
+        min-width: 200px;
+    }
+    
+    .comparison-product-image {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .comparison-cell {
+        padding: 12px;
+        font-size: 0.875rem;
+    }
+}
+
+/* Scroll indicators */
+.comparison-scroll::-webkit-scrollbar {
+    height: 8px;
+}
+
+.comparison-scroll::-webkit-scrollbar-track {
+    background: #f1f5f9;
+    border-radius: 4px;
+}
+
+.comparison-scroll::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 4px;
+}
+
+.comparison-scroll::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+}
+
+.dark .comparison-scroll::-webkit-scrollbar-track {
+    background: #1e293b;
+}
+
+.dark .comparison-scroll::-webkit-scrollbar-thumb {
+    background: #475569;
+}
+
+.dark .comparison-scroll::-webkit-scrollbar-thumb:hover {
+    background: #64748b;
+}
+</style>

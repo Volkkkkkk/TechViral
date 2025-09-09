@@ -1,0 +1,308 @@
+<!-- Système de Filtres Avancés TechViral -->
+<div class="advanced-filters bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 mb-8">
+    <!-- Header avec stats -->
+    <div class="flex items-center justify-between mb-6">
+        <h2 class="text-xl font-semibold flex items-center gap-2">
+            <svg class="w-5 h-5 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-.293.707L12 11.414V15a1 1 0 01-.293.707l-2 2A1 1 0 018 17v-5.586L3.293 6.707A1 1 0 013 6V4z"/>
+            </svg>
+            Filtres
+        </h2>
+        <div class="flex items-center gap-4">
+            <span class="filter-stats text-sm text-gray-600 dark:text-gray-400">
+                764 produits
+            </span>
+            <button class="clear-filters text-sm text-primary hover:text-primary/80 transition-colors">
+                Tout effacer
+            </button>
+        </div>
+    </div>
+
+    <!-- Filtres actifs (badges) -->
+    <div class="active-filters flex flex-wrap gap-2 mb-4 min-h-[2rem]">
+        <!-- Les badges seront ajoutés dynamiquement -->
+    </div>
+
+    <!-- Grid des filtres -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-6 gap-6">
+        
+        <!-- Catégories -->
+        <div class="filter-group">
+            <h3 class="font-medium mb-3 text-gray-900 dark:text-white">Catégories</h3>
+            <div class="space-y-2 max-h-40 overflow-y-auto">
+                <label class="flex items-center">
+                    <input type="checkbox" class="filter-category" value="electronique">
+                    <span class="ml-2 text-sm">📱 Électronique</span>
+                </label>
+                <label class="flex items-center">
+                    <input type="checkbox" class="filter-category" value="sante">
+                    <span class="ml-2 text-sm">🏥 Santé & Bien-être</span>
+                </label>
+                <label class="flex items-center">
+                    <input type="checkbox" class="filter-category" value="maison">
+                    <span class="ml-2 text-sm">🏠 Maison & Déco</span>
+                </label>
+                <label class="flex items-center">
+                    <input type="checkbox" class="filter-category" value="mode">
+                    <span class="ml-2 text-sm">👗 Mode & Accessoires</span>
+                </label>
+                <label class="flex items-center">
+                    <input type="checkbox" class="filter-category" value="lifestyle">
+                    <span class="ml-2 text-sm">✨ Lifestyle</span>
+                </label>
+                <label class="flex items-center">
+                    <input type="checkbox" class="filter-category" value="ecologique">
+                    <span class="ml-2 text-sm">🌱 Écologique</span>
+                </label>
+                <label class="flex items-center">
+                    <input type="checkbox" class="filter-category" value="animaux">
+                    <span class="ml-2 text-sm">🐕 Animaux</span>
+                </label>
+                <label class="flex items-center">
+                    <input type="checkbox" class="filter-category" value="bebe">
+                    <span class="ml-2 text-sm">👶 Bébé & Enfant</span>
+                </label>
+            </div>
+        </div>
+
+        <!-- Prix -->
+        <div class="filter-group">
+            <h3 class="font-medium mb-3 text-gray-900 dark:text-white">Prix</h3>
+            <div class="space-y-3">
+                <div>
+                    <label class="block text-xs text-gray-600 dark:text-gray-400 mb-1">Min</label>
+                    <input 
+                        type="range" 
+                        id="minPrice" 
+                        min="0" 
+                        max="500" 
+                        value="0"
+                        class="w-full h-2 bg-gray-200 dark:bg-gray-700 rounded-lg appearance-none cursor-pointer"
+                    >
+                    <span class="text-xs text-gray-600 dark:text-gray-400">0€</span>
+                </div>
+                <div>
+                    <label class="block text-xs text-gray-600 dark:text-gray-400 mb-1">Max</label>
+                    <input 
+                        type="range" 
+                        id="maxPrice" 
+                        min="0" 
+                        max="1000" 
+                        value="1000"
+                        class="w-full h-2 bg-gray-200 dark:bg-gray-700 rounded-lg appearance-none cursor-pointer"
+                    >
+                    <span class="text-xs text-gray-600 dark:text-gray-400">1000€</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Marques populaires -->
+        <div class="filter-group">
+            <h3 class="font-medium mb-3 text-gray-900 dark:text-white">Marques</h3>
+            <div class="space-y-2 max-h-40 overflow-y-auto">
+                <label class="flex items-center">
+                    <input type="checkbox" class="filter-brand" value="Apple">
+                    <span class="ml-2 text-sm">Apple</span>
+                </label>
+                <label class="flex items-center">
+                    <input type="checkbox" class="filter-brand" value="Samsung">
+                    <span class="ml-2 text-sm">Samsung</span>
+                </label>
+                <label class="flex items-center">
+                    <input type="checkbox" class="filter-brand" value="Sony">
+                    <span class="ml-2 text-sm">Sony</span>
+                </label>
+                <label class="flex items-center">
+                    <input type="checkbox" class="filter-brand" value="Nike">
+                    <span class="ml-2 text-sm">Nike</span>
+                </label>
+                <label class="flex items-center">
+                    <input type="checkbox" class="filter-brand" value="Xiaomi">
+                    <span class="ml-2 text-sm">Xiaomi</span>
+                </label>
+                <label class="flex items-center">
+                    <input type="checkbox" class="filter-brand" value="Garmin">
+                    <span class="ml-2 text-sm">Garmin</span>
+                </label>
+            </div>
+        </div>
+
+        <!-- Note client -->
+        <div class="filter-group">
+            <h3 class="font-medium mb-3 text-gray-900 dark:text-white">Note minimum</h3>
+            <select class="filter-rating w-full p-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700">
+                <option value="0">Toutes les notes</option>
+                <option value="1">⭐ 1+ étoile</option>
+                <option value="2">⭐ 2+ étoiles</option>
+                <option value="3">⭐ 3+ étoiles</option>
+                <option value="4">⭐ 4+ étoiles</option>
+                <option value="5">⭐ 5 étoiles</option>
+            </select>
+        </div>
+
+        <!-- Disponibilité -->
+        <div class="filter-group">
+            <h3 class="font-medium mb-3 text-gray-900 dark:text-white">Disponibilité</h3>
+            <div class="space-y-2">
+                <label class="flex items-center">
+                    <input type="radio" name="availability" class="filter-availability" value="all" checked>
+                    <span class="ml-2 text-sm">Tous les produits</span>
+                </label>
+                <label class="flex items-center">
+                    <input type="radio" name="availability" class="filter-availability" value="in_stock">
+                    <span class="ml-2 text-sm">✅ En stock</span>
+                </label>
+                <label class="flex items-center">
+                    <input type="radio" name="availability" class="filter-availability" value="out_of_stock">
+                    <span class="ml-2 text-sm">❌ Épuisé</span>
+                </label>
+            </div>
+        </div>
+
+        <!-- Tri -->
+        <div class="filter-group">
+            <h3 class="font-medium mb-3 text-gray-900 dark:text-white">Trier par</h3>
+            <select id="sortBy" class="w-full p-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700">
+                <option value="relevance">Pertinence</option>
+                <option value="price_low">Prix croissant</option>
+                <option value="price_high">Prix décroissant</option>
+                <option value="rating">Meilleures notes</option>
+                <option value="newest">Plus récents</option>
+                <option value="popular">Plus populaires</option>
+            </select>
+        </div>
+    </div>
+
+    <!-- Actions rapides -->
+    <div class="mt-6 pt-4 border-t border-gray-200 dark:border-gray-700">
+        <div class="flex flex-wrap gap-2">
+            <button class="quick-filter px-3 py-1 text-xs bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-300 rounded-full hover:bg-red-200 dark:hover:bg-red-900/50 transition-colors" data-tag="promo">
+                🔥 Promotions
+            </button>
+            <button class="quick-filter px-3 py-1 text-xs bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300 rounded-full hover:bg-green-200 dark:hover:bg-green-900/50 transition-colors" data-tag="nouveau">
+                ✨ Nouveautés
+            </button>
+            <button class="quick-filter px-3 py-1 text-xs bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 rounded-full hover:bg-purple-200 dark:hover:bg-purple-900/50 transition-colors" data-tag="viral">
+                🚀 Viral
+            </button>
+            <button class="quick-filter px-3 py-1 text-xs bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded-full hover:bg-blue-200 dark:hover:bg-blue-900/50 transition-colors" data-tag="eco">
+                🌱 Éco-responsable
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- Styles CSS pour les filtres -->
+<style>
+.filter-group h3 {
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.filter-group h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 2rem;
+    height: 2px;
+    background: var(--tw-color-primary, #6366f1);
+    border-radius: 1px;
+}
+
+/* Style pour les sliders de prix */
+input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--tw-color-primary, #6366f1);
+    cursor: pointer;
+    border: 2px solid white;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+input[type="range"]::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--tw-color-primary, #6366f1);
+    cursor: pointer;
+    border: 2px solid white;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+/* Animation pour les filtres actifs */
+.active-filters span {
+    animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Style pour les checkboxes et radios */
+input[type="checkbox"], input[type="radio"] {
+    accent-color: var(--tw-color-primary, #6366f1);
+}
+
+/* Responsive collapse pour mobile */
+@media (max-width: 768px) {
+    .advanced-filters .grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .filter-group {
+        border-bottom: 1px solid #e5e7eb;
+        padding-bottom: 1rem;
+        margin-bottom: 1rem;
+    }
+    
+    .filter-group:last-child {
+        border-bottom: none;
+        margin-bottom: 0;
+    }
+}
+</style>
+
+<script>
+// Quick filters setup
+document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.quick-filter').forEach(button => {
+        button.addEventListener('click', () => {
+            const tag = button.dataset.tag;
+            
+            // Toggle active state
+            button.classList.toggle('active');
+            
+            // Add logic to filter by tag
+            if (window.advancedFilters) {
+                const isActive = button.classList.contains('active');
+                if (isActive) {
+                    if (!window.advancedFilters.filters.tags.includes(tag)) {
+                        window.advancedFilters.filters.tags.push(tag);
+                    }
+                } else {
+                    window.advancedFilters.filters.tags = 
+                        window.advancedFilters.filters.tags.filter(t => t !== tag);
+                }
+                window.advancedFilters.applyFilters();
+                window.advancedFilters.updateURL();
+            }
+        });
+    });
+});
+</script>
