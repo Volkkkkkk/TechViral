@@ -1,12 +1,12 @@
 {
-  "name": "TechViral - Produits Innovants 2025",
+  "name": "TechViral - Produits Innovants & Gadgets 2025",
   "short_name": "TechViral",
-  "description": "Découvrez les produits les plus viraux et innovants de 2025 : caméra POV, drone en mousse, bouteille hydrogène et bien plus encore.",
+  "description": "Découvrez 764+ produits viraux et innovants : caméra POV, drone en mousse, bouteille hydrogène. Livraison gratuite 48h, -30% nouveautés.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#6366f1",
+  "background_color": "#ffffff",
   "theme_color": "#6366f1",
-  "orientation": "portrait-primary",
+  "orientation": "any",
   "scope": "/",
   "lang": "fr",
   "dir": "ltr",
@@ -70,9 +70,21 @@
   
   "shortcuts": [
     {
-      "name": "Promotions Flash",
+      "name": "Recherche Intelligente",
+      "short_name": "Recherche",
+      "description": "Recherche vocale et intelligente dans 764 produits",
+      "url": "/search",
+      "icons": [
+        {
+          "src": "assets/icons/search-icon-96x96.png",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "Promotions Flash -30%",
       "short_name": "Promos",
-      "description": "Accéder directement aux promotions en cours",
+      "description": "Offres limitées et réductions exclusives",
       "url": "/pages/promotions.html",
       "icons": [
         {
@@ -82,25 +94,25 @@
       ]
     },
     {
-      "name": "Toutes les catégories",
-      "short_name": "Catégories",
-      "description": "Explorer toutes nos catégories de produits",
-      "url": "/pages/categories/all.html",
+      "name": "Mon Panier Express",
+      "short_name": "Panier",
+      "description": "Checkout rapide en un clic",
+      "url": "/pages/cart",
       "icons": [
         {
-          "src": "assets/icons/category-icon-96x96.png",
+          "src": "assets/icons/cart-icon-96x96.png",
           "sizes": "96x96"
         }
       ]
     },
     {
-      "name": "Panier",
-      "short_name": "Panier",
-      "description": "Voir mon panier de commande",
-      "url": "/pages/cart.html",
+      "name": "Innovations 2025",
+      "short_name": "Nouveautés",
+      "description": "Derniers gadgets viraux et tendances tech",
+      "url": "/pages/categories/all.html?sort=newest",
       "icons": [
         {
-          "src": "assets/icons/cart-icon-96x96.png",
+          "src": "assets/icons/innovation-icon-96x96.png",
           "sizes": "96x96"
         }
       ]

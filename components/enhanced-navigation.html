@@ -1,0 +1,462 @@
+<!-- Navigation Enrichie TechViral avec Mega Menu -->
+<nav class="enhanced-navigation bg-white dark:bg-gray-800 shadow-lg sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+            
+            <!-- Logo et nom -->
+            <div class="flex items-center">
+                <div class="flex-shrink-0 flex items-center">
+                    <div class="w-8 h-8 bg-gradient-to-r from-primary to-secondary rounded-lg flex items-center justify-center">
+                        <span class="text-white font-bold text-sm">TV</span>
+                    </div>
+                    <span class="ml-2 text-xl font-bold text-gray-900 dark:text-white">TechViral</span>
+                </div>
+            </div>
+
+            <!-- Menu principal - Desktop -->
+            <div class="hidden md:block">
+                <div class="ml-10 flex items-baseline space-x-4">
+                    
+                    <!-- Accueil -->
+                    <a href="/" class="nav-link text-gray-900 dark:text-white hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">
+                        🏠 Accueil
+                    </a>
+
+                    <!-- Catégories avec Mega Menu -->
+                    <div class="relative group">
+                        <button class="nav-link mega-menu-trigger text-gray-900 dark:text-white hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center">
+                            📂 Catégories
+                            <svg class="ml-1 w-3 h-3 transition-transform group-hover:rotate-180" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/>
+                            </svg>
+                        </button>
+                        
+                        <!-- Mega Menu Dropdown -->
+                        <div class="mega-menu absolute left-0 mt-2 w-screen max-w-4xl bg-white dark:bg-gray-800 shadow-xl rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
+                            <div class="p-6">
+                                <div class="grid grid-cols-4 gap-6">
+                                    
+                                    <!-- Électronique & Gadgets -->
+                                    <div class="category-section">
+                                        <h3 class="font-semibold text-gray-900 dark:text-white mb-3 flex items-center">
+                                            📱 Électronique
+                                            <span class="ml-2 text-xs bg-primary/10 text-primary px-2 py-1 rounded-full">156</span>
+                                        </h3>
+                                        <ul class="space-y-2">
+                                            <li><a href="/pages/categories/electronique.html?sub=smartphones" class="submenu-link text-sm text-gray-600 dark:text-gray-400 hover:text-primary">📱 Smartphones</a></li>
+                                            <li><a href="/pages/categories/electronique.html?sub=audio" class="submenu-link text-sm text-gray-600 dark:text-gray-400 hover:text-primary">🎧 Audio</a></li>
+                                            <li><a href="/pages/categories/electronique.html?sub=cameras" class="submenu-link text-sm text-gray-600 dark:text-gray-400 hover:text-primary">📷 Caméras</a></li>
+                                            <li><a href="/pages/categories/electronique.html?sub=gaming" class="submenu-link text-sm text-gray-600 dark:text-gray-400 hover:text-primary">🎮 Gaming</a></li>
+                                            <li><a href="/pages/categories/electronique.html?sub=drones" class="submenu-link text-sm text-gray-600 dark:text-gray-400 hover:text-primary">🚁 Drones</a></li>
+                                        </ul>
+                                    </div>
+
+                                    <!-- Santé & Bien-être -->
+                                    <div class="category-section">
+                                        <h3 class="font-semibold text-gray-900 dark:text-white mb-3 flex items-center">
+                                            🏥 Santé & Bien-être
+                                            <span class="ml-2 text-xs bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400 px-2 py-1 rounded-full">124</span>
+                                        </h3>
+                                        <ul class="space-y-2">
+                                            <li><a href="/pages/categories/sante.html?sub=fitness" class="submenu-link text-sm text-gray-600 dark:text-gray-400 hover:text-primary">💪 Fitness</a></li>
+                                            <li><a href="/pages/categories/sante.html?sub=wellness" class="submenu-link text-sm text-gray-600 dark:text-gray-400 hover:text-primary">🧘 Bien-être</a></li>
+                                            <li><a href="/pages/categories/sante.html?sub=medical" class="submenu-link text-sm text-gray-600 dark:text-gray-400 hover:text-primary">⚕️ Médical</a></li>
+                                            <li><a href="/pages/categories/sante.html?sub=beauty" class="submenu-link text-sm text-gray-600 dark:text-gray-400 hover:text-primary">💅 Beauté</a></li>
+                                            <li><a href="/pages/categories/sante.html?sub=supplements" class="submenu-link text-sm text-gray-600 dark:text-gray-400 hover:text-primary">💊 Suppléments</a></li>
+                                        </ul>
+                                    </div>
+
+                                    <!-- Maison & Lifestyle -->
+                                    <div class="category-section">
+                                        <h3 class="font-semibold text-gray-900 dark:text-white mb-3 flex items-center">
+                                            🏠 Maison & Déco
+                                            <span class="ml-2 text-xs bg-amber-100 dark:bg-amber-900/30 text-amber-600 dark:text-amber-400 px-2 py-1 rounded-full">112</span>
+                                        </h3>
+                                        <ul class="space-y-2">
+                                            <li><a href="/pages/categories/maison.html?sub=smart-home" class="submenu-link text-sm text-gray-600 dark:text-gray-400 hover:text-primary">🏡 Maison connectée</a></li>
+                                            <li><a href="/pages/categories/maison.html?sub=kitchen" class="submenu-link text-sm text-gray-600 dark:text-gray-400 hover:text-primary">🍳 Cuisine</a></li>
+                                            <li><a href="/pages/categories/maison.html?sub=furniture" class="submenu-link text-sm text-gray-600 dark:text-gray-400 hover:text-primary">🪑 Mobilier</a></li>
+                                            <li><a href="/pages/categories/maison.html?sub=lighting" class="submenu-link text-sm text-gray-600 dark:text-gray-400 hover:text-primary">💡 Éclairage</a></li>
+                                            <li><a href="/pages/categories/maison.html?sub=organization" class="submenu-link text-sm text-gray-600 dark:text-gray-400 hover:text-primary">📦 Organisation</a></li>
+                                        </ul>
+                                    </div>
+
+                                    <!-- Mode & Autres -->
+                                    <div class="category-section">
+                                        <h3 class="font-semibold text-gray-900 dark:text-white mb-3 flex items-center">
+                                            ✨ Autres
+                                        </h3>
+                                        <ul class="space-y-2">
+                                            <li><a href="/pages/categories/mode.html" class="submenu-link text-sm text-gray-600 dark:text-gray-400 hover:text-primary">👗 Mode & Accessoires</a></li>
+                                            <li><a href="/pages/categories/animaux.html" class="submenu-link text-sm text-gray-600 dark:text-gray-400 hover:text-primary">🐕 Animaux</a></li>
+                                            <li><a href="/pages/categories/bebe.html" class="submenu-link text-sm text-gray-600 dark:text-gray-400 hover:text-primary">👶 Bébé & Enfant</a></li>
+                                            <li><a href="/pages/categories/ecologique.html" class="submenu-link text-sm text-gray-600 dark:text-gray-400 hover:text-primary">🌱 Écologique</a></li>
+                                            <li><a href="/pages/categories/lifestyle.html" class="submenu-link text-sm text-gray-600 dark:text-gray-400 hover:text-primary">🎨 Lifestyle</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <!-- Section promotionnelle en bas -->
+                                <div class="mt-6 pt-4 border-t border-gray-200 dark:border-gray-700">
+                                    <div class="flex items-center justify-between">
+                                        <div class="flex items-center space-x-4">
+                                            <div class="bg-gradient-to-r from-red-500 to-pink-500 text-white px-3 py-1 rounded-full text-sm font-medium">
+                                                🔥 -30% Nouveautés
+                                            </div>
+                                            <div class="bg-gradient-to-r from-green-500 to-blue-500 text-white px-3 py-1 rounded-full text-sm font-medium">
+                                                🚚 Livraison 48h
+                                            </div>
+                                        </div>
+                                        <a href="/pages/categories/all.html" class="text-primary hover:text-primary/80 text-sm font-medium flex items-center">
+                                            Voir tout
+                                            <svg class="ml-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                                <path d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"/>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Promotions -->
+                    <a href="/pages/promotions.html" class="nav-link text-red-600 dark:text-red-400 hover:text-red-700 dark:hover:text-red-300 px-3 py-2 rounded-md text-sm font-medium transition-colors relative">
+                        🔥 Promos
+                        <span class="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">!</span>
+                    </a>
+
+                    <!-- Blog -->
+                    <a href="/pages/blog.html" class="nav-link text-gray-900 dark:text-white hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">
+                        📝 Blog
+                    </a>
+
+                    <!-- Contact -->
+                    <a href="/pages/contact.html" class="nav-link text-gray-900 dark:text-white hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">
+                        📞 Contact
+                    </a>
+                </div>
+            </div>
+
+            <!-- Actions utilisateur -->
+            <div class="hidden md:flex items-center space-x-4">
+                
+                <!-- Recherche -->
+                <div class="relative">
+                    <button id="searchToggle" class="p-2 text-gray-600 dark:text-gray-400 hover:text-primary transition-colors">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"/>
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- Wishlist -->
+                <button class="p-2 text-gray-600 dark:text-gray-400 hover:text-primary transition-colors relative">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"/>
+                    </svg>
+                    <span id="wishlistCount" class="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full h-4 w-4 flex items-center justify-center hidden">0</span>
+                </button>
+
+                <!-- Panier -->
+                <button id="cartButton" class="p-2 text-gray-600 dark:text-gray-400 hover:text-primary transition-colors relative">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"/>
+                    </svg>
+                    <span id="cartCount" class="absolute -top-1 -right-1 bg-primary text-white text-xs rounded-full h-4 w-4 flex items-center justify-center">0</span>
+                </button>
+
+                <!-- Mode sombre -->
+                <button id="darkModeToggle" class="p-2 text-gray-600 dark:text-gray-400 hover:text-primary transition-colors">
+                    <svg class="w-5 h-5 dark:hidden" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"/>
+                    </svg>
+                    <svg class="w-5 h-5 hidden dark:block" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M10 2L13.09 8.26L20 9L14 14.74L15.18 21.02L10 18L4.82 21.02L6 14.74L0 9L6.91 8.26L10 2Z"/>
+                    </svg>
+                </button>
+
+                <!-- Compte utilisateur -->
+                <div class="relative group">
+                    <button class="flex items-center space-x-1 text-gray-600 dark:text-gray-400 hover:text-primary transition-colors">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"/>
+                        </svg>
+                        <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/>
+                        </svg>
+                    </button>
+                    
+                    <div class="absolute right-0 mt-2 w-48 bg-white dark:bg-gray-800 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                        <div class="py-2">
+                            <a href="/pages/account/login.html" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">Se connecter</a>
+                            <a href="/pages/account/register.html" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">S'inscrire</a>
+                            <div class="border-t border-gray-200 dark:border-gray-600 my-1"></div>
+                            <a href="/pages/account/profile.html" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">Mon profil</a>
+                            <a href="/pages/account/orders.html" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">Mes commandes</a>
+                            <a href="/pages/support" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">Support</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Menu mobile -->
+            <div class="md:hidden flex items-center space-x-2">
+                <button id="mobileSearchButton" class="p-2 text-gray-600 dark:text-gray-400">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"/>
+                    </svg>
+                </button>
+                
+                <button id="mobileCartButton" class="p-2 text-gray-600 dark:text-gray-400 relative">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"/>
+                    </svg>
+                    <span class="absolute -top-1 -right-1 bg-primary text-white text-xs rounded-full h-4 w-4 flex items-center justify-center">0</span>
+                </button>
+                
+                <button id="mobileMenuButton" class="p-2 text-gray-600 dark:text-gray-400">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Barre de recherche globale (masquée par défaut) -->
+    <div id="globalSearch" class="search-bar hidden bg-white dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700">
+        <div class="max-w-7xl mx-auto px-4 py-4">
+            <div class="relative">
+                <input 
+                    type="text" 
+                    id="globalSearchInput"
+                    placeholder="Rechercher des produits..." 
+                    class="w-full pl-10 pr-4 py-3 bg-gray-50 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary"
+                >
+                <svg class="absolute left-3 top-3.5 w-5 h-5 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"/>
+                </svg>
+                
+                <!-- Suggestions de recherche -->
+                <div id="searchSuggestions" class="absolute top-full left-0 right-0 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-b-lg shadow-lg z-10 hidden">
+                    <div class="p-4">
+                        <div class="space-y-2">
+                            <div class="text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wide">Suggestions populaires</div>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="search-suggestion px-3 py-1 bg-gray-100 dark:bg-gray-700 text-sm rounded-full cursor-pointer hover:bg-primary hover:text-white transition-colors">iPhone 15</span>
+                                <span class="search-suggestion px-3 py-1 bg-gray-100 dark:bg-gray-700 text-sm rounded-full cursor-pointer hover:bg-primary hover:text-white transition-colors">AirPods Pro</span>
+                                <span class="search-suggestion px-3 py-1 bg-gray-100 dark:bg-gray-700 text-sm rounded-full cursor-pointer hover:bg-primary hover:text-white transition-colors">Apple Watch</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Menu mobile overlay -->
+    <div id="mobileMenu" class="hidden md:hidden fixed inset-0 z-50">
+        <div class="fixed inset-0 bg-black/50" id="mobileMenuBackdrop"></div>
+        <div class="fixed top-0 right-0 h-full w-80 bg-white dark:bg-gray-800 shadow-xl transform transition-transform duration-300">
+            <div class="p-6">
+                <div class="flex items-center justify-between mb-6">
+                    <span class="text-lg font-semibold">Menu</span>
+                    <button id="closeMobileMenu" class="p-2 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                        </svg>
+                    </button>
+                </div>
+                
+                <nav class="space-y-4">
+                    <a href="/" class="block py-2 text-gray-900 dark:text-white">🏠 Accueil</a>
+                    <a href="/pages/categories/all.html" class="block py-2 text-gray-900 dark:text-white">📂 Toutes les catégories</a>
+                    <a href="/pages/promotions.html" class="block py-2 text-red-600 dark:text-red-400">🔥 Promotions</a>
+                    <a href="/pages/blog.html" class="block py-2 text-gray-900 dark:text-white">📝 Blog</a>
+                    <a href="/pages/contact.html" class="block py-2 text-gray-900 dark:text-white">📞 Contact</a>
+                    
+                    <div class="border-t border-gray-200 dark:border-gray-700 pt-4">
+                        <a href="/pages/account/login.html" class="block py-2 text-gray-900 dark:text-white">Se connecter</a>
+                        <a href="/pages/account/register.html" class="block py-2 text-gray-900 dark:text-white">S'inscrire</a>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<style>
+/* Animations pour le mega menu */
+.mega-menu {
+    transform-origin: top;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.group:hover .mega-menu {
+    transform: translateY(0) scale(1);
+}
+
+/* Animation des liens de sous-menu */
+.submenu-link {
+    transition: all 0.2s ease;
+    position: relative;
+}
+
+.submenu-link:hover {
+    transform: translateX(4px);
+}
+
+.submenu-link::before {
+    content: '';
+    position: absolute;
+    left: -8px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 2px;
+    height: 0;
+    background: var(--tw-color-primary, #6366f1);
+    transition: height 0.2s ease;
+}
+
+.submenu-link:hover::before {
+    height: 16px;
+}
+
+/* Badge pour le nombre de produits */
+.category-section h3 span {
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+/* Responsive pour le mega menu */
+@media (max-width: 1024px) {
+    .mega-menu {
+        left: 50%;
+        transform: translateX(-50%);
+        max-width: 90vw;
+    }
+}
+
+/* Animation pour la barre de recherche */
+.search-bar {
+    animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Menu mobile */
+#mobileMenu > div:last-child {
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+}
+
+#mobileMenu.active > div:last-child {
+    transform: translateX(0);
+}
+
+/* Hover effects */
+.nav-link:hover {
+    background-color: rgba(99, 102, 241, 0.1);
+}
+
+/* Indicateur de section active */
+.nav-link.active {
+    color: var(--tw-color-primary, #6366f1);
+    background-color: rgba(99, 102, 241, 0.1);
+}
+
+/* Compteurs de panier et wishlist */
+#cartCount, #wishlistCount {
+    font-size: 0.75rem;
+    min-width: 16px;
+    height: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Style pour les suggestions de recherche */
+.search-suggestion:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Toggle search bar
+    const searchToggle = document.getElementById('searchToggle');
+    const globalSearch = document.getElementById('globalSearch');
+    const searchInput = document.getElementById('globalSearchInput');
+    
+    searchToggle?.addEventListener('click', () => {
+        globalSearch.classList.toggle('hidden');
+        if (!globalSearch.classList.contains('hidden')) {
+            searchInput.focus();
+        }
+    });
+
+    // Mobile menu
+    const mobileMenuButton = document.getElementById('mobileMenuButton');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const closeMobileMenu = document.getElementById('closeMobileMenu');
+    const mobileMenuBackdrop = document.getElementById('mobileMenuBackdrop');
+    
+    function openMobileMenu() {
+        mobileMenu.classList.remove('hidden');
+        mobileMenu.classList.add('active');
+    }
+    
+    function closeMobileMenuFunc() {
+        mobileMenu.classList.remove('active');
+        setTimeout(() => {
+            mobileMenu.classList.add('hidden');
+        }, 300);
+    }
+    
+    mobileMenuButton?.addEventListener('click', openMobileMenu);
+    closeMobileMenu?.addEventListener('click', closeMobileMenuFunc);
+    mobileMenuBackdrop?.addEventListener('click', closeMobileMenuFunc);
+
+    // Search suggestions
+    const searchSuggestions = document.getElementById('searchSuggestions');
+    
+    searchInput?.addEventListener('focus', () => {
+        searchSuggestions?.classList.remove('hidden');
+    });
+    
+    searchInput?.addEventListener('blur', (e) => {
+        // Delay to allow clicking on suggestions
+        setTimeout(() => {
+            searchSuggestions?.classList.add('hidden');
+        }, 200);
+    });
+
+    // Search suggestion clicks
+    document.querySelectorAll('.search-suggestion').forEach(suggestion => {
+        suggestion.addEventListener('click', () => {
+            searchInput.value = suggestion.textContent;
+            searchSuggestions?.classList.add('hidden');
+            // Trigger search here
+            console.log('Searching for:', suggestion.textContent);
+        });
+    });
+
+    // Highlight current page
+    const currentPath = window.location.pathname;
+    document.querySelectorAll('.nav-link').forEach(link => {
+        if (link.getAttribute('href') === currentPath) {
+            link.classList.add('active');
+        }
+    });
+});
+</script>
