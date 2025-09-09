@@ -24,7 +24,8 @@
       "Bash(telnet:*)",
       "Bash(curl:*)",
       "Bash(.ssh_test.bat)",
-      "Bash(./ssh-deploy.bat)"
+      "Bash(./ssh-deploy.bat)",
+      "WebFetch(domain:raw.githubusercontent.com)"
     ],
     "deny": [],
     "ask": []
