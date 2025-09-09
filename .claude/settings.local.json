@@ -25,7 +25,8 @@
       "Bash(curl:*)",
       "Bash(.ssh_test.bat)",
       "Bash(./ssh-deploy.bat)",
-      "WebFetch(domain:raw.githubusercontent.com)"
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "Bash(git mv:*)"
     ],
     "deny": [],
     "ask": []
