@@ -1,0 +1,5 @@
+WEBHOOK TEST FINAL - 2025-09-09 02:45
+Webhook configuré dans GitHub ✅
+URL: https://webhooks.hostinger.com/deploy/d37a13fcd9463c803eccd17637ed3c6e
+Branche: master → master
+Test de synchronisation automatique
