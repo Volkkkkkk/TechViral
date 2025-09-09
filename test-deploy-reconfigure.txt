@@ -1,0 +1,5 @@
+TEST DEPLOY APRÈS RECONFIGURATION HOSTINGER - 2025-09-09 03:15
+✅ Dépôt supprimé et reconfiguré dans hPanel
+✅ public_html vidé et réinitialisé  
+✅ Nouvelle config Git Hostinger active
+🚀 Test déploiement automatique webhook
