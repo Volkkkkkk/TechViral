@@ -1,0 +1,6 @@
+TEST WEBHOOK REPOSITORY PRIVÉ - 2025-09-09 03:25
+✅ Repository remis en privé
+✅ Deploy key SSH active 
+✅ URL Hostinger SSH: git@github.com:Volkkkkkv/TechViral.git
+✅ Nouvelle URL webhook: ae2d2bdf6a4ab7ff35470d8a1e9071b2
+🔄 Test déploiement automatique privé
