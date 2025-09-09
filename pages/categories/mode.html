@@ -6,8 +6,35 @@
     <title>Mode & Accessoires - TechViral | Wearables et Fashion Tech</title>
     <meta name="description" content="Découvrez notre sélection de mode connectée : montres intelligentes, bijoux tech, vêtements connectés et accessoires high-tech tendance.">
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="icon" href="../../assets/images/favicon.svg">
     
-    <link rel="icon" href="../../assets/images/favicon.ico">
+    <style>
+        /* Icônes emoji pour remplacer Font Awesome */
+        .icon-bolt::before { content: "⚡"; }
+        .icon-cart::before { content: "🛒"; }
+        .icon-watch::before { content: "⌚"; }
+        .icon-gem::before { content: "💎"; }
+        .icon-shirt::before { content: "👕"; }
+        .icon-glasses::before { content: "🕶️"; }
+        .icon-headphones::before { content: "🎧"; }
+        .icon-bag::before { content: "👜"; }
+        .icon-ring::before { content: "💍"; }
+        .icon-shoe::before { content: "👟"; }
+        .icon-filter::before { content: "🔍"; }
+        .icon-sort::before { content: "↕️"; }
+        .icon-star::before { content: "⭐"; }
+        .icon-heart::before { content: "❤️"; }
+        .icon-arrow-left::before { content: "←"; }
+        .icon-home::before { content: "🏠"; }
+        
+        .icon-bolt, .icon-cart, .icon-watch, .icon-gem, .icon-shirt, .icon-glasses,
+        .icon-headphones, .icon-bag, .icon-ring, .icon-shoe,
+        .icon-filter, .icon-sort, .icon-star, .icon-heart, .icon-arrow-left, .icon-home {
+            display: inline-block;
+            font-style: normal;
+        }
+    </style>
 </head>
 <body class="bg-gradient-to-br from-purple-50 to-pink-50 min-h-screen">
     <!-- Navigation -->
@@ -16,7 +43,7 @@
             <div class="flex justify-between items-center h-16">
                 <div class="flex items-center space-x-4">
                     <a href="../../index.html" class="flex items-center space-x-2">
-                        <i class="fas fa-bolt text-2xl text-blue-600"></i>
+                        <span class="icon-bolt text-2xl text-blue-600"></span>
                         <span class="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">TechViral</span>
                     </a>
                 </div>
@@ -28,7 +55,7 @@
                 </div>
                 <div class="flex items-center space-x-3">
                     <button id="cartButton" class="relative p-2 rounded-full bg-gradient-to-r from-purple-500 to-pink-600 text-white hover:shadow-lg transition-all">
-                        <i class="fas fa-shopping-cart w-5 h-5"></i>
+                        <span class="icon-cart text-lg"></span>
                         <span id="cartCount" class="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center font-bold">0</span>
                     </button>
                 </div>
@@ -36,67 +63,449 @@
         </div>
     </nav>
 
-    <!-- Coming Soon Section -->
-    <section class="py-20">
-        <div class="max-w-4xl mx-auto px-4 text-center">
-            <div class="bg-white rounded-3xl shadow-2xl p-12">
-                <div class="mb-8">
-                    <i class="fas fa-tshirt text-6xl text-purple-500 mb-6"></i>
-                    <h1 class="text-4xl lg:text-5xl font-bold text-gray-800 mb-6">
-                        Catégorie <span class="text-purple-500">Mode & Accessoires</span>
-                    </h1>
-                    <div class="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-100 to-pink-100 rounded-full text-purple-800 font-medium text-lg mb-8">
-                        <i class="fas fa-tools mr-3"></i>
-                        Bientôt Disponible
-                    </div>
-                </div>
-                
-                <p class="text-xl text-gray-600 mb-8 leading-relaxed">
-                    Nous préparons une collection exclusive de mode connectée et d'accessoires tech : 
-                    montres intelligentes, bijoux connectés, vêtements high-tech et accessoires tendance.
-                </p>
-                
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-                    <div class="p-6 bg-purple-50 rounded-2xl">
-                        <i class="fas fa-watch text-3xl text-purple-600 mb-4"></i>
-                        <h3 class="text-lg font-bold text-gray-800 mb-2">Wearables Premium</h3>
-                        <p class="text-gray-600">Montres et bijoux connectés design et performants</p>
-                    </div>
-                    <div class="p-6 bg-pink-50 rounded-2xl">
-                        <i class="fas fa-gem text-3xl text-pink-600 mb-4"></i>
-                        <h3 class="text-lg font-bold text-gray-800 mb-2">Fashion Tech</h3>
-                        <p class="text-gray-600">Vêtements intelligents et accessoires innovants</p>
-                    </div>
-                    <div class="p-6 bg-rose-50 rounded-2xl">
-                        <i class="fas fa-star text-3xl text-rose-500 mb-4"></i>
-                        <h3 class="text-lg font-bold text-gray-800 mb-2">Style & Performance</h3>
-                        <p class="text-gray-600">L'alliance parfaite entre élégance et technologie</p>
-                    </div>
-                </div>
-
-                <div class="bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl p-8 text-white mb-8">
-                    <h3 class="text-2xl font-bold mb-4">Fashion Tech Revolution</h3>
-                    <p class="mb-6">Soyez les premiers à découvrir nos collections de mode connectée</p>
-                    <div class="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-                        <input type="email" placeholder="Votre adresse email" class="flex-1 px-6 py-3 rounded-xl border-0 focus:outline-none text-gray-900">
-                        <button class="px-8 py-3 bg-white text-purple-600 rounded-xl font-semibold hover:bg-gray-50 transition-colors">
-                            Fashion Alert
-                        </button>
-                    </div>
-                </div>
-
-                <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                    <a href="all.html" class="px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-xl font-semibold hover:shadow-lg transition-all">
-                        <i class="fas fa-arrow-left mr-2"></i>Toutes les Catégories
-                    </a>
-                    <a href="../../index.html" class="px-8 py-3 bg-gradient-to-r from-gray-100 to-gray-200 text-gray-800 rounded-xl font-semibold hover:shadow-lg transition-all">
-                        <i class="fas fa-home mr-2"></i>Retour Accueil
-                    </a>
-                </div>
+    <!-- Header Section -->
+    <section class="bg-gradient-to-r from-purple-500 via-pink-500 to-rose-500 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <span class="icon-gem text-6xl mb-6 block"></span>
+            <h1 class="text-4xl lg:text-5xl font-bold mb-4">Mode & Accessoires</h1>
+            <p class="text-xl opacity-90 mb-8">Fashion tech et wearables pour un style connecté et innovant</p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <div class="bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-sm">⌚ Montres Smart</div>
+                <div class="bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-sm">💎 Bijoux Tech</div>
+                <div class="bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-sm">👕 Vêtements Connectés</div>
+                <div class="bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-sm">🎧 Audio Fashion</div>
             </div>
         </div>
     </section>
 
+    <!-- Filters -->
+    <section class="py-8 bg-white sticky top-16 z-40 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex flex-wrap gap-4 justify-between items-center">
+                <div class="flex flex-wrap gap-2">
+                    <button class="filter-btn px-4 py-2 rounded-full border border-gray-300 hover:border-purple-500 transition-colors active" data-filter="all">
+                        Tous les produits
+                    </button>
+                    <button class="filter-btn px-4 py-2 rounded-full border border-gray-300 hover:border-purple-500 transition-colors" data-filter="montres">
+                        ⌚ Montres
+                    </button>
+                    <button class="filter-btn px-4 py-2 rounded-full border border-gray-300 hover:border-purple-500 transition-colors" data-filter="bijoux">
+                        💎 Bijoux
+                    </button>
+                    <button class="filter-btn px-4 py-2 rounded-full border border-gray-300 hover:border-purple-500 transition-colors" data-filter="vetements">
+                        👕 Vêtements
+                    </button>
+                    <button class="filter-btn px-4 py-2 rounded-full border border-gray-300 hover:border-purple-500 transition-colors" data-filter="audio">
+                        🎧 Audio
+                    </button>
+                </div>
+                
+                <select id="sortSelect" class="px-4 py-2 border border-gray-300 rounded-lg bg-white">
+                    <option value="name">Trier par nom</option>
+                    <option value="price-low">Prix croissant</option>
+                    <option value="price-high">Prix décroissant</option>
+                    <option value="rating">Meilleures notes</option>
+                </select>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Grid -->
+    <section class="py-12">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" id="productsContainer">
+                
+                <!-- Apple Watch Series 9 -->
+                <div class="product-card product-hover-3d bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500" data-category="montres" data-price="399" data-rating="4.9" data-name="Apple Watch Series 9 GPS">
+                    <div class="relative">
+                        <img src="../../assets/images/products/apple-watch-series9.jpg" alt="Apple Watch Series 9" class="w-full h-48 object-cover" loading="lazy">
+                        <div class="absolute top-3 right-3 bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-medium">Nouveau</div>
+                        <div class="absolute top-3 left-3 bg-gray-900 text-white px-2 py-1 rounded text-xs">⌚ Apple</div>
+                        <button class="wishlist-btn absolute bottom-3 right-3 w-8 h-8 bg-white/90 rounded-full flex items-center justify-center hover:bg-red-500 hover:text-white transition-all">
+                            <span class="icon-heart text-sm"></span>
+                        </button>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg mb-2 text-gray-800">Apple Watch Series 9 GPS</h3>
+                        <p class="text-gray-600 text-sm mb-3">Puce S9, écran Retina toujours activé, suivi santé avancé. Compatible iPhone iOS 17+.</p>
+                        <div class="flex items-center mb-3">
+                            <div class="flex text-yellow-400 mr-2">
+                                <span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span>
+                            </div>
+                            <span class="text-gray-600 text-sm">(892 avis)</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center space-x-2">
+                                <span class="text-2xl font-bold text-purple-600">399€</span>
+                            </div>
+                            <button class="add-to-cart bg-gradient-to-r from-purple-500 to-pink-600 text-white px-4 py-2 rounded-lg hover:shadow-lg transition-all text-sm font-medium" data-id="apple-watch-s9-001">
+                                <span class="icon-cart mr-1"></span>Ajouter
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Samsung Galaxy Buds3 Pro -->
+                <div class="product-card product-hover-3d bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500" data-category="audio" data-price="249" data-rating="4.7" data-name="Samsung Galaxy Buds3 Pro">
+                    <div class="relative">
+                        <img src="../../assets/images/products/galaxy-buds3-pro.jpg" alt="Galaxy Buds3 Pro" class="w-full h-48 object-cover" loading="lazy">
+                        <div class="absolute top-3 right-3 bg-green-500 text-white px-3 py-1 rounded-full text-sm font-medium">-20%</div>
+                        <div class="absolute top-3 left-3 bg-blue-600 text-white px-2 py-1 rounded text-xs">🎧 ANC</div>
+                        <button class="wishlist-btn absolute bottom-3 right-3 w-8 h-8 bg-white/90 rounded-full flex items-center justify-center hover:bg-red-500 hover:text-white transition-all">
+                            <span class="icon-heart text-sm"></span>
+                        </button>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg mb-2 text-gray-800">Samsung Galaxy Buds3 Pro</h3>
+                        <p class="text-gray-600 text-sm mb-3">Réduction bruit adaptative, son 360° Audio, étanche IP57. Autonomie 30h avec boîtier.</p>
+                        <div class="flex items-center mb-3">
+                            <div class="flex text-yellow-400 mr-2">
+                                <span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span>
+                            </div>
+                            <span class="text-gray-600 text-sm">(456 avis)</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center space-x-2">
+                                <span class="text-2xl font-bold text-purple-600">199€</span>
+                                <span class="text-lg text-gray-500 line-through">249€</span>
+                            </div>
+                            <button class="add-to-cart bg-gradient-to-r from-purple-500 to-pink-600 text-white px-4 py-2 rounded-lg hover:shadow-lg transition-all text-sm font-medium" data-id="galaxy-buds3-pro-003">
+                                <span class="icon-cart mr-1"></span>Ajouter
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bague Connectée Oura Gen3 -->
+                <div class="product-card product-hover-3d bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500" data-category="bijoux" data-price="329" data-rating="4.6" data-name="Bague Connectée Oura Gen3">
+                    <div class="relative">
+                        <img src="../../assets/images/products/oura-ring-gen3.jpg" alt="Bague Oura Gen3" class="w-full h-48 object-cover" loading="lazy">
+                        <div class="absolute top-3 right-3 bg-purple-500 text-white px-3 py-1 rounded-full text-sm font-medium">Premium</div>
+                        <div class="absolute top-3 left-3 bg-gold-600 text-white px-2 py-1 rounded text-xs">💍 Smart</div>
+                        <button class="wishlist-btn absolute bottom-3 right-3 w-8 h-8 bg-white/90 rounded-full flex items-center justify-center hover:bg-red-500 hover:text-white transition-all">
+                            <span class="icon-heart text-sm"></span>
+                        </button>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg mb-2 text-gray-800">Bague Connectée Oura Gen3</h3>
+                        <p class="text-gray-600 text-sm mb-3">Suivi sommeil, activité, température corporelle. Design discret, autonomie 7 jours.</p>
+                        <div class="flex items-center mb-3">
+                            <div class="flex text-yellow-400 mr-2">
+                                <span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span>
+                            </div>
+                            <span class="text-gray-600 text-sm">(234 avis)</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center space-x-2">
+                                <span class="text-2xl font-bold text-purple-600">329€</span>
+                            </div>
+                            <button class="add-to-cart bg-gradient-to-r from-purple-500 to-pink-600 text-white px-4 py-2 rounded-lg hover:shadow-lg transition-all text-sm font-medium" data-id="oura-ring-gen3-007">
+                                <span class="icon-cart mr-1"></span>Ajouter
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Lunettes Ray-Ban Meta -->
+                <div class="product-card product-hover-3d bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500" data-category="vetements" data-price="379" data-rating="4.4" data-name="Lunettes Ray-Ban Meta Smart">
+                    <div class="relative">
+                        <img src="../../assets/images/products/rayban-meta-smart.jpg" alt="Ray-Ban Meta Smart" class="w-full h-48 object-cover" loading="lazy">
+                        <div class="absolute top-3 right-3 bg-orange-500 text-white px-3 py-1 rounded-full text-sm font-medium">AR</div>
+                        <div class="absolute top-3 left-3 bg-black text-white px-2 py-1 rounded text-xs">🕶️ Meta</div>
+                        <button class="wishlist-btn absolute bottom-3 right-3 w-8 h-8 bg-white/90 rounded-full flex items-center justify-center hover:bg-red-500 hover:text-white transition-all">
+                            <span class="icon-heart text-sm"></span>
+                        </button>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg mb-2 text-gray-800">Lunettes Ray-Ban Meta Smart</h3>
+                        <p class="text-gray-600 text-sm mb-3">Caméra intégrée, assistant IA Meta, streaming live. Design iconique Ray-Ban Wayfarer.</p>
+                        <div class="flex items-center mb-3">
+                            <div class="flex text-yellow-400 mr-2">
+                                <span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span>
+                            </div>
+                            <span class="text-gray-600 text-sm">(178 avis)</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center space-x-2">
+                                <span class="text-2xl font-bold text-purple-600">379€</span>
+                            </div>
+                            <button class="add-to-cart bg-gradient-to-r from-purple-500 to-pink-600 text-white px-4 py-2 rounded-lg hover:shadow-lg transition-all text-sm font-medium" data-id="rayban-meta-012">
+                                <span class="icon-cart mr-1"></span>Ajouter
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sac à Dos Connecté Anti-Vol -->
+                <div class="product-card product-hover-3d bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500" data-category="vetements" data-price="159" data-rating="4.5" data-name="Sac à Dos Connecté Anti-Vol Smart">
+                    <div class="relative">
+                        <img src="../../assets/images/products/smart-backpack-antivol.jpg" alt="Sac Anti-Vol Smart" class="w-full h-48 object-cover" loading="lazy">
+                        <div class="absolute top-3 left-3 bg-red-600 text-white px-2 py-1 rounded text-xs">👜 Sécurisé</div>
+                        <button class="wishlist-btn absolute bottom-3 right-3 w-8 h-8 bg-white/90 rounded-full flex items-center justify-center hover:bg-red-500 hover:text-white transition-all">
+                            <span class="icon-heart text-sm"></span>
+                        </button>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg mb-2 text-gray-800">Sac à Dos Connecté Anti-Vol Smart</h3>
+                        <p class="text-gray-600 text-sm mb-3">Fermetures sécurisées, chargeur USB intégré, compartiment laptop. Tissu hydrofuge.</p>
+                        <div class="flex items-center mb-3">
+                            <div class="flex text-yellow-400 mr-2">
+                                <span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span>
+                            </div>
+                            <span class="text-gray-600 text-sm">(312 avis)</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center space-x-2">
+                                <span class="text-2xl font-bold text-purple-600">159€</span>
+                            </div>
+                            <button class="add-to-cart bg-gradient-to-r from-purple-500 to-pink-600 text-white px-4 py-2 rounded-lg hover:shadow-lg transition-all text-sm font-medium" data-id="smart-backpack-015">
+                                <span class="icon-cart mr-1"></span>Ajouter
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Montre Fitness Garmin Venu 3 -->
+                <div class="product-card product-hover-3d bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500" data-category="montres" data-price="449" data-rating="4.8" data-name="Garmin Venu 3 GPS Smartwatch">
+                    <div class="relative">
+                        <img src="../../assets/images/products/garmin-venu3.jpg" alt="Garmin Venu 3" class="w-full h-48 object-cover" loading="lazy">
+                        <div class="absolute top-3 right-3 bg-green-500 text-white px-3 py-1 rounded-full text-sm font-medium">Sport</div>
+                        <div class="absolute top-3 left-3 bg-blue-700 text-white px-2 py-1 rounded text-xs">⌚ GPS</div>
+                        <button class="wishlist-btn absolute bottom-3 right-3 w-8 h-8 bg-white/90 rounded-full flex items-center justify-center hover:bg-red-500 hover:text-white transition-all">
+                            <span class="icon-heart text-sm"></span>
+                        </button>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg mb-2 text-gray-800">Garmin Venu 3 GPS Smartwatch</h3>
+                        <p class="text-gray-600 text-sm mb-3">Écran AMOLED, 30+ sports, coaching personnalisé. Autonomie 14 jours, résistante 5ATM.</p>
+                        <div class="flex items-center mb-3">
+                            <div class="flex text-yellow-400 mr-2">
+                                <span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span>
+                            </div>
+                            <span class="text-gray-600 text-sm">(567 avis)</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center space-x-2">
+                                <span class="text-2xl font-bold text-purple-600">449€</span>
+                            </div>
+                            <button class="add-to-cart bg-gradient-to-r from-purple-500 to-pink-600 text-white px-4 py-2 rounded-lg hover:shadow-lg transition-all text-sm font-medium" data-id="garmin-venu3-018">
+                                <span class="icon-cart mr-1"></span>Ajouter
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Baskets Nike Adapt Auto Max -->
+                <div class="product-card product-hover-3d bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500" data-category="vetements" data-price="399" data-rating="4.3" data-name="Nike Adapt Auto Max Self-Lacing">
+                    <div class="relative">
+                        <img src="../../assets/images/products/nike-adapt-automax.jpg" alt="Nike Adapt Auto Max" class="w-full h-48 object-cover" loading="lazy">
+                        <div class="absolute top-3 right-3 bg-black text-white px-3 py-1 rounded-full text-sm font-medium">Tech</div>
+                        <div class="absolute top-3 left-3 bg-orange-500 text-white px-2 py-1 rounded text-xs">👟 Nike</div>
+                        <button class="wishlist-btn absolute bottom-3 right-3 w-8 h-8 bg-white/90 rounded-full flex items-center justify-center hover:bg-red-500 hover:text-white transition-all">
+                            <span class="icon-heart text-sm"></span>
+                        </button>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg mb-2 text-gray-800">Nike Adapt Auto Max Self-Lacing</h3>
+                        <p class="text-gray-600 text-sm mb-3">Laçage automatique via app Nike, LED personnalisables, ajustement précis. Innovation Nike.</p>
+                        <div class="flex items-center mb-3">
+                            <div class="flex text-yellow-400 mr-2">
+                                <span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span>
+                            </div>
+                            <span class="text-gray-600 text-sm">(143 avis)</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center space-x-2">
+                                <span class="text-2xl font-bold text-purple-600">399€</span>
+                            </div>
+                            <button class="add-to-cart bg-gradient-to-r from-purple-500 to-pink-600 text-white px-4 py-2 rounded-lg hover:shadow-lg transition-all text-sm font-medium" data-id="nike-adapt-automax-021">
+                                <span class="icon-cart mr-1"></span>Ajouter
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Collier Fitness Tracker Bellabeat -->
+                <div class="product-card product-hover-3d bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500" data-category="bijoux" data-price="199" data-rating="4.4" data-name="Collier Fitness Tracker Bellabeat Leaf">
+                    <div class="relative">
+                        <img src="../../assets/images/products/bellabeat-leaf-urban.jpg" alt="Bellabeat Leaf Urban" class="w-full h-48 object-cover" loading="lazy">
+                        <div class="absolute top-3 right-3 bg-pink-500 text-white px-3 py-1 rounded-full text-sm font-medium">Femme</div>
+                        <div class="absolute top-3 left-3 bg-purple-600 text-white px-2 py-1 rounded text-xs">💎 Wellness</div>
+                        <button class="wishlist-btn absolute bottom-3 right-3 w-8 h-8 bg-white/90 rounded-full flex items-center justify-center hover:bg-red-500 hover:text-white transition-all">
+                            <span class="icon-heart text-sm"></span>
+                        </button>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg mb-2 text-gray-800">Collier Fitness Tracker Bellabeat Leaf</h3>
+                        <p class="text-gray-600 text-sm mb-3">Bijou intelligent, suivi cycle féminin, méditation guidée. Design élégant acier inoxydable.</p>
+                        <div class="flex items-center mb-3">
+                            <div class="flex text-yellow-400 mr-2">
+                                <span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span>
+                            </div>
+                            <span class="text-gray-600 text-sm">(267 avis)</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center space-x-2">
+                                <span class="text-2xl font-bold text-purple-600">199€</span>
+                            </div>
+                            <button class="add-to-cart bg-gradient-to-r from-purple-500 to-pink-600 text-white px-4 py-2 rounded-lg hover:shadow-lg transition-all text-sm font-medium" data-id="bellabeat-leaf-024">
+                                <span class="icon-cart mr-1"></span>Ajouter
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Navigation Footer -->
+    <section class="py-8 bg-gray-50">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="all.html" class="px-8 py-3 bg-gradient-to-r from-purple-500 to-pink-600 text-white rounded-xl font-semibold hover:shadow-lg transition-all">
+                    <span class="icon-arrow-left mr-2"></span>Toutes les Catégories
+                </a>
+                <a href="../../index.html" class="px-8 py-3 bg-gradient-to-r from-gray-100 to-gray-200 text-gray-800 rounded-xl font-semibold hover:shadow-lg transition-all">
+                    <span class="icon-home mr-2"></span>Retour Accueil
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <script src="../../assets/js/main.js?v=2025010803"></script>
     <script src="../../assets/js/cart.js"></script>
+    <script>
+        // Vérification anti-Font Awesome 
+        document.addEventListener('DOMContentLoaded', function() {
+            const faLinks = document.querySelectorAll('link[href*="font-awesome"], link[href*="cdnjs.cloudflare.com"]');
+            faLinks.forEach(link => {
+                console.warn('🚫 Suppression lien Font Awesome détecté:', link.href);
+                link.remove();
+            });
+        });
+    </script>
+    <script>
+        // Filter functionality
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                // Update active button
+                document.querySelectorAll('.filter-btn').forEach(b => {
+                    b.classList.remove('active');
+                    b.style.background = '';
+                    b.style.color = '';
+                });
+                
+                this.classList.add('active');
+                this.style.background = 'linear-gradient(135deg, #a855f7, #ec4899)';
+                this.style.color = 'white';
+                
+                const filter = this.dataset.filter;
+                const products = document.querySelectorAll('.product-card');
+                
+                products.forEach(product => {
+                    if (filter === 'all' || product.dataset.category === filter) {
+                        product.style.display = 'block';
+                        setTimeout(() => {
+                            product.style.opacity = '1';
+                            product.style.transform = 'translateY(0)';
+                        }, 50);
+                    } else {
+                        product.style.opacity = '0';
+                        product.style.transform = 'translateY(20px)';
+                        setTimeout(() => {
+                            product.style.display = 'none';
+                        }, 300);
+                    }
+                });
+            });
+        });
+
+        // Sort functionality
+        document.getElementById('sortSelect').addEventListener('change', function() {
+            const sortBy = this.value;
+            const container = document.getElementById('productsContainer');
+            const products = Array.from(container.children);
+            
+            products.sort((a, b) => {
+                switch(sortBy) {
+                    case 'name':
+                        return a.dataset.name.localeCompare(b.dataset.name);
+                    case 'price-low':
+                        return parseFloat(a.dataset.price) - parseFloat(b.dataset.price);
+                    case 'price-high':
+                        return parseFloat(b.dataset.price) - parseFloat(a.dataset.price);
+                    case 'rating':
+                        return parseFloat(b.dataset.rating) - parseFloat(a.dataset.rating);
+                    default:
+                        return 0;
+                }
+            });
+            
+            // Animate sort
+            products.forEach((product, index) => {
+                product.style.order = index;
+                product.style.animation = 'slideIn 0.5s ease forwards';
+            });
+            
+            // Rebuild container
+            container.innerHTML = '';
+            products.forEach(product => container.appendChild(product));
+        });
+
+        // Wishlist functionality
+        document.querySelectorAll('.wishlist-btn').forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                e.stopPropagation();
+                
+                const icon = this.querySelector('.icon-heart');
+                if (this.classList.contains('liked')) {
+                    this.classList.remove('liked');
+                    this.style.background = 'rgba(255,255,255,0.9)';
+                    this.style.color = '#666';
+                } else {
+                    this.classList.add('liked');
+                    this.style.background = '#ef4444';
+                    this.style.color = 'white';
+                    
+                    // Animation
+                    this.style.transform = 'scale(1.2)';
+                    setTimeout(() => {
+                        this.style.transform = 'scale(1)';
+                    }, 200);
+                }
+            });
+        });
+
+        // Enhanced add to cart with animation
+        document.querySelectorAll('.add-to-cart').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const productCard = this.closest('.product-card');
+                const productName = productCard.querySelector('h3').textContent;
+                const productPrice = productCard.querySelector('.text-2xl').textContent;
+                const productImage = productCard.querySelector('img').src;
+                
+                // Add to cart logic here (integrate with existing cart system)
+                if (window.cartManager) {
+                    const product = {
+                        id: this.dataset.id,
+                        name: productName,
+                        price: parseFloat(productPrice.replace('€', '')),
+                        image: productImage,
+                        quantity: 1
+                    };
+                    window.cartManager.addToCart(product);
+                }
+                
+                // Visual feedback
+                this.style.transform = 'scale(0.95)';
+                this.textContent = '✓ Ajouté';
+                setTimeout(() => {
+                    this.style.transform = 'scale(1)';
+                    this.innerHTML = '<span class="icon-cart mr-1"></span>Ajouter';
+                }, 1500);
+            });
+        });
+    </script>
 </body>
 </html>
