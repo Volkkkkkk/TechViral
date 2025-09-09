@@ -27,7 +27,8 @@
       "Bash(./ssh-deploy.bat)",
       "WebFetch(domain:raw.githubusercontent.com)",
       "Bash(git mv:*)",
-      "Bash(git merge:*)"
+      "Bash(git merge:*)",
+      "WebFetch(domain:medium.com)"
     ],
     "deny": [],
     "ask": []
