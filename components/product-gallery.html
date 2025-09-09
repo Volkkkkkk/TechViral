@@ -1,0 +1,314 @@
+<!-- Galerie Produit 360° Interactive TechViral -->
+<div class="product-gallery w-full">
+    
+    <!-- Image principale avec contrôles 360° -->
+    <div class="main-image-container relative bg-gray-50 dark:bg-gray-800 rounded-xl overflow-hidden mb-4">
+        
+        <!-- Zone d'affichage principale -->
+        <div class="image-display aspect-square relative group">
+            <img 
+                id="mainProductImage" 
+                src="" 
+                alt="Image produit principale"
+                class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+            >
+            
+            <!-- Overlay de contrôles -->
+            <div class="image-controls absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-all duration-300">
+                
+                <!-- Contrôles 360° -->
+                <div id="controls360" class="hidden absolute top-4 right-4 bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-lg p-2">
+                    <div class="flex items-center space-x-2">
+                        <button id="rotate360" class="p-2 text-primary hover:bg-primary/10 rounded-lg transition-colors" title="Vue 360°">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M4 2a1 1 0 011 1v2.101a7.002 7.002 0 0111.601 2.566 1 1 0 11-1.885.666A5.002 5.002 0 005.999 7H9a1 1 0 010 2H4a1 1 0 01-1-1V3a1 1 0 011-1zm.008 9.057a1 1 0 011.276.61A5.002 5.002 0 0014.001 13H11a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0v-2.101a7.002 7.002 0 01-11.601-2.566 1 1 0 01.61-1.276z"/>
+                            </svg>
+                        </button>
+                        <span class="text-xs text-gray-600 dark:text-gray-400">360°</span>
+                    </div>
+                </div>
+
+                <!-- Zoom controls -->
+                <div class="zoom-controls absolute top-4 left-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div class="flex flex-col space-y-2 bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-lg p-2">
+                        <button id="zoomIn" class="p-2 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 rounded transition-colors" title="Zoom +">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/>
+                            </svg>
+                        </button>
+                        <button id="zoomOut" class="p-2 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 rounded transition-colors" title="Zoom -">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M5 10a1 1 0 011-1h8a1 1 0 110 2H6a1 1 0 01-1-1z"/>
+                            </svg>
+                        </button>
+                        <button id="resetZoom" class="p-2 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 rounded transition-colors" title="Reset">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M4 2a1 1 0 011 1v2.101a7.002 7.002 0 0111.601 2.566 1 1 0 11-1.885.666A5.002 5.002 0 005.999 7H9a1 1 0 010 2H4a1 1 0 01-1-1V3a1 1 0 011-1z"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Badge type de vue -->
+                <div id="viewTypeBadge" class="absolute bottom-4 left-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div class="bg-black/70 text-white px-3 py-1 rounded-full text-sm font-medium">
+                        Vue Standard
+                    </div>
+                </div>
+
+                <!-- Indicateur de chargement -->
+                <div id="imageLoader" class="absolute inset-0 flex items-center justify-center bg-gray-50 dark:bg-gray-800 hidden">
+                    <div class="flex flex-col items-center">
+                        <div class="animate-spin w-8 h-8 border-4 border-primary border-t-transparent rounded-full mb-2"></div>
+                        <span class="text-sm text-gray-600 dark:text-gray-400">Chargement...</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Miniatures -->
+    <div class="thumbnails-container">
+        <div class="flex items-center justify-between mb-2">
+            <h4 class="text-sm font-medium text-gray-700 dark:text-gray-300">Galerie</h4>
+            <div class="flex items-center space-x-1">
+                <button id="prevThumb" class="p-1 text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 transition-colors">
+                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"/>
+                    </svg>
+                </button>
+                <span id="thumbCounter" class="text-xs text-gray-500">1/6</span>
+                <button id="nextThumb" class="p-1 text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 transition-colors">
+                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        
+        <div class="thumbnails-wrapper relative">
+            <div id="thumbnailsTrack" class="thumbnails-track flex space-x-3 transition-transform duration-300">
+                <!-- Les miniatures seront ajoutées dynamiquement -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Types de vues -->
+    <div class="view-types mt-4">
+        <div class="flex items-center justify-between mb-3">
+            <h4 class="text-sm font-medium text-gray-700 dark:text-gray-300">Vues disponibles</h4>
+            <div class="text-xs text-gray-500">Cliquez pour explorer</div>
+        </div>
+        
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-2">
+            <button class="view-type-btn active" data-type="standard">
+                <div class="p-3 border-2 border-primary bg-primary/5 rounded-lg text-center hover:bg-primary/10 transition-colors">
+                    <div class="text-lg mb-1">📷</div>
+                    <div class="text-xs font-medium text-primary">Standard</div>
+                </div>
+            </button>
+            
+            <button class="view-type-btn" data-type="360">
+                <div class="p-3 border-2 border-gray-200 dark:border-gray-600 rounded-lg text-center hover:border-primary hover:bg-primary/5 transition-colors">
+                    <div class="text-lg mb-1">🔄</div>
+                    <div class="text-xs font-medium text-gray-600 dark:text-gray-400">360°</div>
+                </div>
+            </button>
+            
+            <button class="view-type-btn" data-type="zoom">
+                <div class="p-3 border-2 border-gray-200 dark:border-gray-600 rounded-lg text-center hover:border-primary hover:bg-primary/5 transition-colors">
+                    <div class="text-lg mb-1">🔍</div>
+                    <div class="text-xs font-medium text-gray-600 dark:text-gray-400">Zoom HD</div>
+                </div>
+            </button>
+            
+            <button class="view-type-btn" data-type="ar" disabled>
+                <div class="p-3 border-2 border-gray-200 dark:border-gray-600 rounded-lg text-center opacity-50">
+                    <div class="text-lg mb-1">👓</div>
+                    <div class="text-xs font-medium text-gray-400">AR (Bientôt)</div>
+                </div>
+            </button>
+        </div>
+    </div>
+
+    <!-- Galerie plein écran (modal) -->
+    <div id="fullscreenGallery" class="hidden fixed inset-0 bg-black/95 z-50 flex items-center justify-center">
+        
+        <!-- Contrôles header -->
+        <div class="absolute top-4 left-4 right-4 flex items-center justify-between text-white z-10">
+            <div class="flex items-center space-x-4">
+                <h3 id="fullscreenTitle" class="font-medium">Image 1 sur 6</h3>
+                <div id="fullscreen360Toggle" class="hidden">
+                    <button class="px-3 py-1 bg-white/20 hover:bg-white/30 rounded-lg text-sm transition-colors">
+                        Mode 360°
+                    </button>
+                </div>
+            </div>
+            
+            <div class="flex items-center space-x-2">
+                <button id="fullscreenShare" class="p-2 hover:bg-white/20 rounded-lg transition-colors" title="Partager">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M15 8a3 3 0 10-2.977-2.63l-4.94 2.47a3 3 0 100 4.319l4.94 2.47a3 3 0 10.895-1.789l-4.94-2.47a3.027 3.027 0 000-.74l4.94-2.47C13.456 7.68 14.19 8 15 8z"/>
+                    </svg>
+                </button>
+                
+                <button id="closeFullscreen" class="p-2 hover:bg-white/20 rounded-lg transition-colors" title="Fermer">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Image principale plein écran -->
+        <div class="fullscreen-image-container relative w-full h-full flex items-center justify-center">
+            <img id="fullscreenImage" src="" alt="" class="max-w-full max-h-full object-contain">
+            
+            <!-- Navigation -->
+            <button id="fullscreenPrev" class="absolute left-4 top-1/2 -translate-y-1/2 p-3 bg-black/50 hover:bg-black/70 text-white rounded-full transition-colors">
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"/>
+                </svg>
+            </button>
+            
+            <button id="fullscreenNext" class="absolute right-4 top-1/2 -translate-y-1/2 p-3 bg-black/50 hover:bg-black/70 text-white rounded-full transition-colors">
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"/>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Miniatures bottom -->
+        <div class="absolute bottom-4 left-4 right-4">
+            <div id="fullscreenThumbs" class="flex justify-center space-x-2 overflow-x-auto">
+                <!-- Miniatures plein écran -->
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Styles CSS pour la galerie -->
+<style>
+/* Animation pour la rotation 360° */
+@keyframes rotate360 {
+    from { transform: rotateY(0deg); }
+    to { transform: rotateY(360deg); }
+}
+
+.rotating-360 {
+    animation: rotate360 3s linear infinite;
+}
+
+/* Miniatures */
+.thumbnail {
+    width: 60px;
+    height: 60px;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.thumbnail:hover {
+    transform: scale(1.1);
+    border-color: rgba(99, 102, 241, 0.5);
+}
+
+.thumbnail.active {
+    border-color: rgb(99, 102, 241);
+    transform: scale(1.05);
+}
+
+.thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Types de vues */
+.view-type-btn.active div {
+    border-color: rgb(99, 102, 241);
+    background-color: rgba(99, 102, 241, 0.1);
+}
+
+.view-type-btn.active .text-gray-600,
+.view-type-btn.active .text-gray-400 {
+    color: rgb(99, 102, 241);
+}
+
+/* Plein écran */
+#fullscreenGallery {
+    backdrop-filter: blur(4px);
+}
+
+/* Zoom effects */
+.image-display.zoomed {
+    cursor: grab;
+}
+
+.image-display.zoomed:active {
+    cursor: grabbing;
+}
+
+/* Loading states */
+.loading-pulse {
+    animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+/* Touch gestures indicators */
+.touch-hint {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background: rgba(0,0,0,0.7);
+    color: white;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 10px;
+    pointer-events: none;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+    .thumbnails-track {
+        gap: 8px;
+    }
+    
+    .thumbnail {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .view-types .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Dark mode adjustments */
+.dark .thumbnail {
+    border-color: transparent;
+}
+
+.dark .thumbnail:hover {
+    border-color: rgba(99, 102, 241, 0.5);
+}
+
+.dark .thumbnail.active {
+    border-color: rgb(99, 102, 241);
+}
+</style>
+
+<script>
+// Product Gallery Controller will be implemented in separate JS file
+document.addEventListener('DOMContentLoaded', function() {
+    if (typeof ProductGallery !== 'undefined') {
+        window.productGallery = new ProductGallery();
+    }
+});
+</script>
