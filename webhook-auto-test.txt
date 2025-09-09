@@ -1,0 +1,5 @@
+WEBHOOK AUTO-DEPLOYMENT TEST - 2025-09-09 03:00
+✅ Git configuré sur serveur Hostinger
+✅ SSH deploy key active 
+✅ Sync initial réussie
+🔄 Test déploiement automatique via webhook
