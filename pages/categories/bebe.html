@@ -6,8 +6,35 @@
     <title>Bébé & Enfant - TechViral | Produits Tech pour les Plus Petits</title>
     <meta name="description" content="Découvrez notre sélection de produits tech pour bébés et enfants : moniteurs connectés, jouets éducatifs, veilleuses intelligentes et accessoires innovants.">
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="icon" href="../../assets/images/favicon.svg">
     
-    <link rel="icon" href="../../assets/images/favicon.ico">
+    <style>
+        /* Icônes emoji pour remplacer Font Awesome */
+        .icon-bolt::before { content: "⚡"; }
+        .icon-cart::before { content: "🛒"; }
+        .icon-baby::before { content: "👶"; }
+        .icon-toy::before { content: "🧸"; }
+        .icon-monitor::before { content: "📱"; }
+        .icon-light::before { content: "💡"; }
+        .icon-music::before { content: "🎵"; }
+        .icon-camera::before { content: "📷"; }
+        .icon-shield::before { content: "🛡️"; }
+        .icon-thermometer::before { content: "🌡️"; }
+        .icon-filter::before { content: "🔍"; }
+        .icon-sort::before { content: "↕️"; }
+        .icon-star::before { content: "⭐"; }
+        .icon-heart::before { content: "❤️"; }
+        .icon-arrow-left::before { content: "←"; }
+        .icon-home::before { content: "🏠"; }
+        
+        .icon-bolt, .icon-cart, .icon-baby, .icon-toy, .icon-monitor, .icon-light,
+        .icon-music, .icon-camera, .icon-shield, .icon-thermometer,
+        .icon-filter, .icon-sort, .icon-star, .icon-heart, .icon-arrow-left, .icon-home {
+            display: inline-block;
+            font-style: normal;
+        }
+    </style>
 </head>
 <body class="bg-gradient-to-br from-yellow-50 to-orange-50 min-h-screen">
     <!-- Navigation -->
@@ -16,7 +43,7 @@
             <div class="flex justify-between items-center h-16">
                 <div class="flex items-center space-x-4">
                     <a href="../../index.html" class="flex items-center space-x-2">
-                        <i class="fas fa-bolt text-2xl text-blue-600"></i>
+                        <span class="icon-bolt text-2xl text-blue-600"></span>
                         <span class="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">TechViral</span>
                     </a>
                 </div>
@@ -28,7 +55,7 @@
                 </div>
                 <div class="flex items-center space-x-3">
                     <button id="cartButton" class="relative p-2 rounded-full bg-gradient-to-r from-yellow-400 to-orange-500 text-white hover:shadow-lg transition-all">
-                        <i class="fas fa-shopping-cart w-5 h-5"></i>
+                        <span class="icon-cart text-lg"></span>
                         <span id="cartCount" class="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center font-bold">0</span>
                     </button>
                 </div>
@@ -36,67 +63,446 @@
         </div>
     </nav>
 
-    <!-- Coming Soon Section -->
-    <section class="py-20">
-        <div class="max-w-4xl mx-auto px-4 text-center">
-            <div class="bg-white rounded-3xl shadow-2xl p-12">
-                <div class="mb-8">
-                    <i class="fas fa-baby text-6xl text-yellow-500 mb-6"></i>
-                    <h1 class="text-4xl lg:text-5xl font-bold text-gray-800 mb-6">
-                        Catégorie <span class="text-yellow-500">Bébé & Enfant</span>
-                    </h1>
-                    <div class="inline-flex items-center px-6 py-3 bg-gradient-to-r from-yellow-100 to-orange-100 rounded-full text-yellow-800 font-medium text-lg mb-8">
-                        <i class="fas fa-tools mr-3"></i>
-                        Bientôt Disponible
-                    </div>
-                </div>
-                
-                <p class="text-xl text-gray-600 mb-8 leading-relaxed">
-                    Nous préparons une sélection exceptionnelle de produits tech pour les plus petits : 
-                    moniteurs bébé connectés, jouets éducatifs intelligents, veilleuses interactives et bien plus encore.
-                </p>
-                
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-                    <div class="p-6 bg-yellow-50 rounded-2xl">
-                        <i class="fas fa-shield-alt text-3xl text-yellow-600 mb-4"></i>
-                        <h3 class="text-lg font-bold text-gray-800 mb-2">Sécurité Maximale</h3>
-                        <p class="text-gray-600">Produits certifiés et testés pour la sécurité des enfants</p>
-                    </div>
-                    <div class="p-6 bg-orange-50 rounded-2xl">
-                        <i class="fas fa-graduation-cap text-3xl text-orange-600 mb-4"></i>
-                        <h3 class="text-lg font-bold text-gray-800 mb-2">Éducatif & Ludique</h3>
-                        <p class="text-gray-600">Apprentissage par le jeu avec la technologie</p>
-                    </div>
-                    <div class="p-6 bg-red-50 rounded-2xl">
-                        <i class="fas fa-heart text-3xl text-red-500 mb-4"></i>
-                        <h3 class="text-lg font-bold text-gray-800 mb-2">Conçu avec Amour</h3>
-                        <p class="text-gray-600">Développé en collaboration avec des pédiatres</p>
-                    </div>
-                </div>
-
-                <div class="bg-gradient-to-r from-yellow-500 to-orange-500 rounded-2xl p-8 text-white mb-8">
-                    <h3 class="text-2xl font-bold mb-4">Soyez les Premiers Informés</h3>
-                    <p class="mb-6">Inscrivez-vous à notre newsletter pour être averti dès le lancement de cette nouvelle catégorie</p>
-                    <div class="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-                        <input type="email" placeholder="Votre adresse email" class="flex-1 px-6 py-3 rounded-xl border-0 focus:outline-none text-gray-900">
-                        <button class="px-8 py-3 bg-white text-orange-600 rounded-xl font-semibold hover:bg-gray-50 transition-colors">
-                            Notify Me
-                        </button>
-                    </div>
-                </div>
-
-                <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                    <a href="all.html" class="px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-xl font-semibold hover:shadow-lg transition-all">
-                        <i class="fas fa-arrow-left mr-2"></i>Toutes les Catégories
-                    </a>
-                    <a href="../../index.html" class="px-8 py-3 bg-gradient-to-r from-gray-100 to-gray-200 text-gray-800 rounded-xl font-semibold hover:shadow-lg transition-all">
-                        <i class="fas fa-home mr-2"></i>Retour Accueil
-                    </a>
-                </div>
+    <!-- Header Section -->
+    <section class="bg-gradient-to-r from-yellow-400 via-orange-400 to-pink-400 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <span class="icon-baby text-6xl mb-6 block"></span>
+            <h1 class="text-4xl lg:text-5xl font-bold mb-4">Bébé & Enfant</h1>
+            <p class="text-xl opacity-90 mb-8">Produits tech sécurisés et éducatifs pour accompagner la croissance des plus petits</p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <div class="bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-sm">👶 Monitors Bébé</div>
+                <div class="bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-sm">🧸 Jouets Éducatifs</div>
+                <div class="bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-sm">💡 Veilleuses Smart</div>
+                <div class="bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-sm">🎵 Audio Enfant</div>
             </div>
         </div>
     </section>
 
+    <!-- Filters -->
+    <section class="py-8 bg-white sticky top-16 z-40 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex flex-wrap gap-4 justify-between items-center">
+                <div class="flex flex-wrap gap-2">
+                    <button class="filter-btn px-4 py-2 rounded-full border border-gray-300 hover:border-orange-500 transition-colors active" data-filter="all">
+                        Tous les produits
+                    </button>
+                    <button class="filter-btn px-4 py-2 rounded-full border border-gray-300 hover:border-orange-500 transition-colors" data-filter="monitor">
+                        👶 Monitors
+                    </button>
+                    <button class="filter-btn px-4 py-2 rounded-full border border-gray-300 hover:border-orange-500 transition-colors" data-filter="jouet">
+                        🧸 Jouets
+                    </button>
+                    <button class="filter-btn px-4 py-2 rounded-full border border-gray-300 hover:border-orange-500 transition-colors" data-filter="veilleuse">
+                        💡 Veilleuses
+                    </button>
+                    <button class="filter-btn px-4 py-2 rounded-full border border-gray-300 hover:border-orange-500 transition-colors" data-filter="audio">
+                        🎵 Audio
+                    </button>
+                </div>
+                
+                <select id="sortSelect" class="px-4 py-2 border border-gray-300 rounded-lg bg-white">
+                    <option value="name">Trier par nom</option>
+                    <option value="price-low">Prix croissant</option>
+                    <option value="price-high">Prix décroissant</option>
+                    <option value="rating">Meilleures notes</option>
+                </select>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Grid -->
+    <section class="py-12">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" id="productsContainer">
+                
+                <!-- Babyphone Vidéo 4K -->
+                <div class="product-card product-hover-3d bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500" data-category="monitor" data-price="199" data-rating="4.8" data-name="Babyphone Vidéo 4K Smart">
+                    <div class="relative">
+                        <img src="../../assets/images/products/babyphone-4k.jpg" alt="Babyphone Vidéo 4K" class="w-full h-48 object-cover" loading="lazy">
+                        <div class="absolute top-3 right-3 bg-green-500 text-white px-3 py-1 rounded-full text-sm font-medium">-15%</div>
+                        <div class="absolute top-3 left-3 bg-blue-500 text-white px-2 py-1 rounded text-xs">📱 4K</div>
+                        <button class="wishlist-btn absolute bottom-3 right-3 w-8 h-8 bg-white/90 rounded-full flex items-center justify-center hover:bg-red-500 hover:text-white transition-all">
+                            <span class="icon-heart text-sm"></span>
+                        </button>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg mb-2 text-gray-800">Babyphone Vidéo 4K Smart</h3>
+                        <p class="text-gray-600 text-sm mb-3">Vision nocturne couleur, détection pleurs, berceuses intégrées. App mobile avec notifications.</p>
+                        <div class="flex items-center mb-3">
+                            <div class="flex text-yellow-400 mr-2">
+                                <span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span>
+                            </div>
+                            <span class="text-gray-600 text-sm">(142 avis)</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center space-x-2">
+                                <span class="text-2xl font-bold text-orange-600">169€</span>
+                                <span class="text-lg text-gray-500 line-through">199€</span>
+                            </div>
+                            <button class="add-to-cart bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-4 py-2 rounded-lg hover:shadow-lg transition-all text-sm font-medium" data-id="babyphone-4k-001">
+                                <span class="icon-cart mr-1"></span>Ajouter
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Robot Éducatif Programmable -->
+                <div class="product-card product-hover-3d bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500" data-category="jouet" data-price="129" data-rating="4.7" data-name="Robot Éducatif Programmable">
+                    <div class="relative">
+                        <img src="../../assets/images/products/robot-educatif.jpg" alt="Robot Éducatif" class="w-full h-48 object-cover" loading="lazy">
+                        <div class="absolute top-3 left-3 bg-purple-600 text-white px-2 py-1 rounded text-xs">🤖 STEM</div>
+                        <button class="wishlist-btn absolute bottom-3 right-3 w-8 h-8 bg-white/90 rounded-full flex items-center justify-center hover:bg-red-500 hover:text-white transition-all">
+                            <span class="icon-heart text-sm"></span>
+                        </button>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg mb-2 text-gray-800">Robot Éducatif Programmable</h3>
+                        <p class="text-gray-600 text-sm mb-3">Apprend le codage dès 6 ans. Reconnaissance vocale, jeux interactifs et défis créatifs.</p>
+                        <div class="flex items-center mb-3">
+                            <div class="flex text-yellow-400 mr-2">
+                                <span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span>
+                            </div>
+                            <span class="text-gray-600 text-sm">(98 avis)</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center space-x-2">
+                                <span class="text-2xl font-bold text-orange-600">129€</span>
+                            </div>
+                            <button class="add-to-cart bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-4 py-2 rounded-lg hover:shadow-lg transition-all text-sm font-medium" data-id="robot-educatif-003">
+                                <span class="icon-cart mr-1"></span>Ajouter
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Veilleuse Projecteur Étoiles -->
+                <div class="product-card product-hover-3d bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500" data-category="veilleuse" data-price="45" data-rating="4.9" data-name="Veilleuse Projecteur Étoiles Smart">
+                    <div class="relative">
+                        <img src="../../assets/images/products/veilleuse-etoiles.jpg" alt="Veilleuse Projecteur" class="w-full h-48 object-cover" loading="lazy">
+                        <div class="absolute top-3 right-3 bg-pink-500 text-white px-3 py-1 rounded-full text-sm font-medium">TOP</div>
+                        <div class="absolute top-3 left-3 bg-indigo-600 text-white px-2 py-1 rounded text-xs">⭐ Smart</div>
+                        <button class="wishlist-btn absolute bottom-3 right-3 w-8 h-8 bg-white/90 rounded-full flex items-center justify-center hover:bg-red-500 hover:text-white transition-all">
+                            <span class="icon-heart text-sm"></span>
+                        </button>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg mb-2 text-gray-800">Veilleuse Projecteur Étoiles Smart</h3>
+                        <p class="text-gray-600 text-sm mb-3">16 couleurs LED, musiques douces, contrôle vocal. Minuterie et capteur de mouvement.</p>
+                        <div class="flex items-center mb-3">
+                            <div class="flex text-yellow-400 mr-2">
+                                <span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span>
+                            </div>
+                            <span class="text-gray-600 text-sm">(267 avis)</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center space-x-2">
+                                <span class="text-2xl font-bold text-orange-600">45€</span>
+                            </div>
+                            <button class="add-to-cart bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-4 py-2 rounded-lg hover:shadow-lg transition-all text-sm font-medium" data-id="veilleuse-etoiles-007">
+                                <span class="icon-cart mr-1"></span>Ajouter
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tablette Éducative 7" -->
+                <div class="product-card product-hover-3d bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500" data-category="jouet" data-price="89" data-rating="4.6" data-name="Tablette Éducative 7 Pouces Enfant">
+                    <div class="relative">
+                        <img src="../../assets/images/products/tablette-enfant.jpg" alt="Tablette Éducative" class="w-full h-48 object-cover" loading="lazy">
+                        <div class="absolute top-3 left-3 bg-green-600 text-white px-2 py-1 rounded text-xs">📱 Éducatif</div>
+                        <button class="wishlist-btn absolute bottom-3 right-3 w-8 h-8 bg-white/90 rounded-full flex items-center justify-center hover:bg-red-500 hover:text-white transition-all">
+                            <span class="icon-heart text-sm"></span>
+                        </button>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg mb-2 text-gray-800">Tablette Éducative 7" Enfant</h3>
+                        <p class="text-gray-600 text-sm mb-3">Android sécurisé, contrôle parental, apps éducatives préinstallées. Étui antichoc inclus.</p>
+                        <div class="flex items-center mb-3">
+                            <div class="flex text-yellow-400 mr-2">
+                                <span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span>
+                            </div>
+                            <span class="text-gray-600 text-sm">(156 avis)</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center space-x-2">
+                                <span class="text-2xl font-bold text-orange-600">89€</span>
+                            </div>
+                            <button class="add-to-cart bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-4 py-2 rounded-lg hover:shadow-lg transition-all text-sm font-medium" data-id="tablette-enfant-012">
+                                <span class="icon-cart mr-1"></span>Ajouter
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Enceinte Enfant Bluetooth -->
+                <div class="product-card product-hover-3d bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500" data-category="audio" data-price="39" data-rating="4.5" data-name="Enceinte Enfant Bluetooth Kawaii">
+                    <div class="relative">
+                        <img src="../../assets/images/products/enceinte-enfant.jpg" alt="Enceinte Enfant" class="w-full h-48 object-cover" loading="lazy">
+                        <div class="absolute top-3 left-3 bg-pink-600 text-white px-2 py-1 rounded text-xs">🎵 Kawaii</div>
+                        <button class="wishlist-btn absolute bottom-3 right-3 w-8 h-8 bg-white/90 rounded-full flex items-center justify-center hover:bg-red-500 hover:text-white transition-all">
+                            <span class="icon-heart text-sm"></span>
+                        </button>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg mb-2 text-gray-800">Enceinte Enfant Bluetooth Kawaii</h3>
+                        <p class="text-gray-600 text-sm mb-3">Design adorable, volume limité sécurisé, microSD. LED colorées et étanchéité IPX4.</p>
+                        <div class="flex items-center mb-3">
+                            <div class="flex text-yellow-400 mr-2">
+                                <span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span>
+                            </div>
+                            <span class="text-gray-600 text-sm">(213 avis)</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center space-x-2">
+                                <span class="text-2xl font-bold text-orange-600">39€</span>
+                            </div>
+                            <button class="add-to-cart bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-4 py-2 rounded-lg hover:shadow-lg transition-all text-sm font-medium" data-id="enceinte-enfant-015">
+                                <span class="icon-cart mr-1"></span>Ajouter
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Thermomètre Frontal Infrarouge -->
+                <div class="product-card product-hover-3d bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500" data-category="monitor" data-price="29" data-rating="4.4" data-name="Thermomètre Frontal Infrarouge Smart">
+                    <div class="relative">
+                        <img src="../../assets/images/products/thermometre-bebe.jpg" alt="Thermomètre Bébé" class="w-full h-48 object-cover" loading="lazy">
+                        <div class="absolute top-3 left-3 bg-red-600 text-white px-2 py-1 rounded text-xs">🌡️ Médical</div>
+                        <button class="wishlist-btn absolute bottom-3 right-3 w-8 h-8 bg-white/90 rounded-full flex items-center justify-center hover:bg-red-500 hover:text-white transition-all">
+                            <span class="icon-heart text-sm"></span>
+                        </button>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg mb-2 text-gray-800">Thermomètre Frontal Infrarouge Smart</h3>
+                        <p class="text-gray-600 text-sm mb-3">Mesure instantanée sans contact, alertes fièvre, mémoire 32 mesures. Certifié médical.</p>
+                        <div class="flex items-center mb-3">
+                            <div class="flex text-yellow-400 mr-2">
+                                <span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span>
+                            </div>
+                            <span class="text-gray-600 text-sm">(89 avis)</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center space-x-2">
+                                <span class="text-2xl font-bold text-orange-600">29€</span>
+                            </div>
+                            <button class="add-to-cart bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-4 py-2 rounded-lg hover:shadow-lg transition-all text-sm font-medium" data-id="thermometre-smart-018">
+                                <span class="icon-cart mr-1"></span>Ajouter
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Livre Interactif Parlant -->
+                <div class="product-card product-hover-3d bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500" data-category="jouet" data-price="59" data-rating="4.8" data-name="Livre Interactif Parlant Multilingue">
+                    <div class="relative">
+                        <img src="../../assets/images/products/livre-interactif.jpg" alt="Livre Interactif" class="w-full h-48 object-cover" loading="lazy">
+                        <div class="absolute top-3 right-3 bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-medium">Éducatif</div>
+                        <div class="absolute top-3 left-3 bg-orange-600 text-white px-2 py-1 rounded text-xs">📚 Smart</div>
+                        <button class="wishlist-btn absolute bottom-3 right-3 w-8 h-8 bg-white/90 rounded-full flex items-center justify-center hover:bg-red-500 hover:text-white transition-all">
+                            <span class="icon-heart text-sm"></span>
+                        </button>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg mb-2 text-gray-800">Livre Interactif Parlant Multilingue</h3>
+                        <p class="text-gray-600 text-sm mb-3">Pages tactiles, 3 langues, quiz et jeux. Développe lecture et vocabulaire dès 3 ans.</p>
+                        <div class="flex items-center mb-3">
+                            <div class="flex text-yellow-400 mr-2">
+                                <span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span>
+                            </div>
+                            <span class="text-gray-600 text-sm">(174 avis)</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center space-x-2">
+                                <span class="text-2xl font-bold text-orange-600">59€</span>
+                            </div>
+                            <button class="add-to-cart bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-4 py-2 rounded-lg hover:shadow-lg transition-all text-sm font-medium" data-id="livre-interactif-021">
+                                <span class="icon-cart mr-1"></span>Ajouter
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Casque Audio Enfant Bluetooth -->
+                <div class="product-card product-hover-3d bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500" data-category="audio" data-price="35" data-rating="4.7" data-name="Casque Audio Enfant Bluetooth Sécurisé">
+                    <div class="relative">
+                        <img src="../../assets/images/products/casque-enfant.jpg" alt="Casque Audio Enfant" class="w-full h-48 object-cover" loading="lazy">
+                        <div class="absolute top-3 right-3 bg-green-500 text-white px-3 py-1 rounded-full text-sm font-medium">Sécurisé</div>
+                        <div class="absolute top-3 left-3 bg-purple-600 text-white px-2 py-1 rounded text-xs">🎧 85dB</div>
+                        <button class="wishlist-btn absolute bottom-3 right-3 w-8 h-8 bg-white/90 rounded-full flex items-center justify-center hover:bg-red-500 hover:text-white transition-all">
+                            <span class="icon-heart text-sm"></span>
+                        </button>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg mb-2 text-gray-800">Casque Audio Enfant Bluetooth Sécurisé</h3>
+                        <p class="text-gray-600 text-sm mb-3">Volume limité 85dB, design ajustable, microphone intégré. Coussinets ultra-doux.</p>
+                        <div class="flex items-center mb-3">
+                            <div class="flex text-yellow-400 mr-2">
+                                <span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span>
+                            </div>
+                            <span class="text-gray-600 text-sm">(291 avis)</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center space-x-2">
+                                <span class="text-2xl font-bold text-orange-600">35€</span>
+                            </div>
+                            <button class="add-to-cart bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-4 py-2 rounded-lg hover:shadow-lg transition-all text-sm font-medium" data-id="casque-enfant-024">
+                                <span class="icon-cart mr-1"></span>Ajouter
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Navigation Footer -->
+    <section class="py-8 bg-gray-50">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="all.html" class="px-8 py-3 bg-gradient-to-r from-yellow-400 to-orange-500 text-white rounded-xl font-semibold hover:shadow-lg transition-all">
+                    <span class="icon-arrow-left mr-2"></span>Toutes les Catégories
+                </a>
+                <a href="../../index.html" class="px-8 py-3 bg-gradient-to-r from-gray-100 to-gray-200 text-gray-800 rounded-xl font-semibold hover:shadow-lg transition-all">
+                    <span class="icon-home mr-2"></span>Retour Accueil
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <script src="../../assets/js/main.js?v=2025010803"></script>
     <script src="../../assets/js/cart.js"></script>
+    <script>
+        // Vérification anti-Font Awesome 
+        document.addEventListener('DOMContentLoaded', function() {
+            const faLinks = document.querySelectorAll('link[href*="font-awesome"], link[href*="cdnjs.cloudflare.com"]');
+            faLinks.forEach(link => {
+                console.warn('🚫 Suppression lien Font Awesome détecté:', link.href);
+                link.remove();
+            });
+        });
+    </script>
+    <script>
+        // Filter functionality
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                // Update active button
+                document.querySelectorAll('.filter-btn').forEach(b => {
+                    b.classList.remove('active');
+                    b.style.background = '';
+                    b.style.color = '';
+                });
+                
+                this.classList.add('active');
+                this.style.background = 'linear-gradient(135deg, #f59e0b, #f97316)';
+                this.style.color = 'white';
+                
+                const filter = this.dataset.filter;
+                const products = document.querySelectorAll('.product-card');
+                
+                products.forEach(product => {
+                    if (filter === 'all' || product.dataset.category === filter) {
+                        product.style.display = 'block';
+                        setTimeout(() => {
+                            product.style.opacity = '1';
+                            product.style.transform = 'translateY(0)';
+                        }, 50);
+                    } else {
+                        product.style.opacity = '0';
+                        product.style.transform = 'translateY(20px)';
+                        setTimeout(() => {
+                            product.style.display = 'none';
+                        }, 300);
+                    }
+                });
+            });
+        });
+
+        // Sort functionality
+        document.getElementById('sortSelect').addEventListener('change', function() {
+            const sortBy = this.value;
+            const container = document.getElementById('productsContainer');
+            const products = Array.from(container.children);
+            
+            products.sort((a, b) => {
+                switch(sortBy) {
+                    case 'name':
+                        return a.dataset.name.localeCompare(b.dataset.name);
+                    case 'price-low':
+                        return parseFloat(a.dataset.price) - parseFloat(b.dataset.price);
+                    case 'price-high':
+                        return parseFloat(b.dataset.price) - parseFloat(a.dataset.price);
+                    case 'rating':
+                        return parseFloat(b.dataset.rating) - parseFloat(a.dataset.rating);
+                    default:
+                        return 0;
+                }
+            });
+            
+            // Animate sort
+            products.forEach((product, index) => {
+                product.style.order = index;
+                product.style.animation = 'slideIn 0.5s ease forwards';
+            });
+            
+            // Rebuild container
+            container.innerHTML = '';
+            products.forEach(product => container.appendChild(product));
+        });
+
+        // Wishlist functionality
+        document.querySelectorAll('.wishlist-btn').forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                e.stopPropagation();
+                
+                const icon = this.querySelector('.icon-heart');
+                if (this.classList.contains('liked')) {
+                    this.classList.remove('liked');
+                    this.style.background = 'rgba(255,255,255,0.9)';
+                    this.style.color = '#666';
+                } else {
+                    this.classList.add('liked');
+                    this.style.background = '#ef4444';
+                    this.style.color = 'white';
+                    
+                    // Animation
+                    this.style.transform = 'scale(1.2)';
+                    setTimeout(() => {
+                        this.style.transform = 'scale(1)';
+                    }, 200);
+                }
+            });
+        });
+
+        // Enhanced add to cart with animation
+        document.querySelectorAll('.add-to-cart').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const productCard = this.closest('.product-card');
+                const productName = productCard.querySelector('h3').textContent;
+                const productPrice = productCard.querySelector('.text-2xl').textContent;
+                const productImage = productCard.querySelector('img').src;
+                
+                // Add to cart logic here (integrate with existing cart system)
+                if (window.cartManager) {
+                    const product = {
+                        id: this.dataset.id,
+                        name: productName,
+                        price: parseFloat(productPrice.replace('€', '')),
+                        image: productImage,
+                        quantity: 1
+                    };
+                    window.cartManager.addToCart(product);
+                }
+                
+                // Visual feedback
+                this.style.transform = 'scale(0.95)';
+                this.textContent = '✓ Ajouté';
+                setTimeout(() => {
+                    this.style.transform = 'scale(1)';
+                    this.innerHTML = '<span class="icon-cart mr-1"></span>Ajouter';
+                }, 1500);
+            });
+        });
+    </script>
 </body>
 </html>
