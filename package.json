@@ -1,0 +1,90 @@
+{
+  "name": "techviral-ecommerce",
+  "version": "1.0.0-production",
+  "description": "TechViral E-commerce - Enterprise Grade Production Ready",
+  "main": "index.html",
+  "scripts": {
+    "start": "live-server --port=3000 --host=localhost",
+    "serve": "live-server --port=3000 --host=localhost --no-browser",
+    "build": "npm run build:css && npm run build:sitemap",
+    "build:css": "tailwindcss -i ./src/input.css -o ./assets/css/tailwind.min.css --minify",
+    "build:sitemap": "node scripts/generate-sitemap.js",
+    "watch:css": "tailwindcss -i ./src/input.css -o ./assets/css/tailwind.min.css --watch",
+    "dev": "npm run watch:css",
+    "test": "playwright test",
+    "test:lighthouse": "lhci autorun",
+    "validate": "node scripts/deploy-validation.js",
+    "deploy:staging": "npm run validate && echo 'Staging deployment...'",
+    "deploy:production": "npm run validate && echo 'Production deployment authorized'",
+    "monitor:production": "node assets/js/performance-monitor.js",
+    "audit:security": "npm audit --audit-level=high",
+    "lint:html": "html-validate \"**/*.html\"",
+    "lint:css": "stylelint \"assets/css/**/*.css\"",
+    "optimize:images": "node assets/js/image-optimizer.js",
+    "check:accessibility": "axe-core --include=\"body\" --exclude=\"#third-party\"",
+    "qa:validate": "node assets/js/qa-validator.js",
+    "browser:test": "node assets/js/browser-tester.js",
+    "health:check": "curl -f http://localhost:3000/health || exit 1"
+  },
+  "keywords": [
+    "ecommerce",
+    "techviral",
+    "performance",
+    "seo",
+    "accessibility",
+    "mobile-first",
+    "pwa"
+  ],
+  "author": "TechViral Team",
+  "license": "MIT",
+  "devDependencies": {
+    "@tailwindcss/forms": "^0.5.10",
+    "@tailwindcss/typography": "^0.5.16",
+    "tailwindcss": "^3.4.17",
+    "@playwright/test": "^1.40.0",
+    "@lhci/cli": "^0.12.0",
+    "live-server": "^1.2.2",
+    "html-validate": "^8.7.4",
+    "stylelint": "^15.11.0",
+    "axe-core": "^4.8.2",
+    "glob": "^10.3.10"
+  },
+  "dependencies": {
+    "intersection-observer": "^0.12.2"
+  },
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/techviral/ecommerce"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "Firefox ESR",
+    "not dead",
+    "not ie 11"
+  ],
+  "lighthouse": {
+    "performance": 90,
+    "accessibility": 90,
+    "best-practices": 85,
+    "seo": 95
+  },
+  "quality-gates": {
+    "critical": {
+      "lighthouse_performance": 90,
+      "lighthouse_seo": 95,
+      "lighthouse_accessibility": 90,
+      "browser_compatibility": 95,
+      "security_scan": 100
+    },
+    "deployment": {
+      "autoRollback": true,
+      "healthCheckTimeout": 30000,
+      "monitoringEnabled": true
+    }
+  }
+}

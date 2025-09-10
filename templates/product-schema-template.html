@@ -1,0 +1,97 @@
+<!-- 
+Template Schema.org Product - Version "Acier" Enterprise
+Instructions d'utilisation :
+
+1. Inclure le script schema-product.js dans le <head>
+2. Remplacer {{PRODUCT_DATA}} par les vraies données produit
+3. Le schema sera généré automatiquement au chargement de la page
+-->
+
+<!-- Dans le <head> -->
+<script src="../../assets/js/schema-product.js"></script>
+
+<!-- Avant la fermeture </body> -->
+<script>
+// Données produit pour génération automatique Schema.org
+window.productData = {
+    name: "{{PRODUCT_NAME}}",
+    description: "{{PRODUCT_DESCRIPTION}}",
+    sku: "{{PRODUCT_SKU}}",
+    mpn: "{{PRODUCT_MPN}}",
+    brand: "{{PRODUCT_BRAND}}",
+    manufacturer: "{{PRODUCT_MANUFACTURER}}",
+    price: {{PRODUCT_PRICE}},
+    originalPrice: {{PRODUCT_ORIGINAL_PRICE}}, // Optionnel
+    slug: "{{PRODUCT_SLUG}}",
+    category: "{{PRODUCT_CATEGORY}}",
+    stock: {{PRODUCT_STOCK}},
+    images: [
+        "{{PRODUCT_IMAGE_1}}",
+        "{{PRODUCT_IMAGE_2}}",
+        "{{PRODUCT_IMAGE_3}}"
+    ],
+    features: [
+        { name: "{{FEATURE_1_NAME}}", value: "{{FEATURE_1_VALUE}}" },
+        { name: "{{FEATURE_2_NAME}}", value: "{{FEATURE_2_VALUE}}" },
+        // Ajouter d'autres caractéristiques...
+    ],
+    reviews: [
+        {
+            author: "{{REVIEW_1_AUTHOR}}",
+            rating: {{REVIEW_1_RATING}},
+            comment: "{{REVIEW_1_COMMENT}}",
+            date: "{{REVIEW_1_DATE}}"
+        }
+        // Ajouter d'autres avis...
+    ],
+    avgRating: {{AVERAGE_RATING}}
+};
+</script>
+
+<!-- 
+Exemple d'implémentation complète pour un nouveau produit :
+
+<script>
+window.productData = {
+    name: "Caméra POV GoPro Hero13 Ultra",
+    description: "Caméra d'action ultra-compacte avec stabilisation HyperSmooth 6.0, résolution 5.3K, étanche jusqu'à 10m.",
+    sku: "GP-HERO13-ULTRA",
+    mpn: "GOPRO-H13-5.3K",
+    brand: "GoPro",
+    manufacturer: "GoPro Inc.",
+    price: 89.00,
+    originalPrice: 129.00,
+    slug: "camera-pov-gopro-hero13",
+    category: "Électronique",
+    stock: 23,
+    images: [
+        "/assets/images/products/gopro-hero13-main.jpg",
+        "/assets/images/products/gopro-hero13-action.jpg",
+        "/assets/images/products/gopro-hero13-accessories.jpg"
+    ],
+    features: [
+        { name: "Résolution", value: "5.3K à 60fps" },
+        { name: "Stabilisation", value: "HyperSmooth 6.0" },
+        { name: "Étanchéité", value: "10m sans boîtier" },
+        { name: "Autonomie", value: "1.5h en 5.3K" },
+        { name: "Stockage", value: "Jusqu'à 1TB microSD" }
+    ],
+    reviews: [
+        {
+            author: "Alex D.",
+            rating: 5,
+            comment: "Qualité d'image incroyable ! Parfait pour mes vlogs d'aventure.",
+            date: "2024-12-28"
+        }
+    ],
+    avgRating: 4.8
+};
+</script>
+
+Avantages de cette approche "acier" :
+✅ Schema.org généré automatiquement pour TOUS les produits
+✅ Rich Snippets garantis (prix, avis, disponibilité, images)
+✅ Maintenance centralisée du code Schema
+✅ Données structurées cohérentes
+✅ SEO scalable à l'échelle enterprise
+-->

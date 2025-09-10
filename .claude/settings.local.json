@@ -28,7 +28,11 @@
       "WebFetch(domain:raw.githubusercontent.com)",
       "Bash(git mv:*)",
       "Bash(git merge:*)",
-      "WebFetch(domain:medium.com)"
+      "WebFetch(domain:medium.com)",
+      "Bash(ftp:*)",
+      "Bash(npm install:*)",
+      "Bash(npm run build:css:*)",
+      "Read(//c/**)"
     ],
     "deny": [],
     "ask": []
