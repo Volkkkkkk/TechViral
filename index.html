@@ -92,11 +92,13 @@
     ]
     </script>
     
-    <!-- Tailwind CSS optimisé (build local) -->
-    <link rel="stylesheet" href="assets/css/tailwind.min.css">
+    <!-- Tailwind CSS optimisé (non-blocking preload) -->
+    <link rel="preload" href="assets/css/tailwind.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="assets/css/tailwind.min.css"></noscript>
     
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Custom CSS (non-blocking preload) -->
+    <link rel="preload" href="assets/css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="assets/css/style.css"></noscript>
     
     <!-- Preload critical resources -->
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -113,41 +115,9 @@
     <link rel="icon" type="image/x-icon" href="assets/icons/favicon.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png">
     
-    <!-- Breadcrumb Generator -->
-    <script src="assets/js/breadcrumb-generator.js"></script>
-    
-    <!-- Search Console Manager -->
-    <script src="assets/js/search-console-manager.js"></script>
-    
-    <!-- Image Optimizer -->
-    <script src="assets/js/image-optimizer.js"></script>
-    
-    <!-- Accessibility Checker -->
-    <script src="assets/js/accessibility-checker.js"></script>
-    
-    <!-- Mobile Navigation -->
-    <script src="assets/js/mobile-navigation.js"></script>
-    
-    <!-- GA4 Analytics -->
-    <script src="assets/js/analytics-ga4.js"></script>
-    
-    <!-- Category Filters -->
-    <script src="assets/js/category-filters.js"></script>
-    
-    <!-- Performance Monitor -->
-    <script src="assets/js/performance-monitor.js"></script>
-    
-    <!-- Vitals Dashboard -->
-    <script src="assets/js/vitals-dashboard.js"></script>
-    
-    <!-- GDPR Consent -->
-    <script src="assets/js/gdpr-consent.js"></script>
-    
-    <!-- Error Monitor -->
-    <script src="assets/js/error-monitor.js"></script>
-    
-    <!-- Browser Tester -->
-    <script src="assets/js/browser-tester.js"></script>
+    <!-- Critical scripts only - minimal blocking -->
+    <script async src="assets/js/image-optimizer.js"></script>
+    <script async src="assets/js/mobile-navigation.js"></script>
 </head>
 <body class="font-body bg-gradient-to-br from-warm to-cool dark:from-gray-900 dark:to-gray-800 text-gray-900 dark:text-gray-100 transition-colors duration-300">
 
@@ -1020,6 +990,18 @@
     <script src="assets/js/search.js"></script>
     <script src="assets/js/forms.js"></script>
     <script src="assets/js/main.js"></script>
+    
+    <!-- Non-critical scripts loaded after page render -->
+    <script defer src="assets/js/breadcrumb-generator.js"></script>
+    <script defer src="assets/js/search-console-manager.js"></script>
+    <script defer src="assets/js/accessibility-checker.js"></script>
+    <script defer src="assets/js/analytics-ga4.js"></script>
+    <script defer src="assets/js/category-filters.js"></script>
+    <script defer src="assets/js/performance-monitor.js"></script>
+    <script defer src="assets/js/vitals-dashboard.js"></script>
+    <script defer src="assets/js/gdpr-consent.js"></script>
+    <script defer src="assets/js/error-monitor.js"></script>
+    <script defer src="assets/js/browser-tester.js"></script>
     
     <!-- HOTFIX PROFESSIONNEL 2025: Mode sombre et panier -->
     <script>

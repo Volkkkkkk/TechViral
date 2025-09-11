@@ -1,0 +1,106 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - navigation [ref=e2]:
+    - generic [ref=e4]:
+      - link "T TechViral" [ref=e5] [cursor=pointer]:
+        - /url: ../../index.html
+        - generic [ref=e7] [cursor=pointer]: T
+        - generic [ref=e8] [cursor=pointer]: TechViral
+      - generic [ref=e9]:
+        - generic [ref=e10]:
+          - generic [ref=e11]: "1"
+          - generic [ref=e12]: Panier
+        - generic [ref=e14]:
+          - generic [ref=e15]: "2"
+          - generic [ref=e16]: Commande
+        - generic [ref=e18]:
+          - generic [ref=e19]: "3"
+          - generic [ref=e20]: Confirmation
+      - link "Continuer les achats" [ref=e21] [cursor=pointer]:
+        - /url: ../../index.html
+  - generic [ref=e22]:
+    - generic [ref=e23]:
+      - generic [ref=e25]:
+        - generic [ref=e26]:
+          - heading "Mon Panier" [level=1] [ref=e27]
+          - paragraph [ref=e28]: 1 article sélectionné
+        - generic "1 item in cart" [ref=e30]:
+          - generic [ref=e31]: test.jpg
+          - generic [ref=e32]:
+            - heading "Test Quantity Product" [level=3] [ref=e33]
+            - paragraph [ref=e34]: Produit TechViral • Innovation 2025
+            - generic [ref=e36]: ✓ En stock
+          - generic [ref=e37]:
+            - generic [ref=e38]:
+              - button [ref=e39] [cursor=pointer]:
+                - img [ref=e40] [cursor=pointer]
+              - generic [ref=e42]: "1"
+              - button [ref=e43] [cursor=pointer]:
+                - img [ref=e44] [cursor=pointer]
+            - generic [ref=e46]:
+              - paragraph [ref=e47]: 50.00 €
+              - paragraph [ref=e48]: "Prix unitaire: 50.00 €"
+            - button [ref=e49] [cursor=pointer]:
+              - img [ref=e50] [cursor=pointer]
+      - generic [ref=e52]:
+        - generic [ref=e53]:
+          - heading "Résumé" [level=2] [ref=e55]
+          - generic [ref=e56]:
+            - generic [ref=e57]:
+              - generic [ref=e58]: Sous-total
+              - generic [ref=e59]: 50.00 €
+            - generic [ref=e60]:
+              - generic [ref=e61]: Livraison
+              - generic [ref=e62]: Gratuite
+            - generic [ref=e63]:
+              - generic [ref=e64]: TVA incluse
+              - generic [ref=e65]: 0,00 €
+            - generic [ref=e67]:
+              - generic [ref=e68]: Total
+              - generic [ref=e69]: 50.00 €
+            - button "Finaliser la commande" [ref=e70] [cursor=pointer]
+            - generic [ref=e71]:
+              - generic [ref=e72]:
+                - img [ref=e73]
+                - text: SSL
+              - generic [ref=e75]:
+                - img [ref=e76]
+                - text: 3D Secure
+              - generic [ref=e78]: Paiement sécurisé
+        - generic [ref=e80]:
+          - img [ref=e81]
+          - generic [ref=e83]:
+            - paragraph [ref=e84]: Livraison gratuite
+            - paragraph [ref=e85]: Commandes livrées sous 48h
+        - generic [ref=e87]:
+          - img [ref=e88]
+          - generic [ref=e90]:
+            - paragraph [ref=e91]: Garantie 30 jours
+            - paragraph [ref=e92]: Satisfaction ou remboursé
+        - button "Vider le panier" [ref=e94] [cursor=pointer]
+    - generic [ref=e95]:
+      - heading "Produits recommandés" [level=2] [ref=e96]
+      - generic [ref=e100]:
+        - heading "Caméra POV 4K" [level=3] [ref=e101]
+        - paragraph [ref=e102]: Ultra-légère étanche
+        - generic [ref=e103]:
+          - generic [ref=e104]: 89,99 €
+          - button "1 item in cart" [ref=e105] [cursor=pointer]: + Ajouter
+  - contentinfo [ref=e106]:
+    - generic [ref=e107]:
+      - generic [ref=e108]:
+        - generic [ref=e110]: T
+        - generic [ref=e111]: TechViral
+      - paragraph [ref=e112]: Votre panier sécurisé avec TechViral
+      - generic [ref=e113]:
+        - link "Aide & Support" [ref=e114] [cursor=pointer]:
+          - /url: "#"
+        - link "CGV" [ref=e115] [cursor=pointer]:
+          - /url: "#"
+        - link "Livraison" [ref=e116] [cursor=pointer]:
+          - /url: "#"
+        - link "Retours" [ref=e117] [cursor=pointer]:
+          - /url: "#"
+```

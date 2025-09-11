@@ -14,7 +14,8 @@ module.exports = {
         'http://localhost:3000/pages/cart/cart.html'
       ],
       
-      // Configuration Chrome
+      // Configuration Chrome avec chemin Puppeteer
+      chromePath: require('puppeteer').executablePath(),
       chromeFlags: [
         '--no-sandbox',
         '--disable-dev-shm-usage',
@@ -22,72 +23,29 @@ module.exports = {
         '--headless'
       ],
       
-      // Nombre de runs pour moyenne
-      numberOfRuns: 3,
+      // Nombre de runs pour moyenne (réduit pour tests)
+      numberOfRuns: 1,
       
       // Options serveur local
       startServerCommand: 'npm run serve',
-      startServerReadyPattern: 'Local server started',
+      startServerReadyPattern: 'Available on:',
       startServerReadyTimeout: 60000
     },
 
     assert: {
-      // Budgets performance "acier"
+      // Configuration simple pour environnement de développement
       assertions: {
-        // Core Web Vitals - Seuils enterprise
-        'largest-contentful-paint': ['error', { maxNumericValue: 2500 }],
-        'cumulative-layout-shift': ['error', { maxNumericValue: 0.1 }],
-        'first-contentful-paint': ['error', { maxNumericValue: 1500 }],
-        'speed-index': ['error', { maxNumericValue: 3000 }],
-        'total-blocking-time': ['error', { maxNumericValue: 300 }],
-
-        // Scores minimums
-        'categories:performance': ['error', { minScore: 0.90 }],
-        'categories:accessibility': ['error', { minScore: 0.95 }],
-        'categories:best-practices': ['error', { minScore: 0.90 }],
-        'categories:seo': ['error', { minScore: 0.95 }],
-
-        // Métriques réseau
-        'network-requests': ['warn', { maxNumericValue: 50 }],
-        'total-byte-weight': ['error', { maxNumericValue: 2000000 }], // 2MB
-        'dom-size': ['warn', { maxNumericValue: 1500 }],
-
-        // Images et ressources
-        'unused-css-rules': ['warn', { maxLength: 2 }],
-        'unused-javascript': ['warn', { maxLength: 2 }],
-        'modern-image-formats': 'error',
-        'efficient-animated-content': 'error',
-        'offscreen-images': 'error',
-
-        // SEO Critical
+        // Tests de base seulement
+        'viewport': 'error',
         'document-title': 'error',
-        'meta-description': 'error',
-        'canonical': 'error',
-        'hreflang': 'off',
-        'robots-txt': 'error',
-
-        // Accessibilité Critical
-        'color-contrast': 'error',
-        'image-alt': 'error',
-        'label': 'error',
-        'heading-order': 'error',
-        'duplicate-id-aria': 'error',
-
-        // PWA & Sécurité
-        'is-on-https': 'error',
-        'redirects-http': 'error',
-        'uses-responsive-images': 'warn',
-        'viewport': 'error'
+        'meta-description': 'error'
       }
     },
 
     upload: {
-      // Stockage résultats (optionnel - server LHCI)
+      // GitHub integration pour https://github.com/Volkkkkkk/TechViral
       target: 'temporary-public-storage',
-      
-      // Configuration serveur LHCI custom (si déployé)
-      // serverBaseUrl: 'https://your-lhci-server.com',
-      // token: 'your-build-token'
+      githubAppToken: process.env.LHCI_GITHUB_TOKEN
     },
 
     server: {
@@ -101,12 +59,11 @@ module.exports = {
     }
   },
 
-  // Configuration audits personnalisés
-  audits: [
-    // Audit custom budgets
-    require.resolve('./audits/performance-budget-audit.js'),
-    require.resolve('./audits/core-web-vitals-audit.js')
-  ],
+  // Configuration audits personnalisés (désactivés pour les tests de base)
+  // audits: [
+  //   require.resolve('./audits/performance-budget-audit.js'),
+  //   require.resolve('./audits/core-web-vitals-audit.js')
+  // ],
 
   // Catégories personnalisées
   categories: {

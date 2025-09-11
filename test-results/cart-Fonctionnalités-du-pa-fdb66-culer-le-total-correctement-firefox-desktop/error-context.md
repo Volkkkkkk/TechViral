@@ -1,0 +1,125 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - navigation [ref=e2]:
+    - generic [ref=e4]:
+      - link "T TechViral" [ref=e5] [cursor=pointer]:
+        - /url: ../../index.html
+        - generic [ref=e7] [cursor=pointer]: T
+        - generic [ref=e8] [cursor=pointer]: TechViral
+      - generic [ref=e9]:
+        - generic [ref=e10]:
+          - generic [ref=e11]: "1"
+          - generic [ref=e12]: Panier
+        - generic [ref=e14]:
+          - generic [ref=e15]: "2"
+          - generic [ref=e16]: Commande
+        - generic [ref=e18]:
+          - generic [ref=e19]: "3"
+          - generic [ref=e20]: Confirmation
+      - link "Continuer les achats" [ref=e21] [cursor=pointer]:
+        - /url: ../../index.html
+  - generic [ref=e22]:
+    - generic [ref=e23]:
+      - generic [ref=e25]:
+        - generic [ref=e26]:
+          - heading "Mon Panier" [level=1] [ref=e27]
+          - paragraph [ref=e28]: 3 articles sélectionnés
+        - generic [ref=e29]:
+          - generic "3 items in cart" [ref=e30]:
+            - generic [ref=e31]: test.jpg
+            - generic [ref=e32]:
+              - heading "Test Product" [level=3] [ref=e33]
+              - paragraph [ref=e34]: Produit TechViral • Innovation 2025
+              - generic [ref=e36]: ✓ En stock
+            - generic [ref=e37]:
+              - generic [ref=e38]:
+                - button [ref=e39] [cursor=pointer]:
+                  - img [ref=e40] [cursor=pointer]
+                - generic [ref=e42]: "2"
+                - button [ref=e43] [cursor=pointer]:
+                  - img [ref=e44] [cursor=pointer]
+              - generic [ref=e46]:
+                - paragraph [ref=e47]: 59.98 €
+                - paragraph [ref=e48]: "Prix unitaire: 29.99 €"
+              - button [ref=e49] [cursor=pointer]:
+                - img [ref=e50] [cursor=pointer]
+          - generic "3 items in cart" [ref=e52]:
+            - generic [ref=e53]: test2.jpg
+            - generic [ref=e54]:
+              - heading "Test Product 2" [level=3] [ref=e55]
+              - paragraph [ref=e56]: Produit TechViral • Innovation 2025
+              - generic [ref=e58]: ✓ En stock
+            - generic [ref=e59]:
+              - generic [ref=e60]:
+                - button [ref=e61] [cursor=pointer]:
+                  - img [ref=e62] [cursor=pointer]
+                - generic [ref=e64]: "1"
+                - button [ref=e65] [cursor=pointer]:
+                  - img [ref=e66] [cursor=pointer]
+              - generic [ref=e68]:
+                - paragraph [ref=e69]: 19.99 €
+                - paragraph [ref=e70]: "Prix unitaire: 19.99 €"
+              - button [ref=e71] [cursor=pointer]:
+                - img [ref=e72] [cursor=pointer]
+      - generic [ref=e74]:
+        - generic [ref=e75]:
+          - heading "Résumé" [level=2] [ref=e77]
+          - generic [ref=e78]:
+            - generic [ref=e79]:
+              - generic [ref=e80]: Sous-total
+              - generic [ref=e81]: 79.97 €
+            - generic [ref=e82]:
+              - generic [ref=e83]: Livraison
+              - generic [ref=e84]: Gratuite
+            - generic [ref=e85]:
+              - generic [ref=e86]: TVA incluse
+              - generic [ref=e87]: 0,00 €
+            - generic [ref=e89]:
+              - generic [ref=e90]: Total
+              - generic [ref=e91]: 79.97 €
+            - button "Finaliser la commande" [ref=e92] [cursor=pointer]
+            - generic [ref=e93]:
+              - generic [ref=e94]:
+                - img [ref=e95]
+                - text: SSL
+              - generic [ref=e97]:
+                - img [ref=e98]
+                - text: 3D Secure
+              - generic [ref=e100]: Paiement sécurisé
+        - generic [ref=e102]:
+          - img [ref=e103]
+          - generic [ref=e105]:
+            - paragraph [ref=e106]: Livraison gratuite
+            - paragraph [ref=e107]: Commandes livrées sous 48h
+        - generic [ref=e109]:
+          - img [ref=e110]
+          - generic [ref=e112]:
+            - paragraph [ref=e113]: Garantie 30 jours
+            - paragraph [ref=e114]: Satisfaction ou remboursé
+        - button "Vider le panier" [ref=e116] [cursor=pointer]
+    - generic [ref=e117]:
+      - heading "Produits recommandés" [level=2] [ref=e118]
+      - generic [ref=e122]:
+        - heading "Caméra POV 4K" [level=3] [ref=e123]
+        - paragraph [ref=e124]: Ultra-légère étanche
+        - generic [ref=e125]:
+          - generic [ref=e126]: 89,99 €
+          - button "3 items in cart" [ref=e127] [cursor=pointer]: + Ajouter
+  - contentinfo [ref=e128]:
+    - generic [ref=e129]:
+      - generic [ref=e130]:
+        - generic [ref=e132]: T
+        - generic [ref=e133]: TechViral
+      - paragraph [ref=e134]: Votre panier sécurisé avec TechViral
+      - generic [ref=e135]:
+        - link "Aide & Support" [ref=e136] [cursor=pointer]:
+          - /url: "#"
+        - link "CGV" [ref=e137] [cursor=pointer]:
+          - /url: "#"
+        - link "Livraison" [ref=e138] [cursor=pointer]:
+          - /url: "#"
+        - link "Retours" [ref=e139] [cursor=pointer]:
+          - /url: "#"
+```

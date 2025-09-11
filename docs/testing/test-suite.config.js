@@ -3,9 +3,11 @@
  * Version "Acier" : Tests multi-environnements enterprise
  */
 
+const { devices } = require('@playwright/test');
+
 module.exports = {
   // Configuration Playwright pour tests cross-browser
-  testDir: './tests',
+  testDir: '../../tests',
   timeout: 30000,
   expect: { timeout: 5000 },
   fullyParallel: true,
@@ -87,5 +89,3 @@ module.exports = {
     reuseExistingServer: !process.env.CI
   }
 };
-
-const { devices } = require('@playwright/test');

@@ -1,0 +1,407 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - generic [ref=e2]: "🎯 PROMOTION LIMITÉE : -30% sur les nouveautés + Livraison GRATUITE sous 48h ! 🚚"
+  - banner [ref=e3]:
+    - navigation [ref=e4]:
+      - generic [ref=e5]:
+        - generic [ref=e6]:
+          - img [ref=e8]
+          - generic [ref=e10]:
+            - generic [ref=e11]: TechViral
+            - paragraph [ref=e12]: Innovations 2025
+        - generic [ref=e13]:
+          - link "Accueil" [ref=e14] [cursor=pointer]:
+            - /url: index.html
+          - button "Catégories" [ref=e16] [cursor=pointer]:
+            - text: Catégories
+            - img [ref=e17] [cursor=pointer]
+          - link "🔥 Promotions" [ref=e19] [cursor=pointer]:
+            - /url: pages/promotions.html
+          - link "Blog" [ref=e20] [cursor=pointer]:
+            - /url: pages/blog.html
+          - link "Contact" [ref=e21] [cursor=pointer]:
+            - /url: pages/contact.html
+        - generic [ref=e22]:
+          - searchbox "Rechercher un produit..." [ref=e23]
+          - button "Search" [ref=e24] [cursor=pointer]:
+            - img [ref=e25] [cursor=pointer]
+        - generic [ref=e27]:
+          - button [ref=e28] [cursor=pointer]:
+            - img [ref=e29] [cursor=pointer]
+          - button [ref=e32] [cursor=pointer]:
+            - img [ref=e33] [cursor=pointer]
+          - button "0 items in cart" [ref=e35] [cursor=pointer]:
+            - img [ref=e36] [cursor=pointer]
+            - generic "0 items in cart" [ref=e38] [cursor=pointer]: "0"
+  - navigation "Fil d'Ariane" [ref=e39]:
+    - list [ref=e41]:
+      - listitem [ref=e42]:
+        - link "AccueilAccueil" [ref=e43] [cursor=pointer]:
+          - /url: /
+          - text: Accueil
+          - generic [ref=e44] [cursor=pointer]: Accueil
+        - img [ref=e45]
+      - listitem [ref=e46]:
+        - generic [ref=e47]: Index.Html
+  - generic [ref=e54]:
+    - generic [ref=e55]:
+      - generic [ref=e56]:
+        - generic [ref=e57]: 🔥
+        - text: Nouveautés 2025 - Produits viraux disponibles
+      - generic [ref=e58]:
+        - heading "Innovations qui Révolutionnent Votre Quotidien" [level=1] [ref=e59]:
+          - generic [ref=e60]: Innovations
+          - generic [ref=e61]: qui Révolutionnent
+          - generic [ref=e62]: Votre Quotidien
+        - paragraph [ref=e63]:
+          - text: Découvrez les
+          - strong [ref=e64]: produits viraux
+          - text: "les plus attendus de 2025 : caméra POV portable, drone en mousse, bouteille hydrogène, casquette cryothérapie et bien plus."
+      - generic [ref=e65]:
+        - button "Découvrir les Nouveautés" [ref=e66] [cursor=pointer]:
+          - generic [ref=e67] [cursor=pointer]: Découvrir les Nouveautés
+          - img [ref=e68] [cursor=pointer]
+        - button "🎯 Voir les Promotions -30%" [ref=e70] [cursor=pointer]
+      - generic [ref=e71]:
+        - generic [ref=e72]:
+          - img [ref=e74]
+          - generic [ref=e76]:
+            - generic [ref=e77]: Livraison Gratuite
+            - paragraph [ref=e78]: sous 48h en France
+        - generic [ref=e79]:
+          - img [ref=e81]
+          - generic [ref=e83]:
+            - generic [ref=e84]: Garantie 30 jours
+            - paragraph [ref=e85]: ou échange gratuit
+        - generic [ref=e86]:
+          - img [ref=e88]
+          - generic [ref=e90]:
+            - generic [ref=e91]: Paiement Sécurisé
+            - paragraph [ref=e92]: SSL + 3D Secure
+    - generic [ref=e94]:
+      - generic [ref=e95]:
+        - generic [ref=e96]:
+          - generic [ref=e98]: 📹
+          - heading "Caméra POV" [level=3] [ref=e99]
+          - paragraph [ref=e100]: Capture immersive 4K ultra-portable
+          - generic [ref=e101]: 89€
+        - generic [ref=e102]:
+          - generic [ref=e104]: 💧
+          - heading "Bouteille H₂" [level=3] [ref=e105]
+          - paragraph [ref=e106]: Eau enrichie en hydrogène
+          - generic [ref=e107]: 199€
+      - generic [ref=e108]:
+        - generic [ref=e109]:
+          - generic [ref=e111]: 🚁
+          - heading "Drone Mousse" [level=3] [ref=e112]
+          - paragraph [ref=e113]: Ultra-léger et sécurisé
+          - generic [ref=e114]: 149€
+        - generic [ref=e115]:
+          - generic [ref=e117]: 🧊
+          - heading "Casquette Cryo" [level=3] [ref=e118]
+          - paragraph [ref=e119]: Anti-migraine naturel
+          - generic [ref=e120]: 69€
+  - generic [ref=e122]:
+    - generic [ref=e123]:
+      - generic [ref=e124]:
+        - generic [ref=e125]: ⚡
+        - text: Sélection Premium 2025
+      - heading "Produits Viraux & Innovations" [level=2] [ref=e126]:
+        - generic [ref=e127]: Produits Viraux
+        - generic [ref=e128]: "& Innovations"
+      - paragraph [ref=e129]:
+        - text: Découvrez notre sélection exclusive des produits les plus
+        - strong [ref=e130]: innovants et tendance
+        - text: du moment, choisis pour leur qualité exceptionnelle et leur potentiel viral.
+    - generic [ref=e131]:
+      - button "Tous les produits" [ref=e132] [cursor=pointer]
+      - button "📱 Électronique" [ref=e133] [cursor=pointer]
+      - button "🌿 Écologique" [ref=e134] [cursor=pointer]
+      - button "💊 Santé" [ref=e135] [cursor=pointer]
+      - button "✨ Lifestyle" [ref=e136] [cursor=pointer]
+    - generic [ref=e137]:
+      - generic [ref=e138]:
+        - generic [ref=e139]:
+          - generic [ref=e141]: 📹
+          - generic [ref=e142]: VIRAL
+          - img [ref=e144]
+        - generic [ref=e146]:
+          - generic [ref=e147]:
+            - heading "Caméra POV Portable 4K" [level=3] [ref=e148]
+            - generic [ref=e149]: ⭐⭐⭐⭐⭐
+          - paragraph [ref=e150]: Capture immersive ultra-haute définition pour vos aventures extrêmes. Résistante aux chocs et à l'eau.
+          - generic [ref=e152]:
+            - generic [ref=e153]: 89€
+            - generic [ref=e154]: 129€
+            - generic [ref=e155]: "-31%"
+          - button "0 items in cart" [ref=e156] [cursor=pointer]:
+            - generic [ref=e157] [cursor=pointer]: Ajouter au panier
+            - img [ref=e158] [cursor=pointer]
+      - generic [ref=e160]:
+        - generic [ref=e161]:
+          - generic [ref=e163]: 🚁
+          - generic [ref=e164]: NOUVEAU
+          - img [ref=e166]
+        - generic [ref=e168]:
+          - generic [ref=e169]:
+            - heading "Drone en Mousse RC" [level=3] [ref=e170]
+            - generic [ref=e171]: ⭐⭐⭐⭐⭐
+          - paragraph [ref=e172]: Ultra-léger et 100% sécurisé pour débuter. Parfait pour les cascades et l'apprentissage du pilotage.
+          - generic [ref=e174]:
+            - generic [ref=e175]: 149€
+            - generic [ref=e176]: 199€
+            - generic [ref=e177]: "-25%"
+          - button "0 items in cart" [ref=e178] [cursor=pointer]:
+            - generic [ref=e179] [cursor=pointer]: Ajouter au panier
+            - img [ref=e180] [cursor=pointer]
+      - generic [ref=e182]:
+        - generic [ref=e183]:
+          - generic [ref=e185]: 💧
+          - generic [ref=e186]: ÉCO
+          - img [ref=e188]
+        - generic [ref=e190]:
+          - generic [ref=e191]:
+            - heading "Bouteille Hydrogène H₂" [level=3] [ref=e192]
+            - generic [ref=e193]: ⭐⭐⭐⭐⭐
+          - paragraph [ref=e194]: Enrichit votre eau en hydrogène moléculaire pour une hydratation optimale et des bénéfices santé.
+          - generic [ref=e196]:
+            - generic [ref=e197]: 199€
+            - generic [ref=e198]: 299€
+            - generic [ref=e199]: "-33%"
+          - button "0 items in cart" [ref=e200] [cursor=pointer]:
+            - generic [ref=e201] [cursor=pointer]: Ajouter au panier
+            - img [ref=e202] [cursor=pointer]
+      - generic [ref=e204]:
+        - generic [ref=e205]:
+          - generic [ref=e207]: 🧊
+          - generic [ref=e208]: SANTÉ
+          - img [ref=e210]
+        - generic [ref=e212]:
+          - generic [ref=e213]:
+            - heading "Casquette Cryothérapie" [level=3] [ref=e214]
+            - generic [ref=e215]: ⭐⭐⭐⭐⭐
+          - paragraph [ref=e216]: Soulagement naturel et immédiat des migraines grâce à la thérapie par le froid. Réutilisable à l'infini.
+          - generic [ref=e218]:
+            - generic [ref=e219]: 69€
+            - generic [ref=e220]: 99€
+            - generic [ref=e221]: "-30%"
+          - button "0 items in cart" [ref=e222] [cursor=pointer]:
+            - generic [ref=e223] [cursor=pointer]: Ajouter au panier
+            - img [ref=e224] [cursor=pointer]
+      - generic [ref=e226]:
+        - generic [ref=e227]:
+          - generic [ref=e229]: 🫖
+          - generic [ref=e230]: DESIGN
+          - img [ref=e232]
+        - generic [ref=e234]:
+          - generic [ref=e235]:
+            - heading "Théière Verre à Bouton" [level=3] [ref=e236]
+            - generic [ref=e237]: ⭐⭐⭐⭐⭐
+          - paragraph [ref=e238]: Théière en verre borosilicate avec filtre intégré et système de pression innovant. Design élégant.
+          - generic [ref=e240]:
+            - generic [ref=e241]: 45€
+            - generic [ref=e242]: 65€
+            - generic [ref=e243]: "-31%"
+          - button "0 items in cart" [ref=e244] [cursor=pointer]:
+            - generic [ref=e245] [cursor=pointer]: Ajouter au panier
+            - img [ref=e246] [cursor=pointer]
+      - generic [ref=e248]:
+        - generic [ref=e249]:
+          - generic [ref=e251]: ☕
+          - generic [ref=e252]: GADGET
+          - img [ref=e254]
+        - generic [ref=e256]:
+          - generic [ref=e257]:
+            - heading "Mug Auto-Mélangeur" [level=3] [ref=e258]
+            - generic [ref=e259]: ⭐⭐⭐⭐⭐
+          - paragraph [ref=e260]: Tasse rechargeable qui mélange automatiquement boissons et protéines d'une simple pression.
+          - generic [ref=e262]:
+            - generic [ref=e263]: 39€
+            - generic [ref=e264]: 55€
+            - generic [ref=e265]: "-29%"
+          - button "0 items in cart" [ref=e266] [cursor=pointer]:
+            - generic [ref=e267] [cursor=pointer]: Ajouter au panier
+            - img [ref=e268] [cursor=pointer]
+    - button "Voir tous les produits →" [ref=e271] [cursor=pointer]
+  - generic [ref=e273]:
+    - generic [ref=e274]:
+      - heading "Ils nous font confiance" [level=2] [ref=e275]:
+        - text: Ils nous font
+        - generic [ref=e276]: confiance
+      - paragraph [ref=e277]: Plus de 25,000 clients satisfaits à travers l'Europe
+    - generic [ref=e280]:
+      - generic [ref=e282]:
+        - paragraph [ref=e283]: Marie L. vient d'acheter
+        - paragraph [ref=e284]: Caméra POV Portable 4K
+      - generic [ref=e285]: Il y a 2 min
+    - generic [ref=e286]:
+      - generic [ref=e287]:
+        - generic [ref=e288]: 25K+
+        - generic [ref=e289]: Clients Satisfaits
+      - generic [ref=e290]:
+        - generic [ref=e291]: 98.5%
+        - generic [ref=e292]: Satisfaction
+      - generic [ref=e293]:
+        - generic [ref=e294]: 24/7
+        - generic [ref=e295]: Support Client
+      - generic [ref=e296]:
+        - generic [ref=e297]: 48H
+        - generic [ref=e298]: Livraison Gratuite
+    - generic [ref=e299]:
+      - generic [ref=e300]:
+        - generic [ref=e301]: ⭐⭐⭐⭐⭐
+        - paragraph [ref=e302]: "\"La caméra POV est juste incroyable ! Qualité 4K parfaite pour mes vlogs d'aventure. Livraison ultra rapide !\""
+        - generic [ref=e303]:
+          - generic [ref=e304]: A
+          - generic [ref=e305]:
+            - generic [ref=e306]: Alexandre M.
+            - generic [ref=e307]: Vérifié • Il y a 3 jours
+      - generic [ref=e308]:
+        - generic [ref=e309]: ⭐⭐⭐⭐⭐
+        - paragraph [ref=e310]: "\"La bouteille hydrogène a vraiment changé ma routine santé. Je me sens plus énergique depuis que je l'utilise !\""
+        - generic [ref=e311]:
+          - generic [ref=e312]: S
+          - generic [ref=e313]:
+            - generic [ref=e314]: Sophie L.
+            - generic [ref=e315]: Vérifié • Il y a 1 semaine
+      - generic [ref=e316]:
+        - generic [ref=e317]: ⭐⭐⭐⭐⭐
+        - paragraph [ref=e318]: "\"Service client exceptionnel et produits de qualité. Ma casquette cryothérapie soulage vraiment mes migraines !\""
+        - generic [ref=e319]:
+          - generic [ref=e320]: L
+          - generic [ref=e321]:
+            - generic [ref=e322]: Lucas R.
+            - generic [ref=e323]: Vérifié • Il y a 5 jours
+  - generic [ref=e327]:
+    - generic [ref=e328]:
+      - generic [ref=e329]: 🎯
+      - text: Offres exclusives et nouveautés en avant-première
+    - heading "Restez à la Pointe des Innovations" [level=2] [ref=e330]:
+      - text: Restez à la Pointe des
+      - generic [ref=e331]: Innovations
+    - paragraph [ref=e332]:
+      - text: Recevez en exclusivité les derniers produits viraux, bénéficiez de
+      - strong [ref=e333]: remises jusqu'à -40%
+      - text: et soyez les premiers informés de nos nouveautés révolutionnaires.
+    - generic [ref=e335]:
+      - textbox "Votre adresse email" [ref=e336]
+      - button "S'abonner" [ref=e337] [cursor=pointer]
+    - generic [ref=e338]:
+      - generic [ref=e339]:
+        - img [ref=e340]
+        - generic [ref=e342]: Contenu exclusif
+      - generic [ref=e343]:
+        - img [ref=e344]
+        - generic [ref=e346]: Remises jusqu'à -40%
+      - generic [ref=e347]:
+        - img [ref=e348]
+        - generic [ref=e350]: Désabonnement facile
+      - generic [ref=e351]:
+        - img [ref=e352]
+        - generic [ref=e354]: 0 spam garanti
+  - contentinfo [ref=e355]:
+    - generic [ref=e356]:
+      - generic [ref=e357]:
+        - generic [ref=e358]:
+          - generic [ref=e359]:
+            - img [ref=e361]
+            - generic [ref=e363]:
+              - generic [ref=e364]: TechViral
+              - paragraph [ref=e365]: Innovations 2025
+          - paragraph [ref=e366]: Votre destination pour les produits les plus innovants et viraux de 2025. Qualité garantie, livraison express, satisfaction client au cœur de nos priorités.
+          - generic [ref=e367]:
+            - link "📘" [ref=e368] [cursor=pointer]:
+              - /url: "#"
+              - generic [ref=e369] [cursor=pointer]: 📘
+            - link "📷" [ref=e370] [cursor=pointer]:
+              - /url: "#"
+              - generic [ref=e371] [cursor=pointer]: 📷
+            - link "🐦" [ref=e372] [cursor=pointer]:
+              - /url: "#"
+              - generic [ref=e373] [cursor=pointer]: 🐦
+            - link "📺" [ref=e374] [cursor=pointer]:
+              - /url: "#"
+              - generic [ref=e375] [cursor=pointer]: 📺
+        - generic [ref=e376]:
+          - heading "Nos Produits" [level=3] [ref=e377]
+          - list [ref=e378]:
+            - listitem [ref=e379]:
+              - link "📱 Électronique" [ref=e380] [cursor=pointer]:
+                - /url: pages/categories/electronique.html
+            - listitem [ref=e381]:
+              - link "🌿 Écologique" [ref=e382] [cursor=pointer]:
+                - /url: pages/categories/ecologique.html
+            - listitem [ref=e383]:
+              - link "💊 Santé" [ref=e384] [cursor=pointer]:
+                - /url: pages/categories/sante.html
+            - listitem [ref=e385]:
+              - link "✨ Lifestyle" [ref=e386] [cursor=pointer]:
+                - /url: pages/categories/lifestyle.html
+            - listitem [ref=e387]:
+              - link "🔥 Promotions" [ref=e388] [cursor=pointer]:
+                - /url: pages/promotions.html
+        - generic [ref=e389]:
+          - heading "Aide & Support" [level=3] [ref=e390]
+          - list [ref=e391]:
+            - listitem [ref=e392]:
+              - link "❓ FAQ" [ref=e393] [cursor=pointer]:
+                - /url: pages/support/faq.html
+            - listitem [ref=e394]:
+              - link "📞 Contact" [ref=e395] [cursor=pointer]:
+                - /url: pages/contact.html
+            - listitem [ref=e396]:
+              - link "🚚 Livraisons" [ref=e397] [cursor=pointer]:
+                - /url: pages/support/shipping.html
+            - listitem [ref=e398]:
+              - link "↩️ Retours" [ref=e399] [cursor=pointer]:
+                - /url: pages/support/returns.html
+            - listitem [ref=e400]:
+              - link "🛡️ Garantie" [ref=e401] [cursor=pointer]:
+                - /url: pages/support/warranty.html
+        - generic [ref=e402]:
+          - heading "Informations Légales" [level=3] [ref=e403]
+          - list [ref=e404]:
+            - listitem [ref=e405]:
+              - link "📋 CGV" [ref=e406] [cursor=pointer]:
+                - /url: pages/legal/terms.html
+            - listitem [ref=e407]:
+              - link "🔒 Confidentialité" [ref=e408] [cursor=pointer]:
+                - /url: pages/legal/privacy.html
+            - listitem [ref=e409]:
+              - link "⚖️ Mentions légales" [ref=e410] [cursor=pointer]:
+                - /url: pages/legal/mentions.html
+            - listitem [ref=e411]:
+              - link "🍪 Cookies" [ref=e412] [cursor=pointer]:
+                - /url: pages/legal/cookies.html
+      - generic [ref=e413]:
+        - paragraph [ref=e414]:
+          - text: © 2025 TechViral. Tous droits réservés. Site optimisé et hébergé par
+          - link "Hostinger" [ref=e415] [cursor=pointer]:
+            - /url: https://hostinger.fr
+          - text: .
+        - generic [ref=e416]:
+          - generic [ref=e417]:
+            - img [ref=e418]
+            - text: Paiements sécurisés
+          - generic [ref=e420]:
+            - img [ref=e421]
+            - text: SSL & 3D Secure
+  - generic [ref=e423]:
+    - generic [ref=e425]:
+      - heading "Mon Panier" [level=3] [ref=e426]
+      - button [ref=e427] [cursor=pointer]:
+        - img [ref=e428] [cursor=pointer]
+    - generic [ref=e431]:
+      - img [ref=e432]
+      - paragraph [ref=e434]: Votre panier est vide
+      - button "Continuer les achats" [ref=e435] [cursor=pointer]
+    - generic [ref=e436]:
+      - generic [ref=e437]:
+        - generic [ref=e438]: "Total:"
+        - generic [ref=e439]: 0.00 €
+      - generic [ref=e440]:
+        - button "Voir le panier complet" [ref=e441] [cursor=pointer]
+        - button "Finaliser la commande" [disabled] [ref=e442]
+```
