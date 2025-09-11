@@ -50,7 +50,8 @@
       "Bash(npm run build:images:*)",
       "Bash(npm run build:legacy:*)",
       "Bash(git reset:*)",
-      "Bash(cat:*)"
+      "Bash(cat:*)",
+      "Bash(git stash:*)"
     ],
     "deny": [],
     "ask": []
