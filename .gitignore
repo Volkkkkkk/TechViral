@@ -56,9 +56,25 @@ ehthumbs.db
 backup_*
 index_backup_*
 
+# Deployment scripts avec credentials (SÉCURITÉ)
+*deploy*.bat
+*ftp*.bat
+ftp_*.txt
+*credentials*
+*.key
+*.pem
+
+# Archives et fichiers temporaires de développement
+archive-*/
+archiverepasox/
+Performance*
+nul
+
 # Ne PAS ignorer ces fichiers importants pour le déploiement
 !.htaccess
 !sw.js
 !*.html
 !assets/
 !pages/
+!deploy.sh
+!DEPLOY.md

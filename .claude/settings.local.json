@@ -32,7 +32,11 @@
       "Bash(ftp:*)",
       "Bash(npm install:*)",
       "Bash(npm run build:css:*)",
-      "Read(//c/**)"
+      "Read(//c/**)",
+      "Bash(ls:*)",
+      "Bash(rm:*)",
+      "Bash(npx:*)",
+      "Bash(npm test)"
     ],
     "deny": [],
     "ask": []
