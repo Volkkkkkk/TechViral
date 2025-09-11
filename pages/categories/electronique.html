@@ -7,6 +7,7 @@
     <meta name="description" content="Découvrez notre sélection exclusive d'électronique et gadgets high-tech 2025 : caméras POV 4K, drones, montres connectées, écouteurs sans fil. Livraison 48h.">
     
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="../../assets/js/breadcrumb-generator.js"></script>
     <script>
         tailwind.config = {
             theme: {
@@ -22,6 +23,14 @@
         }
     </script>
     <link rel="stylesheet" href="../../assets/css/style.css">
+    <script>
+        // Configuration breadcrumb manuel
+        window.breadcrumbData = [
+            { name: 'Accueil', url: '/' },
+            { name: 'Catégories', url: '/pages/categories/' },
+            { name: 'Électronique', url: '/pages/categories/electronique.html' }
+        ];
+    </script>
 </head>
 <body class="font-body bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 dark:from-gray-900 dark:to-indigo-900 text-gray-900 dark:text-gray-100">
 

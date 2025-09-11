@@ -1,0 +1,90 @@
+{
+  "timestamp": "2025-09-10T22:57:44.481Z",
+  "seoReady": true,
+  "score": 100,
+  "validations": {
+    "passed": 4,
+    "total": 4,
+    "details": [
+      {
+        "name": "SEO Mode",
+        "passed": true,
+        "required": true
+      },
+      {
+        "name": "URL Handling",
+        "passed": true,
+        "required": true
+      },
+      {
+        "name": "Pagination SEO",
+        "passed": true,
+        "required": true
+      },
+      {
+        "name": "Canonical Update",
+        "passed": true,
+        "required": true
+      }
+    ]
+  },
+  "issues": [
+    {
+      "severity": "LOW",
+      "category": "NO_JS_FALLBACK",
+      "message": "Page pages/categories/electronique.html sans canonical"
+    },
+    {
+      "severity": "LOW",
+      "category": "NO_JS_FALLBACK",
+      "message": "Page pages/categories/maison.html sans canonical"
+    },
+    {
+      "severity": "MEDIUM",
+      "category": "PREV_NEXT_LINKS",
+      "message": "Liens rel=prev/next non implémentés"
+    }
+  ],
+  "testUrls": [
+    {
+      "url": "/iphone",
+      "type": "category",
+      "valid": true
+    },
+    {
+      "url": "/gaming/pc",
+      "type": "subcategory",
+      "valid": true
+    },
+    {
+      "url": "/accessories?page=2",
+      "type": "pagination",
+      "valid": true
+    },
+    {
+      "url": "/maison?sort=price&filter=eco",
+      "type": "filtered",
+      "valid": true
+    },
+    {
+      "url": "/category.php?id=123",
+      "type": "dynamic",
+      "valid": false
+    },
+    {
+      "url": "/products.aspx?cat=tech&p=2",
+      "type": "dynamic",
+      "valid": false
+    },
+    {
+      "url": "/?ajax=1&filters=true",
+      "type": "ajax_params",
+      "valid": false
+    }
+  ],
+  "summary": {
+    "critical": 0,
+    "total": 3,
+    "status": "SEO_READY"
+  }
+}

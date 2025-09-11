@@ -1,0 +1,178 @@
+commit fix(critical): Corriger liens navigation et optimisations SEO urgentes
+
+# FIXES.DIFF - Quick Wins TechViral
+# Correctifs critiques prêts à appliquer
+# Application: git apply fixes.diff
+
+diff --git a/index.html b/index.html
+--- a/index.html
++++ b/index.html
+@@ -225,8 +225,8 @@
+                         </button>
+                         <div class="absolute right-0 top-full mt-2 w-48 bg-white dark:bg-gray-800 rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 border border-gray-100 dark:border-gray-700">
+                             <div class="p-2">
+-                                <a href="account/login.html" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 rounded-lg">Se connecter</a>
+-                                <a href="account/register.html" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 rounded-lg">Créer un compte</a>
++                                <a href="pages/account/login.html" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 rounded-lg">Se connecter</a>
++                                <a href="pages/account/register.html" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 rounded-lg">Créer un compte</a>
+                                 <hr class="my-2 border-gray-200 dark:border-gray-600">
+-                                <a href="account/profile.html" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 rounded-lg">Mon profil</a>
+-                                <a href="account/orders.html" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 rounded-lg">Mes commandes</a>
++                                <a href="pages/account/profile.html" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 rounded-lg">Mon profil</a>
++                                <a href="pages/account/orders.html" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 rounded-lg">Mes commandes</a>
+                             </div>
+                         </div>
+                     </div>
+@@ -888,6 +888,8 @@
+                     <ul class="space-y-3 text-gray-300">
+-                        <li><a href="support/faq.html" class="hover:text-white hover:translate-x-1 transition-all duration-200">❓ FAQ</a></li>
++                        <li><a href="pages/support/faq.html" class="hover:text-white hover:translate-x-1 transition-all duration-200">❓ FAQ</a></li>
+                         <li><a href="pages/contact.html" class="hover:text-white hover:translate-x-1 transition-all duration-200">📞 Contact</a></li>
+-                        <li><a href="support/shipping.html" class="hover:text-white hover:translate-x-1 transition-all duration-200">🚚 Livraisons</a></li>
+-                        <li><a href="support/returns.html" class="hover:text-white hover:translate-x-1 transition-all duration-200">↩️ Retours</a></li>
+-                        <li><a href="support/warranty.html" class="hover:text-white hover:translate-x-1 transition-all duration-200">🛡️ Garantie</a></li>
++                        <li><a href="pages/support/shipping.html" class="hover:text-white hover:translate-x-1 transition-all duration-200">🚚 Livraisons</a></li>
++                        <li><a href="pages/support/returns.html" class="hover:text-white hover:translate-x-1 transition-all duration-200">↩️ Retours</a></li>
++                        <li><a href="pages/support/warranty.html" class="hover:text-white hover:translate-x-1 transition-all duration-200">🛡️ Garantie</a></li>
+                     </ul>
+@@ -900,9 +902,9 @@
+                     <ul class="space-y-3 text-gray-300">
+-                        <li><a href="legal/terms.html" class="hover:text-white hover:translate-x-1 transition-all duration-200">📋 CGV</a></li>
+-                        <li><a href="legal/privacy.html" class="hover:text-white hover:translate-x-1 transition-all duration-200">🔒 Confidentialité</a></li>
+-                        <li><a href="legal/mentions.html" class="hover:text-white hover:translate-x-1 transition-all duration-200">⚖️ Mentions légales</a></li>
+-                        <li><a href="legal/cookies.html" class="hover:text-white hover:translate-x-1 transition-all duration-200">🍪 Cookies</a></li>
++                        <li><a href="pages/legal/terms.html" class="hover:text-white hover:translate-x-1 transition-all duration-200">📋 CGV</a></li>
++                        <li><a href="pages/legal/privacy.html" class="hover:text-white hover:translate-x-1 transition-all duration-200">🔒 Confidentialité</a></li>
++                        <li><a href="pages/legal/mentions.html" class="hover:text-white hover:translate-x-1 transition-all duration-200">⚖️ Mentions légales</a></li>
++                        <li><a href="pages/legal/cookies.html" class="hover:text-white hover:translate-x-1 transition-all duration-200">🍪 Cookies</a></li>
+                     </ul>
+@@ -995,7 +997,6 @@
+         // Force l'initialisation complète au DOM ready
+         document.addEventListener('DOMContentLoaded', function() {
+-            console.log('🔧 HOTFIX PRO 2025: Initialisation...');
+             
+             // 1. MODE SOMBRE PROFESSIONNEL
+             const darkModeToggle = document.getElementById('darkModeToggle');
+             if (darkModeToggle) {
+-                console.log('🌙 Configuration mode sombre avancée...');
+                 
+                 // Fonction toggle moderne
+                 function toggleDarkMode() {
+@@ -1010,7 +1011,6 @@
+                     document.documentElement.classList.toggle('dark', newTheme === 'dark');
+                     localStorage.setItem('theme', newTheme);
+                     
+-                    console.log(`${newTheme === 'dark' ? '🌙' : '☀️'} Mode ${newTheme} activé`);
+                 }
+                 
+                 // Event listener unique
+                 darkModeToggle.removeEventListener('click', toggleDarkMode);
+                 darkModeToggle.addEventListener('click', toggleDarkMode);
+                 
+-                console.log('✅ Mode sombre configuré (Tailwind v4 compatible) !');
+             }
+             
+             // 2. PANIER PROFESSIONNEL avec JSON.parse sécurisé
+@@ -1029,7 +1027,6 @@
+                 cartCheckAttempts++;
+                 
+                 if (typeof window.cartManager !== 'undefined') {
+-                    console.log('✅ CartManager opérationnel:', window.cartManager.getCartCount(), 'articles');
+                     
+                     // Force synchronisation localStorage
+                     try {
+                         const cartData = localStorage.getItem('techviral_cart');
+                         if (cartData) {
+                             const parsedCart = JSON.parse(cartData); // JSON.parse sécurisé
+-                            console.log('📦 Cart localStorage synchronisé:', parsedCart.length, 'articles');
+                         }
+                         window.cartManager.updateCartBadge();
+                     } catch (e) {
+-                        console.warn('⚠️ Erreur JSON cart:', e);
+                         localStorage.removeItem('techviral_cart'); // Clear corrupted data
+                     }
+                 } else if (cartCheckAttempts < maxAttempts) {
+-                    console.log(`⏳ CartManager en cours de chargement... (${cartCheckAttempts}/${maxAttempts})`);
+                     setTimeout(checkCart, 500); // Retry
+                 } else {
+-                    console.error('❌ CartManager impossible à charger après', maxAttempts, 'tentatives');
+                 }
+             }
+
+diff --git a/pages/categories/electronique.html b/pages/categories/electronique.html
+--- a/pages/categories/electronique.html
++++ b/pages/categories/electronique.html
+@@ -5,6 +5,7 @@
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Électronique & Gadgets High-Tech 2025 | TechViral</title>
+     <meta name="description" content="Découvrez notre sélection exclusive d'électronique et gadgets high-tech 2025 : caméras POV 4K, drones, montres connectées, écouteurs sans fil. Livraison 48h.">
++    <link rel="canonical" href="https://techviral.com/pages/categories/electronique.html">
+     
+     <script src="https://cdn.tailwindcss.com"></script>
+
+diff --git a/pages/categories/ecologique.html b/pages/categories/ecologique.html
+--- a/pages/categories/ecologique.html
++++ b/pages/categories/ecologique.html
+@@ -5,6 +5,7 @@
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Produits Écologiques & Durables 2025 | TechViral</title>
+-    <meta name="description" content="Découvrez notre sélection de produits écologiques et durables : bouteilles hydrogène, cotons réutilisables, alternatives zéro déchet. Livraison éco-responsable.">
++    <meta name="description" content="Collection exclusive produits écologiques 2025 : bouteilles hydrogène H₂, cotons démaquillants réutilisables, alternatives zéro déchet. Livraison neutre carbone 48h.">
++    <link rel="canonical" href="https://techviral.com/pages/categories/ecologique.html">
+
+diff --git a/pages/categories/sante.html b/pages/categories/sante.html
+--- a/pages/categories/sante.html
++++ b/pages/categories/sante.html
+@@ -5,6 +5,7 @@
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Santé & Bien-être - Innovations 2025 | TechViral</title>
+-    <meta name="description" content="Produits santé et bien-être innovants : casquette cryothérapie, appareils de massage, suppléments naturels. Votre santé, notre priorité.">
++    <meta name="description" content="Innovations santé & bien-être 2025 : casquette cryothérapie anti-migraines, thérapie par le froid, appareils de récupération musculaire. Soulagement naturel garanti.">
++    <link rel="canonical" href="https://techviral.com/pages/categories/sante.html">
+
+diff --git a/pages/categories/lifestyle.html b/pages/categories/lifestyle.html
+--- a/pages/categories/lifestyle.html
++++ b/pages/categories/lifestyle.html
+@@ -5,6 +5,7 @@
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Lifestyle & Design - Objets Tendance 2025 | TechViral</title>
+-    <meta name="description" content="Objets lifestyle et design tendance : théières modernes, mugs auto-mélangeurs, accessoires élégants pour un quotidien stylé. Style et fonctionnalité.">
++    <meta name="description" content="Collection lifestyle & design 2025 : théières verre borosilicate à bouton, mugs auto-mélangeurs rechargeables, objets tendance pour quotidien stylé et fonctionnel.">
++    <link rel="canonical" href="https://techviral.com/pages/categories/lifestyle.html">
+
+diff --git a/pages/categories/animaux.html b/pages/categories/animaux.html
+--- a/pages/categories/animaux.html
++++ b/pages/categories/animaux.html
+@@ -5,6 +5,7 @@
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Animaux & Compagnons - Accessoires Innovants | TechViral</title>
+-    <meta name="description" content="Accessoires innovants pour vos animaux de compagnie : colliers GPS intelligents, jouets interactifs, soins vétérinaires. Le bonheur de vos compagnons.">
++    <meta name="description" content="Accessoires high-tech animaux 2025 : colliers GPS intelligents temps réel, jouets interactifs connectés, solutions bien-être pour chiens et chats. Sécurité garantie.">
++    <link rel="canonical" href="https://techviral.com/pages/categories/animaux.html">
+
+# AJOUT PRELOAD CSS CRITIQUE
+diff --git a/pages/categories/all.html b/pages/categories/all.html
+--- a/pages/categories/all.html
++++ b/pages/categories/all.html
+@@ -7,6 +7,8 @@
+     <title>Toutes les Catégories - Catalogue Complet | TechViral</title>
+     <meta name="description" content="Explorez notre catalogue complet de produits innovants 2025 : électronique, écologique, santé, lifestyle, animaux. Tous les produits viraux en un seul endroit.">
++    <link rel="canonical" href="https://techviral.com/pages/categories/all.html">
++    <link rel="preload" href="../../assets/css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+     
+     <script src="https://cdn.tailwindcss.com"></script>
+
+# OPTIMISATION FAVICON
+diff --git a/index.html b/index.html
+--- a/index.html
++++ b/index.html
+@@ -105,7 +105,9 @@
+     
+     <!-- Favicon -->
+-    <link rel="icon" type="image/x-icon" href="assets/icons/favicon.ico">
+-    <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png">
++    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
++    <link rel="icon" type="image/x-icon" href="assets/images/favicon.svg">
++    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon.svg">
++    <meta name="theme-color" content="#6366f1">
+ </head>

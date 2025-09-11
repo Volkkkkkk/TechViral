@@ -1,0 +1,143 @@
+{
+  "timestamp": "2025-09-10T22:51:15.583Z",
+  "siteUrl": "https://techviral.hostingersite.com",
+  "sitemapUrl": "https://techviral.hostingersite.com/sitemap.xml",
+  "status": "ANALYSÉ",
+  "checks": {
+    "file_sitemap_xml": {
+      "exists": true,
+      "path": "C:\\monsite\\sitemap.xml",
+      "status": "OK"
+    },
+    "file_robots_txt": {
+      "exists": true,
+      "path": "C:\\monsite\\robots.txt",
+      "status": "OK"
+    },
+    "file_index_html": {
+      "exists": true,
+      "path": "C:\\monsite\\index.html",
+      "status": "OK"
+    },
+    "sitemap": {
+      "status": "OK",
+      "urlCount": 24,
+      "hasValidStructure": true,
+      "size": 4791,
+      "lastModified": "2025-09-10T18:00:56.602Z",
+      "missingPages": [
+        "/",
+        "/iphone",
+        "/android",
+        "/gaming",
+        "/accessories",
+        "/gaming/pc",
+        "/gaming/console",
+        "/gaming/mobile",
+        "/maison",
+        "/bebe",
+        "/mode"
+      ]
+    },
+    "robots": {
+      "status": "OK",
+      "hasUserAgent": true,
+      "hasDirectives": true,
+      "hasSitemap": true,
+      "hasSitemapUrl": false,
+      "content": "# TechViral - Robots.txt\r\n# Site optimisé pour les moteurs de recherche et l'expérience utilisateur\r\n\r\nUser-agent: *\r\nAllow: /\r\n\r\n# Priorités SEO\r\nAllow: /index.html\r\nAllow: /pages/categories/\r\nAllow: /pages/promotions.html\r\nAllow: /assets/css/\r\nAllow: /assets/js/\r\nAllow: /assets/images/\r\n\r\n# Fichiers système à exclure\r\nDisallow: /config/\r\nDisallow: /docs/\r\nDisallow: /*.json$\r\nDisallow: /Base*\r\n\r\n# Performance et cache\r\nDisallow: /assets/temp/\r\nDisallow: /.claude/\r\n\r\n# Sitemap\r\nSitemap: https://techviral.com/sitemap.xml\r\n\r\n# Délai entre les requêtes (en secondes)\r\nCrawl-delay: 1\r\n\r\n# Directives spécifiques pour les moteurs de recherche majeurs\r\nUser-agent: Googlebot\r\nAllow: /\r\nCrawl-delay: 1\r\n\r\nUser-agent: Bingbot\r\nAllow: /\r\nCrawl-delay: 1\r\n\r\nUser-agent: facebookexternalhit\r\nAllow: /\r\n\r\nUser-agent: Twitterbot\r\nAllow: /\r\n\r\n# Interdire les bots malveillants\r\nUser-agent: SemrushBot\r\nDisallow: /\r\n\r\nUser-agent: AhrefsBot\r\nDisallow: /\r\n\r\nUser-agent: MJ12bot\r\nDisallow: /"
+    },
+    "verification": {
+      "status": "CONFIGURÉ",
+      "hasGoogle": false,
+      "hasBing": false,
+      "googleToken": null,
+      "bingToken": null
+    },
+    "canonical": {
+      "status": "OK",
+      "url": "https://techviral.com/",
+      "isAbsolute": true
+    },
+    "coverage": {
+      "total": 11,
+      "found": 0,
+      "missing": [
+        {
+          "path": "/",
+          "priority": 1,
+          "category": "Homepage"
+        },
+        {
+          "path": "/iphone",
+          "priority": 0.9,
+          "category": "Product Category"
+        },
+        {
+          "path": "/android",
+          "priority": 0.9,
+          "category": "Product Category"
+        },
+        {
+          "path": "/gaming",
+          "priority": 0.9,
+          "category": "Product Category"
+        },
+        {
+          "path": "/accessories",
+          "priority": 0.8,
+          "category": "Product Category"
+        },
+        {
+          "path": "/gaming/pc",
+          "priority": 0.8,
+          "category": "Product Subcategory"
+        },
+        {
+          "path": "/gaming/console",
+          "priority": 0.8,
+          "category": "Product Subcategory"
+        },
+        {
+          "path": "/gaming/mobile",
+          "priority": 0.8,
+          "category": "Product Subcategory"
+        },
+        {
+          "path": "/maison",
+          "priority": 0.8,
+          "category": "Product Category"
+        },
+        {
+          "path": "/bebe",
+          "priority": 0.8,
+          "category": "Product Category"
+        },
+        {
+          "path": "/mode",
+          "priority": 0.8,
+          "category": "Product Category"
+        }
+      ],
+      "priorities": {}
+    }
+  },
+  "recommendations": [
+    {
+      "priority": "HIGH",
+      "action": "Ajouter meta verification Google",
+      "description": "Obtenir token GSC et ajouter <meta name=\"google-site-verification\">"
+    },
+    {
+      "priority": "MEDIUM",
+      "action": "Compléter couverture pages",
+      "description": "11 pages manquantes dans sitemap"
+    },
+    {
+      "priority": "LOW",
+      "action": "Référencer sitemap dans robots.txt",
+      "description": "Améliore découverte du sitemap par les crawlers"
+    }
+  ],
+  "readyForSubmission": true
+}

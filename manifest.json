@@ -1,151 +1,98 @@
 {
-  "name": "TechViral - Produits Innovants & Gadgets 2025",
+  "name": "TechViral",
   "short_name": "TechViral",
-  "description": "Découvrez 764+ produits viraux et innovants : caméra POV, drone en mousse, bouteille hydrogène. Livraison gratuite 48h, -30% nouveautés.",
+  "description": "TechViral - High-tech et accessoires premium",
+  "lang": "fr",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#ffffff",
+  "orientation": "portrait",
   "theme_color": "#6366f1",
-  "orientation": "any",
+  "background_color": "#ffffff",
   "scope": "/",
-  "lang": "fr",
-  "dir": "ltr",
-  
   "icons": [
     {
-      "src": "assets/icons/icon-72x72.png",
-      "sizes": "72x72",
-      "type": "image/png",
-      "purpose": "maskable any"
-    },
-    {
-      "src": "assets/icons/icon-96x96.png",
-      "sizes": "96x96",
-      "type": "image/png",
-      "purpose": "maskable any"
-    },
-    {
-      "src": "assets/icons/icon-128x128.png",
-      "sizes": "128x128",
-      "type": "image/png",
-      "purpose": "maskable any"
-    },
-    {
-      "src": "assets/icons/icon-144x144.png",
-      "sizes": "144x144",
-      "type": "image/png",
-      "purpose": "maskable any"
-    },
-    {
-      "src": "assets/icons/icon-152x152.png",
-      "sizes": "152x152",
-      "type": "image/png",
-      "purpose": "maskable any"
-    },
-    {
-      "src": "assets/icons/icon-192x192.png",
+      "src": "assets/icons/android-chrome-192x192.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "maskable any"
     },
     {
-      "src": "assets/icons/icon-384x384.png",
-      "sizes": "384x384",
-      "type": "image/png",
-      "purpose": "maskable any"
-    },
-    {
-      "src": "assets/icons/icon-512x512.png",
+      "src": "assets/icons/android-chrome-512x512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "maskable any"
+    },
+    {
+      "src": "assets/icons/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/icons/favicon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/icons/favicon-16x16.png",
+      "sizes": "16x16",
+      "type": "image/png"
     }
   ],
-  
   "categories": [
     "shopping",
-    "lifestyle",
-    "productivity"
+    "technology",
+    "business"
   ],
-  
-  "shortcuts": [
-    {
-      "name": "Recherche Intelligente",
-      "short_name": "Recherche",
-      "description": "Recherche vocale et intelligente dans 764 produits",
-      "url": "/search",
-      "icons": [
-        {
-          "src": "assets/icons/search-icon-96x96.png",
-          "sizes": "96x96"
-        }
-      ]
-    },
-    {
-      "name": "Promotions Flash -30%",
-      "short_name": "Promos",
-      "description": "Offres limitées et réductions exclusives",
-      "url": "/pages/promotions.html",
-      "icons": [
-        {
-          "src": "assets/icons/promo-icon-96x96.png",
-          "sizes": "96x96"
-        }
-      ]
-    },
-    {
-      "name": "Mon Panier Express",
-      "short_name": "Panier",
-      "description": "Checkout rapide en un clic",
-      "url": "/pages/cart",
-      "icons": [
-        {
-          "src": "assets/icons/cart-icon-96x96.png",
-          "sizes": "96x96"
-        }
-      ]
-    },
-    {
-      "name": "Innovations 2025",
-      "short_name": "Nouveautés",
-      "description": "Derniers gadgets viraux et tendances tech",
-      "url": "/pages/categories/all.html?sort=newest",
-      "icons": [
-        {
-          "src": "assets/icons/innovation-icon-96x96.png",
-          "sizes": "96x96"
-        }
-      ]
-    }
-  ],
-  
   "screenshots": [
     {
-      "src": "assets/images/screenshot-wide.png",
+      "src": "assets/icons/screenshot-wide.png",
       "sizes": "1280x720",
       "type": "image/png",
-      "form_factor": "wide",
-      "label": "Page d'accueil TechViral"
+      "form_factor": "wide"
     },
     {
-      "src": "assets/images/screenshot-narrow.png",
-      "sizes": "360x640",
+      "src": "assets/icons/screenshot-narrow.png",
+      "sizes": "640x1136",
       "type": "image/png",
-      "form_factor": "narrow",
-      "label": "Vue mobile TechViral"
+      "form_factor": "narrow"
     }
   ],
-  
-  "edge_side_panel": {
-    "preferred_width": 400
-  },
-  
-  "related_applications": [
+  "shortcuts": [
     {
-      "platform": "webapp",
-      "url": "https://techviral.com/manifest.json"
+      "name": "iPhone",
+      "short_name": "iPhone",
+      "description": "Découvrir les iPhone",
+      "url": "/iphone",
+      "icons": [
+        {
+          "src": "assets/icons/shortcut-iphone.png",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "Android",
+      "short_name": "Android",
+      "description": "Découvrir Android",
+      "url": "/android",
+      "icons": [
+        {
+          "src": "assets/icons/shortcut-android.png",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "Gaming",
+      "short_name": "Gaming",
+      "description": "Matériel Gaming",
+      "url": "/gaming",
+      "icons": [
+        {
+          "src": "assets/icons/shortcut-gaming.png",
+          "sizes": "96x96"
+        }
+      ]
     }
-  ],
-  
-  "prefer_related_applications": false
+  ]
 }
