@@ -23,7 +23,7 @@ Disallow: /assets/temp/
 Disallow: /.claude/
 
 # Sitemap
-Sitemap: https://techviral.com/sitemap.xml
+Sitemap: https://antiquewhite-rabbit-562143.hostingersite.com/sitemap.xml
 
 # Délai entre les requêtes (en secondes)
 Crawl-delay: 1

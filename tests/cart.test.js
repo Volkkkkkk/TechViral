@@ -17,23 +17,37 @@ class TestFramework {
 
     async run() {
         console.log('🧪 Démarrage des tests du panier TechViral\n');
+        const startTime = Date.now();
         
         for (const test of this.tests) {
+            const testStartTime = Date.now();
             try {
                 await test.testFn();
-                console.log(`✅ ${test.name}`);
+                const testDuration = Date.now() - testStartTime;
+                console.log(`✅ ${test.name} (${testDuration}ms)`);
                 this.passed++;
             } catch (error) {
-                console.error(`❌ ${test.name}`);
+                const testDuration = Date.now() - testStartTime;
+                console.error(`❌ ${test.name} (${testDuration}ms)`);
                 console.error(`   Erreur: ${error.message}`);
+                console.error(`   Stack: ${error.stack?.split('\n')[1]?.trim() || 'N/A'}`);
                 this.failed++;
             }
         }
         
+        const totalDuration = Date.now() - startTime;
         console.log(`\n📊 Résultats des tests:`);
         console.log(`   ✅ Réussis: ${this.passed}`);
         console.log(`   ❌ Échoués: ${this.failed}`);
-        console.log(`   Total: ${this.tests.length}`);
+        console.log(`   📦 Total: ${this.tests.length}`);
+        console.log(`   ⏱️  Durée: ${totalDuration}ms`);
+        console.log(`   📈 Taux de réussite: ${Math.round((this.passed / this.tests.length) * 100)}%`);
+        
+        if (this.failed === 0) {
+            console.log(`\n🎉 Tous les tests sont passés avec succès!\n`);
+        } else {
+            console.log(`\n⚠️  ${this.failed} test(s) ont échoué.\n`);
+        }
         
         return this.failed === 0;
     }

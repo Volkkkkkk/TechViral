@@ -9,102 +9,145 @@
     <!-- SEO Meta Tags -->
     <meta name="keywords" content="dropshipping, produits viraux, caméra POV, drone mousse, bouteille hydrogène, casquette cryothérapie, gadgets 2025, produits innovants, électronique, écologique">
     <meta name="author" content="TechViral">
-    <link rel="canonical" href="https://techviral.com/">
+    <link rel="canonical" href="https://antiquewhite-rabbit-562143.hostingersite.com/">
     
     <!-- Open Graph -->
     <meta property="og:title" content="TechViral - Produits Viraux & Innovations 2025">
-    <meta property="og:description" content="Les produits les plus innovants et tendance : caméra POV, drone en mousse, bouteille hydrogène. Livraison gratuite sous 48h.">
+    <meta property="og:description" content="Découvrez les produits les plus viraux et innovants de 2025 : caméra POV portable, drone en mousse, bouteille hydrogène, casquette cryothérapie. Livraison gratuite et 30j de garantie.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://techviral.com/">
-    <meta property="og:image" content="https://techviral.com/assets/images/og-image.jpg">
+    <meta property="og:url" content="https://antiquewhite-rabbit-562143.hostingersite.com/">
+    <meta property="og:image" content="https://antiquewhite-rabbit-562143.hostingersite.com/assets/images/og-home-1200x630.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="TechViral - Sélection produits innovants 2025">
+    <meta property="og:site_name" content="TechViral">
+    <meta property="og:locale" content="fr_FR">
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="TechViral - Innovations 2025">
-    <meta name="twitter:description" content="Produits viraux et gadgets révolutionnaires">
+    <meta name="twitter:site" content="@TechViral">
+    <meta name="twitter:creator" content="@TechViral">
+    <meta name="twitter:title" content="TechViral - Produits Viraux & Innovations 2025">
+    <meta name="twitter:description" content="Découvrez les gadgets les plus viraux : caméra POV 4K, drone mousse, bouteille hydrogène, casquette cryothérapie. Livraison 48h.">
+    <meta name="twitter:image" content="https://antiquewhite-rabbit-562143.hostingersite.com/assets/images/twitter-card-home.jpg">
     
     <!-- Structured Data -->
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Store",
-      "name": "TechViral",
-      "description": "Boutique spécialisée dans les produits innovants et gadgets high-tech",
-      "url": "https://techviral.com",
-      "logo": "https://techviral.com/assets/images/logo.png",
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "telephone": "+33-1-23-45-67-89",
-        "contactType": "customer service",
-        "availableLanguage": "French"
+    [
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "TechViral",
+        "description": "Boutique spécialisée en high-tech et accessoires premium",
+        "url": "https://antiquewhite-rabbit-562143.hostingersite.com",
+        "logo": "https://antiquewhite-rabbit-562143.hostingersite.com/assets/icons/logo.png",
+        "image": "https://antiquewhite-rabbit-562143.hostingersite.com/assets/images/og-home-1200x630.jpg",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+33-1-23-45-67-89",
+          "contactType": "Customer Service",
+          "email": "contact@techviral.com",
+          "availableLanguage": "French"
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "FR",
+          "addressLocality": "Paris"
+        },
+        "sameAs": [
+          "https://www.facebook.com/techviral",
+          "https://www.instagram.com/techviral",
+          "https://www.twitter.com/techviral"
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "TechViral",
+        "description": "High-tech et accessoires premium",
+        "url": "https://antiquewhite-rabbit-562143.hostingersite.com",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "https://antiquewhite-rabbit-562143.hostingersite.com/search?q={search_term_string}"
+          },
+          "query-input": "required name=search_term_string"
+        }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Store",
+        "name": "TechViral",
+        "description": "Boutique spécialisée dans les produits innovants et gadgets high-tech",
+        "url": "https://antiquewhite-rabbit-562143.hostingersite.com",
+        "logo": "https://antiquewhite-rabbit-562143.hostingersite.com/assets/icons/logo.png",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+33-1-23-45-67-89",
+          "contactType": "customer service",
+          "availableLanguage": "French"
+        }
       }
-    }
+    ]
     </script>
     
-    <!-- Tailwind CSS avec configuration inline (CDN pour développement) -->
-    <!-- TODO: Remplacer par PostCSS build pour production -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        // Configuration Tailwind après chargement
-        document.addEventListener('DOMContentLoaded', function() {
-            if (typeof tailwind !== 'undefined') {
-                tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '#6366f1',
-                        secondary: '#f59e0b',
-                        accent: '#10b981',
-                        warm: '#fef7ed',
-                        cool: '#f0f9ff',
-                        'mocha-mousse': '#8B5A2B'
-                    },
-                    fontFamily: {
-                        'display': ['Inter Variable', 'Inter', 'system-ui', 'sans-serif'],
-                        'body': ['Inter Variable', 'Inter', 'system-ui', 'sans-serif']
-                    },
-                    animation: {
-                        'float': 'float 6s ease-in-out infinite',
-                        'glow': 'glow 2s ease-in-out infinite alternate',
-                        'slide-up': 'slideUp 0.3s ease-out',
-                        'cart-bounce': 'cartBounce 0.6s ease-out'
-                    },
-                    keyframes: {
-                        float: {
-                            '0%, 100%': { transform: 'translateY(0px)' },
-                            '50%': { transform: 'translateY(-10px)' }
-                        },
-                        glow: {
-                            '0%': { boxShadow: '0 0 5px #6366f1' },
-                            '100%': { boxShadow: '0 0 20px #6366f1, 0 0 30px #6366f1' }
-                        },
-                        slideUp: {
-                            '0%': { transform: 'translateY(10px)', opacity: '0' },
-                            '100%': { transform: 'translateY(0)', opacity: '1' }
-                        },
-                        cartBounce: {
-                            '0%, 20%, 50%, 80%, 100%': { transform: 'translateY(0)' },
-                            '40%': { transform: 'translateY(-10px)' },
-                            '60%': { transform: 'translateY(-5px)' }
-                        }
-                    }
-                }
-            },
-            darkMode: 'selector'  // FIXÉ: v4-compatible selector au lieu de class
-                }
-            }
-        });
-    </script>
+    <!-- Tailwind CSS optimisé (build local) -->
+    <link rel="stylesheet" href="assets/css/tailwind.min.css">
     
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
     
     <!-- Preload critical resources -->
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <style>
+    @font-face{
+      font-family:'Inter Variable';
+      font-style:normal;
+      font-display:swap;
+      src:url('https://fonts.gstatic.com/s/inter/v13/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa1ZL7.woff2') format('woff2');
+    }
+    </style>
     
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="assets/icons/favicon.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png">
+    
+    <!-- Breadcrumb Generator -->
+    <script src="assets/js/breadcrumb-generator.js"></script>
+    
+    <!-- Search Console Manager -->
+    <script src="assets/js/search-console-manager.js"></script>
+    
+    <!-- Image Optimizer -->
+    <script src="assets/js/image-optimizer.js"></script>
+    
+    <!-- Accessibility Checker -->
+    <script src="assets/js/accessibility-checker.js"></script>
+    
+    <!-- Mobile Navigation -->
+    <script src="assets/js/mobile-navigation.js"></script>
+    
+    <!-- GA4 Analytics -->
+    <script src="assets/js/analytics-ga4.js"></script>
+    
+    <!-- Category Filters -->
+    <script src="assets/js/category-filters.js"></script>
+    
+    <!-- Performance Monitor -->
+    <script src="assets/js/performance-monitor.js"></script>
+    
+    <!-- Vitals Dashboard -->
+    <script src="assets/js/vitals-dashboard.js"></script>
+    
+    <!-- GDPR Consent -->
+    <script src="assets/js/gdpr-consent.js"></script>
+    
+    <!-- Error Monitor -->
+    <script src="assets/js/error-monitor.js"></script>
+    
+    <!-- Browser Tester -->
+    <script src="assets/js/browser-tester.js"></script>
 </head>
 <body class="font-body bg-gradient-to-br from-warm to-cool dark:from-gray-900 dark:to-gray-800 text-gray-900 dark:text-gray-100 transition-colors duration-300">
 
@@ -225,11 +268,11 @@
                         </button>
                         <div class="absolute right-0 top-full mt-2 w-48 bg-white dark:bg-gray-800 rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 border border-gray-100 dark:border-gray-700">
                             <div class="p-2">
-                                <a href="account/login.html" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 rounded-lg">Se connecter</a>
-                                <a href="account/register.html" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 rounded-lg">Créer un compte</a>
+                                <a href="pages/account/login.html" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 rounded-lg">Se connecter</a>
+                                <a href="pages/account/register.html" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 rounded-lg">Créer un compte</a>
                                 <hr class="my-2 border-gray-200 dark:border-gray-600">
-                                <a href="account/profile.html" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 rounded-lg">Mon profil</a>
-                                <a href="account/orders.html" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 rounded-lg">Mes commandes</a>
+                                <a href="pages/account/profile.html" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 rounded-lg">Mon profil</a>
+                                <a href="pages/account/orders.html" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 rounded-lg">Mes commandes</a>
                             </div>
                         </div>
                     </div>
@@ -872,7 +915,7 @@
                 
                 <!-- Quick Links -->
                 <div>
-                    <h3 class="font-bold text-lg mb-4 text-white">Produits</h3>
+                    <h3 class="font-bold text-lg mb-4 text-white">Nos Produits</h3>
                     <ul class="space-y-3 text-gray-300">
                         <li><a href="pages/categories/electronique.html" class="hover:text-white hover:translate-x-1 transition-all duration-200">📱 Électronique</a></li>
                         <li><a href="pages/categories/ecologique.html" class="hover:text-white hover:translate-x-1 transition-all duration-200">🌿 Écologique</a></li>
@@ -884,24 +927,24 @@
                 
                 <!-- Support -->
                 <div>
-                    <h3 class="font-bold text-lg mb-4 text-white">Support</h3>
+                    <h3 class="font-bold text-lg mb-4 text-white">Aide & Support</h3>
                     <ul class="space-y-3 text-gray-300">
-                        <li><a href="support/faq.html" class="hover:text-white hover:translate-x-1 transition-all duration-200">❓ FAQ</a></li>
+                        <li><a href="pages/support/faq.html" class="hover:text-white hover:translate-x-1 transition-all duration-200">❓ FAQ</a></li>
                         <li><a href="pages/contact.html" class="hover:text-white hover:translate-x-1 transition-all duration-200">📞 Contact</a></li>
-                        <li><a href="support/shipping.html" class="hover:text-white hover:translate-x-1 transition-all duration-200">🚚 Livraisons</a></li>
-                        <li><a href="support/returns.html" class="hover:text-white hover:translate-x-1 transition-all duration-200">↩️ Retours</a></li>
-                        <li><a href="support/warranty.html" class="hover:text-white hover:translate-x-1 transition-all duration-200">🛡️ Garantie</a></li>
+                        <li><a href="pages/support/shipping.html" class="hover:text-white hover:translate-x-1 transition-all duration-200">🚚 Livraisons</a></li>
+                        <li><a href="pages/support/returns.html" class="hover:text-white hover:translate-x-1 transition-all duration-200">↩️ Retours</a></li>
+                        <li><a href="pages/support/warranty.html" class="hover:text-white hover:translate-x-1 transition-all duration-200">🛡️ Garantie</a></li>
                     </ul>
                 </div>
                 
                 <!-- Legal -->
                 <div>
-                    <h3 class="font-bold text-lg mb-4 text-white">Légal</h3>
+                    <h3 class="font-bold text-lg mb-4 text-white">Informations Légales</h3>
                     <ul class="space-y-3 text-gray-300">
-                        <li><a href="legal/terms.html" class="hover:text-white hover:translate-x-1 transition-all duration-200">📋 CGV</a></li>
-                        <li><a href="legal/privacy.html" class="hover:text-white hover:translate-x-1 transition-all duration-200">🔒 Confidentialité</a></li>
-                        <li><a href="legal/mentions.html" class="hover:text-white hover:translate-x-1 transition-all duration-200">⚖️ Mentions légales</a></li>
-                        <li><a href="legal/cookies.html" class="hover:text-white hover:translate-x-1 transition-all duration-200">🍪 Cookies</a></li>
+                        <li><a href="pages/legal/terms.html" class="hover:text-white hover:translate-x-1 transition-all duration-200">📋 CGV</a></li>
+                        <li><a href="pages/legal/privacy.html" class="hover:text-white hover:translate-x-1 transition-all duration-200">🔒 Confidentialité</a></li>
+                        <li><a href="pages/legal/mentions.html" class="hover:text-white hover:translate-x-1 transition-all duration-200">⚖️ Mentions légales</a></li>
+                        <li><a href="pages/legal/cookies.html" class="hover:text-white hover:translate-x-1 transition-all duration-200">🍪 Cookies</a></li>
                     </ul>
                 </div>
             </div>
@@ -995,12 +1038,12 @@
         
         // Force l'initialisation complète au DOM ready
         document.addEventListener('DOMContentLoaded', function() {
-            console.log('🔧 HOTFIX PRO 2025: Initialisation...');
+            // Supprimé: console.log debug production
             
             // 1. MODE SOMBRE PROFESSIONNEL
             const darkModeToggle = document.getElementById('darkModeToggle');
             if (darkModeToggle) {
-                console.log('🌙 Configuration mode sombre avancée...');
+                // Mode sombre configuré
                 
                 // Fonction toggle moderne
                 function toggleDarkMode() {
@@ -1010,14 +1053,14 @@
                     document.documentElement.classList.toggle('dark', newTheme === 'dark');
                     localStorage.setItem('theme', newTheme);
                     
-                    console.log(`${newTheme === 'dark' ? '🌙' : '☀️'} Mode ${newTheme} activé`);
+                    // Theme ${newTheme} activé
                 }
                 
                 // Event listener unique
                 darkModeToggle.removeEventListener('click', toggleDarkMode);
                 darkModeToggle.addEventListener('click', toggleDarkMode);
                 
-                console.log('✅ Mode sombre configuré (Tailwind v4 compatible) !');
+                // Mode sombre opérationnel
             }
             
             // 2. PANIER PROFESSIONNEL avec JSON.parse sécurisé
@@ -1028,25 +1071,25 @@
                 cartCheckAttempts++;
                 
                 if (typeof window.cartManager !== 'undefined') {
-                    console.log('✅ CartManager opérationnel:', window.cartManager.getCartCount(), 'articles');
+                    // CartManager opérationnel
                     
                     // Force synchronisation localStorage
                     try {
                         const cartData = localStorage.getItem('techviral_cart');
                         if (cartData) {
                             const parsedCart = JSON.parse(cartData); // JSON.parse sécurisé
-                            console.log('📦 Cart localStorage synchronisé:', parsedCart.length, 'articles');
+                            // Cart localStorage synchronisé
                         }
                         window.cartManager.updateCartBadge();
                     } catch (e) {
-                        console.warn('⚠️ Erreur JSON cart:', e);
+                        // Erreur JSON cart, clearing corrupted data
                         localStorage.removeItem('techviral_cart'); // Clear corrupted data
                     }
                 } else if (cartCheckAttempts < maxAttempts) {
-                    console.log(`⏳ CartManager en cours de chargement... (${cartCheckAttempts}/${maxAttempts})`);
+                    // CartManager loading...
                     setTimeout(checkCart, 500); // Retry
                 } else {
-                    console.error('❌ CartManager impossible à charger après', maxAttempts, 'tentatives');
+                    // CartManager failed to load
                 }
             }
             
@@ -1056,20 +1099,8 @@
 
     <!-- Performance & Analytics -->
     <script>
-        // Lazy load images
-        if ('IntersectionObserver' in window) {
-            const imageObserver = new IntersectionObserver((entries, observer) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        const img = entry.target;
-                        img.src = img.dataset.src;
-                        img.classList.remove('lazy');
-                        observer.unobserve(img);
-                    }
-                });
-            });
-            document.querySelectorAll('img[data-src]').forEach(img => imageObserver.observe(img));
-        }
+        // Images optimisées par image-optimizer.js (AVIF/WebP automatique)
+        // Lazy loading + formats modernes gérés automatiquement
     </script>
 </body>
 </html>

@@ -1,0 +1,36 @@
+{
+  "timestamp": "2025-09-10T22:54:25.616Z",
+  "compliance": true,
+  "gtmBlocked": true,
+  "ga4Blocked": true,
+  "issues": [],
+  "validations": [
+    {
+      "name": "EU Detection",
+      "passed": true,
+      "required": true
+    },
+    {
+      "name": "Cookie Categories",
+      "passed": true,
+      "required": true
+    },
+    {
+      "name": "Consent Banner",
+      "passed": true,
+      "required": true
+    },
+    {
+      "name": "Granular Consent",
+      "passed": true,
+      "required": true
+    }
+  ],
+  "summary": {
+    "criticalIssues": 0,
+    "highIssues": 0,
+    "totalIssues": 0,
+    "complianceStatus": "CONFORME"
+  },
+  "recommendations": []
+}

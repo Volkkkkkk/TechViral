@@ -1,0 +1,156 @@
+{
+  "timestamp": "2025-09-10T23:03:14.758Z",
+  "schemaReady": false,
+  "score": 67,
+  "validations": {
+    "passed": 4,
+    "total": 6,
+    "details": [
+      {
+        "name": "Product Schema",
+        "passed": true,
+        "required": true
+      },
+      {
+        "name": "Organization Schema",
+        "passed": true,
+        "required": true
+      },
+      {
+        "name": "WebSite Schema",
+        "passed": false,
+        "required": true
+      },
+      {
+        "name": "Breadcrumb Schema",
+        "passed": false,
+        "required": true
+      },
+      {
+        "name": "Offers Schema",
+        "passed": true,
+        "required": true
+      },
+      {
+        "name": "Aggregate Rating",
+        "passed": true,
+        "required": false
+      }
+    ]
+  },
+  "schemas": [
+    {
+      "file": "pages/products/camera-pov-gopro-hero13.html",
+      "schema": {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": "GoPro HERO 13 Black - Caméra POV 4K",
+        "image": "../../assets/images/products/gopro-hero13-main.jpg",
+        "description": "Caméra POV portable 4K ultra-légère avec stabilisation avancée HyperSmooth, parfaite pour créer des contenus viraux",
+        "brand": {
+          "@type": "Brand",
+          "name": "GoPro"
+        },
+        "model": "HERO 13 Black",
+        "offers": {
+          "@type": "Offer",
+          "priceCurrency": "EUR",
+          "price": "449.00",
+          "availability": "https://schema.org/InStock",
+          "seller": {
+            "@type": "Organization",
+            "name": "TechViral"
+          }
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.8",
+          "reviewCount": "127"
+        }
+      },
+      "valid": true,
+      "fields": {
+        "hasName": "GoPro HERO 13 Black - Caméra POV 4K",
+        "hasDescription": "Caméra POV portable 4K ultra-légère avec stabilisation avancée HyperSmooth, parfaite pour créer des contenus viraux",
+        "hasImage": "../../assets/images/products/gopro-hero13-main.jpg",
+        "hasOffers": {
+          "@type": "Offer",
+          "priceCurrency": "EUR",
+          "price": "449.00",
+          "availability": "https://schema.org/InStock",
+          "seller": {
+            "@type": "Organization",
+            "name": "TechViral"
+          }
+        },
+        "hasBrand": {
+          "@type": "Brand",
+          "name": "GoPro"
+        }
+      }
+    },
+    {
+      "file": "pages/products/collier-gps-intelligent.html",
+      "schema": {
+        "@context": "https://schema.org/",
+        "@type": "Product",
+        "name": "Collier GPS Intelligent pour Chien",
+        "image": "https://images.unsplash.com/photo-1601758228041-f3b2795255f1?w=800",
+        "description": "Collier GPS intelligent avec suivi en temps réel, zones de sécurité et monitoring d'activité. Autonomie 7 jours, étanche IP67.",
+        "brand": {
+          "@type": "Brand",
+          "name": "TechViral"
+        },
+        "offers": {
+          "@type": "Offer",
+          "url": "https://techviral.com/pages/products/collier-gps-intelligent.html",
+          "priceCurrency": "EUR",
+          "price": "89.90",
+          "itemCondition": "https://schema.org/NewCondition",
+          "availability": "https://schema.org/InStock"
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.7",
+          "reviewCount": "2891"
+        }
+      },
+      "valid": true,
+      "fields": {
+        "hasName": "Collier GPS Intelligent pour Chien",
+        "hasDescription": "Collier GPS intelligent avec suivi en temps réel, zones de sécurité et monitoring d'activité. Autonomie 7 jours, étanche IP67.",
+        "hasImage": "https://images.unsplash.com/photo-1601758228041-f3b2795255f1?w=800",
+        "hasOffers": {
+          "@type": "Offer",
+          "url": "https://techviral.com/pages/products/collier-gps-intelligent.html",
+          "priceCurrency": "EUR",
+          "price": "89.90",
+          "itemCondition": "https://schema.org/NewCondition",
+          "availability": "https://schema.org/InStock"
+        },
+        "hasBrand": {
+          "@type": "Brand",
+          "name": "TechViral"
+        }
+      }
+    }
+  ],
+  "productPages": 10,
+  "issues": [
+    {
+      "severity": "MEDIUM",
+      "category": "SCHEMA_GENERATOR",
+      "message": "2 types de schema manquants"
+    },
+    {
+      "severity": "HIGH",
+      "category": "PRODUCT_SCHEMAS",
+      "message": "Page pages/products/bouteille-hydrogene-piurify.html sans schema"
+    }
+  ],
+  "summary": {
+    "critical": 1,
+    "total": 2,
+    "status": "NEEDS_FIXES"
+  }
+}
