@@ -13,11 +13,21 @@
 # 2. Commit et push vers GitHub
 git add .
 git commit -m "Description des changements"
-git push origin master
+
+# IMPORTANT: Le webhook Hostinger suit la branche 'main'
+git push origin main
 
 # 3. Le webhook Hostinger se déclenche automatiquement
 # 4. Site synchronisé en ~10 secondes
 ```
+
+### ⚠️ **Problème Résolu - Branches Git**
+**Cause du problème :** Le webhook Hostinger était configuré pour la branche `main` mais nous poussions vers `master`.
+
+**Solution appliquée :**
+1. Synchronisation `master` → `main` 
+2. Push vers branche `main` pour déclencher le webhook
+3. Déploiement automatique maintenant fonctionnel ✅
 
 ### Avantages
 ✅ Automatique - pas d'intervention manuelle  
