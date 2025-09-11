@@ -36,7 +36,21 @@
       "Bash(ls:*)",
       "Bash(rm:*)",
       "Bash(npx:*)",
-      "Bash(npm test)"
+      "Bash(npm test)",
+      "Bash(npm run lint:*)",
+      "Bash(npm run test:playwright:*)",
+      "Bash(npm i:*)",
+      "Bash(npm run test:lighthouse:*)",
+      "Bash(where chrome)",
+      "Bash(where chromium)",
+      "Bash(git remote set-url:*)",
+      "Bash(setx:*)",
+      "Bash(set LHCI_GITHUB_TOKEN=:*)",
+      "Bash(npm run serve:*)",
+      "Bash(npm run build:images:*)",
+      "Bash(npm run build:legacy:*)",
+      "Bash(git reset:*)",
+      "Bash(cat:*)"
     ],
     "deny": [],
     "ask": []
