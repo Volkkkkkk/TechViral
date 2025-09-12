@@ -92,13 +92,11 @@
     ]
     </script>
     
-    <!-- Tailwind CSS optimisé (non-blocking preload) -->
-    <link rel="preload" href="assets/css/tailwind.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="assets/css/tailwind.min.css"></noscript>
+    <!-- Tailwind CSS -->
+    <link rel="stylesheet" href="assets/css/tailwind.min.css">
     
-    <!-- Custom CSS (non-blocking preload) -->
-    <link rel="preload" href="assets/css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="assets/css/style.css"></noscript>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
     
     <!-- Preload critical resources -->
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -997,8 +995,9 @@
     <script defer src="assets/js/accessibility-checker.js"></script>
     <script defer src="assets/js/analytics-ga4.js"></script>
     <script defer src="assets/js/category-filters.js"></script>
-    <script defer src="assets/js/performance-monitor.js"></script>
-    <script defer src="assets/js/vitals-dashboard.js"></script>
+    <!-- Temporairement désactivé pour corriger problèmes d'affichage -->
+    <!-- <script defer src="assets/js/performance-monitor.js"></script> -->
+    <!-- <script defer src="assets/js/vitals-dashboard.js"></script> -->
     <script defer src="assets/js/gdpr-consent.js"></script>
     <script defer src="assets/js/error-monitor.js"></script>
     <script defer src="assets/js/browser-tester.js"></script>

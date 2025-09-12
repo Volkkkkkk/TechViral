@@ -27,10 +27,11 @@ class VitalsDashboard {
         this.setupEventListeners();
         this.startDataCollection();
         
-        // Afficher seulement en développement par défaut
-        if (this.isDevelopment()) {
-            this.show();
-        }
+        // Dashboard désactivé par défaut (cause problèmes d'affichage)
+        // Utiliser console pour débugger: window.vitalsDashboard.show()
+        // if (this.isDevelopment()) {
+        //     this.show();
+        // }
         
         console.log('📊 Vitals Dashboard initialisé');
     }
