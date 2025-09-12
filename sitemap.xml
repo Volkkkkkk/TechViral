@@ -1,180 +1,105 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-  <!-- Homepage -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://antiquewhite-rabbit-562143.hostingersite.com/</loc>
-    <lastmod>2025-01-15</lastmod>
+    <lastmod>2025-09-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
-  
-  <!-- Main Product Categories -->
   <url>
-    <loc>https://antiquewhite-rabbit-562143.hostingersite.com/iphone</loc>
-    <lastmod>2025-01-15</lastmod>
-    <changefreq>weekly</changefreq>
+    <loc>https://antiquewhite-rabbit-562143.hostingersite.com/pages/categories/all.html</loc>
+    <lastmod>2025-09-12</lastmod>
+    <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
-  <url>
-    <loc>https://antiquewhite-rabbit-562143.hostingersite.com/android</loc>
-    <lastmod>2025-01-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://antiquewhite-rabbit-562143.hostingersite.com/gaming</loc>
-    <lastmod>2025-01-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://antiquewhite-rabbit-562143.hostingersite.com/accessories</loc>
-    <lastmod>2025-01-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <!-- Gaming Subcategories -->
-  <url>
-    <loc>https://antiquewhite-rabbit-562143.hostingersite.com/gaming/pc</loc>
-    <lastmod>2025-01-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://antiquewhite-rabbit-562143.hostingersite.com/gaming/console</loc>
-    <lastmod>2025-01-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://antiquewhite-rabbit-562143.hostingersite.com/gaming/mobile</loc>
-    <lastmod>2025-01-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <!-- Lifestyle Categories -->
-  <url>
-    <loc>https://antiquewhite-rabbit-562143.hostingersite.com/maison</loc>
-    <lastmod>2025-01-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://antiquewhite-rabbit-562143.hostingersite.com/bebe</loc>
-    <lastmod>2025-01-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://antiquewhite-rabbit-562143.hostingersite.com/mode</loc>
-    <lastmod>2025-01-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <!-- Other Categories -->
   <url>
     <loc>https://antiquewhite-rabbit-562143.hostingersite.com/pages/categories/electronique.html</loc>
-    <lastmod>2025-01-15</lastmod>
+    <lastmod>2025-09-12</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://antiquewhite-rabbit-562143.hostingersite.com/pages/categories/ecologique.html</loc>
-    <lastmod>2025-01-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://antiquewhite-rabbit-562143.hostingersite.com/pages/categories/sante.html</loc>
-    <lastmod>2025-01-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://antiquewhite-rabbit-562143.hostingersite.com/pages/categories/lifestyle.html</loc>
-    <lastmod>2025-01-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://antiquewhite-rabbit-562143.hostingersite.com/pages/categories/animaux.html</loc>
-    <lastmod>2025-01-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
-  <!-- Featured Products -->
-  <url>
-    <loc>https://antiquewhite-rabbit-562143.hostingersite.com/pages/products/camera-pov-gopro-hero13.html</loc>
-    <lastmod>2025-01-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://antiquewhite-rabbit-562143.hostingersite.com/pages/products/bouteille-hydrogene-piurify.html</loc>
-    <lastmod>2025-01-15</lastmod>
+    <lastmod>2025-09-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://antiquewhite-rabbit-562143.hostingersite.com/pages/products/collier-gps-intelligent.html</loc>
-    <lastmod>2025-01-15</lastmod>
+    <loc>https://antiquewhite-rabbit-562143.hostingersite.com/pages/categories/sante.html</loc>
+    <lastmod>2025-09-12</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://antiquewhite-rabbit-562143.hostingersite.com/pages/products/cotons-demaquillants-reutilisables.html</loc>
-    <lastmod>2025-01-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <!-- Support & Info Pages -->
-  <url>
-    <loc>https://antiquewhite-rabbit-562143.hostingersite.com/pages/contact.html</loc>
-    <lastmod>2025-01-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://antiquewhite-rabbit-562143.hostingersite.com/pages/support/faq.html</loc>
-    <lastmod>2025-01-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://antiquewhite-rabbit-562143.hostingersite.com/pages/support/shipping.html</loc>
-    <lastmod>2025-01-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://antiquewhite-rabbit-562143.hostingersite.com/pages/blog.html</loc>
-    <lastmod>2025-01-15</lastmod>
+    <loc>https://antiquewhite-rabbit-562143.hostingersite.com/pages/categories/animaux.html</loc>
+    <lastmod>2025-09-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://antiquewhite-rabbit-562143.hostingersite.com/pages/promotions.html</loc>
-    <lastmod>2025-01-15</lastmod>
+    <lastmod>2025-09-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
-  
-  <!-- Legal Pages -->
   <url>
-    <loc>https://antiquewhite-rabbit-562143.hostingersite.com/pages/legal/terms.html</loc>
-    <lastmod>2025-01-15</lastmod>
+    <loc>https://antiquewhite-rabbit-562143.hostingersite.com/pages/blog.html</loc>
+    <lastmod>2025-09-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://antiquewhite-rabbit-562143.hostingersite.com/pages/contact.html</loc>
+    <lastmod>2025-09-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://antiquewhite-rabbit-562143.hostingersite.com/pages/legal/mentions.html</loc>
+    <lastmod>2025-09-12</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://antiquewhite-rabbit-562143.hostingersite.com/pages/legal/privacy.html</loc>
-    <lastmod>2025-01-15</lastmod>
+    <loc>https://antiquewhite-rabbit-562143.hostingersite.com/pages/legal/cookies.html</loc>
+    <lastmod>2025-09-12</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://antiquewhite-rabbit-562143.hostingersite.com/pages/support/returns.html</loc>
+    <lastmod>2025-09-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://antiquewhite-rabbit-562143.hostingersite.com/pages/support/warranty.html</loc>
+    <lastmod>2025-09-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://antiquewhite-rabbit-562143.hostingersite.com/pages/products/bouteille-hydrogene-piurify.html</loc>
+    <lastmod>2025-09-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://antiquewhite-rabbit-562143.hostingersite.com/pages/products/camera-pov-gopro-hero13.html</loc>
+    <lastmod>2025-09-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://antiquewhite-rabbit-562143.hostingersite.com/pages/products/collier-gps-intelligent.html</loc>
+    <lastmod>2025-09-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://antiquewhite-rabbit-562143.hostingersite.com/pages/products/cotons-demaquillants-reutilisables.html</loc>
+    <lastmod>2025-09-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
 </urlset>

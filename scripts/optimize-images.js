@@ -1,7 +1,15 @@
-const imagemin = require('imagemin');
-const imageminWebp = require('imagemin-webp');
-const imageminMozjpeg = require('imagemin-mozjpeg');
-const imageminPngquant = require('imagemin-pngquant');
+// Import avec gestion d'erreur pour les packages d'optimisation d'images
+let imagemin, imageminWebp, imageminMozjpeg, imageminPngquant;
+
+try {
+    imagemin = require('imagemin');
+    imageminWebp = require('imagemin-webp');
+    imageminMozjpeg = require('imagemin-mozjpeg');
+    imageminPngquant = require('imagemin-pngquant');
+} catch (error) {
+    console.warn('⚠️  Packages d\'optimisation d\'images non disponibles:', error.message);
+    // Mode dégradé sans optimisation
+}
 const fs = require('fs').promises;
 const path = require('path');
 const { glob } = require('glob');
@@ -101,6 +109,12 @@ class ImageBuildOptimizer {
     async optimizeJpeg(inputPath, originalSize) {
         const outputPath = this.getOutputPath(inputPath);
         const webpPath = this.getWebpPath(inputPath);
+
+        if (!imagemin || !imageminMozjpeg) {
+            console.log(`📋 Copie ${inputPath} (optimisation indisponible)`);
+            await this.copyFile(inputPath, outputPath);
+            return;
+        }
 
         // Optimiser JPEG original
         const jpegFiles = await imagemin([inputPath], {

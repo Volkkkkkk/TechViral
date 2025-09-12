@@ -1,0 +1,33 @@
+{
+  "environment": "production",
+  "urls": {
+    "staging": "http://localhost:3000",
+    "production": "https://techviral.hostingersite.com"
+  },
+  "lighthouse": {
+    "categories": [
+      "performance",
+      "accessibility",
+      "best-practices",
+      "seo"
+    ],
+    "device": "desktop",
+    "timeout": 60000
+  },
+  "deployment": {
+    "autoRollback": true,
+    "healthCheckUrl": "/health",
+    "healthCheckTimeout": 30000,
+    "warmupUrls": [
+      "/",
+      "/iphone",
+      "/android",
+      "/gaming"
+    ]
+  },
+  "notifications": {
+    "slack": false,
+    "email": false,
+    "discord": false
+  }
+}
