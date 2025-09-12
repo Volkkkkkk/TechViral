@@ -57,7 +57,8 @@
       "Bash(netstat:*)",
       "Bash(taskkill:*)",
       "Bash(dir:*)",
-      "Bash(git stash:*)"
+      "Bash(git stash:*)",
+      "Bash(git fetch:*)"
     ],
     "deny": [],
     "ask": []

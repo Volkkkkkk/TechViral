@@ -41,10 +41,10 @@ class ErrorMonitor {
         this.createErrorDashboard();
         this.startPeriodicChecks();
         
-        // Afficher seulement en développement par défaut
-        if (this.isDevelopment()) {
-            this.show();
-        }
+        // Dashboard désactivé par défaut (use console: window.errorMonitor.show())
+        // if (this.isDevelopment()) {
+        //     this.show();
+        // }
         
         console.log('🚨 Error Monitor initialisé');
     }
@@ -329,9 +329,10 @@ class ErrorMonitor {
         // Reporter erreur
         this.reportError(error);
         
-        // Log critique immédiat
-        if (error.severity >= this.severity.HIGH) {
-            console.error('🚨 Critical Error Detected:', error);
+        // Log critique immédiat - temporairement désactivé
+        if (error.severity >= this.severity.CRITICAL) {
+            // console.error('🚨 Critical Error Detected:', error);
+            // Collecter silencieusement pour analyse
         }
     }
 

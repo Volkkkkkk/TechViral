@@ -21,7 +21,7 @@ class CategoryFiltersManager {
     init() {
         this.setupFilterControls();
         this.setupUrlHandling();
-        this.setupPagination();
+        // this.setupPagination(); // TODO: Implémenter cette méthode
         this.setupSEOOptimizations();
         
         // Charger état initial depuis URL
