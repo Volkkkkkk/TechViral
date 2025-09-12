@@ -6,42 +6,44 @@
     <title>Blog TechViral | Actualités Tech & Innovations 2025</title>
     <meta name="description" content="Découvrez les dernières tendances tech, tests produits et guides d'achat sur le blog TechViral. Restez à la pointe des innovations 2025.">
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/tailwind-custom.css">
     
     <link rel="icon" href="../assets/images/favicon.ico">
     
     <style>
         .blog-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            box-shadow: var(--shadow-xl);
         }
-        .category-tech { background: linear-gradient(45deg, #3b82f6, #1d4ed8); }
-        .category-trend { background: linear-gradient(45deg, #f59e0b, #d97706); }
-        .category-guide { background: linear-gradient(45deg, #10b981, #059669); }
-        .category-news { background: linear-gradient(45deg, #8b5cf6, #7c3aed); }
+        .category-tech { background: linear-gradient(45deg, var(--primary), var(--info)); }
+        .category-trend { background: linear-gradient(45deg, var(--secondary), var(--warning)); }
+        .category-guide { background: linear-gradient(45deg, var(--accent), var(--success)); }
+        .category-news { background: linear-gradient(45deg, var(--purple-500), var(--purple-600)); }
     </style>
 </head>
-<body class="bg-gray-50">
+<body class="bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
     <!-- Navigation -->
-    <nav class="bg-white shadow-lg sticky top-0 z-50">
+    <nav class="bg-white dark:bg-gray-800 shadow-lg sticky top-0 z-50 transition-colors duration-300">
         <div class="max-w-7xl mx-auto px-4">
             <div class="flex justify-between items-center h-16">
                 <div class="flex items-center space-x-4">
                     <a href="../index.html" class="flex items-center space-x-2">
-                        <i class="fas fa-bolt text-2xl text-blue-600"></i>
-                        <span class="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">TechViral</span>
+                        <i class="fas fa-bolt text-2xl text-primary"></i>
+                        <span class="text-2xl font-bold bg-gradient-to-r from-primary to-purple-600 bg-clip-text text-transparent">TechViral</span>
                     </a>
                 </div>
                 <div class="hidden md:flex items-center space-x-6">
-                    <a href="../index.html" class="text-gray-700 hover:text-blue-600 transition-colors">Accueil</a>
-                    <a href="categories/all.html" class="text-gray-700 hover:text-blue-600 transition-colors">Catégories</a>
-                    <a href="promotions.html" class="text-red-600 hover:text-red-700 transition-colors font-medium">🔥 Promotions</a>
-                    <a href="blog.html" class="text-blue-600 font-medium">Blog</a>
-                    <a href="contact.html" class="text-gray-700 hover:text-blue-600 transition-colors">Contact</a>
+                    <a href="../index.html" class="text-gray-700 dark:text-gray-300 hover:text-primary transition-colors">Accueil</a>
+                    <a href="categories/all.html" class="text-gray-700 dark:text-gray-300 hover:text-primary transition-colors">Catégories</a>
+                    <a href="promotions.html" class="text-error hover:text-red-700 transition-colors font-medium">🔥 Promotions</a>
+                    <a href="blog.html" class="text-primary font-medium">Blog</a>
+                    <a href="contact.html" class="text-gray-700 dark:text-gray-300 hover:text-primary transition-colors">Contact</a>
                 </div>
                 <div class="flex items-center space-x-3">
-                    <button id="cartButton" class="relative p-2 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 text-white hover:shadow-lg transition-all">
+                    <button id="cartButton" class="relative p-2 rounded-full bg-gradient-to-r from-primary to-purple-600 text-white hover:shadow-lg transition-all">
                         <i class="fas fa-shopping-cart w-5 h-5"></i>
-                        <span id="cartCount" class="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center font-bold">0</span>
+                        <span id="cartCount" class="absolute -top-1 -right-1 bg-error text-white text-xs rounded-full w-5 h-5 flex items-center justify-center font-bold">0</span>
                     </button>
                 </div>
             </div>
@@ -49,7 +51,7 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="bg-gradient-to-r from-blue-600 via-purple-600 to-blue-800 text-white py-20">
+    <section class="bg-gradient-primary text-white py-20">
         <div class="max-w-7xl mx-auto px-4 text-center">
             <div class="inline-flex items-center px-4 py-2 bg-white/20 rounded-full text-white font-medium text-sm mb-8">
                 <i class="fas fa-newspaper mr-2"></i>
@@ -65,22 +67,22 @@
     </section>
 
     <!-- Categories Filter -->
-    <section class="py-8 bg-white border-b">
+    <section class="py-8 bg-white dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700 transition-colors duration-300">
         <div class="max-w-7xl mx-auto px-4">
             <div class="flex flex-wrap items-center justify-center gap-4">
-                <button class="filter-btn active px-6 py-2 rounded-full bg-blue-600 text-white hover:bg-blue-700 transition-colors" data-category="all">
+                <button class="filter-btn active px-6 py-2 rounded-full bg-primary text-white hover:bg-primary-dark transition-colors" data-category="all">
                     Tous les articles
                 </button>
-                <button class="filter-btn px-6 py-2 rounded-full bg-gray-200 text-gray-700 hover:bg-gray-300 transition-colors" data-category="tech">
+                <button class="filter-btn px-6 py-2 rounded-full bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors" data-category="tech">
                     <i class="fas fa-microchip mr-2"></i>Tech
                 </button>
-                <button class="filter-btn px-6 py-2 rounded-full bg-gray-200 text-gray-700 hover:bg-gray-300 transition-colors" data-category="trend">
+                <button class="filter-btn px-6 py-2 rounded-full bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors" data-category="trend">
                     <i class="fas fa-fire mr-2"></i>Tendances
                 </button>
-                <button class="filter-btn px-6 py-2 rounded-full bg-gray-200 text-gray-700 hover:bg-gray-300 transition-colors" data-category="guide">
+                <button class="filter-btn px-6 py-2 rounded-full bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors" data-category="guide">
                     <i class="fas fa-book mr-2"></i>Guides
                 </button>
-                <button class="filter-btn px-6 py-2 rounded-full bg-gray-200 text-gray-700 hover:bg-gray-300 transition-colors" data-category="news">
+                <button class="filter-btn px-6 py-2 rounded-full bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors" data-category="news">
                     <i class="fas fa-newspaper mr-2"></i>Actualités
                 </button>
             </div>
@@ -88,11 +90,11 @@
     </section>
 
     <!-- Featured Article -->
-    <section class="py-12 bg-white">
+    <section class="py-12 bg-white dark:bg-gray-800 transition-colors duration-300">
         <div class="max-w-7xl mx-auto px-4">
             <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold text-gray-800 mb-4">Article à la Une</h2>
-                <p class="text-gray-600">Notre sélection de contenu premium cette semaine</p>
+                <h2 class="text-3xl font-bold text-gray-800 dark:text-white mb-4">Article à la Une</h2>
+                <p class="text-gray-600 dark:text-gray-300">Notre sélection de contenu premium cette semaine</p>
             </div>
             
             <div class="bg-gradient-to-r from-blue-50 to-purple-50 rounded-3xl overflow-hidden shadow-xl">
@@ -106,7 +108,7 @@
                         </div>
                     </div>
                     <div class="p-8 lg:p-12 flex flex-col justify-center">
-                        <div class="text-sm text-blue-600 font-medium mb-2">
+                        <div class="text-sm text-primary font-medium mb-2">
                             <i class="fas fa-calendar mr-2"></i>6 janvier 2025
                         </div>
                         <h3 class="text-3xl font-bold text-gray-800 mb-4">
@@ -120,10 +122,10 @@
                                 <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=50" alt="Marc Dubois" class="w-10 h-10 rounded-full">
                                 <div>
                                     <div class="font-medium text-gray-800">Marc Dubois</div>
-                                    <div class="text-sm text-gray-500">Expert Tech</div>
+                                    <div class="text-sm text-gray-500 dark:text-gray-400">Expert Tech</div>
                                 </div>
                             </div>
-                            <button class="px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-full font-medium hover:shadow-lg transition-all">
+                            <button class="btn btn-primary px-6 py-3 rounded-full font-medium">
                                 Lire l'article
                             </button>
                         </div>
@@ -134,17 +136,17 @@
     </section>
 
     <!-- Latest Articles -->
-    <section class="py-16 bg-gray-50">
+    <section class="py-16 bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
         <div class="max-w-7xl mx-auto px-4">
             <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold text-gray-800 mb-4">Derniers Articles</h2>
-                <p class="text-gray-600">Retrouvez tous nos contenus récents</p>
+                <h2 class="text-3xl font-bold text-gray-800 dark:text-white mb-4">Derniers Articles</h2>
+                <p class="text-gray-600 dark:text-gray-300">Retrouvez tous nos contenus récents</p>
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="articlesGrid">
                 
                 <!-- Article 1 -->
-                <article class="blog-card bg-white rounded-2xl shadow-lg overflow-hidden transition-all duration-300" data-category="guide">
+                <article class="blog-card bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden transition-all duration-300" data-category="guide">
                     <div class="relative h-48">
                         <img src="https://images.unsplash.com/photo-1556656793-08538906a9f8?w=400" alt="Guide d'achat caméras" class="w-full h-full object-cover">
                         <div class="absolute top-4 left-4">
@@ -160,12 +162,12 @@
                         <div class="text-sm text-green-600 font-medium mb-2">
                             <i class="fas fa-calendar mr-1"></i>5 janvier 2025
                         </div>
-                        <h3 class="text-xl font-bold text-gray-800 mb-3">Guide d'Achat : Meilleures Caméras POV 2025</h3>
-                        <p class="text-gray-600 mb-4">Comparatif complet des caméras d'action les plus performantes. Qualité 4K, stabilisation et prix analysés.</p>
+                        <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-3">Guide d'Achat : Meilleures Caméras POV 2025</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">Comparatif complet des caméras d'action les plus performantes. Qualité 4K, stabilisation et prix analysés.</p>
                         <div class="flex items-center justify-between">
                             <div class="flex items-center space-x-2">
                                 <img src="https://images.unsplash.com/photo-1494790108755-2616b612b593?w=30" alt="Sophie Martin" class="w-8 h-8 rounded-full">
-                                <span class="text-sm text-gray-500">Sophie Martin</span>
+                                <span class="text-sm text-gray-500 dark:text-gray-400">Sophie Martin</span>
                             </div>
                             <div class="flex items-center space-x-1 text-yellow-400">
                                 <i class="fas fa-star text-sm"></i>
@@ -179,7 +181,7 @@
                 </article>
 
                 <!-- Article 2 -->
-                <article class="blog-card bg-white rounded-2xl shadow-lg overflow-hidden transition-all duration-300" data-category="trend">
+                <article class="blog-card bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden transition-all duration-300" data-category="trend">
                     <div class="relative h-48">
                         <img src="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=400" alt="Gadgets tendance" class="w-full h-full object-cover">
                         <div class="absolute top-4 left-4">
@@ -195,12 +197,12 @@
                         <div class="text-sm text-orange-600 font-medium mb-2">
                             <i class="fas fa-calendar mr-1"></i>4 janvier 2025
                         </div>
-                        <h3 class="text-xl font-bold text-gray-800 mb-3">Top 7 Gadgets Viraux de Janvier 2025</h3>
-                        <p class="text-gray-600 mb-4">Ces produits font le buzz sur les réseaux sociaux. Découvrez pourquoi ils cartonnent et s'ils valent le coup.</p>
+                        <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-3">Top 7 Gadgets Viraux de Janvier 2025</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">Ces produits font le buzz sur les réseaux sociaux. Découvrez pourquoi ils cartonnent et s'ils valent le coup.</p>
                         <div class="flex items-center justify-between">
                             <div class="flex items-center space-x-2">
                                 <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=30" alt="Thomas Leroy" class="w-8 h-8 rounded-full">
-                                <span class="text-sm text-gray-500">Thomas Leroy</span>
+                                <span class="text-sm text-gray-500 dark:text-gray-400">Thomas Leroy</span>
                             </div>
                             <div class="flex items-center space-x-1 text-yellow-400">
                                 <i class="fas fa-star text-sm"></i>
@@ -214,7 +216,7 @@
                 </article>
 
                 <!-- Article 3 -->
-                <article class="blog-card bg-white rounded-2xl shadow-lg overflow-hidden transition-all duration-300" data-category="tech">
+                <article class="blog-card bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden transition-all duration-300" data-category="tech">
                     <div class="relative h-48">
                         <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=400" alt="Intelligence artificielle" class="w-full h-full object-cover">
                         <div class="absolute top-4 left-4">
@@ -227,15 +229,15 @@
                         </div>
                     </div>
                     <div class="p-6">
-                        <div class="text-sm text-blue-600 font-medium mb-2">
+                        <div class="text-sm text-primary font-medium mb-2">
                             <i class="fas fa-calendar mr-1"></i>3 janvier 2025
                         </div>
-                        <h3 class="text-xl font-bold text-gray-800 mb-3">IA et Objets Connectés : L'Alliance Révolutionnaire</h3>
-                        <p class="text-gray-600 mb-4">Comment l'intelligence artificielle transforme nos gadgets du quotidien. Analyse technique et implications futures.</p>
+                        <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-3">IA et Objets Connectés : L'Alliance Révolutionnaire</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">Comment l'intelligence artificielle transforme nos gadgets du quotidien. Analyse technique et implications futures.</p>
                         <div class="flex items-center justify-between">
                             <div class="flex items-center space-x-2">
                                 <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=30" alt="Marc Dubois" class="w-8 h-8 rounded-full">
-                                <span class="text-sm text-gray-500">Marc Dubois</span>
+                                <span class="text-sm text-gray-500 dark:text-gray-400">Marc Dubois</span>
                             </div>
                             <div class="flex items-center space-x-1 text-yellow-400">
                                 <i class="fas fa-star text-sm"></i>
@@ -249,7 +251,7 @@
                 </article>
 
                 <!-- Article 4 -->
-                <article class="blog-card bg-white rounded-2xl shadow-lg overflow-hidden transition-all duration-300" data-category="news">
+                <article class="blog-card bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden transition-all duration-300" data-category="news">
                     <div class="relative h-48">
                         <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?w=400" alt="Événement tech" class="w-full h-full object-cover">
                         <div class="absolute top-4 left-4">
@@ -265,12 +267,12 @@
                         <div class="text-sm text-purple-600 font-medium mb-2">
                             <i class="fas fa-calendar mr-1"></i>2 janvier 2025
                         </div>
-                        <h3 class="text-xl font-bold text-gray-800 mb-3">CES 2025 : Les Annonces les Plus Marquantes</h3>
-                        <p class="text-gray-600 mb-4">Retour sur le salon tech le plus attendu de l'année. Nos coups de cœur et découvertes exclusives.</p>
+                        <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-3">CES 2025 : Les Annonces les Plus Marquantes</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">Retour sur le salon tech le plus attendu de l'année. Nos coups de cœur et découvertes exclusives.</p>
                         <div class="flex items-center justify-between">
                             <div class="flex items-center space-x-2">
                                 <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=30" alt="Emma Chen" class="w-8 h-8 rounded-full">
-                                <span class="text-sm text-gray-500">Emma Chen</span>
+                                <span class="text-sm text-gray-500 dark:text-gray-400">Emma Chen</span>
                             </div>
                             <div class="flex items-center space-x-1 text-yellow-400">
                                 <i class="fas fa-star text-sm"></i>
@@ -284,7 +286,7 @@
                 </article>
 
                 <!-- Article 5 -->
-                <article class="blog-card bg-white rounded-2xl shadow-lg overflow-hidden transition-all duration-300" data-category="guide">
+                <article class="blog-card bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden transition-all duration-300" data-category="guide">
                     <div class="relative h-48">
                         <img src="https://images.unsplash.com/photo-1434494878577-86c23bcb06b9?w=400" alt="Setup gaming" class="w-full h-full object-cover">
                         <div class="absolute top-4 left-4">
@@ -300,12 +302,12 @@
                         <div class="text-sm text-green-600 font-medium mb-2">
                             <i class="fas fa-calendar mr-1"></i>1 janvier 2025
                         </div>
-                        <h3 class="text-xl font-bold text-gray-800 mb-3">Setup Gaming Parfait : Notre Guide Complet</h3>
-                        <p class="text-gray-600 mb-4">Créez votre station de jeu idéale avec nos recommandations d'experts. Budget, performance et esthétique.</p>
+                        <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-3">Setup Gaming Parfait : Notre Guide Complet</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">Créez votre station de jeu idéale avec nos recommandations d'experts. Budget, performance et esthétique.</p>
                         <div class="flex items-center justify-between">
                             <div class="flex items-center space-x-2">
                                 <img src="https://images.unsplash.com/photo-1507591064344-4c6ce005b128?w=30" alt="Alex Moreau" class="w-8 h-8 rounded-full">
-                                <span class="text-sm text-gray-500">Alex Moreau</span>
+                                <span class="text-sm text-gray-500 dark:text-gray-400">Alex Moreau</span>
                             </div>
                             <div class="flex items-center space-x-1 text-yellow-400">
                                 <i class="fas fa-star text-sm"></i>
@@ -319,7 +321,7 @@
                 </article>
 
                 <!-- Article 6 -->
-                <article class="blog-card bg-white rounded-2xl shadow-lg overflow-hidden transition-all duration-300" data-category="trend">
+                <article class="blog-card bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden transition-all duration-300" data-category="trend">
                     <div class="relative h-48">
                         <img src="https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=400" alt="Écouteurs sans fil" class="w-full h-full object-cover">
                         <div class="absolute top-4 left-4">
@@ -335,12 +337,12 @@
                         <div class="text-sm text-orange-600 font-medium mb-2">
                             <i class="fas fa-calendar mr-1"></i>31 décembre 2024
                         </div>
-                        <h3 class="text-xl font-bold text-gray-800 mb-3">Écouteurs Sans Fil : La Révolution Audio Continue</h3>
-                        <p class="text-gray-600 mb-4">Test exclusif des derniers modèles qui changent la donne. Qualité sonore, autonomie et design passés au crible.</p>
+                        <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-3">Écouteurs Sans Fil : La Révolution Audio Continue</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">Test exclusif des derniers modèles qui changent la donne. Qualité sonore, autonomie et design passés au crible.</p>
                         <div class="flex items-center justify-between">
                             <div class="flex items-center space-x-2">
                                 <img src="https://images.unsplash.com/photo-1494790108755-2616b612b593?w=30" alt="Sophie Martin" class="w-8 h-8 rounded-full">
-                                <span class="text-sm text-gray-500">Sophie Martin</span>
+                                <span class="text-sm text-gray-500 dark:text-gray-400">Sophie Martin</span>
                             </div>
                             <div class="flex items-center space-x-1 text-yellow-400">
                                 <i class="fas fa-star text-sm"></i>
@@ -357,7 +359,7 @@
             
             <!-- Load More Button -->
             <div class="text-center mt-12">
-                <button class="px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-full font-medium hover:shadow-lg transition-all">
+                <button class="btn btn-primary px-8 py-3 rounded-full font-medium">
                     Charger plus d'articles
                 </button>
             </div>
@@ -365,7 +367,7 @@
     </section>
 
     <!-- Newsletter -->
-    <section class="py-16 bg-gradient-to-r from-blue-900 to-purple-900 text-white">
+    <section class="py-16 bg-gradient-secondary text-white">
         <div class="max-w-4xl mx-auto px-4 text-center">
             <h2 class="text-3xl font-bold mb-4">Newsletter TechViral</h2>
             <p class="text-xl text-blue-100 mb-8">Recevez nos derniers articles et analyses tech directement dans votre boîte mail</p>
@@ -373,7 +375,7 @@
             <div class="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
                 <input type="email" placeholder="Votre adresse email" 
                        class="flex-1 px-6 py-3 rounded-xl border-0 focus:ring-4 focus:ring-blue-300 focus:outline-none text-gray-900">
-                <button class="px-8 py-3 bg-white text-blue-600 rounded-xl font-semibold hover:bg-gray-50 transition-colors">
+                <button class="px-8 py-3 bg-white text-primary rounded-xl font-semibold hover:bg-gray-50 transition-colors">
                     S'abonner
                 </button>
             </div>
@@ -385,12 +387,12 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-12">
+    <footer class="bg-gray-900 dark:bg-gray-800 text-white py-12 transition-colors duration-300">
         <div class="max-w-7xl mx-auto px-4">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
                 <div>
                     <div class="flex items-center space-x-2 mb-4">
-                        <i class="fas fa-bolt text-2xl text-blue-500"></i>
+                        <i class="fas fa-bolt text-2xl text-primary"></i>
                         <span class="text-2xl font-bold">TechViral</span>
                     </div>
                     <p class="text-gray-400 mb-4">Votre source d'actualités tech, tests produits et guides d'achat pour rester à la pointe de l'innovation.</p>
@@ -408,7 +410,7 @@
                         <li><a href="../index.html" class="text-gray-400 hover:text-white transition-colors">Accueil</a></li>
                         <li><a href="categories/all.html" class="text-gray-400 hover:text-white transition-colors">Catégories</a></li>
                         <li><a href="promotions.html" class="text-gray-400 hover:text-white transition-colors">Promotions</a></li>
-                        <li><a href="blog.html" class="text-blue-400 transition-colors">Blog</a></li>
+                        <li><a href="blog.html" class="text-primary transition-colors">Blog</a></li>
                         <li><a href="contact.html" class="text-gray-400 hover:text-white transition-colors">Contact</a></li>
                     </ul>
                 </div>
@@ -446,10 +448,10 @@
             btn.addEventListener('click', function() {
                 // Update active button
                 document.querySelectorAll('.filter-btn').forEach(b => {
-                    b.classList.remove('active', 'bg-blue-600', 'text-white');
+                    b.classList.remove('active', 'bg-primary', 'text-white');
                     b.classList.add('bg-gray-200', 'text-gray-700');
                 });
-                this.classList.add('active', 'bg-blue-600', 'text-white');
+                this.classList.add('active', 'bg-primary', 'text-white');
                 this.classList.remove('bg-gray-200', 'text-gray-700');
                 
                 // Filter articles

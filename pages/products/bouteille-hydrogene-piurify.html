@@ -29,6 +29,7 @@
     
     <!-- Custom Styles -->
     <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/tailwind-custom.css">
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -41,25 +42,25 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center py-4">
                 <a href="../../index.html" class="flex items-center space-x-3">
-                    <div class="w-10 h-10 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-xl flex items-center justify-center">
+                    <div class="w-10 h-10 bg-gradient-to-r from-primary to-purple-600 rounded-xl flex items-center justify-center">
                         <span class="text-white font-bold text-lg">T</span>
                     </div>
-                    <span class="text-2xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">TechViral</span>
+                    <span class="text-2xl font-bold bg-gradient-to-r from-primary to-purple-600 bg-clip-text text-transparent">TechViral</span>
                 </a>
                 
                 <div class="hidden md:flex items-center space-x-8">
-                    <a href="../../index.html" class="text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Accueil</a>
-                    <a href="../categories/sante.html" class="text-indigo-600 dark:text-indigo-400 font-medium">Santé</a>
-                    <a href="../categories/all.html" class="text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Tous les produits</a>
-                    <a href="../contact.html" class="text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Contact</a>
+                    <a href="../../index.html" class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors">Accueil</a>
+                    <a href="../categories/sante.html" class="text-primary dark:text-primary font-medium">Santé</a>
+                    <a href="../categories/all.html" class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors">Tous les produits</a>
+                    <a href="../contact.html" class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors">Contact</a>
                     
                     <!-- Cart Icon -->
                     <div class="relative">
-                        <button id="cartButton" class="flex items-center space-x-2 text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">
+                        <button id="cartButton" class="flex items-center space-x-2 text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors">
                             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4m2.6 8L6 21H4.6M7 13L5.4 5M7 13l-2.293 2.293c-.39.39-.39 1.024 0 1.414L7 18v-5zM17 13l2.293 2.293c.39.39.39 1.024 0 1.414L17 18v-5z"></path>
                             </svg>
-                            <span id="cartCount" class="bg-indigo-600 text-white rounded-full w-5 h-5 flex items-center justify-center text-xs">0</span>
+                            <span id="cartCount" class="bg-primary text-white rounded-full w-5 h-5 flex items-center justify-center text-xs">0</span>
                         </button>
                     </div>
                 </div>
@@ -85,7 +86,7 @@
                         <svg class="flex-shrink-0 h-5 w-5 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
                             <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
                         </svg>
-                        <a href="../categories/sante.html" class="ml-4 text-sm font-medium text-gray-500 hover:text-gray-700">Santé & Bien-être</a>
+                        <a href="../categories/sante.html" class="ml-4 text-sm font-medium text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300">Santé & Bien-être</a>
                     </div>
                 </li>
                 <li>
@@ -105,30 +106,30 @@
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <!-- Product Images -->
             <div class="space-y-4">
-                <div class="aspect-square bg-gradient-to-br from-blue-50 to-cyan-50 dark:from-blue-900/20 dark:to-cyan-900/20 rounded-2xl border border-gray-200 dark:border-gray-700 p-8">
+                <div class="aspect-square bg-gradient-to-br from-primary/10 to-secondary/10 dark:from-primary/20 dark:to-secondary/20 rounded-2xl border border-gray-200 dark:border-gray-700 p-8">
                     <img id="mainImage" src="../../assets/images/products/bouteille-h2.webp" alt="Bouteille Piurify H₂" 
                          class="w-full h-full object-contain hover:scale-110 transition-transform duration-300">
                 </div>
                 
                 <div class="grid grid-cols-4 gap-4">
-                    <div class="aspect-square bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 p-2 cursor-pointer hover:border-blue-500 transition-colors thumbnail active" data-image="../../assets/images/products/bouteille-h2.webp">
+                    <div class="aspect-square bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 p-2 cursor-pointer hover:border-primary transition-colors thumbnail active" data-image="../../assets/images/products/bouteille-h2.webp">
                         <img src="../../assets/images/products/bouteille-h2.webp" alt="Vue principale" class="w-full h-full object-contain">
                     </div>
-                    <div class="aspect-square bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 p-2 cursor-pointer hover:border-blue-500 transition-colors thumbnail" data-image="../../assets/images/products/bouteille-h2-process.webp">
+                    <div class="aspect-square bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 p-2 cursor-pointer hover:border-primary transition-colors thumbnail" data-image="../../assets/images/products/bouteille-h2-process.webp">
                         <img src="../../assets/images/products/bouteille-h2.webp" alt="Processus H₂" class="w-full h-full object-contain">
                     </div>
-                    <div class="aspect-square bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 p-2 cursor-pointer hover:border-blue-500 transition-colors thumbnail" data-image="../../assets/images/products/bouteille-h2-usage.webp">
+                    <div class="aspect-square bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 p-2 cursor-pointer hover:border-primary transition-colors thumbnail" data-image="../../assets/images/products/bouteille-h2-usage.webp">
                         <img src="../../assets/images/products/bouteille-h2.webp" alt="Utilisation" class="w-full h-full object-contain">
                     </div>
-                    <div class="aspect-square bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 p-2 cursor-pointer hover:border-blue-500 transition-colors thumbnail" data-image="../../assets/images/products/bouteille-h2-benefits.webp">
+                    <div class="aspect-square bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 p-2 cursor-pointer hover:border-primary transition-colors thumbnail" data-image="../../assets/images/products/bouteille-h2-benefits.webp">
                         <img src="../../assets/images/products/bouteille-h2.webp" alt="Bénéfices" class="w-full h-full object-contain">
                     </div>
                 </div>
 
                 <!-- Scientific Proof -->
-                <div class="bg-blue-50 dark:bg-blue-900/20 rounded-xl p-6 border border-blue-200 dark:border-blue-700">
-                    <h3 class="font-semibold text-blue-900 dark:text-blue-200 mb-3">🧪 Prouvé scientifiquement</h3>
-                    <ul class="space-y-2 text-blue-800 dark:text-blue-300 text-sm">
+                <div class="bg-primary/10 dark:bg-primary/20 rounded-xl p-6 border border-primary/20 dark:border-primary/30">
+                    <h3 class="font-semibold text-primary dark:text-primary mb-3">🧪 Prouvé scientifiquement</h3>
+                    <ul class="space-y-2 text-primary/90 dark:text-primary text-sm">
                         <li>• Production stable jusqu'à 4000 ppb d'hydrogène</li>
                         <li>• Efficacité maintenue après 2+ années d'utilisation</li>
                         <li>• Tests indépendants certifiés</li>
@@ -142,7 +143,7 @@
                 <!-- Product Header -->
                 <div>
                     <div class="flex items-center gap-2 mb-2">
-                        <span class="bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200 px-2 py-1 rounded-full text-sm font-medium">💧 Hydratation</span>
+                        <span class="bg-primary/10 text-primary dark:bg-primary/20 dark:text-primary px-2 py-1 rounded-full text-sm font-medium">💧 Hydratation</span>
                         <span class="bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200 px-2 py-1 rounded-full text-sm font-medium">En stock</span>
                         <span class="bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200 px-2 py-1 rounded-full text-sm font-medium">Tendance santé</span>
                     </div>
@@ -162,7 +163,7 @@
                     </div>
                     
                     <div class="flex items-center gap-4 mb-6">
-                        <span class="text-4xl font-bold text-blue-600 dark:text-blue-400">199,00 €</span>
+                        <span class="text-4xl font-bold text-primary dark:text-primary">199,00 €</span>
                         <span class="text-xl text-gray-500 dark:text-gray-400 line-through">279,00 €</span>
                         <span class="bg-red-500 text-white px-2 py-1 rounded text-sm font-medium">-29%</span>
                     </div>
@@ -173,14 +174,14 @@
                 </div>
 
                 <!-- Key Benefits -->
-                <div class="bg-gradient-to-br from-blue-50 to-cyan-50 dark:from-blue-900/20 dark:to-cyan-900/20 rounded-xl p-6 border border-blue-200 dark:border-blue-700">
+                <div class="bg-gradient-to-br from-primary/10 to-secondary/10 dark:from-primary/20 dark:to-secondary/20 rounded-xl p-6 border border-primary/20 dark:border-primary/30">
                     <h3 class="font-semibold text-gray-900 dark:text-white mb-4 flex items-center">
                         <span class="text-2xl mr-2">✨</span>
                         Bienfaits prouvés
                     </h3>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div class="flex items-start space-x-3">
-                            <div class="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                            <div class="w-8 h-8 bg-primary rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                                 <span class="text-white text-sm">💧</span>
                             </div>
                             <div>
@@ -226,7 +227,7 @@
                     <h3 class="font-semibold text-gray-900 dark:text-white mb-4">🔬 Spécifications techniques</h3>
                     <div class="grid grid-cols-2 gap-4">
                         <div>
-                            <div class="text-2xl font-bold text-blue-600 dark:text-blue-400">4000 ppb</div>
+                            <div class="text-2xl font-bold text-primary dark:text-primary">4000 ppb</div>
                             <div class="text-sm text-gray-600 dark:text-gray-400">Concentration H₂ max</div>
                         </div>
                         <div>
@@ -248,16 +249,16 @@
                 <div class="space-y-4">
                     <h3 class="font-semibold text-gray-900 dark:text-white">Choisir votre pack :</h3>
                     <div class="grid grid-cols-1 gap-3">
-                        <label class="pack-option flex items-center justify-between p-4 border-2 border-blue-500 bg-blue-50 dark:bg-blue-900/20 rounded-lg cursor-pointer">
+                        <label class="pack-option flex items-center justify-between p-4 border-2 border-primary bg-primary/10 dark:bg-primary/20 rounded-lg cursor-pointer">
                             <input type="radio" name="pack" value="essential" checked class="sr-only">
                             <div>
                                 <h4 class="font-medium text-gray-900 dark:text-white">Pack Découverte</h4>
                                 <p class="text-sm text-gray-600 dark:text-gray-400">Bouteille Piurify + Guide d'utilisation</p>
                             </div>
-                            <span class="font-bold text-blue-600 dark:text-blue-400">199€</span>
+                            <span class="font-bold text-primary dark:text-primary">199€</span>
                         </label>
                         
-                        <label class="pack-option flex items-center justify-between p-4 border-2 border-gray-200 dark:border-gray-700 rounded-lg cursor-pointer hover:border-blue-300">
+                        <label class="pack-option flex items-center justify-between p-4 border-2 border-gray-200 dark:border-gray-700 rounded-lg cursor-pointer hover:border-primary/50">
                             <input type="radio" name="pack" value="wellness" class="sr-only">
                             <div>
                                 <h4 class="font-medium text-gray-900 dark:text-white">Pack Wellness</h4>
@@ -269,7 +270,7 @@
                             </div>
                         </label>
                         
-                        <label class="pack-option flex items-center justify-between p-4 border-2 border-gray-200 dark:border-gray-700 rounded-lg cursor-pointer hover:border-blue-300">
+                        <label class="pack-option flex items-center justify-between p-4 border-2 border-gray-200 dark:border-gray-700 rounded-lg cursor-pointer hover:border-primary/50">
                             <input type="radio" name="pack" value="family" class="sr-only">
                             <div>
                                 <h4 class="font-medium text-gray-900 dark:text-white">Pack Famille</h4>
@@ -299,7 +300,7 @@
                         </button>
                     </div>
                     
-                    <button id="addToCart" class="add-to-cart flex-1 px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white rounded-xl font-semibold text-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
+                    <button id="addToCart" class="add-to-cart flex-1 px-8 py-4 bg-gradient-to-r from-primary to-secondary text-white rounded-xl font-semibold text-lg hover:from-primary/90 hover:to-secondary/90 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
                         💧 Ajouter au panier - <span id="currentPrice">199€</span>
                     </button>
                 </div>
@@ -325,8 +326,8 @@
 
                     <div class="grid grid-cols-3 gap-4">
                         <div class="text-center">
-                            <div class="w-12 h-12 bg-blue-100 dark:bg-blue-900 rounded-full flex items-center justify-center mx-auto mb-2">
-                                <svg class="w-6 h-6 text-blue-600 dark:text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <div class="w-12 h-12 bg-primary/10 dark:bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-2">
+                                <svg class="w-6 h-6 text-primary dark:text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
                                 </svg>
                             </div>
@@ -334,8 +335,8 @@
                         </div>
                         
                         <div class="text-center">
-                            <div class="w-12 h-12 bg-blue-100 dark:bg-blue-900 rounded-full flex items-center justify-center mx-auto mb-2">
-                                <svg class="w-6 h-6 text-blue-600 dark:text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <div class="w-12 h-12 bg-primary/10 dark:bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-2">
+                                <svg class="w-6 h-6 text-primary dark:text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h10a8 8 0 018 8v2M3 10l6 6m-6-6v8a2 2 0 002 2h8.586A2 2 0 0015 19.414L21 13.414A2 2 0 0021 12V8a8 8 0 00-8-8H3z"></path>
                                 </svg>
                             </div>
@@ -343,8 +344,8 @@
                         </div>
                         
                         <div class="text-center">
-                            <div class="w-12 h-12 bg-blue-100 dark:bg-blue-900 rounded-full flex items-center justify-center mx-auto mb-2">
-                                <svg class="w-6 h-6 text-blue-600 dark:text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <div class="w-12 h-12 bg-primary/10 dark:bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-2">
+                                <svg class="w-6 h-6 text-primary dark:text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z"></path>
                                 </svg>
                             </div>
@@ -360,7 +361,7 @@
             <div class="bg-white dark:bg-gray-800 rounded-2xl border border-gray-200 dark:border-gray-700 overflow-hidden">
                 <div class="border-b border-gray-200 dark:border-gray-700">
                     <nav class="-mb-px flex">
-                        <button class="spec-tab active py-4 px-8 text-sm font-medium text-blue-600 dark:text-blue-400 border-b-2 border-blue-600 dark:border-blue-400" data-tab="benefits">
+                        <button class="spec-tab active py-4 px-8 text-sm font-medium text-primary dark:text-primary border-b-2 border-primary dark:border-primary" data-tab="benefits">
                             Bienfaits
                         </button>
                         <button class="spec-tab py-4 px-8 text-sm font-medium text-gray-500 dark:text-gray-400 border-b-2 border-transparent hover:text-gray-700 dark:hover:text-gray-300" data-tab="specs">
@@ -387,12 +388,12 @@
                             </div>
 
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                                <div class="bg-blue-50 dark:bg-blue-900/20 rounded-xl p-6">
-                                    <h4 class="font-semibold text-blue-900 dark:text-blue-200 mb-3 flex items-center">
+                                <div class="bg-primary/10 dark:bg-primary/20 rounded-xl p-6">
+                                    <h4 class="font-semibold text-primary dark:text-primary mb-3 flex items-center">
                                         <span class="text-2xl mr-2">💧</span>
                                         Hydratation optimale
                                     </h4>
-                                    <ul class="space-y-2 text-blue-800 dark:text-blue-300 text-sm">
+                                    <ul class="space-y-2 text-primary/90 dark:text-primary text-sm">
                                         <li>• Améliore l'absorption cellulaire de l'eau</li>
                                         <li>• Réduit la fatigue et booste l'énergie</li>
                                         <li>• Optimise la récupération après l'effort</li>
@@ -492,7 +493,7 @@
                             
                             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                                 <div class="text-center">
-                                    <div class="w-16 h-16 bg-blue-100 dark:bg-blue-900 rounded-full flex items-center justify-center mx-auto mb-4">
+                                    <div class="w-16 h-16 bg-primary/10 dark:bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4">
                                         <span class="text-2xl">1️⃣</span>
                                     </div>
                                     <h4 class="font-semibold text-gray-900 dark:text-white mb-2">Remplir</h4>
@@ -500,7 +501,7 @@
                                 </div>
                                 
                                 <div class="text-center">
-                                    <div class="w-16 h-16 bg-blue-100 dark:bg-blue-900 rounded-full flex items-center justify-center mx-auto mb-4">
+                                    <div class="w-16 h-16 bg-primary/10 dark:bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4">
                                         <span class="text-2xl">2️⃣</span>
                                     </div>
                                     <h4 class="font-semibold text-gray-900 dark:text-white mb-2">Activer</h4>
@@ -508,7 +509,7 @@
                                 </div>
                                 
                                 <div class="text-center">
-                                    <div class="w-16 h-16 bg-blue-100 dark:bg-blue-900 rounded-full flex items-center justify-center mx-auto mb-4">
+                                    <div class="w-16 h-16 bg-primary/10 dark:bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4">
                                         <span class="text-2xl">3️⃣</span>
                                     </div>
                                     <h4 class="font-semibold text-gray-900 dark:text-white mb-2">Savourer</h4>
@@ -690,11 +691,11 @@
         document.querySelectorAll('input[name="pack"]').forEach(pack => {
             pack.addEventListener('change', function() {
                 document.querySelectorAll('.pack-option').forEach(option => {
-                    option.classList.remove('border-blue-500', 'bg-blue-50', 'dark:bg-blue-900/20');
+                    option.classList.remove('border-primary', 'bg-primary/10', 'dark:bg-primary/20');
                     option.classList.add('border-gray-200', 'dark:border-gray-700');
                 });
                 
-                this.closest('.pack-option').classList.add('border-blue-500', 'bg-blue-50', 'dark:bg-blue-900/20');
+                this.closest('.pack-option').classList.add('border-primary', 'bg-primary/10', 'dark:bg-primary/20');
                 this.closest('.pack-option').classList.remove('border-gray-200', 'dark:border-gray-700');
                 
                 const prices = { essential: 199, wellness: 249, family: 319 };
@@ -706,11 +707,11 @@
         document.querySelectorAll('.spec-tab').forEach(tab => {
             tab.addEventListener('click', function() {
                 document.querySelectorAll('.spec-tab').forEach(t => {
-                    t.classList.remove('active', 'text-blue-600', 'dark:text-blue-400', 'border-blue-600', 'dark:border-blue-400');
+                    t.classList.remove('active', 'text-primary', 'dark:text-primary', 'border-primary', 'dark:border-primary');
                     t.classList.add('text-gray-500', 'dark:text-gray-400', 'border-transparent');
                 });
                 
-                this.classList.add('active', 'text-blue-600', 'dark:text-blue-400', 'border-blue-600', 'dark:border-blue-400');
+                this.classList.add('active', 'text-primary', 'dark:text-primary', 'border-primary', 'dark:border-primary');
                 this.classList.remove('text-gray-500', 'dark:text-gray-400', 'border-transparent');
                 
                 document.querySelectorAll('.spec-content').forEach(content => {
@@ -729,12 +730,12 @@
             
             // Animation du bouton
             this.innerHTML = '✅ Ajouté au panier !';
-            this.classList.remove('from-blue-600', 'to-cyan-600');
+            this.classList.remove('from-primary', 'to-secondary');
             this.classList.add('bg-green-600');
             
             setTimeout(() => {
                 this.innerHTML = `💧 Ajouter au panier - ${prices[selectedPack]}€`;
-                this.classList.add('from-blue-600', 'to-cyan-600');
+                this.classList.add('from-primary', 'to-secondary');
                 this.classList.remove('bg-green-600');
             }, 2000);
             

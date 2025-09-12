@@ -51,6 +51,12 @@
       "Bash(npm run build:legacy:*)",
       "Bash(git reset:*)",
       "Bash(cat:*)",
+      "Bash(tree:*)",
+      "Bash(npm audit:*)",
+      "WebFetch(domain:web.dev)",
+      "Bash(netstat:*)",
+      "Bash(taskkill:*)",
+      "Bash(dir:*)",
       "Bash(git stash:*)"
     ],
     "deny": [],

@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Collier GPS Intelligent - Suivi Temps Réel Chien | TechViral</title>
     <meta name="description" content="Collier GPS intelligent pour chien avec suivi temps réel, zones de sécurité et monitoring activité. Autonomie 7 jours, étanche IP67. +445% recherches">
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/tailwind-custom.css">
     
     <link rel="icon" href="../../assets/images/favicon.ico">
     
@@ -81,52 +83,52 @@
     }
     </script>
 </head>
-<body class="bg-gray-50">
+<body class="bg-gray-50 dark:bg-gray-900">
     <!-- Navigation -->
-    <nav class="bg-white shadow-lg sticky top-0 z-50">
+    <nav class="bg-white dark:bg-gray-800 shadow-lg sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-4">
             <div class="flex justify-between items-center h-16">
                 <div class="flex items-center space-x-4">
                     <a href="../../index.html" class="flex items-center space-x-2">
-                        <i class="fas fa-bolt text-2xl text-blue-600"></i>
-                        <span class="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">TechViral</span>
+                        <i class="fas fa-bolt text-2xl text-primary"></i>
+                        <span class="text-2xl font-bold bg-gradient-to-r from-primary to-purple-600 bg-clip-text text-transparent">TechViral</span>
                     </a>
                 </div>
                 <div class="hidden md:flex items-center space-x-6">
-                    <a href="../../index.html" class="text-gray-700 hover:text-blue-600 transition-colors">Accueil</a>
+                    <a href="../../index.html" class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors">Accueil</a>
                     <div class="relative group">
-                        <a href="#" class="text-gray-700 hover:text-blue-600 transition-colors flex items-center">
+                        <a href="#" class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors flex items-center">
                             Catégories <i class="fas fa-chevron-down ml-1"></i>
                         </a>
-                        <div class="absolute top-full left-0 w-48 bg-white shadow-lg rounded-lg py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
-                            <a href="../categories/electronique.html" class="block px-4 py-2 hover:bg-gray-100">Électronique</a>
-                            <a href="../categories/sante.html" class="block px-4 py-2 hover:bg-gray-100">Santé & Bien-être</a>
-                            <a href="../categories/ecologique.html" class="block px-4 py-2 hover:bg-gray-100">Écologique</a>
+                        <div class="absolute top-full left-0 w-48 bg-white dark:bg-gray-700 shadow-lg rounded-lg py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+                            <a href="../categories/electronique.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 text-gray-700 dark:text-gray-300">Électronique</a>
+                            <a href="../categories/sante.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 text-gray-700 dark:text-gray-300">Santé & Bien-être</a>
+                            <a href="../categories/ecologique.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 text-gray-700 dark:text-gray-300">Écologique</a>
                             <a href="../categories/animaux.html" class="block px-4 py-2 text-orange-500 font-medium">Animaux</a>
                         </div>
                     </div>
-                    <a href="../support.html" class="text-gray-700 hover:text-blue-600 transition-colors">Support</a>
+                    <a href="../support.html" class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors">Support</a>
                 </div>
                 <div class="flex items-center space-x-4">
-                    <a href="../cart.html" id="cartButton" class="relative text-gray-700 hover:text-blue-600 transition-colors">
+                    <a href="../cart.html" id="cartButton" class="relative text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors">
                         <i class="fas fa-shopping-cart text-xl"></i>
                         <span class="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center" id="cartCount">0</span>
                     </a>
-                    <a href="../login.html" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">Connexion</a>
+                    <a href="../login.html" class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-primary/90 transition-colors">Connexion</a>
                 </div>
             </div>
         </div>
     </nav>
 
     <!-- Breadcrumb -->
-    <nav class="bg-white px-4 py-3 border-b">
+    <nav class="bg-white dark:bg-gray-800 px-4 py-3 border-b border-gray-200 dark:border-gray-700">
         <div class="max-w-7xl mx-auto">
             <div class="flex items-center space-x-2 text-sm">
-                <a href="../../index.html" class="text-gray-500 hover:text-blue-600">Accueil</a>
+                <a href="../../index.html" class="text-gray-500 dark:text-gray-400 hover:text-primary dark:hover:text-primary">Accueil</a>
                 <i class="fas fa-chevron-right text-gray-400 text-xs"></i>
-                <a href="../categories/animaux.html" class="text-gray-500 hover:text-blue-600">Animaux</a>
+                <a href="../categories/animaux.html" class="text-gray-500 dark:text-gray-400 hover:text-primary dark:hover:text-primary">Animaux</a>
                 <i class="fas fa-chevron-right text-gray-400 text-xs"></i>
-                <span class="text-gray-900 font-medium">Collier GPS Intelligent</span>
+                <span class="text-gray-900 dark:text-white font-medium">Collier GPS Intelligent</span>
             </div>
         </div>
     </nav>
@@ -172,8 +174,8 @@
                             </span>
                             <span class="bg-red-100 text-red-600 px-2 py-1 rounded text-sm font-bold">+445% recherches</span>
                         </div>
-                        <h1 class="text-3xl font-bold text-gray-900 mb-4">Collier GPS Intelligent</h1>
-                        <p class="text-lg text-gray-600 mb-4">Suivi en temps réel avec zones de sécurité et monitoring d'activité pour votre chien</p>
+                        <h1 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">Collier GPS Intelligent</h1>
+                        <p class="text-lg text-gray-600 dark:text-gray-300 mb-4">Suivi en temps réel avec zones de sécurité et monitoring d'activité pour votre chien</p>
                         
                         <!-- Rating -->
                         <div class="flex items-center space-x-2 mb-6">
@@ -184,10 +186,10 @@
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star-half-alt"></i>
                             </div>
-                            <span class="text-gray-600">(4.7/5)</span>
-                            <span class="text-gray-500">•</span>
-                            <span class="text-gray-500">2,891 avis</span>
-                            <a href="#reviews" class="text-blue-600 hover:underline">Voir les avis</a>
+                            <span class="text-gray-600 dark:text-gray-400">(4.7/5)</span>
+                            <span class="text-gray-500 dark:text-gray-400">•</span>
+                            <span class="text-gray-500 dark:text-gray-400">2,891 avis</span>
+                            <a href="#reviews" class="text-primary hover:underline">Voir les avis</a>
                         </div>
                     </div>
 
@@ -198,8 +200,8 @@
                             <span class="text-2xl text-gray-400 line-through">129,90€</span>
                             <span class="bg-red-100 text-red-600 px-3 py-1 rounded-lg font-bold">-31%</span>
                         </div>
-                        <div class="text-sm text-gray-600 space-y-1">
-                            <p><i class="fas fa-mobile-alt text-blue-500 mr-2"></i><strong>App gratuite :</strong> iOS & Android incluse</p>
+                        <div class="text-sm text-gray-600 dark:text-gray-400 space-y-1">
+                            <p><i class="fas fa-mobile-alt text-primary mr-2"></i><strong>App gratuite :</strong> iOS & Android incluse</p>
                             <p><i class="fas fa-truck text-green-500 mr-2"></i><strong>Livraison :</strong> GRATUITE sous 48h</p>
                             <p><i class="fas fa-tools text-purple-500 mr-2"></i><strong>Installation :</strong> Support technique inclus</p>
                         </div>
@@ -207,21 +209,21 @@
 
                     <!-- Key Features -->
                     <div class="space-y-3">
-                        <h3 class="text-lg font-semibold text-gray-900">Fonctionnalités avancées</h3>
+                        <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Fonctionnalités avancées</h3>
                         <div class="grid grid-cols-1 gap-3">
-                            <div class="flex items-center space-x-3 p-3 bg-blue-50 rounded-lg">
+                            <div class="flex items-center space-x-3 p-3 bg-primary/10 dark:bg-primary/20 rounded-lg">
                                 <i class="fas fa-map-marker-alt text-red-500 text-lg"></i>
                                 <span><strong>Localisation précise :</strong> GPS + GLONASS ±3 mètres</span>
                             </div>
-                            <div class="flex items-center space-x-3 p-3 bg-green-50 rounded-lg">
+                            <div class="flex items-center space-x-3 p-3 bg-green-50 dark:bg-green-900/20 rounded-lg">
                                 <i class="fas fa-shield-alt text-green-600 text-lg"></i>
                                 <span><strong>Zones de sécurité :</strong> Alertes temps réel</span>
                             </div>
-                            <div class="flex items-center space-x-3 p-3 bg-purple-50 rounded-lg">
+                            <div class="flex items-center space-x-3 p-3 bg-purple-50 dark:bg-purple-900/20 rounded-lg">
                                 <i class="fas fa-heartbeat text-purple-600 text-lg"></i>
                                 <span><strong>Suivi activité :</strong> Pas, calories, sommeil</span>
                             </div>
-                            <div class="flex items-center space-x-3 p-3 bg-yellow-50 rounded-lg">
+                            <div class="flex items-center space-x-3 p-3 bg-yellow-50 dark:bg-yellow-900/20 rounded-lg">
                                 <i class="fas fa-battery-full text-yellow-600 text-lg"></i>
                                 <span><strong>Autonomie :</strong> 7 jours en usage normal</span>
                             </div>
@@ -230,24 +232,24 @@
 
                     <!-- Size Selection -->
                     <div class="space-y-3">
-                        <h3 class="text-lg font-semibold text-gray-900">Taille du collier :</h3>
+                        <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Taille du collier :</h3>
                         <div class="flex space-x-3">
                             <label class="flex items-center space-x-2 cursor-pointer">
                                 <input type="radio" name="size" value="small" class="sr-only">
-                                <div class="size-option w-16 h-12 border-2 border-gray-300 rounded-lg flex items-center justify-center text-sm font-medium hover:border-orange-500 transition-colors">
-                                    Petit<br><span class="text-xs text-gray-500">20-35cm</span>
+                                <div class="size-option w-16 h-12 border-2 border-gray-300 dark:border-gray-600 rounded-lg flex items-center justify-center text-sm font-medium hover:border-orange-500 transition-colors text-gray-900 dark:text-white">
+                                    Petit<br><span class="text-xs text-gray-500 dark:text-gray-400">20-35cm</span>
                                 </div>
                             </label>
                             <label class="flex items-center space-x-2 cursor-pointer">
                                 <input type="radio" name="size" value="medium" class="sr-only" checked>
                                 <div class="size-option w-16 h-12 border-2 border-orange-500 bg-orange-50 rounded-lg flex items-center justify-center text-sm font-medium">
-                                    Moyen<br><span class="text-xs text-gray-500">35-50cm</span>
+                                    Moyen<br><span class="text-xs text-gray-500 dark:text-gray-400">35-50cm</span>
                                 </div>
                             </label>
                             <label class="flex items-center space-x-2 cursor-pointer">
                                 <input type="radio" name="size" value="large" class="sr-only">
-                                <div class="size-option w-16 h-12 border-2 border-gray-300 rounded-lg flex items-center justify-center text-sm font-medium hover:border-orange-500 transition-colors">
-                                    Grand<br><span class="text-xs text-gray-500">50-70cm</span>
+                                <div class="size-option w-16 h-12 border-2 border-gray-300 dark:border-gray-600 rounded-lg flex items-center justify-center text-sm font-medium hover:border-orange-500 transition-colors text-gray-900 dark:text-white">
+                                    Grand<br><span class="text-xs text-gray-500 dark:text-gray-400">50-70cm</span>
                                 </div>
                             </label>
                         </div>
@@ -256,29 +258,29 @@
                     <!-- Quantity and Add to Cart -->
                     <div class="space-y-4">
                         <div class="flex items-center space-x-4">
-                            <span class="text-lg font-semibold">Quantité :</span>
-                            <div class="flex items-center border border-gray-300 rounded-lg">
+                            <span class="text-lg font-semibold text-gray-900 dark:text-white">Quantité :</span>
+                            <div class="flex items-center border border-gray-300 dark:border-gray-600 rounded-lg">
                                 <button class="quantity-btn px-4 py-2 hover:bg-gray-50 transition-colors" onclick="changeQuantity(-1)">
                                     <i class="fas fa-minus"></i>
                                 </button>
-                                <input type="number" id="quantity" value="1" min="1" max="5" class="w-16 text-center border-0 focus:outline-none">
+                                <input type="number" id="quantity" value="1" min="1" max="5" class="w-16 text-center border-0 focus:outline-none bg-white dark:bg-gray-800 text-gray-900 dark:text-white">
                                 <button class="quantity-btn px-4 py-2 hover:bg-gray-50 transition-colors" onclick="changeQuantity(1)">
                                     <i class="fas fa-plus"></i>
                                 </button>
                             </div>
-                            <span class="text-sm text-gray-500">Stock: 23 unités</span>
+                            <span class="text-sm text-gray-500 dark:text-gray-400">Stock: 23 unités</span>
                         </div>
 
                         <div class="flex space-x-4">
                             <button id="add-to-cart" class="add-to-cart flex-1 bg-orange-600 text-white py-4 px-6 rounded-xl hover:bg-orange-700 transition-colors font-semibold text-lg">
                                 <i class="fas fa-cart-plus mr-2"></i>Ajouter au Panier
                             </button>
-                            <button class="px-6 py-4 border-2 border-gray-300 rounded-xl hover:border-red-500 hover:text-red-500 transition-colors">
+                            <button class="px-6 py-4 border-2 border-gray-300 dark:border-gray-600 rounded-xl hover:border-red-500 hover:text-red-500 transition-colors text-gray-900 dark:text-white">
                                 <i class="fas fa-heart"></i>
                             </button>
                         </div>
 
-                        <button class="add-to-cart w-full bg-blue-600 text-white py-3 px-6 rounded-xl hover:bg-blue-700 transition-colors font-semibold">
+                        <button class="add-to-cart w-full bg-primary text-white py-3 px-6 rounded-xl hover:bg-primary/90 transition-colors font-semibold">
                             <i class="fas fa-bolt mr-2"></i>ACHETER MAINTENANT
                         </button>
                     </div>
@@ -286,16 +288,16 @@
                     <!-- Trust Indicators -->
                     <div class="grid grid-cols-3 gap-4 pt-6 border-t">
                         <div class="text-center">
-                            <i class="fas fa-water text-blue-500 text-2xl mb-2"></i>
-                            <p class="text-sm text-gray-600">Étanche IP67</p>
+                            <i class="fas fa-water text-primary text-2xl mb-2"></i>
+                            <p class="text-sm text-gray-600 dark:text-gray-400">Étanche IP67</p>
                         </div>
                         <div class="text-center">
                             <i class="fas fa-mobile-alt text-green-500 text-2xl mb-2"></i>
-                            <p class="text-sm text-gray-600">App iOS/Android</p>
+                            <p class="text-sm text-gray-600 dark:text-gray-400">App iOS/Android</p>
                         </div>
                         <div class="text-center">
                             <i class="fas fa-satellite text-orange-500 text-2xl mb-2"></i>
-                            <p class="text-sm text-gray-600">GPS Double</p>
+                            <p class="text-sm text-gray-600 dark:text-gray-400">GPS Double</p>
                         </div>
                     </div>
                 </div>
@@ -304,55 +306,55 @@
     </section>
 
     <!-- Live Tracking Demo -->
-    <section class="py-12 bg-white">
+    <section class="py-12 bg-white dark:bg-gray-800">
         <div class="max-w-7xl mx-auto px-4">
             <div class="text-center mb-8">
-                <h2 class="text-3xl font-bold mb-4">Suivi en Temps Réel</h2>
-                <p class="text-gray-600 max-w-2xl mx-auto">Gardez toujours un œil sur votre compagnon grâce à notre technologie GPS avancée et nos alertes intelligentes</p>
+                <h2 class="text-3xl font-bold mb-4 text-gray-900 dark:text-white">Suivi en Temps Réel</h2>
+                <p class="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">Gardez toujours un œil sur votre compagnon grâce à notre technologie GPS avancée et nos alertes intelligentes</p>
             </div>
             
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
                 <div class="map-demo h-96 rounded-2xl flex items-center justify-center relative">
                     <div class="absolute inset-0 opacity-10">
-                        <div class="w-full h-full bg-gradient-to-br from-blue-400 to-blue-600"></div>
+                        <div class="w-full h-full bg-gradient-to-br from-primary to-secondary"></div>
                     </div>
                     <div class="relative text-center">
                         <div class="tracking-dot w-4 h-4 bg-red-500 rounded-full mx-auto mb-4"></div>
                         <div class="bg-white/90 p-4 rounded-lg shadow-lg">
-                            <h3 class="font-semibold text-gray-900 mb-2">Max - En balade</h3>
-                            <p class="text-sm text-gray-600">📍 Parc Central<br>⏱️ Activité: 15 min<br>🔋 Batterie: 85%</p>
+                            <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Max - En balade</h3>
+                            <p class="text-sm text-gray-600 dark:text-gray-400">📍 Parc Central<br>⏱️ Activité: 15 min<br>🔋 Batterie: 85%</p>
                         </div>
                     </div>
                 </div>
                 
                 <div class="space-y-6">
                     <div class="flex items-start space-x-4">
-                        <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center">
-                            <i class="fas fa-map-marked-alt text-blue-600 text-xl"></i>
+                        <div class="w-12 h-12 bg-primary/10 dark:bg-primary/20 rounded-xl flex items-center justify-center">
+                            <i class="fas fa-map-marked-alt text-primary text-xl"></i>
                         </div>
                         <div>
-                            <h3 class="text-lg font-semibold mb-2">Localisation Précise</h3>
-                            <p class="text-gray-600">GPS + GLONASS pour une précision de ±3 mètres, même en ville ou en forêt</p>
+                            <h3 class="text-lg font-semibold mb-2 text-gray-900 dark:text-white">Localisation Précise</h3>
+                            <p class="text-gray-600 dark:text-gray-300">GPS + GLONASS pour une précision de ±3 mètres, même en ville ou en forêt</p>
                         </div>
                     </div>
                     
                     <div class="flex items-start space-x-4">
-                        <div class="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center">
+                        <div class="w-12 h-12 bg-green-100 dark:bg-green-900/30 rounded-xl flex items-center justify-center">
                             <i class="fas fa-bell text-green-600 text-xl"></i>
                         </div>
                         <div>
-                            <h3 class="text-lg font-semibold mb-2">Alertes Intelligentes</h3>
-                            <p class="text-gray-600">Notifications instantanées si votre animal sort de sa zone de sécurité</p>
+                            <h3 class="text-lg font-semibold mb-2 text-gray-900 dark:text-white">Alertes Intelligentes</h3>
+                            <p class="text-gray-600 dark:text-gray-300">Notifications instantanées si votre animal sort de sa zone de sécurité</p>
                         </div>
                     </div>
                     
                     <div class="flex items-start space-x-4">
-                        <div class="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center">
+                        <div class="w-12 h-12 bg-purple-100 dark:bg-purple-900/30 rounded-xl flex items-center justify-center">
                             <i class="fas fa-chart-line text-purple-600 text-xl"></i>
                         </div>
                         <div>
-                            <h3 class="text-lg font-semibold mb-2">Suivi d'Activité</h3>
-                            <p class="text-gray-600">Monitore les pas, les calories brûlées et les habitudes de sommeil</p>
+                            <h3 class="text-lg font-semibold mb-2 text-gray-900 dark:text-white">Suivi d'Activité</h3>
+                            <p class="text-gray-600 dark:text-gray-300">Monitore les pas, les calories brûlées et les habitudes de sommeil</p>
                         </div>
                     </div>
                 </div>
@@ -361,20 +363,20 @@
     </section>
 
     <!-- Product Details Tabs -->
-    <section class="py-12 bg-gray-50">
+    <section class="py-12 bg-gray-50 dark:bg-gray-900">
         <div class="max-w-7xl mx-auto px-4">
-            <div class="border-b border-gray-200">
+            <div class="border-b border-gray-200 dark:border-gray-700">
                 <nav class="flex space-x-8">
                     <button class="tab-btn py-4 px-2 border-b-2 border-orange-500 text-orange-600 font-semibold" data-tab="features">
                         Fonctionnalités
                     </button>
-                    <button class="tab-btn py-4 px-2 border-b-2 border-transparent text-gray-500 hover:text-gray-700 font-semibold" data-tab="specifications">
+                    <button class="tab-btn py-4 px-2 border-b-2 border-transparent text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300 font-semibold" data-tab="specifications">
                         Spécifications
                     </button>
-                    <button class="tab-btn py-4 px-2 border-b-2 border-transparent text-gray-500 hover:text-gray-700 font-semibold" data-tab="installation">
+                    <button class="tab-btn py-4 px-2 border-b-2 border-transparent text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300 font-semibold" data-tab="installation">
                         Installation
                     </button>
-                    <button class="tab-btn py-4 px-2 border-b-2 border-transparent text-gray-500 hover:text-gray-700 font-semibold" data-tab="reviews">
+                    <button class="tab-btn py-4 px-2 border-b-2 border-transparent text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300 font-semibold" data-tab="reviews">
                         Avis (2891)
                     </button>
                 </nav>
@@ -389,7 +391,7 @@
                             
                             <div class="bg-white p-6 rounded-xl shadow-lg">
                                 <div class="flex items-center space-x-3 mb-4">
-                                    <i class="fas fa-satellite-dish text-2xl text-blue-600"></i>
+                                    <i class="fas fa-satellite-dish text-2xl text-primary"></i>
                                     <h4 class="text-lg font-semibold">GPS Double Constellation</h4>
                                 </div>
                                 <p class="text-gray-700 mb-4">Utilise à la fois GPS et GLONASS pour une localisation ultra-précise, même en environnement urbain dense ou forestier.</p>
@@ -475,7 +477,7 @@
                         </div>
                         
                         <div>
-                            <h4 class="text-lg font-semibold mb-4 text-blue-600">Connectivité</h4>
+                            <h4 class="text-lg font-semibold mb-4 text-primary">Connectivité</h4>
                             <div class="space-y-3">
                                 <div class="flex justify-between py-2 border-b">
                                     <span class="font-medium">GPS :</span>
@@ -559,9 +561,9 @@
                     <h3 class="text-2xl font-bold mb-6">Guide d'Installation</h3>
                     <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
                         <div class="space-y-6">
-                            <h4 class="text-xl font-semibold text-blue-700">🔧 Configuration Initiale</h4>
+                            <h4 class="text-xl font-semibold text-primary">🔧 Configuration Initiale</h4>
                             <div class="space-y-4">
-                                <div class="bg-blue-50 p-4 rounded-lg">
+                                <div class="bg-primary/10 p-4 rounded-lg">
                                     <h5 class="font-semibold mb-2">1. Charge complète</h5>
                                     <p class="text-sm text-gray-700">Chargez le collier 3h minimum avant la première utilisation (LED verte = chargé)</p>
                                 </div>
@@ -591,7 +593,7 @@
                                     <p class="text-sm text-gray-700">Dans l'app : Menu → Zones → Créer → Dessiner la zone sur la carte</p>
                                 </div>
                                 
-                                <div class="bg-white p-4 border-l-4 border-blue-500">
+                                <div class="bg-white p-4 border-l-4 border-primary">
                                     <h5 class="font-semibold mb-2">Fréquence de mise à jour</h5>
                                     <p class="text-sm text-gray-700">Réglages → GPS → Choisir entre 10s (précis) et 10min (économie)</p>
                                 </div>
@@ -681,7 +683,7 @@
                         <div class="lg:col-span-2 space-y-6">
                             <div class="border-b pb-6">
                                 <div class="flex items-start space-x-4">
-                                    <div class="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center text-white font-semibold">P</div>
+                                    <div class="w-10 h-10 bg-primary/100 rounded-full flex items-center justify-center text-white font-semibold">P</div>
                                     <div class="flex-1">
                                         <div class="flex items-center space-x-2 mb-2">
                                             <span class="font-semibold">Pierre M.</span>
@@ -798,7 +800,7 @@
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
                 <div>
                     <div class="flex items-center space-x-2 mb-4">
-                        <i class="fas fa-bolt text-2xl text-blue-500"></i>
+                        <i class="fas fa-bolt text-2xl text-primary"></i>
                         <span class="text-2xl font-bold">TechViral</span>
                     </div>
                     <p class="text-gray-400 mb-4">Votre destination pour les produits high-tech innovants pour animaux.</p>

@@ -54,6 +54,7 @@
     
     <!-- Custom Styles -->
     <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/tailwind-custom.css">
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -66,25 +67,25 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center py-4">
                 <a href="../../index.html" class="flex items-center space-x-3">
-                    <div class="w-10 h-10 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-xl flex items-center justify-center">
+                    <div class="w-10 h-10 bg-gradient-to-r from-primary to-purple-600 rounded-xl flex items-center justify-center">
                         <span class="text-white font-bold text-lg">T</span>
                     </div>
-                    <span class="text-2xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">TechViral</span>
+                    <span class="text-2xl font-bold bg-gradient-to-r from-primary to-purple-600 bg-clip-text text-transparent">TechViral</span>
                 </a>
                 
                 <div class="hidden md:flex items-center space-x-8">
-                    <a href="../../index.html" class="text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Accueil</a>
-                    <a href="../categories/electronique.html" class="text-indigo-600 dark:text-indigo-400 font-medium">Électronique</a>
-                    <a href="../categories/all.html" class="text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Tous les produits</a>
-                    <a href="../contact.html" class="text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Contact</a>
+                    <a href="../../index.html" class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors">Accueil</a>
+                    <a href="../categories/electronique.html" class="text-primary dark:text-primary font-medium">Électronique</a>
+                    <a href="../categories/all.html" class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors">Tous les produits</a>
+                    <a href="../contact.html" class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors">Contact</a>
                     
                     <!-- Cart Icon -->
                     <div class="relative">
-                        <button id="cartBtn" class="flex items-center space-x-2 text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">
+                        <button id="cartBtn" class="flex items-center space-x-2 text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors">
                             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4m2.6 8L6 21H4.6M7 13L5.4 5M7 13l-2.293 2.293c-.39.39-.39 1.024 0 1.414L7 18v-5zM17 13l2.293 2.293c.39.39.39 1.024 0 1.414L17 18v-5z"></path>
                             </svg>
-                            <span id="cartCount" class="bg-indigo-600 text-white rounded-full w-5 h-5 flex items-center justify-center text-xs">0</span>
+                            <span id="cartCount" class="bg-primary text-white rounded-full w-5 h-5 flex items-center justify-center text-xs">0</span>
                         </button>
                     </div>
                 </div>
@@ -110,7 +111,7 @@
                         <svg class="flex-shrink-0 h-5 w-5 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
                             <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
                         </svg>
-                        <a href="../categories/electronique.html" class="ml-4 text-sm font-medium text-gray-500 hover:text-gray-700">Électronique</a>
+                        <a href="../categories/electronique.html" class="ml-4 text-sm font-medium text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300">Électronique</a>
                     </div>
                 </li>
                 <li>
@@ -136,16 +137,16 @@
                 </div>
                 
                 <div class="grid grid-cols-4 gap-4">
-                    <div class="aspect-square bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 p-2 cursor-pointer hover:border-indigo-500 transition-colors thumbnail active" data-image="../../assets/images/products/camera-pov.webp">
+                    <div class="aspect-square bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 p-2 cursor-pointer hover:border-primary transition-colors thumbnail active" data-image="../../assets/images/products/camera-pov.webp">
                         <img src="../../assets/images/products/camera-pov.webp" alt="Vue principale" class="w-full h-full object-contain">
                     </div>
-                    <div class="aspect-square bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 p-2 cursor-pointer hover:border-indigo-500 transition-colors thumbnail" data-image="../../assets/images/products/camera-pov-2.webp">
+                    <div class="aspect-square bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 p-2 cursor-pointer hover:border-primary transition-colors thumbnail" data-image="../../assets/images/products/camera-pov-2.webp">
                         <img src="../../assets/images/products/camera-pov.webp" alt="Vue de côté" class="w-full h-full object-contain">
                     </div>
-                    <div class="aspect-square bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 p-2 cursor-pointer hover:border-indigo-500 transition-colors thumbnail" data-image="../../assets/images/products/camera-pov-3.webp">
+                    <div class="aspect-square bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 p-2 cursor-pointer hover:border-primary transition-colors thumbnail" data-image="../../assets/images/products/camera-pov-3.webp">
                         <img src="../../assets/images/products/camera-pov.webp" alt="Accessoires inclus" class="w-full h-full object-contain">
                     </div>
-                    <div class="aspect-square bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 p-2 cursor-pointer hover:border-indigo-500 transition-colors thumbnail" data-image="../../assets/images/products/camera-pov-4.webp">
+                    <div class="aspect-square bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 p-2 cursor-pointer hover:border-primary transition-colors thumbnail" data-image="../../assets/images/products/camera-pov-4.webp">
                         <img src="../../assets/images/products/camera-pov.webp" alt="En action" class="w-full h-full object-contain">
                     </div>
                 </div>
@@ -170,7 +171,7 @@
                     <div class="flex items-center gap-2 mb-2">
                         <span class="bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200 px-2 py-1 rounded-full text-sm font-medium">🔥 Viral</span>
                         <span class="bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200 px-2 py-1 rounded-full text-sm font-medium">En stock</span>
-                        <span class="bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200 px-2 py-1 rounded-full text-sm font-medium">Expédition 24h</span>
+                        <span class="bg-primary/10 text-primary dark:bg-primary/20 dark:text-primary px-2 py-1 rounded-full text-sm font-medium">Expédition 24h</span>
                     </div>
                     
                     <h1 class="text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white mb-4">
@@ -188,7 +189,7 @@
                     </div>
                     
                     <div class="flex items-center gap-4">
-                        <span class="text-4xl font-bold text-indigo-600 dark:text-indigo-400">449,00 €</span>
+                        <span class="text-4xl font-bold text-primary dark:text-primary">449,00 €</span>
                         <span class="text-xl text-gray-500 dark:text-gray-400 line-through">599,00 €</span>
                         <span class="bg-red-500 text-white px-2 py-1 rounded text-sm font-medium">-25%</span>
                     </div>
@@ -239,16 +240,16 @@
                 <div class="space-y-4">
                     <h3 class="font-semibold text-gray-900 dark:text-white">Pack choisi :</h3>
                     <div class="grid grid-cols-1 gap-3">
-                        <label class="pack-option flex items-center justify-between p-4 border-2 border-indigo-500 bg-indigo-50 dark:bg-indigo-900/20 rounded-lg cursor-pointer">
+                        <label class="pack-option flex items-center justify-between p-4 border-2 border-primary bg-primary/10 dark:bg-primary/20 rounded-lg cursor-pointer">
                             <input type="radio" name="pack" value="essential" checked class="sr-only">
                             <div>
                                 <h4 class="font-medium text-gray-900 dark:text-white">Pack Essentiel</h4>
                                 <p class="text-sm text-gray-600 dark:text-gray-400">Caméra + Batterie + Carte SD 64Go</p>
                             </div>
-                            <span class="font-bold text-indigo-600 dark:text-indigo-400">449€</span>
+                            <span class="font-bold text-primary dark:text-primary">449€</span>
                         </label>
                         
-                        <label class="pack-option flex items-center justify-between p-4 border-2 border-gray-200 dark:border-gray-700 rounded-lg cursor-pointer hover:border-indigo-300">
+                        <label class="pack-option flex items-center justify-between p-4 border-2 border-gray-200 dark:border-gray-700 rounded-lg cursor-pointer hover:border-primary/50">
                             <input type="radio" name="pack" value="creator" class="sr-only">
                             <div>
                                 <h4 class="font-medium text-gray-900 dark:text-white">Pack Créateur</h4>
@@ -257,7 +258,7 @@
                             <span class="font-bold text-gray-900 dark:text-white">579€</span>
                         </label>
                         
-                        <label class="pack-option flex items-center justify-between p-4 border-2 border-gray-200 dark:border-gray-700 rounded-lg cursor-pointer hover:border-indigo-300">
+                        <label class="pack-option flex items-center justify-between p-4 border-2 border-gray-200 dark:border-gray-700 rounded-lg cursor-pointer hover:border-primary/50">
                             <input type="radio" name="pack" value="pro" class="sr-only">
                             <div>
                                 <h4 class="font-medium text-gray-900 dark:text-white">Pack Pro</h4>
@@ -284,7 +285,7 @@
                         </button>
                     </div>
                     
-                    <button id="addToCart" class="add-to-cart flex-1 px-8 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-xl font-semibold text-lg hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
+                    <button id="addToCart" class="add-to-cart flex-1 px-8 py-4 bg-gradient-to-r from-primary to-purple-600 text-white rounded-xl font-semibold text-lg hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
                         🛒 Ajouter au panier - <span id="currentPrice">449€</span>
                     </button>
                 </div>
@@ -310,8 +311,8 @@
                 <!-- Guarantees -->
                 <div class="grid grid-cols-3 gap-4">
                     <div class="text-center">
-                        <div class="w-12 h-12 bg-indigo-100 dark:bg-indigo-900 rounded-full flex items-center justify-center mx-auto mb-2">
-                            <svg class="w-6 h-6 text-indigo-600 dark:text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <div class="w-12 h-12 bg-primary/10 dark:bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-2">
+                            <svg class="w-6 h-6 text-primary dark:text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
                             </svg>
                         </div>
@@ -319,8 +320,8 @@
                     </div>
                     
                     <div class="text-center">
-                        <div class="w-12 h-12 bg-indigo-100 dark:bg-indigo-900 rounded-full flex items-center justify-center mx-auto mb-2">
-                            <svg class="w-6 h-6 text-indigo-600 dark:text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <div class="w-12 h-12 bg-primary/10 dark:bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-2">
+                            <svg class="w-6 h-6 text-primary dark:text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h10a8 8 0 018 8v2M3 10l6 6m-6-6v8a2 2 0 002 2h8.586A2 2 0 0015 19.414L21 13.414A2 2 0 0021 12V8a8 8 0 00-8-8H3z"></path>
                             </svg>
                         </div>
@@ -328,8 +329,8 @@
                     </div>
                     
                     <div class="text-center">
-                        <div class="w-12 h-12 bg-indigo-100 dark:bg-indigo-900 rounded-full flex items-center justify-center mx-auto mb-2">
-                            <svg class="w-6 h-6 text-indigo-600 dark:text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <div class="w-12 h-12 bg-primary/10 dark:bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-2">
+                            <svg class="w-6 h-6 text-primary dark:text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z"></path>
                             </svg>
                         </div>
@@ -344,7 +345,7 @@
             <div class="bg-white dark:bg-gray-800 rounded-2xl border border-gray-200 dark:border-gray-700 overflow-hidden">
                 <div class="border-b border-gray-200 dark:border-gray-700">
                     <nav class="-mb-px flex">
-                        <button class="spec-tab active py-4 px-8 text-sm font-medium text-indigo-600 dark:text-indigo-400 border-b-2 border-indigo-600 dark:border-indigo-400" data-tab="specs">
+                        <button class="spec-tab active py-4 px-8 text-sm font-medium text-primary dark:text-primary border-b-2 border-primary dark:border-primary" data-tab="specs">
                             Spécifications
                         </button>
                         <button class="spec-tab py-4 px-8 text-sm font-medium text-gray-500 dark:text-gray-400 border-b-2 border-transparent hover:text-gray-700 dark:hover:text-gray-300" data-tab="included">
@@ -522,7 +523,7 @@
                                 <!-- Review 1 -->
                                 <div class="border-b border-gray-200 dark:border-gray-700 pb-6">
                                     <div class="flex items-center gap-4 mb-3">
-                                        <div class="w-10 h-10 bg-indigo-600 rounded-full flex items-center justify-center text-white font-medium">M</div>
+                                        <div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-white font-medium">M</div>
                                         <div>
                                             <div class="flex items-center gap-2">
                                                 <span class="font-medium text-gray-900 dark:text-white">Marc D.</span>
@@ -571,7 +572,7 @@
                                 </div>
                             </div>
 
-                            <button class="text-indigo-600 dark:text-indigo-400 hover:text-indigo-500 font-medium">
+                            <button class="text-primary dark:text-primary hover:text-primary/90 font-medium">
                                 Voir tous les avis →
                             </button>
                         </div>
@@ -590,8 +591,8 @@
                     <img src="../../assets/images/products/gopro-accessories.webp" alt="Selfie Stick GoPro" class="w-full aspect-square object-cover rounded-lg mb-4">
                     <h3 class="font-medium text-gray-900 dark:text-white mb-2">Selfie Stick GoPro</h3>
                     <div class="flex items-center justify-between">
-                        <span class="text-lg font-bold text-indigo-600 dark:text-indigo-400">39,99 €</span>
-                        <button class="px-4 py-2 bg-indigo-600 text-white rounded-lg text-sm hover:bg-indigo-700 transition-colors">
+                        <span class="text-lg font-bold text-primary dark:text-primary">39,99 €</span>
+                        <button class="px-4 py-2 bg-primary text-white rounded-lg text-sm hover:bg-primary/90 transition-colors">
                             Ajouter
                         </button>
                     </div>
@@ -602,8 +603,8 @@
                     <img src="../../assets/images/products/gopro-case.webp" alt="Étui de transport" class="w-full aspect-square object-cover rounded-lg mb-4">
                     <h3 class="font-medium text-gray-900 dark:text-white mb-2">Étui de transport</h3>
                     <div class="flex items-center justify-between">
-                        <span class="text-lg font-bold text-indigo-600 dark:text-indigo-400">24,99 €</span>
-                        <button class="px-4 py-2 bg-indigo-600 text-white rounded-lg text-sm hover:bg-indigo-700 transition-colors">
+                        <span class="text-lg font-bold text-primary dark:text-primary">24,99 €</span>
+                        <button class="px-4 py-2 bg-primary text-white rounded-lg text-sm hover:bg-primary/90 transition-colors">
                             Ajouter
                         </button>
                     </div>
@@ -614,8 +615,8 @@
                     <img src="../../assets/images/products/tripod.webp" alt="Trépied flexible" class="w-full aspect-square object-cover rounded-lg mb-4">
                     <h3 class="font-medium text-gray-900 dark:text-white mb-2">Trépied flexible</h3>
                     <div class="flex items-center justify-between">
-                        <span class="text-lg font-bold text-indigo-600 dark:text-indigo-400">19,99 €</span>
-                        <button class="px-4 py-2 bg-indigo-600 text-white rounded-lg text-sm hover:bg-indigo-700 transition-colors">
+                        <span class="text-lg font-bold text-primary dark:text-primary">19,99 €</span>
+                        <button class="px-4 py-2 bg-primary text-white rounded-lg text-sm hover:bg-primary/90 transition-colors">
                             Ajouter
                         </button>
                     </div>
@@ -626,8 +627,8 @@
                     <img src="../../assets/images/products/sd-card.webp" alt="Carte SD 128GB" class="w-full aspect-square object-cover rounded-lg mb-4">
                     <h3 class="font-medium text-gray-900 dark:text-white mb-2">Carte SD 128GB</h3>
                     <div class="flex items-center justify-between">
-                        <span class="text-lg font-bold text-indigo-600 dark:text-indigo-400">29,99 €</span>
-                        <button class="px-4 py-2 bg-indigo-600 text-white rounded-lg text-sm hover:bg-indigo-700 transition-colors">
+                        <span class="text-lg font-bold text-primary dark:text-primary">29,99 €</span>
+                        <button class="px-4 py-2 bg-primary text-white rounded-lg text-sm hover:bg-primary/90 transition-colors">
                             Ajouter
                         </button>
                     </div>
@@ -642,7 +643,7 @@
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
                 <div class="col-span-1 md:col-span-2">
                     <div class="flex items-center space-x-3 mb-4">
-                        <div class="w-10 h-10 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-xl flex items-center justify-center">
+                        <div class="w-10 h-10 bg-gradient-to-r from-primary to-purple-600 rounded-xl flex items-center justify-center">
                             <span class="text-white font-bold text-lg">T</span>
                         </div>
                         <span class="text-2xl font-bold">TechViral</span>
@@ -699,11 +700,11 @@
         document.querySelectorAll('input[name="pack"]').forEach(pack => {
             pack.addEventListener('change', function() {
                 document.querySelectorAll('.pack-option').forEach(option => {
-                    option.classList.remove('border-indigo-500', 'bg-indigo-50', 'dark:bg-indigo-900/20');
+                    option.classList.remove('border-primary', 'bg-primary/10', 'dark:bg-primary/20');
                     option.classList.add('border-gray-200', 'dark:border-gray-700');
                 });
                 
-                this.closest('.pack-option').classList.add('border-indigo-500', 'bg-indigo-50', 'dark:bg-indigo-900/20');
+                this.closest('.pack-option').classList.add('border-primary', 'bg-primary/10', 'dark:bg-primary/20');
                 this.closest('.pack-option').classList.remove('border-gray-200', 'dark:border-gray-700');
                 
                 const prices = { essential: 449, creator: 579, pro: 749 };
@@ -715,11 +716,11 @@
         document.querySelectorAll('.spec-tab').forEach(tab => {
             tab.addEventListener('click', function() {
                 document.querySelectorAll('.spec-tab').forEach(t => {
-                    t.classList.remove('active', 'text-indigo-600', 'dark:text-indigo-400', 'border-indigo-600', 'dark:border-indigo-400');
+                    t.classList.remove('active', 'text-primary', 'dark:text-primary', 'border-primary', 'dark:border-primary');
                     t.classList.add('text-gray-500', 'dark:text-gray-400', 'border-transparent');
                 });
                 
-                this.classList.add('active', 'text-indigo-600', 'dark:text-indigo-400', 'border-indigo-600', 'dark:border-indigo-400');
+                this.classList.add('active', 'text-primary', 'dark:text-primary', 'border-primary', 'dark:border-primary');
                 this.classList.remove('text-gray-500', 'dark:text-gray-400', 'border-transparent');
                 
                 document.querySelectorAll('.spec-content').forEach(content => {
@@ -739,12 +740,12 @@
             // Animation du bouton
             this.innerHTML = '✅ Ajouté au panier !';
             this.classList.add('bg-green-600');
-            this.classList.remove('from-indigo-600', 'to-purple-600');
+            this.classList.remove('from-primary', 'to-purple-600');
             
             setTimeout(() => {
                 this.innerHTML = `🛒 Ajouter au panier - ${prices[selectedPack]}€`;
                 this.classList.remove('bg-green-600');
-                this.classList.add('from-indigo-600', 'to-purple-600');
+                this.classList.add('from-primary', 'to-purple-600');
             }, 2000);
             
             // Update cart count

@@ -4,17 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Retours & Échanges - TechViral</title>
-    <link href="../../assets/css/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
     <link href="../../assets/css/style.css" rel="stylesheet">
+    <link href="../../assets/css/tailwind-custom.css" rel="stylesheet">
 </head>
-<body>
-    <nav class="bg-white shadow-sm">
+<body class="bg-gray-50 dark:bg-gray-900 dark:text-white">
+    <nav class="bg-white dark:bg-gray-800 shadow-sm">
         <div class="max-w-7xl mx-auto px-4">
             <div class="flex justify-between items-center py-4">
-                <a href="../../index.html" class="text-2xl font-bold text-indigo-600">TechViral</a>
+                <a href="../../index.html" class="text-2xl font-bold text-primary">TechViral</a>
                 <div class="space-x-6">
-                    <a href="../cart/cart.html" class="text-gray-600 hover:text-indigo-600">Panier</a>
-                    <a href="contact.html" class="text-gray-600 hover:text-indigo-600">Contact</a>
+                    <a href="../cart/cart.html" class="text-gray-600 dark:text-gray-300 hover:text-primary">Panier</a>
+                    <a href="contact.html" class="text-gray-600 dark:text-gray-300 hover:text-primary">Contact</a>
                 </div>
             </div>
         </div>
@@ -23,11 +24,11 @@
     <main class="max-w-4xl mx-auto px-4 py-8">
         <h1 class="text-3xl font-bold mb-8">Retours & Échanges</h1>
         
-        <div class="bg-white rounded-lg shadow-md p-6 space-y-6">
+        <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 space-y-6">
             <section>
                 <h2 class="text-xl font-semibold mb-4">Politique de Retour</h2>
-                <p class="text-gray-600 mb-4">Vous disposez de 30 jours pour retourner votre produit.</p>
-                <ul class="list-disc list-inside text-gray-600 space-y-2">
+                <p class="text-gray-600 dark:text-gray-300 mb-4">Vous disposez de 30 jours pour retourner votre produit.</p>
+                <ul class="list-disc list-inside text-gray-600 dark:text-gray-300 space-y-2">
                     <li>Produit en parfait état</li>
                     <li>Emballage d'origine conservé</li>
                     <li>Accessoires complets</li>
@@ -36,7 +37,7 @@
 
             <section>
                 <h2 class="text-xl font-semibold mb-4">Comment procéder ?</h2>
-                <ol class="list-decimal list-inside text-gray-600 space-y-2">
+                <ol class="list-decimal list-inside text-gray-600 dark:text-gray-300 space-y-2">
                     <li>Contactez notre service client</li>
                     <li>Obtenez votre numéro de retour</li>
                     <li>Emballez soigneusement le produit</li>
@@ -44,11 +45,17 @@
                 </ol>
             </section>
 
-            <div class="bg-indigo-50 p-4 rounded-lg">
-                <h3 class="font-semibold text-indigo-900 mb-2">Besoin d'aide ?</h3>
-                <p class="text-indigo-700">Contactez-nous : support@techviral.com</p>
+            <div class="bg-primary/10 dark:bg-primary/20 p-4 rounded-lg border border-primary/20 dark:border-primary/30">
+                <h3 class="font-semibold text-primary dark:text-primary-light mb-2">Besoin d'aide ?</h3>
+                <p class="text-primary dark:text-primary-light">Contactez-nous : support@techviral.com</p>
             </div>
         </div>
     </main>
+
+    <footer class="bg-gray-800 dark:bg-gray-900 text-white py-8 mt-12">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <p>&copy; 2025 TechViral. Tous droits réservés.</p>
+        </div>
+    </footer>
 </body>
 </html>
