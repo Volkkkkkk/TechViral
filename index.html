@@ -984,11 +984,14 @@
     <!-- Cart Backdrop -->
     <div id="cartBackdrop" class="fixed inset-0 bg-black/50 z-40 opacity-0 invisible transition-all duration-300"></div>
 
-    <!-- JavaScript -->
-    <script src="assets/js/cart.js?v=2025010800"></script>
+    <!-- JavaScript - Ordre optimisé et corrigé -->
+    <script src="assets/js/main-fixed.js"></script>
+    <script src="assets/js/cart.js?v=2025010801"></script>
     <script src="assets/js/search.js"></script>
     <script src="assets/js/forms.js"></script>
-    <script src="assets/js/main.js"></script>
+    
+    <!-- Error Reporting System (Development) -->
+    <script src="assets/js/error-report.js"></script>
     
     <!-- Non-critical scripts loaded after page render -->
     <script defer src="assets/js/breadcrumb-generator.js"></script>
@@ -996,16 +999,18 @@
     <script defer src="assets/js/accessibility-checker.js"></script>
     <script defer src="assets/js/analytics-ga4.js"></script>
     <script defer src="assets/js/category-filters.js"></script>
-    <!-- Scripts de monitoring réactivés (dashboard désactivé par défaut) -->
+    <!-- Scripts de monitoring - Chargement conditionnel -->
+    <!-- Désactivés en production pour améliorer les performances
     <script defer src="assets/js/performance-monitor.js"></script>
     <script defer src="assets/js/vitals-dashboard.js"></script>
     <script defer src="assets/js/gdpr-consent.js"></script>
     <script defer src="assets/js/error-monitor.js"></script>
     <script defer src="assets/js/browser-tester.js"></script>
+    -->
     
-    <!-- HOTFIX PROFESSIONNEL 2025: Mode sombre et panier -->
+    <!-- HOTFIX SYSTÈME COMPLET 2025: Mode sombre, panier et navigation -->
     <script>
-        // INIT IMMÉDIAT du mode sombre (éviter FOUC)
+        // 1. INIT IMMÉDIAT du mode sombre (éviter FOUC)
         (function() {
             const savedTheme = localStorage.getItem('theme');
             const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
@@ -1018,64 +1023,169 @@
             }
         })();
         
-        // Force l'initialisation complète au DOM ready
+        // 2. FORCE INITIALISATION COMPLÈTE
         document.addEventListener('DOMContentLoaded', function() {
-            // Supprimé: console.log debug production
+            console.log('🚀 Site initialization starting...');
             
-            // 1. MODE SOMBRE PROFESSIONNEL
+            // A. MODE SOMBRE UNIFIÉ (évite les conflits avec main-fixed.js)
             const darkModeToggle = document.getElementById('darkModeToggle');
-            if (darkModeToggle) {
-                // Mode sombre configuré
+            if (darkModeToggle && !darkModeToggle.hasAttribute('data-initialized')) {
+                darkModeToggle.setAttribute('data-initialized', 'true');
                 
-                // Fonction toggle moderne
                 function toggleDarkMode() {
                     const isDark = document.documentElement.classList.contains('dark');
                     const newTheme = isDark ? 'light' : 'dark';
                     
                     document.documentElement.classList.toggle('dark', newTheme === 'dark');
                     localStorage.setItem('theme', newTheme);
-                    
-                    // Theme ${newTheme} activé
+                    console.log('✅ Theme switched to:', newTheme);
                 }
                 
-                // Event listener unique
-                darkModeToggle.removeEventListener('click', toggleDarkMode);
                 darkModeToggle.addEventListener('click', toggleDarkMode);
-                
-                // Mode sombre opérationnel
+                console.log('✅ Dark mode toggle initialized');
             }
             
-            // 2. PANIER PROFESSIONNEL avec JSON.parse sécurisé
-            let cartCheckAttempts = 0;
-            const maxAttempts = 5;
+            // B. NAVIGATION MOBILE
+            const mobileMenuButton = document.getElementById('mobileMenuButton');
+            const mobileMenu = document.getElementById('mobileMenu');
+            if (mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    mobileMenu.classList.toggle('hidden');
+                    console.log('📱 Mobile menu toggled');
+                });
+                
+                // Fermer le menu en cliquant ailleurs
+                document.addEventListener('click', (e) => {
+                    if (!mobileMenuButton.contains(e.target) && !mobileMenu.contains(e.target)) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                });
+                console.log('✅ Mobile navigation initialized');
+            }
             
-            function checkCart() {
-                cartCheckAttempts++;
+            // C. PANIER SYSTÈME UNIFIÉ
+            let cartInitAttempts = 0;
+            const maxAttempts = 10;
+            
+            function initCartSystem() {
+                cartInitAttempts++;
                 
                 if (typeof window.cartManager !== 'undefined') {
-                    // CartManager opérationnel
+                    console.log('✅ CartManager found, initializing...');
                     
-                    // Force synchronisation localStorage
                     try {
+                        // Nettoyer les données corrompues
                         const cartData = localStorage.getItem('techviral_cart');
-                        if (cartData) {
-                            const parsedCart = JSON.parse(cartData); // JSON.parse sécurisé
-                            // Cart localStorage synchronisé
+                        if (cartData && cartData !== 'undefined' && cartData !== 'null') {
+                            try {
+                                JSON.parse(cartData);
+                                console.log('📦 Cart data validated');
+                            } catch (e) {
+                                console.warn('🧹 Cleaning corrupted cart data');
+                                localStorage.removeItem('techviral_cart');
+                            }
                         }
+                        
+                        // Force synchronisation
+                        window.cartManager.syncCartFromStorage();
                         window.cartManager.updateCartBadge();
-                    } catch (e) {
-                        // Erreur JSON cart, clearing corrupted data
-                        localStorage.removeItem('techviral_cart'); // Clear corrupted data
+                        console.log('✅ Cart system initialized');
+                        
+                    } catch (error) {
+                        console.error('❌ Cart initialization error:', error);
+                        localStorage.removeItem('techviral_cart');
                     }
-                } else if (cartCheckAttempts < maxAttempts) {
-                    // CartManager loading...
-                    setTimeout(checkCart, 500); // Retry
+                    
+                } else if (cartInitAttempts < maxAttempts) {
+                    console.log(`⏳ Waiting for CartManager... (${cartInitAttempts}/${maxAttempts})`);
+                    setTimeout(initCartSystem, 300);
                 } else {
-                    // CartManager failed to load
+                    console.warn('❌ CartManager failed to load after', maxAttempts, 'attempts');
                 }
             }
             
-            checkCart();
+            // D. SCROLL TO PRODUCTS FUNCTION
+            window.scrollToProducts = function() {
+                const productsSection = document.getElementById('featured-products');
+                if (productsSection) {
+                    productsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            };
+            
+            // E. SEARCH FUNCTIONALITY
+            const searchInput = document.getElementById('searchInput');
+            if (searchInput) {
+                searchInput.addEventListener('keypress', (e) => {
+                    if (e.key === 'Enter') {
+                        const query = searchInput.value.trim();
+                        if (query) {
+                            console.log('🔍 Search query:', query);
+                            // Ici on pourrait rediriger vers une page de résultats
+                        }
+                    }
+                });
+                console.log('✅ Search initialized');
+            }
+            
+            // F. FILTRES PRODUITS
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const productsGrid = document.getElementById('productsGrid');
+            
+            if (filterButtons.length && productsGrid) {
+                filterButtons.forEach(button => {
+                    button.addEventListener('click', () => {
+                        const category = button.dataset.category;
+                        
+                        // Mise à jour état actif
+                        filterButtons.forEach(btn => btn.classList.remove('active'));
+                        button.classList.add('active');
+                        
+                        // Filtrage produits
+                        const products = productsGrid.querySelectorAll('.product-card');
+                        products.forEach(product => {
+                            if (category === 'all' || product.dataset.category?.includes(category)) {
+                                product.style.display = '';
+                                product.classList.add('animate-slide-up');
+                            } else {
+                                product.style.display = 'none';
+                            }
+                        });
+                        
+                        console.log('🏷️ Products filtered by:', category);
+                    });
+                });
+                console.log('✅ Product filters initialized');
+            }
+            
+            // G. NEWSLETTER FORM
+            const newsletterForm = document.getElementById('newsletterForm');
+            if (newsletterForm) {
+                newsletterForm.addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    const email = newsletterForm.querySelector('input[type="email"]')?.value;
+                    if (email) {
+                        const button = newsletterForm.querySelector('button[type="submit"]');
+                        const originalText = button.textContent;
+                        button.textContent = '✓ Inscrit !';
+                        button.disabled = true;
+                        
+                        setTimeout(() => {
+                            button.textContent = originalText;
+                            button.disabled = false;
+                            newsletterForm.reset();
+                        }, 3000);
+                        
+                        console.log('📧 Newsletter subscription:', email);
+                    }
+                });
+                console.log('✅ Newsletter form initialized');
+            }
+            
+            // DÉMARRER L'INIT DU CART
+            setTimeout(initCartSystem, 200);
+            
+            console.log('🎯 Site fully initialized!');
         });
     </script>
 
