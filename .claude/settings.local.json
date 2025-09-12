@@ -58,7 +58,14 @@
       "Bash(taskkill:*)",
       "Bash(dir:*)",
       "Bash(git stash:*)",
-      "Bash(git fetch:*)"
+      "Bash(git fetch:*)",
+      "Bash(grep:*)",
+      "Bash(npm run validate:*)",
+      "Bash(npm run deploy:staging:*)",
+      "Bash(bash sftp-deploy.sh)",
+      "Bash(bash:*)",
+      "Bash(npm run build:*)",
+      "Bash(npm run deploy:production:*)"
     ],
     "deny": [],
     "ask": []

@@ -1,11 +1,67 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
-    <meta http-equiv="refresh" content="0;url=cart.html">
-    <title>Redirection vers le panier</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="2;url=cart.html">
+    <title>Redirection vers le panier - TechViral</title>
+    <link rel="icon" type="image/x-icon" href="../../assets/icons/favicon.ico">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #6366f1, #f59e0b);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            color: white;
+        }
+        .loading-container {
+            text-align: center;
+            padding: 2rem;
+        }
+        .spinner {
+            width: 50px;
+            height: 50px;
+            border: 4px solid rgba(255,255,255,0.3);
+            border-radius: 50%;
+            border-top-color: white;
+            animation: spin 1s ease-in-out infinite;
+            margin: 0 auto 1rem;
+        }
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        .redirect-text {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+        .fallback-link {
+            color: rgba(255,255,255,0.8);
+            text-decoration: underline;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
-    <p>Redirection vers votre panier...</p>
-    <script>window.location.replace('cart.html');</script>
+    <div class="loading-container">
+        <div class="spinner"></div>
+        <p class="redirect-text">🛒 Redirection vers votre panier...</p>
+        <p>
+            <a href="cart.html" class="fallback-link">Cliquez ici si la redirection ne fonctionne pas</a>
+        </p>
+    </div>
+    
+    <script>
+        // Redirection immédiate avec fallback
+        setTimeout(function() {
+            try {
+                window.location.replace('cart.html');
+            } catch (e) {
+                window.location.href = 'cart.html';
+            }
+        }, 1000);
+    </script>
 </body>
 </html>

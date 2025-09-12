@@ -1,0 +1,18 @@
+cd /home/u531520039/domains/antiquewhite-rabbit-562143.hostingersite.com/public_html
+put manifest.json
+put sw-advanced.js
+put index.html
+
+cd assets/js
+lcd assets/js
+mput *.js
+
+cd ../../components
+lcd ../../components  
+mput *.html
+
+cd ../pages
+lcd ../pages
+put checkout-express.html
+
+quit
