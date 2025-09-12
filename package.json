@@ -5,7 +5,7 @@
   "main": "index.html",
   "scripts": {
     "start": "vite",
-    "serve": "http-server . -p 3000 --silent",
+    "serve": "http-server . -p 3001 --silent",
     "build": "npm run build:images && vite build && npm run build:sitemap",
     "build:legacy": "tailwindcss -i ./src/input.css -o ./assets/css/tailwind.min.css --minify",
     "build:sitemap": "node scripts/generate-sitemap.js",

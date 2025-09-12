@@ -27,6 +27,7 @@
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Expires" content="0">
     <link rel="stylesheet" href="../../assets/css/style.css?v=2025010803">
+    <link rel="stylesheet" href="../../assets/css/tailwind-custom.css">
     <link rel="icon" href="../../assets/images/favicon.svg">
     
     <style>
@@ -76,23 +77,23 @@
         .icon-award::before { content: "🏆"; }
     </style>
 </head>
-<body class="bg-gray-50">
+<body class="bg-gray-50 dark:bg-gray-900">
     <!-- Navigation -->
-    <nav class="bg-white shadow-lg sticky top-0 z-50">
+    <nav class="bg-white dark:bg-gray-800 shadow-lg sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-4">
             <div class="flex justify-between items-center h-16">
                 <div class="flex items-center space-x-4">
                     <a href="../../index.html" class="flex items-center space-x-2">
-                        <span class="icon-bolt text-2xl text-blue-600"></span>
-                        <span class="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">TechViral</span>
+                        <span class="icon-bolt text-2xl text-primary"></span>
+                        <span class="text-2xl font-bold bg-gradient-to-r from-primary to-purple-600 bg-clip-text text-transparent">TechViral</span>
                     </a>
                 </div>
                 <div class="hidden md:flex items-center space-x-6">
-                    <a href="../../index.html" class="text-gray-700 hover:text-blue-600 transition-colors">Accueil</a>
-                    <a href="all.html" class="text-gray-700 hover:text-blue-600 transition-colors">Catégories</a>
+                    <a href="../../index.html" class="text-gray-700 dark:text-gray-300 hover:text-primary transition-colors">Accueil</a>
+                    <a href="all.html" class="text-gray-700 dark:text-gray-300 hover:text-primary transition-colors">Catégories</a>
                     <a href="../promotions.html" class="text-red-600 hover:text-red-700 transition-colors font-medium">🔥 Promotions</a>
-                    <a href="../blog.html" class="text-gray-700 hover:text-blue-600 transition-colors">Blog</a>
-                    <a href="../contact.html" class="text-gray-700 hover:text-blue-600 transition-colors">Contact</a>
+                    <a href="../blog.html" class="text-gray-700 dark:text-gray-300 hover:text-primary transition-colors">Blog</a>
+                    <a href="../contact.html" class="text-gray-700 dark:text-gray-300 hover:text-primary transition-colors">Contact</a>
                 </div>
                 <div class="flex items-center space-x-3">
                     <button id="cartButton" class="relative p-2 rounded-full bg-gradient-to-r from-pink-500 to-rose-600 text-white hover:shadow-lg transition-all">
@@ -149,20 +150,20 @@
                     <button class="filter-btn active px-4 py-2 rounded-full bg-pink-500 text-white hover:bg-pink-600 transition-colors" data-category="all">
                         Tous (<span id="product-count">8</span>)
                     </button>
-                    <button class="filter-btn px-4 py-2 rounded-full bg-gray-200 text-gray-700 hover:bg-gray-300 transition-colors" data-category="deco">
+                    <button class="filter-btn px-4 py-2 rounded-full bg-gray-200 text-gray-700 dark:text-gray-300 hover:bg-gray-300 transition-colors" data-category="deco">
                         <span class="icon-home mr-2"></span>Déco (3)
                     </button>
-                    <button class="filter-btn px-4 py-2 rounded-full bg-gray-200 text-gray-700 hover:bg-gray-300 transition-colors" data-category="accessoires">
+                    <button class="filter-btn px-4 py-2 rounded-full bg-gray-200 text-gray-700 dark:text-gray-300 hover:bg-gray-300 transition-colors" data-category="accessoires">
                         <span class="icon-gem mr-2"></span>Accessoires (3)
                     </button>
-                    <button class="filter-btn px-4 py-2 rounded-full bg-gray-200 text-gray-700 hover:bg-gray-300 transition-colors" data-category="design">
+                    <button class="filter-btn px-4 py-2 rounded-full bg-gray-200 text-gray-700 dark:text-gray-300 hover:bg-gray-300 transition-colors" data-category="design">
                         <span class="icon-palette mr-2"></span>Design (2)
                     </button>
                 </div>
 
                 <!-- Sort -->
                 <div class="flex items-center space-x-4">
-                    <label class="text-sm font-medium text-gray-700">Trier par :</label>
+                    <label class="text-sm font-medium text-gray-700 dark:text-gray-300">Trier par :</label>
                     <select id="sort-select" class="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent">
                         <option value="popularity">Popularité</option>
                         <option value="price-asc">Prix croissant</option>
@@ -223,7 +224,7 @@
                         </div>
                         <div class="space-y-2 mb-4">
                             <div class="flex items-center text-sm text-gray-600">
-                                <i class="fas fa-wifi text-blue-500 mr-2"></i>
+                                <i class="fas fa-wifi text-primary mr-2"></i>
                                 <span>WiFi + Bluetooth</span>
                             </div>
                             <div class="flex items-center text-sm text-gray-600">
@@ -279,7 +280,7 @@
                         </div>
                         <div class="space-y-2 mb-4">
                             <div class="flex items-center text-sm text-gray-600">
-                                <i class="fas fa-touch text-blue-500 mr-2"></i>
+                                <i class="fas fa-touch text-primary mr-2"></i>
                                 <span>Écran tactile 24"</span>
                             </div>
                             <div class="flex items-center text-sm text-gray-600">
@@ -336,7 +337,7 @@
                                 <span>Fonctionnement silencieux</span>
                             </div>
                             <div class="flex items-center text-sm text-gray-600">
-                                <i class="fas fa-clock text-blue-500 mr-2"></i>
+                                <i class="fas fa-clock text-primary mr-2"></i>
                                 <span>Programmation 12h</span>
                             </div>
                             <div class="flex items-center text-sm text-gray-600">
@@ -360,7 +361,7 @@
                             </span>
                         </div>
                         <div class="absolute top-4 right-4">
-                            <span class="bg-gradient-to-r from-blue-500 to-indigo-600 text-white px-2 py-1 rounded text-xs font-bold">+289%</span>
+                            <span class="bg-gradient-to-r from-primary to-indigo-600 text-white px-2 py-1 rounded text-xs font-bold">+289%</span>
                         </div>
                     </div>
                     <div class="p-6">
@@ -385,7 +386,7 @@
                         </div>
                         <div class="space-y-2 mb-4">
                             <div class="flex items-center text-sm text-gray-600">
-                                <i class="fas fa-video text-blue-500 mr-2"></i>
+                                <i class="fas fa-video text-primary mr-2"></i>
                                 <span>Projection 180°</span>
                             </div>
                             <div class="flex items-center text-sm text-gray-600">
@@ -441,7 +442,7 @@
                         </div>
                         <div class="space-y-2 mb-4">
                             <div class="flex items-center text-sm text-gray-600">
-                                <i class="fas fa-volume-up text-blue-500 mr-2"></i>
+                                <i class="fas fa-volume-up text-primary mr-2"></i>
                                 <span>Son 360° HD</span>
                             </div>
                             <div class="flex items-center text-sm text-gray-600">
@@ -494,7 +495,7 @@
                         </div>
                         <div class="space-y-2 mb-4">
                             <div class="flex items-center text-sm text-gray-600">
-                                <i class="fas fa-tint text-blue-500 mr-2"></i>
+                                <i class="fas fa-tint text-primary mr-2"></i>
                                 <span>Arrosage intelligent</span>
                             </div>
                             <div class="flex items-center text-sm text-gray-600">
@@ -522,7 +523,7 @@
                             </span>
                         </div>
                         <div class="absolute top-4 right-4">
-                            <span class="bg-gradient-to-r from-blue-500 to-indigo-600 text-white px-2 py-1 rounded text-xs font-bold">+234%</span>
+                            <span class="bg-gradient-to-r from-primary to-indigo-600 text-white px-2 py-1 rounded text-xs font-bold">+234%</span>
                         </div>
                     </div>
                     <div class="p-6">
@@ -555,7 +556,7 @@
                                 <span>Charge sans fil 15W</span>
                             </div>
                             <div class="flex items-center text-sm text-gray-600">
-                                <i class="fas fa-redo text-blue-500 mr-2"></i>
+                                <i class="fas fa-redo text-primary mr-2"></i>
                                 <span>Rotation libre 360°</span>
                             </div>
                         </div>
@@ -603,7 +604,7 @@
                         </div>
                         <div class="space-y-2 mb-4">
                             <div class="flex items-center text-sm text-gray-600">
-                                <i class="fas fa-tv text-blue-500 mr-2"></i>
+                                <i class="fas fa-tv text-primary mr-2"></i>
                                 <span>Écran 4K 15"</span>
                             </div>
                             <div class="flex items-center text-sm text-gray-600">
@@ -683,7 +684,7 @@
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
                 <div>
                     <div class="flex items-center space-x-2 mb-4">
-                        <i class="fas fa-bolt text-2xl text-blue-500"></i>
+                        <i class="fas fa-bolt text-2xl text-primary"></i>
                         <span class="text-2xl font-bold">TechViral</span>
                     </div>
                     <p class="text-gray-400 mb-4">Votre destination pour les objets lifestyle et design les plus innovants. Élégance et technologie réunies.</p>
@@ -739,7 +740,7 @@
         document.addEventListener('DOMContentLoaded', function() {
             const faLinks = document.querySelectorAll('link[href*="font-awesome"], link[href*="cdnjs.cloudflare.com"]');
             faLinks.forEach(link => {
-                console.warn('🚫 Suppression lien Font Awesome détecté:', link.href);
+                // Suppression lien Font Awesome détecté
                 link.remove();
             });
         });
@@ -753,10 +754,10 @@
                     b.classList.remove('active');
                     b.style.background = '';
                     b.style.color = '';
-                    b.classList.add('bg-gray-200', 'text-gray-700');
+                    b.classList.add('bg-gray-200', 'text-gray-700 dark:text-gray-300');
                 });
                 this.classList.add('active');
-                this.classList.remove('bg-gray-200', 'text-gray-700');
+                this.classList.remove('bg-gray-200', 'text-gray-700 dark:text-gray-300');
                 this.style.background = 'linear-gradient(135deg, #ec4899, #be185d)';
                 this.style.color = 'white';
                 

@@ -7,6 +7,7 @@
     <meta name="description" content="Découvrez notre sélection de produits connectés pour la maison : domotique, éclairage intelligent, sécurité connectée et décoration high-tech.">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/tailwind-custom.css">
     <link rel="icon" href="../../assets/images/favicon.svg">
     
     <style>
@@ -37,25 +38,25 @@
         }
     </style>
 </head>
-<body class="bg-gradient-to-br from-blue-50 to-indigo-50 min-h-screen">
+<body class="bg-gradient-to-br from-primary/10 to-indigo-50 dark:from-gray-900 dark:to-gray-800 min-h-screen">
     <!-- Navigation -->
-    <nav class="bg-white shadow-lg sticky top-0 z-50">
+    <nav class="bg-white dark:bg-gray-800 shadow-lg sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-4">
             <div class="flex justify-between items-center h-16">
                 <div class="flex items-center space-x-4">
                     <a href="../../index.html" class="flex items-center space-x-2">
-                        <span class="icon-bolt text-2xl text-blue-600"></span>
-                        <span class="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">TechViral</span>
+                        <span class="icon-bolt text-2xl text-primary"></span>
+                        <span class="text-2xl font-bold bg-gradient-to-r from-primary to-purple-600 bg-clip-text text-transparent">TechViral</span>
                     </a>
                 </div>
                 <div class="hidden md:flex items-center space-x-6">
-                    <a href="../../index.html" class="text-gray-700 hover:text-blue-600 transition-colors">Accueil</a>
-                    <a href="all.html" class="text-gray-700 hover:text-blue-600 transition-colors">Catégories</a>
+                    <a href="../../index.html" class="text-gray-700 dark:text-gray-300 hover:text-primary transition-colors">Accueil</a>
+                    <a href="all.html" class="text-gray-700 dark:text-gray-300 hover:text-primary transition-colors">Catégories</a>
                     <a href="../promotions.html" class="text-red-600 hover:text-red-700 transition-colors font-medium">🔥 Promotions</a>
-                    <a href="../contact.html" class="text-gray-700 hover:text-blue-600 transition-colors">Contact</a>
+                    <a href="../contact.html" class="text-gray-700 dark:text-gray-300 hover:text-primary transition-colors">Contact</a>
                 </div>
                 <div class="flex items-center space-x-3">
-                    <button id="cartButton" class="relative p-2 rounded-full bg-gradient-to-r from-blue-500 to-indigo-600 text-white hover:shadow-lg transition-all">
+                    <button id="cartButton" class="relative p-2 rounded-full bg-gradient-to-r from-primary/100 to-indigo-600 text-white hover:shadow-lg transition-all">
                         <span class="icon-cart text-lg"></span>
                         <span id="cartCount" class="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center font-bold">0</span>
                     </button>
@@ -65,7 +66,7 @@
     </nav>
 
     <!-- Header Section -->
-    <section class="bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 text-white py-16">
+    <section class="bg-gradient-to-r from-primary via-indigo-600 to-purple-600 text-white py-16">
         <div class="max-w-7xl mx-auto px-4 text-center">
             <span class="icon-home text-6xl mb-6 block"></span>
             <h1 class="text-4xl lg:text-5xl font-bold mb-4">Maison & Décoration</h1>
@@ -84,19 +85,19 @@
         <div class="max-w-7xl mx-auto px-4">
             <div class="flex flex-wrap gap-4 justify-between items-center">
                 <div class="flex flex-wrap gap-2">
-                    <button class="filter-btn px-4 py-2 rounded-full border border-gray-300 hover:border-blue-500 transition-colors active" data-filter="all">
+                    <button class="filter-btn px-4 py-2 rounded-full border border-gray-300 hover:border-primary transition-colors active" data-filter="all">
                         Tous les produits
                     </button>
-                    <button class="filter-btn px-4 py-2 rounded-full border border-gray-300 hover:border-blue-500 transition-colors" data-filter="domotique">
+                    <button class="filter-btn px-4 py-2 rounded-full border border-gray-300 hover:border-primary transition-colors" data-filter="domotique">
                         🏠 Domotique
                     </button>
-                    <button class="filter-btn px-4 py-2 rounded-full border border-gray-300 hover:border-blue-500 transition-colors" data-filter="eclairage">
+                    <button class="filter-btn px-4 py-2 rounded-full border border-gray-300 hover:border-primary transition-colors" data-filter="eclairage">
                         💡 Éclairage
                     </button>
-                    <button class="filter-btn px-4 py-2 rounded-full border border-gray-300 hover:border-blue-500 transition-colors" data-filter="securite">
+                    <button class="filter-btn px-4 py-2 rounded-full border border-gray-300 hover:border-primary transition-colors" data-filter="securite">
                         🛡️ Sécurité
                     </button>
-                    <button class="filter-btn px-4 py-2 rounded-full border border-gray-300 hover:border-blue-500 transition-colors" data-filter="climat">
+                    <button class="filter-btn px-4 py-2 rounded-full border border-gray-300 hover:border-primary transition-colors" data-filter="climat">
                         🌡️ Climat
                     </button>
                 </div>
@@ -121,7 +122,7 @@
                     <div class="relative">
                         <img src="../../assets/images/products/domotique-hub.jpg" alt="Station Domotique Centrale" class="w-full h-48 object-cover" loading="lazy">
                         <div class="absolute top-3 right-3 bg-green-500 text-white px-3 py-1 rounded-full text-sm font-medium">-20%</div>
-                        <div class="absolute top-3 left-3 bg-blue-500 text-white px-2 py-1 rounded text-xs">🏠 Hub</div>
+                        <div class="absolute top-3 left-3 bg-primary text-white px-2 py-1 rounded text-xs">🏠 Hub</div>
                         <button class="wishlist-btn absolute bottom-3 right-3 w-8 h-8 bg-white/90 rounded-full flex items-center justify-center hover:bg-red-500 hover:text-white transition-all">
                             <span class="icon-heart text-sm"></span>
                         </button>
@@ -137,10 +138,10 @@
                         </div>
                         <div class="flex items-center justify-between">
                             <div class="flex items-center space-x-2">
-                                <span class="text-2xl font-bold text-blue-600">239€</span>
+                                <span class="text-2xl font-bold text-primary">239€</span>
                                 <span class="text-lg text-gray-500 line-through">299€</span>
                             </div>
-                            <button class="add-to-cart bg-gradient-to-r from-blue-500 to-indigo-600 text-white px-4 py-2 rounded-lg hover:shadow-lg transition-all text-sm font-medium" data-id="hub-domotique-001">
+                            <button class="add-to-cart bg-gradient-to-r from-primary/100 to-indigo-600 text-white px-4 py-2 rounded-lg hover:shadow-lg transition-all text-sm font-medium" data-id="hub-domotique-001">
                                 <span class="icon-cart mr-1"></span>Ajouter
                             </button>
                         </div>
@@ -167,9 +168,9 @@
                         </div>
                         <div class="flex items-center justify-between">
                             <div class="flex items-center space-x-2">
-                                <span class="text-2xl font-bold text-blue-600">45€</span>
+                                <span class="text-2xl font-bold text-primary">45€</span>
                             </div>
-                            <button class="add-to-cart bg-gradient-to-r from-blue-500 to-indigo-600 text-white px-4 py-2 rounded-lg hover:shadow-lg transition-all text-sm font-medium" data-id="smart-bulbs-003">
+                            <button class="add-to-cart bg-gradient-to-r from-primary/100 to-indigo-600 text-white px-4 py-2 rounded-lg hover:shadow-lg transition-all text-sm font-medium" data-id="smart-bulbs-003">
                                 <span class="icon-cart mr-1"></span>Ajouter
                             </button>
                         </div>
@@ -197,9 +198,9 @@
                         </div>
                         <div class="flex items-center justify-between">
                             <div class="flex items-center space-x-2">
-                                <span class="text-2xl font-bold text-blue-600">189€</span>
+                                <span class="text-2xl font-bold text-primary">189€</span>
                             </div>
-                            <button class="add-to-cart bg-gradient-to-r from-blue-500 to-indigo-600 text-white px-4 py-2 rounded-lg hover:shadow-lg transition-all text-sm font-medium" data-id="security-cam-4k-007">
+                            <button class="add-to-cart bg-gradient-to-r from-primary/100 to-indigo-600 text-white px-4 py-2 rounded-lg hover:shadow-lg transition-all text-sm font-medium" data-id="security-cam-4k-007">
                                 <span class="icon-cart mr-1"></span>Ajouter
                             </button>
                         </div>
@@ -226,9 +227,9 @@
                         </div>
                         <div class="flex items-center justify-between">
                             <div class="flex items-center space-x-2">
-                                <span class="text-2xl font-bold text-blue-600">159€</span>
+                                <span class="text-2xl font-bold text-primary">159€</span>
                             </div>
-                            <button class="add-to-cart bg-gradient-to-r from-blue-500 to-indigo-600 text-white px-4 py-2 rounded-lg hover:shadow-lg transition-all text-sm font-medium" data-id="smart-thermostat-012">
+                            <button class="add-to-cart bg-gradient-to-r from-primary/100 to-indigo-600 text-white px-4 py-2 rounded-lg hover:shadow-lg transition-all text-sm font-medium" data-id="smart-thermostat-012">
                                 <span class="icon-cart mr-1"></span>Ajouter
                             </button>
                         </div>
@@ -255,9 +256,9 @@
                         </div>
                         <div class="flex items-center justify-between">
                             <div class="flex items-center space-x-2">
-                                <span class="text-2xl font-bold text-blue-600">129€</span>
+                                <span class="text-2xl font-bold text-primary">129€</span>
                             </div>
-                            <button class="add-to-cart bg-gradient-to-r from-blue-500 to-indigo-600 text-white px-4 py-2 rounded-lg hover:shadow-lg transition-all text-sm font-medium" data-id="smart-doorbell-015">
+                            <button class="add-to-cart bg-gradient-to-r from-primary/100 to-indigo-600 text-white px-4 py-2 rounded-lg hover:shadow-lg transition-all text-sm font-medium" data-id="smart-doorbell-015">
                                 <span class="icon-cart mr-1"></span>Ajouter
                             </button>
                         </div>
@@ -269,7 +270,7 @@
                     <div class="relative">
                         <img src="../../assets/images/products/smart-plugs.jpg" alt="Prises Connectées" class="w-full h-48 object-cover" loading="lazy">
                         <div class="absolute top-3 right-3 bg-orange-500 text-white px-3 py-1 rounded-full text-sm font-medium">PACK</div>
-                        <div class="absolute top-3 left-3 bg-blue-500 text-white px-2 py-1 rounded text-xs">🔌 x4</div>
+                        <div class="absolute top-3 left-3 bg-primary text-white px-2 py-1 rounded text-xs">🔌 x4</div>
                         <button class="wishlist-btn absolute bottom-3 right-3 w-8 h-8 bg-white/90 rounded-full flex items-center justify-center hover:bg-red-500 hover:text-white transition-all">
                             <span class="icon-heart text-sm"></span>
                         </button>
@@ -285,9 +286,9 @@
                         </div>
                         <div class="flex items-center justify-between">
                             <div class="flex items-center space-x-2">
-                                <span class="text-2xl font-bold text-blue-600">39€</span>
+                                <span class="text-2xl font-bold text-primary">39€</span>
                             </div>
-                            <button class="add-to-cart bg-gradient-to-r from-blue-500 to-indigo-600 text-white px-4 py-2 rounded-lg hover:shadow-lg transition-all text-sm font-medium" data-id="smart-plugs-pack-018">
+                            <button class="add-to-cart bg-gradient-to-r from-primary/100 to-indigo-600 text-white px-4 py-2 rounded-lg hover:shadow-lg transition-all text-sm font-medium" data-id="smart-plugs-pack-018">
                                 <span class="icon-cart mr-1"></span>Ajouter
                             </button>
                         </div>
@@ -314,9 +315,9 @@
                         </div>
                         <div class="flex items-center justify-between">
                             <div class="flex items-center space-x-2">
-                                <span class="text-2xl font-bold text-blue-600">89€</span>
+                                <span class="text-2xl font-bold text-primary">89€</span>
                             </div>
-                            <button class="add-to-cart bg-gradient-to-r from-blue-500 to-indigo-600 text-white px-4 py-2 rounded-lg hover:shadow-lg transition-all text-sm font-medium" data-id="smoke-detector-021">
+                            <button class="add-to-cart bg-gradient-to-r from-primary/100 to-indigo-600 text-white px-4 py-2 rounded-lg hover:shadow-lg transition-all text-sm font-medium" data-id="smoke-detector-021">
                                 <span class="icon-cart mr-1"></span>Ajouter
                             </button>
                         </div>
@@ -344,9 +345,9 @@
                         </div>
                         <div class="flex items-center justify-between">
                             <div class="flex items-center space-x-2">
-                                <span class="text-2xl font-bold text-blue-600">199€</span>
+                                <span class="text-2xl font-bold text-primary">199€</span>
                             </div>
-                            <button class="add-to-cart bg-gradient-to-r from-blue-500 to-indigo-600 text-white px-4 py-2 rounded-lg hover:shadow-lg transition-all text-sm font-medium" data-id="smart-speaker-024">
+                            <button class="add-to-cart bg-gradient-to-r from-primary/100 to-indigo-600 text-white px-4 py-2 rounded-lg hover:shadow-lg transition-all text-sm font-medium" data-id="smart-speaker-024">
                                 <span class="icon-cart mr-1"></span>Ajouter
                             </button>
                         </div>
@@ -361,7 +362,7 @@
     <section class="py-8 bg-gray-50">
         <div class="max-w-4xl mx-auto px-4 text-center">
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="all.html" class="px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-xl font-semibold hover:shadow-lg transition-all">
+                <a href="all.html" class="px-8 py-3 bg-gradient-to-r from-primary to-purple-600 text-white rounded-xl font-semibold hover:shadow-lg transition-all">
                     <span class="icon-arrow-left mr-2"></span>Toutes les Catégories
                 </a>
                 <a href="../../index.html" class="px-8 py-3 bg-gradient-to-r from-gray-100 to-gray-200 text-gray-800 rounded-xl font-semibold hover:shadow-lg transition-all">
@@ -378,7 +379,7 @@
         document.addEventListener('DOMContentLoaded', function() {
             const faLinks = document.querySelectorAll('link[href*="font-awesome"], link[href*="cdnjs.cloudflare.com"]');
             faLinks.forEach(link => {
-                console.warn('🚫 Suppression lien Font Awesome détecté:', link.href);
+                // Suppression lien Font Awesome détecté
                 link.remove();
             });
         });

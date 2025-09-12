@@ -8,10 +8,10 @@ module.exports = {
     collect: {
       // URLs à tester
       url: [
-        'http://localhost:3000/',
-        'http://localhost:3000/pages/categories/electronique.html',
-        'http://localhost:3000/pages/products/camera-pov-gopro-hero13.html',
-        'http://localhost:3000/pages/cart/cart.html'
+        'http://localhost:3001/',
+        'http://localhost:3001/pages/categories/electronique.html',
+        'http://localhost:3001/pages/products/camera-pov-gopro-hero13.html',
+        'http://localhost:3001/pages/cart/cart.html'
       ],
       
       // Configuration Chrome avec chemin Puppeteer
