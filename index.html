@@ -98,8 +98,9 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
     
-    <!-- Preload critical resources -->
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <!-- Google Fonts - chargement direct sans preload JavaScript -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"></noscript>
     <style>
     @font-face{
       font-family:'Inter Variable';
@@ -113,9 +114,9 @@
     <link rel="icon" type="image/x-icon" href="assets/icons/favicon.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png">
     
-    <!-- Critical scripts only - minimal blocking -->
-    <script async src="assets/js/image-optimizer.js"></script>
-    <script async src="assets/js/mobile-navigation.js"></script>
+    <!-- Critical scripts - chargement synchrone pour éviter race conditions -->
+    <script src="assets/js/image-optimizer.js"></script>
+    <script src="assets/js/mobile-navigation.js"></script>
 </head>
 <body class="font-body bg-gradient-to-br from-warm to-cool dark:from-gray-900 dark:to-gray-800 text-gray-900 dark:text-gray-100 transition-colors duration-300">
 
